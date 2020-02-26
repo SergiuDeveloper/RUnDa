@@ -16,7 +16,7 @@ Tasks (TBA TO TRELLO) :
     - Slides detailed contents\
     - Graph concept\
     - Research REST API / GraphQL\
-    - HTML, CSS, JavaScript practice.\
+    - HTML, CSS, JavaScript practice.
 
 # Adaugati ce mai e, scoateti ce e prost
 
