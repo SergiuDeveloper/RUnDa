@@ -7,16 +7,16 @@ Recurgând la un API REST/GraphQL propriu, să se realizeze un instrument Web de
 Statisticile, plus vizualizările generate – minim 3 maniere, plus cele cartografice pe baza unor servicii Web specializate – vor putea fi exportate în formatele CSV, XML, SVG si PDF.
 
 Tasks (TBA TO TRELLO) : 
-    - HTML elements for front page.
-    - General Look, Color Palette, Model Assets
-    - Asset building (throw anything and see what sticks)
-    - Asset building (based on look, model...)
-    - Main Page Slideshow workings
-    - Page detailed text contents
-    - Slides detailed contents
-    - Graph concept
-    - Research REST API / GraphQL
-    - HTML, CSS, JavaScript practice.
+    - HTML elements for front page.\
+    - General Look, Color Palette, Model Assets\
+    - Asset building (throw anything and see what sticks)\
+    - Asset building (based on look, model...)\
+    - Main Page Slideshow workings\
+    - Page detailed text contents\
+    - Slides detailed contents\
+    - Graph concept\
+    - Research REST API / GraphQL\
+    - HTML, CSS, JavaScript practice.\
 
 # Adaugati ce mai e, scoateti ce e prost
 
