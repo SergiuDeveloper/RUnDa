@@ -20,7 +20,7 @@ Tasks (TBA TO TRELLO) :
 
 # Adaugati ce mai e, scoateti ce e prost
 
-Resurse : 
+Resurse : \
     1. Date publice Somaj : http://data.gov.ro/dataset?q=somaj&sort=metadata_modified+desc \
     2. Vizualizare date : https://profs.info.uaic.ro/~busaco/teach/courses/cliw/web-film.html#week4 \
     3. CSS CheatSheet : https://adam-marsden.co.uk/css-cheat-sheet \
