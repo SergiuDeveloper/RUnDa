@@ -24,41 +24,61 @@
 			<a href = "./ph3.html"> Placeholder Link 3 </a>
 		</nav>
 
-		<div class = "slideshowContainer">
-			<div class = "slideContainer fade">
-				<div class = "slideNumberText"> 1 / 4 </div>
-				<img src = "../resources/slides/Slide1.png" alt = "Slide 1" style = "width: 100%">
-				<div class = "slideText"> Caption Text One </div>
+		<div class = "slideshow">
+
+			<div class = "slideshowContainer">
+				<div class = "slideContainer fade">
+					<div class = "slideNumberText"> 1 / 4 </div>
+					<img src = "../resources/slides/Slide1.png" alt = "Slide 1" style = "width: 100%">
+					<div class = "slideText"> Caption Text One </div>
+				</div>
+
+				<div class = "slideContainer fade">
+					<div class = "slideNumberText"> 2 / 4 </div>
+					<img src = "../resources/slides/Slide2.png" alt = "Slide 2" style = "width: 100%">
+					<div class = "slideText"> Caption Text Two </div>
+				</div>
+
+				<div class = "slideContainer fade">
+					<div class = "slideNumberText"> 3 / 4 </div>
+					<img src = "../resources/slides/Slide3.png" alt = "Slide 3" style = "width: 100%">
+					<div class = "slideText"> Caption Text Three </div>
+				</div>
+
+				<div class = "slideContainer fade">
+					<div class = "slideNumberText"> 4 / 4 </div>
+					<img src = "../resources/slides/Slide4.png" alt = "Slide 4" style = "width: 100%">
+					<div class = "slideText"> Caption Text Four </div>
+				</div>
+
+				<a class = "previousSlide" onclick = "plusSlide(-1)"> &#10094 </a>
+				<a class = "nextSlide" onclick = "plusSlide(1)"> &#10095 </a>
+
+
+				<div style = "text-align: center">
+						<span class = "dotSlide" onclick = "currentSlide(1)"></span>
+						<span class = "dotSlide" onclick = "currentSlide(2)"></span>
+						<span class = "dotSlide" onclick = "currentSlide(3)"></span>
+						<span class = "dotSlide" onclick = "currentSlide(4)"></span>
+				</div>
 			</div>
 
-			<div class = "slideContainer fade">
-				<div class = "slideNumberText"> 2 / 4 </div>
-				<img src = "../resources/slides/Slide2.png" alt = "Slide 2" style = "width: 100%">
-				<div class = "slideText"> Caption Text Two </div>
+			<div class = "slideshowDescription">
+				Slide description 1
 			</div>
 
-			<div class = "slideContainer fade">
-				<div class = "slideNumberText"> 3 / 4 </div>
-				<img src = "../resources/slides/Slide3.png" alt = "Slide 3" style = "width: 100%">
-				<div class = "slideText"> Caption Text Three </div>
+			<div class = "slideshowDescription">
+				Slide description 2
 			</div>
 
-			<div class = "slideContainer fade">
-				<div class = "slideNumberText"> 4 / 4 </div>
-				<img src = "../resources/slides/Slide4.png" alt = "Slide 4" style = "width: 100%">
-				<div class = "slideText"> Caption Text Four </div>
+			<div class = "slideshowDescription">
+				Slide description 3
 			</div>
 
-			<a class = "previousSlide" onclick = "plusSlide(-1)"> &#10094 </a>
-			<a class = "nextSlide" onclick = "plusSlide(1)"> &#10095 </a>
-
-
-			<div style = "text-align: center">
-					<span class = "dotSlide" onclick = "currentSlide(1)"></span>
-					<span class = "dotSlide" onclick = "currentSlide(2)"></span>
-					<span class = "dotSlide" onclick = "currentSlide(3)"></span>
-					<span class = "dotSlide" onclick = "currentSlide(4)"></span>
+			<div class = "slideshowDescription">
+				Slide description 4
 			</div>
+
 		</div>
 
 		<section class = "contentPlaceholder">
