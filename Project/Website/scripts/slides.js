@@ -1,11 +1,14 @@
 var slideIndex = 1;
+var timeout;
 showSlides(slideIndex);
 
 function plusSlide(n){
+    clearTimeout(timeout);
     showSlides(slideIndex += n);
 }
 
 function currentSlide(n){
+    clearTimeout(timeout);
     showSlides(slideIndex = n);
 }
 
@@ -18,7 +21,7 @@ function showSlides(n){
         slideIndex = 1;
     }
     if(n < 1){
-        slideIndex = slides.length;
+        slideIndex = slides.length - (-n);
     }
 
     for(i = 0; i < slides.length; i++){
@@ -33,4 +36,11 @@ function showSlides(n){
     slides[slideIndex-1].style.display = "block";
     slideDescriptions[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
+
+    slideIndex++;
+    if(slideIndex > slides.length){
+        slideIndex = 1;
+    }
+
+    timeout = setTimeout(showSlides, 2000);
 }
