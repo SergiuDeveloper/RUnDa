@@ -1,13 +1,9 @@
-import unemployed_data as ud; 
-import linear_regression as lr;
+import unemployed_data as ud;
 
-document_format = './Data/medii-somaj-%s-%d.csv';
-years = [2018, 2019];
-months = ['ianuarie', 'februarie', 'martie', 'aprilie', 'mai', 'iunie', 'iulie', 'august', 'septembrie', 'octombrie', 'noiembrie', 'decembrie'];
+input_document_format = './Data/medii-somaj-%s-%d.csv';
+plot_file_format = './Plots/numar-total-someri.png';
+output_file_format = './Output/numar-total-someri.data';
+feature_name = 'Luna';
+label_name = 'Numar Total Someri';
 
-documents = ud.get_unemployed_data(document_format, years, months);
-dataframe = ud.map_dataframe(documents);
-
-datalist = lr.get_datalist_from_dataframe(dataframe);
-[w0, w1] = lr.linear_regression(datalist, 100000);
-lr.plot_model(w0, w1, datalist,  'Luna', 'Numar Total Someri')
+ud.UnemployedData.extract_data(input_document_format, plot_file_format, output_file_format, feature_name, label_name);
