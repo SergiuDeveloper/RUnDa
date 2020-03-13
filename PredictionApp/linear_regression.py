@@ -1,8 +1,6 @@
 from matplotlib import pyplot as plt;
 
-def linear_regression(dataframe, epochs, featureName, labelName):
-    dataframe = dataframe.dropna();
-    datalist = dataframe.values.tolist();
+def linear_regression(datalist, epochs):
 
     w1 = (datalist[0][1] - datalist[1][1]) / (datalist[0][0] - datalist[1][0]);
     w0 = datalist[0][1] - datalist[0][0] * w1;
@@ -30,7 +28,13 @@ def linear_regression(dataframe, epochs, featureName, labelName):
         print('MSE =', currentMSE);
         print();
 
-    plot_model(w1, w0, datalist, featureName, labelName);
+    return [w0, w1];
+
+def get_datalist_from_dataframe(dataframe):
+    dataframe = dataframe.dropna();
+    datalist = dataframe.values.tolist();
+
+    return datalist;
 
 def compute_MSE(datalist, w0, w1):
 	mse = 0;
@@ -48,7 +52,7 @@ def compute_MSE(datalist, w0, w1):
 def compute_optimal_learning_rate():
     return 0.001;
 
-def plot_model(w1, w0, datalist, featureName, labelName):
+def plot_model(w0, w1, datalist, featureName, labelName):
     feature = [];
     label = [];
     for data in datalist:

@@ -28,7 +28,7 @@ def map_dataframe(documents):
     for document in documents:
         luni.append(document.month);
         
-        valoare_somaj = document.value.iloc[:, 1].tail(1).iloc[-1];
+        valoare_somaj = document.value.iloc[:, 1].tail(1).head(1).iloc[-1];
         valoare_somaj = int(re.sub('[^0-9]', '', str(valoare_somaj)));
         somaj.append(valoare_somaj);
 
