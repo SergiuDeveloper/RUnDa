@@ -67,9 +67,20 @@ class LinearRegression:
 
         plt.scatter(feature, label);
 
-        x0 = 0;
-        y0 = w0;
-        x1 = feature[-1];
+        feature_prediction = [];
+        label_prediction = [];
+        for predicted_points_iterator in range(len(feature)):
+            feature_prediction.append(feature[len(feature) - 1] + predicted_points_iterator + 1);
+            label_prediction.append(w0 + (w1 * feature_prediction[len(feature_prediction) - 1]));
+
+        plt.scatter(feature_prediction, label_prediction);
+
+        feature.extend(feature_prediction);
+        joined_feature = feature;
+
+        x0 = joined_feature[0];
+        y0 = w0 + (w1 * x0);
+        x1 = joined_feature[-1];
         y1 = w0 + (w1 * x1);
         plt.plot([x0, x1], [y0, y1], c = 'r');
 
