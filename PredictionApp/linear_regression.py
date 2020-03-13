@@ -2,12 +2,12 @@ from matplotlib import pyplot as plt;
 
 class LinearRegression:
     @staticmethod
-    def linear_regression(datalist, epochs):
+    def linear_regression(datalist, epochs, label_name):
         w1 = (datalist[0][1] - datalist[1][1]) / (datalist[0][0] - datalist[1][0]);
         w0 = datalist[0][1] - datalist[0][0] * w1;
 
         for epoch in range(epochs):
-            print('Epoch', epoch);	
+            print('Epoch', epoch, '- ', label_name);	
 
             w0Gradient = 0;
             w1Gradient = 0;

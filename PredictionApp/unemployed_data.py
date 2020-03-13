@@ -17,11 +17,10 @@ class UnemployedData:
         dataframe = UnemployedData.map_dataframe(documents);
 
         datalist = lr.LinearRegression.get_datalist_from_dataframe(dataframe);
-        [w0, w1] = lr.LinearRegression.linear_regression(datalist, 100000);
+        [w0, w1] = lr.LinearRegression.linear_regression(datalist, 100000, label_name);
 
-        plot = lr.LinearRegression.plot_model(w0, w1, datalist,  'Luna', 'Numar Total Someri')
+        plot = lr.LinearRegression.plot_model(w0, w1, datalist,  'Luna', 'Numar Total Someri');
         plot.savefig(plot_file_format);
-        plot.show();
 
         output_file = open(output_file_format, 'w');
         output_file_content = 'w0 = %f\nw1 = %f' % (w0, w1);
