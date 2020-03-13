@@ -19,7 +19,7 @@ class UnemployedData:
         datalist = lr.LinearRegression.get_datalist_from_dataframe(dataframe);
         [w0, w1] = lr.LinearRegression.linear_regression(datalist, epochs, label_name);
 
-        plot = lr.LinearRegression.plot_model(w0, w1, datalist,  'Luna', 'Numar Total Someri');
+        plot = lr.LinearRegression.plot_model(w0, w1, datalist,  feature_name, label_name);
         plot.savefig(plot_file_format);
         plot.close();
 

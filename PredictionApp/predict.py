@@ -1,7 +1,7 @@
 import unemployed_data as ud;
 
 input_document_format = './Data/medii-somaj-%s-%d.csv';
-epochs = 10000;
+epochs = 100000;
 
 plot_folder = './Plots/';
 output_folder = './Output/';
