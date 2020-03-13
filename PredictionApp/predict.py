@@ -1,6 +1,7 @@
 import unemployed_data as ud;
 
 input_document_format = './Data/medii-somaj-%s-%d.csv';
+epochs = 10000;
 
 plot_folder = './Plots/';
 output_folder = './Output/';
@@ -13,7 +14,7 @@ file_formats = ['numar-total-someri', 'numar-total-someri-femei', 'numar-total-s
 label_names = ['Numar Total Someri', 'Numar Total Someri Femei', 'Numar Total Someri Barbati', 'Numar Total Someri Din Mediul Urban', 'Numar Someri Femei Din Mediul Urban', 'Numar Someri Barbati Din Mediul Urban',
     'Numar Total Someri Din Mediul Rural', 'Numar Someri Femei Din Mediul Rural', 'Numar Someri Barbati Din Mediul Rural'];
 
-for file_format in range(len(file_formats)):
-    plot_file_format = '%s%s%s' % (plot_folder, file_formats[file_format], plot_file_extension);
-    output_file_format = '%s%s%s' % (output_folder, file_formats[file_format], output_file_extension);
-    ud.UnemployedData.extract_data(input_document_format, plot_file_format, output_file_format, feature_name, label_names[file_format]);
+for file_format_iterator in range(len(file_formats)):
+    plot_file_format = '%s%s%s' % (plot_folder, file_formats[file_format_iterator], plot_file_extension);
+    output_file_format = '%s%s%s' % (output_folder, file_formats[file_format_iterator], output_file_extension);
+    ud.UnemployedData.extract_data(input_document_format, file_format_iterator + 1, epochs, plot_file_format, output_file_format, feature_name, label_names[file_format_iterator]);

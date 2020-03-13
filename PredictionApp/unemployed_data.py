@@ -9,18 +9,19 @@ class UnemployedData:
         month = None;
 
     @staticmethod
-    def extract_data(input_document_format, plot_file_format, output_file_format, feature_name, label_name):
+    def extract_data(input_document_format, column_number, epochs, plot_file_format, output_file_format, feature_name, label_name):
         years = [2018, 2019];
         months = ['ianuarie', 'februarie', 'martie', 'aprilie', 'mai', 'iunie', 'iulie', 'august', 'septembrie', 'octombrie', 'noiembrie', 'decembrie'];
 
         documents = UnemployedData.get_unemployed_data(input_document_format, years, months);
-        dataframe = UnemployedData.map_dataframe(documents);
+        dataframe = UnemployedData.map_dataframe(documents, column_number);
 
         datalist = lr.LinearRegression.get_datalist_from_dataframe(dataframe);
-        [w0, w1] = lr.LinearRegression.linear_regression(datalist, 100000, label_name);
+        [w0, w1] = lr.LinearRegression.linear_regression(datalist, epochs, label_name);
 
         plot = lr.LinearRegression.plot_model(w0, w1, datalist,  'Luna', 'Numar Total Someri');
         plot.savefig(plot_file_format);
+        plot.close();
 
         output_file = open(output_file_format, 'w');
         output_file_content = 'w0 = %f\nw1 = %f' % (w0, w1);
@@ -45,13 +46,13 @@ class UnemployedData:
         return documents;
 
     @staticmethod
-    def map_dataframe(documents):
+    def map_dataframe(documents, column_number):
         luni = []
         somaj = [];
         for document in documents:
             luni.append(document.month);
             
-            valoare_somaj = document.value.iloc[:, 1].tail(1).head(1).iloc[-1];
+            valoare_somaj = document.value.iloc[:, 1].tail(column_number).head(1).iloc[-1];
             valoare_somaj = int(re.sub('[^0-9]', '', str(valoare_somaj)));
             somaj.append(valoare_somaj);
 
