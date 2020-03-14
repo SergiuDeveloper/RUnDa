@@ -1,0 +1,83 @@
+USE sys;
+
+DROP TABLE IF EXISTS Counties;
+CREATE TABLE Counties (
+	ID INT NOT NULL UNIQUE PRIMARY KEY,
+    Title VARCHAR(32) NOT NULL UNIQUE
+);
+
+DROP TABLE IF EXISTS AgeCategories;
+CREATE TABLE AgeCategories (
+	ID INT NOT NULL UNIQUE PRIMARY KEY,
+    Title VARCHAR(32) NOT NULL UNIQUE
+);
+
+DROP TABLE IF EXISTS EducationLevels;
+CREATE TABLE EducationLevels (
+	ID INT NOT NULL UNIQUE PRIMARY KEY,
+    Title VARCHAR(32) NOT NULL UNIQUE
+);
+
+DROP TABLE IF EXISTS CompensationStatuses;
+CREATE TABLE CompensationStatuses (
+	ID INT NOT NULL UNIQUE PRIMARY KEY,
+    Title VARCHAR(32) NOT NULL UNIQUE
+);
+
+DROP TABLE IF EXISTS Environments;
+CREATE TABLE Environments (
+	ID INT NOT NULL UNIQUE PRIMARY KEY,
+    Title VARCHAR(32) NOT NULL UNIQUE
+);
+
+DROP TABLE IF EXISTS Genders;
+CREATE TABLE Genders (
+	ID INT NOT NULL UNIQUE PRIMARY KEY,
+    Title VARCHAR(32) NOT NULL UNIQUE
+);
+
+DROP TABLE IF EXISTS DataPerAgeCategory;
+CREATE TABLE DataPerAgeCategory (
+	ID INT NOT NULL UNIQUE PRIMARY KEY,
+    CountyID INT NOT NULL REFERENCES Counties.ID,
+    AgeCategoryID INT NOT NULL REFERENCES AgeCategories.ID,
+    Value INT NOT NULL,
+    UNIQUE KEY (CountyID, AgeCategoryID)
+);
+
+DROP TABLE IF EXISTS DataPerEducationLevel;
+CREATE TABLE DataPerEducationLevel (
+	ID INT NOT NULL UNIQUE PRIMARY KEY,
+    CountyID INT NOT NULL REFERENCES Counties.ID,
+    EducationLevelID INT NOT NULL REFERENCES EducationLevels.ID,
+    Value INT NOT NULL,
+    UNIQUE KEY (CountyID, EducationLevelID)
+);
+
+DROP TABLE IF EXISTS DataPerCompensationStatus;
+CREATE TABLE DataPerCompensationStatus (
+	ID INT NOT NULL UNIQUE PRIMARY KEY,
+    CountyID INT NOT NULL REFERENCES Counties.ID,
+    CompensationStatusID INT NOT NULL REFERENCES CompensationStatus.ID,
+    Value INT NOT NULL,
+    UNIQUE KEY (CountyID, CompensationStatusID)
+);
+
+DROP TABLE IF EXISTS DataPerGenderAndEnvironment;
+CREATE TABLE DataPerGenderAndEnvironment (
+	ID INT NOT NULL UNIQUE PRIMARY KEY,
+    CountyID INT NOT NULL REFERENCES Counties.ID,
+    GenderID INT NOT NULL REFERENCES Genders.ID,
+    EnvironmentID INT NOT NULL REFERENCES Environments.ID,
+    Value INT NOT NULL,
+    UNIQUE KEY (CountyID, GenderID, EnvironmentID)
+);
+
+DROP TABLE IF EXISTS RatePerGender;
+CREATE TABLE RatePerGender (
+	ID INT NOT NULL UNIQUE PRIMARY KEY,
+    CountyID INT NOT NULL REFERENCES Counties.ID,
+    GenderID INT NOT NULL REFERENCES Genders.ID,
+    Value INT NOT NULL,
+    UNIQUE KEY (CountyID, GenderID)
+);
