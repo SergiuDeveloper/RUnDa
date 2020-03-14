@@ -84,3 +84,17 @@ CREATE TABLE RatePerGender (
     Value INT NOT NULL,
     UNIQUE KEY (CountyID, GenderID)
 );
+
+DROP TABLE IF EXISTS PredictionFunctionWeights;
+CREATE TABLE PredictionFunctionWeights (
+	ID INT NOT NULL UNIQUE PRIMARY KEY,
+    CountyID INT REFERENCES Counties.ID,
+	AgeCategoryID INT REFERENCES AgeCategories.ID,
+    EducationLevelID INT REFERENCES EducationLevels.ID,
+    CompensationStatusID INT REFERENCES CompensationStatuses.ID,
+    EnvironmentID INT REFERENCES Environments.ID,
+    GenderID INT REFERENCES Genders.ID,
+    W0 FLOAT NOT NULL,
+    W1 FLOAT NOT NULL,
+    UNIQUE KEY (CountyID, AgeCategoryID, EducationLevelID, CompensationStatusID, EnvironmentID, GenderID)
+);
