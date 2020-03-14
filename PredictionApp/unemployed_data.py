@@ -1,5 +1,5 @@
 import re;
-import pandas as pd; 
+import pandas as pd;
 import linear_regression as lr;
 
 class UnemployedData:
