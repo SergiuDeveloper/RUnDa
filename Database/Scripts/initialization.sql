@@ -96,5 +96,20 @@ CREATE TABLE PredictionFunctionWeights (
     GenderID INT REFERENCES Genders.ID,
     W0 FLOAT NOT NULL,
     W1 FLOAT NOT NULL,
-    UNIQUE KEY (CountyID, AgeCategoryID, EducationLevelID, CompensationStatusID, EnvironmentID, GenderID)
+    UNIQUE KEY (
+		CountyID,
+        AgeCategoryID,
+        EducationLevelID,
+        CompensationStatusID,
+        EnvironmentID, 
+        GenderID
+	),
+	CONSTRAINT CHECK (
+		CountyID IS NOT NULL OR
+        AgeCategoryID IS NOT NULL OR
+        EducationLevelID IS NOT NULL OR
+        CompensationStatusID IS NOT NULL OR
+        EnvironmentID IS NOT NULL OR
+        GenderID IS NOT NULL
+	)
 );
