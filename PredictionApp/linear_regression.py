@@ -70,18 +70,46 @@ class LinearRegression:
         feature_prediction = [];
         label_prediction = [];
         for predicted_points_iterator in range(len(feature)):
-            feature_prediction.append(feature[len(feature) - 1] + predicted_points_iterator + 1);
-            label_prediction.append(w0 + (w1 * feature_prediction[len(feature_prediction) - 1]));
+            xValue = feature[len(feature) - 1] + predicted_points_iterator + 1;
+            yValue = w0 + (w1 * xValue);
+            feature_prediction.append(xValue);
+            label_prediction.append(yValue);
+
+        feature_prediction_not_null_label_points = [];
+        feature_prediction_null_label_points = [];
+        started_null_points = False;
+        for feature_prediction_point in range(len(feature_prediction)):
+            if label_prediction[feature_prediction_point] < 0:
+                label_prediction[feature_prediction_point] = 0;
+                started_null_points = True;
+            
+            if started_null_points == True:
+                feature_prediction_null_label_points.append(feature_prediction[feature_prediction_point]);
+            else:
+                feature_prediction_not_null_label_points.append(feature_prediction[feature_prediction_point]);
+
+        joined_feature = feature;
+        joined_feature.extend(feature_prediction_not_null_label_points);
 
         plt.scatter(feature_prediction, label_prediction);
-
-        feature.extend(feature_prediction);
-        joined_feature = feature;
 
         x0 = joined_feature[0];
         y0 = w0 + (w1 * x0);
         x1 = joined_feature[-1];
         y1 = w0 + (w1 * x1);
         plt.plot([x0, x1], [y0, y1], c = 'r');
+
+        if len(feature_prediction_null_label_points) > 0:
+            x0 = feature_prediction_not_null_label_points[len(feature_prediction_not_null_label_points) - 1];
+            y0 = w0 + (w1 * x0);
+            x1 = feature_prediction_null_label_points[0];
+            y1 = 0;
+            plt.plot([x0, x1], [y0, y1], c = 'r');
+
+            x0 = feature_prediction_null_label_points[0];
+            y0 = 0;
+            x1 = feature_prediction_null_label_points[-1];
+            y1 = 0;
+            plt.plot([x0, x1], [y0, y1], c = 'r');
 
         return plt;
