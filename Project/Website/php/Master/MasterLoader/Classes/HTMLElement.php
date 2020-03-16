@@ -30,7 +30,7 @@ class HTMLElement {
         
         $this->elementWasUsed = true;
         $this->elementBegun = true;
-        $this->LoadFileContents($this->htmlElementsFolderPath . $this->startFileName . $this->htmlElementsFileExtension);
+        return $this->LoadFileContents($this->htmlElementsFolderPath . $this->startFileName . $this->htmlElementsFileExtension);
     }
 
     public function End() {
@@ -48,12 +48,12 @@ class HTMLElement {
                 throw new Exception('In order to end the ' . $this->elementName . ' tag, you have to end the ' . $closedTag->elementName . ' tag first');
 
         $this->elementEnded = true;
-        $this->LoadFileContents($this->htmlElementsFolderPath . $this->endingFileName . $this->htmlElementsFileExtension);
+        return $this->LoadFileContents($this->htmlElementsFolderPath . $this->endingFileName . $this->htmlElementsFileExtension);
     }
 
     private function LoadFileContents($filePath) {
         $fileContents = file_get_contents($filePath);
-        echo $fileContents;
+        return $fileContents;
     }
 
     private $elementName;

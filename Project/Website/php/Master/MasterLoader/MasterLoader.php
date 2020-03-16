@@ -39,19 +39,19 @@ class MasterLoader {
     }
 
     public function BeginHTML() {
-        $this->htmlHTMLElement->Begin();
+        return $this->htmlHTMLElement->Begin();
     }
 
     public function EndHTML() {
-        $this->htmlHTMLElement->End();
+        return $this->htmlHTMLElement->End();
     }
 
     public function BeginHead() {
-        $this->htmlHeadElement->Begin();
+        return $this->htmlHeadElement->Begin();
     }
 
     public function EndHead() {
-        $this->htmlHeadElement->End();
+        return $this->htmlHeadElement->End();
     }
 
     private $htmlHTMLElement;
