@@ -38,19 +38,40 @@ class MasterLoader {
         );
     }
 
-    public function BeginHTML() {
+    public static function Load() {
+        $masterLoader = new MasterLoader();
+
+        $callerFile = get_included_files()[0];
+        $callerFileHTMLContent = file_get_contents($callerFile);
+
+        $callerFileHTMLContent = preg_replace('%(require|include) ((\'Master(/|\\\)LoadMaster.php\')|(\"Master(/|\\\)LoadMaster.php\"))(;?)%', '', $callerFileHTMLContent);
+
+        if (strpos($callerFileHTMLContent, '<html>') != FALSE)
+            $callerFileHTMLContent = str_replace('<html>', $masterLoader->BeginHTML(), $callerFileHTMLContent);
+        if (strpos($callerFileHTMLContent, '<head>') != FALSE)
+            $callerFileHTMLContent = str_replace('<head>', $masterLoader->BeginHead(), $callerFileHTMLContent);
+        if (strpos($callerFileHTMLContent, '</head>') != FALSE)
+            $callerFileHTMLContent = str_replace('</head>', $masterLoader->EndHead(), $callerFileHTMLContent);
+        if (strpos($callerFileHTMLContent, '</html>') != FALSE)
+            $callerFileHTMLContent = str_replace('</html>', $masterLoader->EndHTML(), $callerFileHTMLContent);
+
+        eval('?>' . $callerFileHTMLContent . '<?php');
+        exit();
+    }
+
+    private function BeginHTML() {
         return $this->htmlHTMLElement->Begin();
     }
 
-    public function EndHTML() {
+    private function EndHTML() {
         return $this->htmlHTMLElement->End();
     }
 
-    public function BeginHead() {
+    private function BeginHead() {
         return $this->htmlHeadElement->Begin();
     }
 
-    public function EndHead() {
+    private function EndHead() {
         return $this->htmlHeadElement->End();
     }
 

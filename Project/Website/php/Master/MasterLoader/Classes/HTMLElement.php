@@ -10,7 +10,7 @@ class HTMLElement {
     }
 
     public function __destruct() {
-        if (!$this->elementEnded)
+        if (!$this->elementEnded && $this->elementWasUsed)
             throw new Exception('An used element was never ended - ' . $this->elementName);
     }
 
