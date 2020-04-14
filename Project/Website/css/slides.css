@@ -1,8 +1,7 @@
 .slideshowContainer{
-    max-width: 1350px;
-    position: relative;
-    float: left;
-    width: 70%;
+    max-width: 1000px;
+    position: left;
+    width: 100%;
     height: auto;
     margin: auto;
     background-color: black;
@@ -88,14 +87,4 @@
 @keyframes fade{
     from {opacity: .4}
     to {opacity: 1}
-}
-.slideshowDescription{
-    float: right;
-    min-width: 30%;
-    min-height: inherit;
-    overflow: visible;
-    text-align: center;
-    vertical-align: middle;
-    background-color: gray;
-    display: none;
 }
