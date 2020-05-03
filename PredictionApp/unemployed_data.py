@@ -8,8 +8,22 @@ class UnemployedData:
         value = None
         month = None
 
+    __event_val = 0
+    __file_format_iterator = 0
+
     @staticmethod
-    def extract_data(input_document_format, column_number, epochs, plot_file_format, output_file_format, feature_name, label_name):
+    def get_request_var():
+        return __event_val[__file_format_iterator]
+
+    @staticmethod
+    def reset_request_var():
+        __event_val[__file_format_iterator] = 0
+
+    @staticmethod
+    def extract_data(input_document_format, column_number, epochs, plot_file_format, output_file_format, feature_name, label_name, event_val, file_format_iterator):
+        __event_val = event_val
+        __file_format_iterator = file_format_iterator
+
         years = [2018, 2019]
         months = ['ianuarie', 'februarie', 'martie', 'aprilie', 'mai', 'iunie', 'iulie', 'august', 'septembrie', 'octombrie', 'noiembrie', 'decembrie']
 
@@ -17,9 +31,9 @@ class UnemployedData:
         dataframe = UnemployedData.map_dataframe(documents, column_number)
 
         datalist = lr.LinearRegression.get_datalist_from_dataframe(dataframe)
-        [w0, w1] = lr.LinearRegression.linear_regression(datalist, epochs, label_name)
+        [w0, w1, p1] = lr.LinearRegression.polynomial_regression(datalist, epochs, label_name, feature_name, plot_file_format, output_file_format)
 
-        plot = lr.LinearRegression.plot_model(w0, w1, datalist,  feature_name, label_name)
+        plot = lr.LinearRegression.plot_model_polynomial(w0, w1, p1, datalist, feature_name, label_name)
         plot.savefig(plot_file_format)
         plot.close()
 
