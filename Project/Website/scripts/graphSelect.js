@@ -1,10 +1,40 @@
 
 
+let selectedCanvasTexture;
 var charts = document.getElementsByClassName("charts");
 testChart();
 testChart2();
 charts[1].style.display = "none";
+
+function callbackFunction(response){
+    console.log(response.toString());
+}
+
+function errorCallbackFunction(state, status, response){
+    console.log(state.toString() + "\n" + status.toString() + "\n" + JSON.parse(response).toString() );
+}
+
+function getHttpAsync(URL, callback){
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function () {
+        if(xmlHttp.readyState === 4 && xmlHttp.status === 200){
+            callback(xmlHttp.responseText);
+        }
+        else if(xmlHttp.readyState === 4){
+            errorCallbackFunction(xmlHttp.readyState, xmlHttp.status, xmlHttp.responseText);
+        }
+    }
+    xmlHttp.open("GET", URL, true);
+    xmlHttp.send(null);
+}
+
 function graphChanged(n){
+
+    var chartToGenerate = "chart" + (n);
+
+    selectedCanvasTexture = document.getElementById(chartToGenerate).getContext('2d');
+
+    getHttpAsync("https://127.0.0.1/TW/RESTTests/GetRandomGraphData.php?sectionsCount=7&sectionLabels=[\"apples\",\"pears\",\"pineapples\",\"oranges\",\"bananas\",\"melons\",\"grapefruits\"]&dataFloor=20&dataCeiling=100", callbackFunction);
 
     console.log(n);
     for(i = 0; i < charts.length; i++){
