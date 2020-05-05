@@ -1,5 +1,5 @@
-var slideIndex = 1;
-var timeout;
+let slideIndex = 1;
+let timeout;
 showSlides(slideIndex);
 
 function plusSlide(n){
@@ -13,10 +13,10 @@ function currentSlide(n){
 }
 
 function showSlides(n){
-    var i; 
+    let i;
     //var slideDescriptions = document.getElementsByClassName("slideshowDescription");
-    var slides = document.getElementsByClassName("slideContainer");
-    var dots = document.getElementsByClassName("dotSlide");
+    const slides = document.getElementsByClassName("slideContainer");
+    const dots = document.getElementsByClassName("dotSlide");
     if(n > slides.length) {
         slideIndex = 1;
     }

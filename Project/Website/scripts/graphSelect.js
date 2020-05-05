@@ -10,12 +10,7 @@ function graphChanged(n){
     for(i = 0; i < charts.length; i++){
         charts[i].style.display = "none";
     }
-    if(n == 0){
-        charts[0].style.display = "block";
-    }
-    if(n == 1){
-        charts[1].style.display = "block";
-    }
+    charts[n].style.display = "block";
 }
 
 function changeGraph(){
@@ -48,12 +43,12 @@ function testChart2(){
                             3
                         ],
                         backgroundColor: [
-                            'rgba(255, 99, 132, 0.2',
-                            'rgba(54, 162, 235, 0.2',
-                            'rgba(255, 206, 86, 0.2',
-                            'rgba(75, 192, 192, 0.2',
-                            'rgba(153, 102, 255, 0.2',
-                            'rbga(255, 159, 64, 0.2'
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rbga(255, 159, 64, 0.2)'
                         ],
                         borderColor: [
                             'rgba(255, 99, 132, 1)',
@@ -110,12 +105,12 @@ function testChart(){
                             3
                         ],
                         backgroundColor: [
-                            'rgba(255, 99, 132, 0.2',
-                            'rgba(54, 162, 235, 0.2',
-                            'rgba(255, 206, 86, 0.2',
-                            'rgba(75, 192, 192, 0.2',
-                            'rgba(153, 102, 255, 0.2',
-                            'rbga(255, 159, 64, 0.2'
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rbga(255, 159, 64, 0.2)'
                         ],
                         borderColor: [
                             'rgba(255, 99, 132, 1)',
