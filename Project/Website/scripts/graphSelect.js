@@ -16,6 +16,7 @@ function errorCallbackFunction(state, status, response){
 
 function getHttpAsync(URL, callback){
     var xmlHttp = new XMLHttpRequest();
+
     xmlHttp.onreadystatechange = function () {
         if(xmlHttp.readyState === 4 && xmlHttp.status === 200){
             callback(xmlHttp.responseText);
@@ -25,6 +26,11 @@ function getHttpAsync(URL, callback){
         }
     }
     xmlHttp.open("GET", URL, true);
+    xmlHttp.setRequestHeader('Access-Control-Allow-Origin', '*');
+    xmlHttp.setRequestHeader('Access-Control-Allow-Methods', 'GET, POST, PUT');
+    xmlHttp.setRequestHeader('Access-Control-Allow-Headers', 'Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,X-Access-Token,XKey,Authorization');
+    //xmlHttp.setRequestHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+
     xmlHttp.send(null);
 }
 
@@ -34,7 +40,7 @@ function graphChanged(n){
 
     selectedCanvasTexture = document.getElementById(chartToGenerate).getContext('2d');
 
-    getHttpAsync("https://127.0.0.1/TW/RESTTests/GetRandomGraphData.php?sectionsCount=7&sectionLabels=[\"apples\",\"pears\",\"pineapples\",\"oranges\",\"bananas\",\"melons\",\"grapefruits\"]&dataFloor=20&dataCeiling=100", callbackFunction);
+    getHttpAsync("https://localhost/TW/php/RESTTests/GetRandomGraphData.php?sectionsCount=7&sectionLabels=[\"apples\",\"pears\",\"pineapples\",\"oranges\",\"bananas\",\"melons\",\"grapefruits\"]&dataFloor=20&dataCeiling=100", callbackFunction);
 
     console.log(n);
     for(i = 0; i < charts.length; i++){
