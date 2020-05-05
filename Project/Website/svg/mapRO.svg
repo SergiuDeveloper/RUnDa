@@ -1,28 +1,4 @@
-<!DOCTYPE html>
-
-<html lang = "en">
-    <head>
-		<!-- Font? -->
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
-		<link rel = "stylesheet" href = "../css/layout.css">
-		<link rel = "stylesheet" href = "../css/slides.css">
-		
-		<title>
-			Placeholder Title
-		</title>
-	</head>
-    <body>
-        <header>
-			Placeholder header
-		</header>
-		<nav>
-			<a href = "./mainPage.html"> Home </a>
-			<a href = "./graph.html"> Placeholder Graph Link 1 </a>
-			<a href = "./mapView.html"> Placeholder Link 2 </a>
-			<a href = "./ph3.html"> Placeholder Link 3 </a>
-		</nav>
-		<div>
-			<?xml version="1.0"?>
+<?xml version="1.0"?>
 <!--
 ************* Copyright (c) 2017 Pareto Softare, LLC DBA Simplemaps.com *******************		
 ************* Free for Commercial Use, full terms at  http://simplemaps.com/resources/svg-license ************
@@ -120,6 +96,3 @@
  <circle cx="416.9" cy="151.6" id="2">
  </circle>
 </svg>
-		</div>
-    </body>
-</html>
