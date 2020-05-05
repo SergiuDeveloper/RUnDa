@@ -2,8 +2,9 @@
     max-width: 100%;
     height: auto;
     margin: auto;
-    /*text-align: center;*/
-    background-color: black;
+    text-align: center;
+    background-color: inherit;
+    position: relative;
 }
 
 .slideshow{
@@ -13,9 +14,7 @@
     padding-left: 15%;
     padding-right : 15%;
     padding-top:1em;
-
 }
-
 
 .slideContainer{
     display: none;
@@ -23,27 +22,60 @@
 
 .previousSlide, .nextSlide{
     cursor: pointer;
-    position: relative;
-    bottom: 50%;
+    /*position: relative;*/
+    /*top : -250px;*/
+    /*bottom: 50%;*/
+    /*top : 50px;*/
+    /*align-self: center;*/
+    margin-right: 1px;
+    margin-left: 1px;
     width: auto;
-    margin-top: -22px;
+    /*height: auto;*/
     padding: 16px;
     color: white;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
+    border-radius: 0 0 0 0;
+    /*margin-top : 50px;*/
 }
 
+.slideshowContainer .previousSlide{
+    position: absolute;
+
+    justify-content: left;
+
+    right : 100%;
+    top : 50%;
+    z-index: 1;
+    transform: translate(+0%, -50%);
+}
+
+.slideshowContainer .nextSlide{
+    position: absolute;
+
+    justify-content: right;
+
+    top : 50%;
+    left: 100%;
+    z-index: 1;
+    transform: translate(+0%, -50%);
+}
+/*
 .nextSlide{
-    /*right: 0;
-    position: inherit;
+    left: 50%;
     position: absolute;
     border-radius:  3px 0 0 3px;
-
-     */
-
 }
+
+.previousSlide{
+    right : 50%;
+    position: absolute;
+    border-radius: 3px 0 0 3px;
+    bottom : 50%;
+}
+
+*/
 
 .previousSlide:hover, .nextSlide:hover{
     background-color: rgba(0,0,0,0.8);
@@ -52,7 +84,7 @@
 .slideText{
     color: #555555;
     font-size: 16px;
-    padding: 0 0;
+    padding: 0 5px;
     position: relative;
     bottom: 30px;
     width: 100%;
@@ -76,6 +108,10 @@
     background-color: #bbb;
     display: inline-block;
     transition: background-color 0.6s ease;
+}
+
+
+.slideshowDescription{=
 }
 
 .active, .dotSlide:hover{

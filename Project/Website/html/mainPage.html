@@ -25,7 +25,10 @@
 
 		<div class = "slideshow">
 
+
 			<div class = "slideshowContainer">
+				<a class = "nextSlide" onclick = "plusSlide(0)"> &#10095 </a>
+				<a class = "previousSlide" onclick = "plusSlide(-2)"> &#10094 </a>
 				<div class = "slideContainer fade">
 					<div class = "slideNumberText"> 1 / 4 </div>
 					<img src = "../resources/slides/Slide1.png" alt = "Slide 1" style = "width: 100%">
@@ -50,9 +53,6 @@
 					<div class = "slideText"> Caption Text Four </div>
 				</div>
 
-				<a class = "previousSlide" onclick = "plusSlide(-2)"> &#10094 </a>
-				<a class = "nextSlide" onclick = "plusSlide(0)"> &#10095 </a>
-
 
 				<div style = "text-align: center">
 						<span class = "dotSlide" onclick = "currentSlide(1)"></span>
@@ -61,29 +61,25 @@
 						<span class = "dotSlide" onclick = "currentSlide(4)"></span>
 				</div>
 			</div>
-
-			<!--<div class = "slideshowDescription">
-				Slide description 1
-			</div>
-
-			<div class = "slideshowDescription">
-				Slide description 2
-			</div>
-
-			<div class = "slideshowDescription">
-				Slide description 3
-			</div>
-
-			<div class = "slideshowDescription">
-				Slide description 4
-			</div>
-			-->
-
 		</div>
 
 		<section class = "contentPlaceholder">
 			<div class = "contentItem descriptionPlaceholder">
-				Placeholder Description
+				<div class = "slideshowDescription fade" style="display: none;">
+					Slide description 1
+				</div>
+
+				<div class = "slideshowDescription fade" style="display: none;">
+					Slide description 2
+				</div>
+
+				<div class = "slideshowDescription fade" style="display: none;">
+					Slide description 3
+				</div>
+
+				<div class = "slideshowDescription fade" style="display: none;">
+					Slide description 4
+				</div>
 			</div>
 
 			<div class = "contentItem extraPlaceholder">
