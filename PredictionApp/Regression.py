@@ -3,7 +3,7 @@
 from types import MethodType
 from typing import List, Tuple
 
-class Regression:
+class Regression():
     def __init__(self):
         if type(getattr(self, 'train')) is not MethodType:
             raise TypeError
@@ -18,3 +18,5 @@ class Regression:
         data_list = [(data[0] - data_subtrahend, data[1]) for data in data_list]
 
         return (data_list, data_subtrahend)
+
+    #Eliminate bad data
