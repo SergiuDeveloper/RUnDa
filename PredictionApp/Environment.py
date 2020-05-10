@@ -89,7 +89,7 @@ class Environment():
         for subcategory_index in range(len(csv_lines[0])):
             subcategory = csv_lines[0][subcategory_index]
 
-            subcategories.append(subcategory.lower())
+            subcategories.append(subcategory.upper())
 
         return subcategories
 
@@ -135,7 +135,7 @@ class Environment():
             data
             for data in self.__data_dictionary[(category, subcategory, location)]
             if data[0] is xValue
-            ]):
+        ]):
             raise ValueError
 
         self.__data_dictionary[(category, subcategory, location)].append((xValue, yValue))
