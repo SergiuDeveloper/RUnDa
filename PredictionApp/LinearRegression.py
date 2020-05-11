@@ -1,18 +1,19 @@
 #!/usr/bin/python3
 
 from Regression import Regression
+
 from typing import List, Tuple
 
 class LinearRegression(Regression):
     @staticmethod
     def train(
-        data_list:      List[Tuple[float, float]],
+        data_list:      List[Tuple[int, float]],
         epochs:         int,
         learning_rate:  float
-    ) -> Tuple[float, float]:
-        normalization_result: Tuple[List[float, float], float] = LogisticPolynomialRegression._Regression__normalize(data_list)
+    ) -> Tuple[Tuple[float, float], Tuple[int, float]]:
+        normalization_result: Tuple[List[float, float], Tuple[int, float]] = LinearRegression._Regression__normalize(data_list)
         data_list = normalization_result[0]
-        data_subtrahend: float = normalization_result[1]
+        data_subtrahend: Tuple[int, float] = normalization_result[1]
 
         coefficients_tuple: Tuple[float, float] = (LinearRegression.__compute_optimal_initial_coefficients(data_list))
         w0: float = coefficients_tuple[0]
@@ -23,9 +24,7 @@ class LinearRegression(Regression):
             w0 = coefficients_tuple[0]
             b = coefficients_tuple[1]
 
-        b += data_subtrahend
-
-        return (w0, b)
+        return ((w0, b), data_subtrahend)
 
     @staticmethod
     def __compute_optimal_initial_coefficients(
@@ -38,7 +37,7 @@ class LinearRegression(Regression):
 
     @staticmethod
     def __update_coefficients(
-        data_list:      List[Tuple[float, float]],
+        data_list:      List[Tuple[int, float]],
         learning_rate:  float,
         w0:             float,
         b:              float
@@ -54,7 +53,7 @@ class LinearRegression(Regression):
 
     @staticmethod
     def __compute_gradient(
-        data_list:  List[Tuple[float, float]],
+        data_list:  List[Tuple[int, float]],
         w0:         float,
         b:          float
     ) -> Tuple[float, float]:

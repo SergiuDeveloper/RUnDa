@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 
+from LinearRegression import LinearRegression
+from LogisticPolynomialRegression import LogisticPolynomialRegression
+
 from csv import reader
 from typing import List, Dict, Tuple, Union
 from os import walk
@@ -10,8 +13,35 @@ class Environment():
     ):
         self.__initialize(data_folder)
 
-    def print_data_dictionary(self) -> None:
-        print(self.__data_dictionary)
+    def linear_regression(self) -> List[Tuple[Tuple[str, str, str], Tuple[Tuple[float, float], Tuple[int, float]]]]:
+        training_results: List[Tuple[Tuple[str, str, str], Tuple[Tuple[float, float], Tuple[int, float]]]] = []
+        training_result: Tuple[Tuple[float, float], Tuple[int, float]] = None
+
+        data_dictionary_keys: List[Tuple[str, str, str]] = self.__data_dictionary.keys()
+        for data_dictionary_key in data_dictionary_keys:
+            training_result = LinearRegression.train(
+                    self.__data_dictionary[data_dictionary_key],
+                    1000,
+                    0.001
+                )
+            training_results.append((data_dictionary_key, training_result))
+
+        return training_results
+
+    def logistic_polynomial_regression(self) -> List[Tuple[Tuple[str, str, str], Tuple[Tuple[float, float, float], Tuple[int, float]]]]:
+        training_results: List[Tuple[Tuple[str, str, str], Tuple[Tuple[float, float, float], Tuple[int, float]]]] = []
+        training_result: Tuple[Tuple[float, float, float], Tuple[int, float]] = None
+
+        data_dictionary_keys: List[Tuple[str, str, str]] = self.__data_dictionary.keys()
+        for data_dictionary_key in data_dictionary_keys:
+            training_result = LogisticPolynomialRegression.train(
+                    self.__data_dictionary[data_dictionary_key],
+                    1000,
+                    0.001
+                )
+            training_results.append((data_dictionary_key, training_result))
+
+        return training_results
 
     def __initialize(self,
         data_folder: str
@@ -40,6 +70,73 @@ class Environment():
                         data_file = f'{data_folder}/{category_directory}/{year_directory}/{month_directory}/{data_file}'
                         self.__get_data_from_file(data_file, category, year, month)
 
+        self.__remove_single_entry_datasets()
+
+    def __get_data_from_file(self,
+        data_file:      str,
+        category:       str,
+        year:           int,
+        month:          int
+    ) -> None:
+        location:   str
+        xValue:     int
+        yValue:     Union[int, float]
+
+        with open(data_file) as csv_file:
+            csv_lines: List[List[str]] = list(reader(csv_file))
+            csv_lines = Environment.__validate_csv_data(csv_lines)
+
+            subcategories: List[str] = Environment.__get_subcategories(csv_lines)
+
+            location_column_index: int = 0
+            
+            csv_lines.pop(0)
+
+            for csv_line in csv_lines:
+                location = csv_line[location_column_index]
+
+                for element_index in range(len(csv_line)):
+                    if element_index == location_column_index:
+                        continue
+
+                    subcategory = subcategories[element_index]
+                    xValue = year * 12 + month
+                    yValue = Environment.__string_to_num(csv_line[element_index])
+                    if yValue == None:
+                        continue
+
+                    self.__add_to_data_dictionary(
+                        category,
+                        subcategory,
+                        location,
+                        xValue,
+                        yValue
+                    )
+
+    def __add_to_data_dictionary(self,
+        category:       str,
+        subcategory:    str,
+        location:       str,
+        xValue:         int,
+        yValue:         Union[int, float]
+    ) -> None:
+        if (category, subcategory, location) not in self.__data_dictionary:
+            self.__data_dictionary[(category, subcategory, location)] = []
+        elif len([
+            data
+            for data in self.__data_dictionary[(category, subcategory, location)]
+            if data[0] == xValue
+        ]) > 0:
+            raise ValueError
+
+        self.__data_dictionary[(category, subcategory, location)].append((xValue, yValue))
+
+    def __remove_single_entry_datasets(self) -> None:
+        data_dictionary_keys: List[Tuple[str, str, str]] = list(self.__data_dictionary.keys())
+        for data_dictionary_key in data_dictionary_keys:
+            if len(self.__data_dictionary[data_dictionary_key]) < 2:
+                self.__data_dictionary.pop(data_dictionary_key)
+
     @staticmethod
     def __validate_csv_data(
         csv_lines: List[List[str]]
@@ -51,13 +148,13 @@ class Environment():
         csv_lines = [
             csv_line
             for csv_line in csv_lines
-            if csv_line[0] is not ''
+            if csv_line[0] != ''
         ]
 
         empty_csv_column_indexes: List[int] = [
             column_index
             for column_index in range(len(csv_lines[0]))
-            if csv_lines[0][column_index].strip() is ''
+            if csv_lines[0][column_index].strip() == ''
         ]
         csv_lines_valid: List[List[str]] = []
         csv_line_valid: List[str]
@@ -70,7 +167,7 @@ class Environment():
                     continue
 
                 element = csv_line[element_index].strip()
-                if element is '':
+                if element == '':
                     element = str(0)
 
                 csv_line_valid.append(element)
@@ -94,22 +191,6 @@ class Environment():
         return subcategories
 
     @staticmethod
-    def __get_location_column_index(
-        csv_lines: List[List[str]],
-    ) -> int:
-        location_column_index:  int
-        location_column_name:   str = 'JUDET'
-
-        subcategory: str
-        for subcategory_index in range(len(csv_lines[0])):
-            subcategory = csv_lines[0][subcategory_index]
-                
-            if subcategory.upper().startswith(location_column_name):
-                location_column_index = subcategory_index
-
-        return location_column_index
-
-    @staticmethod
     def __string_to_num(
         string_to_parse: str
     ) -> Union[int, float]:
@@ -120,63 +201,3 @@ class Environment():
                 return float(string_to_parse)
             except:
                 return None
-
-    def __add_to_data_dictionary(self,
-        category:       str,
-        subcategory:    str,
-        location:       str,
-        xValue:         int,
-        yValue:         Union[int, float]
-    ):
-        if (category, subcategory, location) not in self.__data_dictionary:
-            self.__data_dictionary[(category, subcategory, location)] = []
-
-        if len([
-            data
-            for data in self.__data_dictionary[(category, subcategory, location)]
-            if data[0] is xValue
-        ]):
-            raise ValueError
-
-        self.__data_dictionary[(category, subcategory, location)].append((xValue, yValue))
-
-    def __get_data_from_file(self,
-        data_file:      str,
-        category:       str,
-        year:           int,
-        month:          int
-    ) -> None:
-        location:   str
-        xValue:     int
-        yValue:     Union[int, float]
-
-        with open(data_file) as csv_file:
-            csv_lines: List[List[str]] = list(reader(csv_file))
-            csv_lines = Environment.__validate_csv_data(csv_lines)
-
-            subcategories: List[str] = Environment.__get_subcategories(csv_lines)
-
-            location_column_index: int = Environment.__get_location_column_index(csv_lines)
-            
-            csv_lines.pop(0)
-
-            for csv_line in csv_lines:
-                location = csv_line[location_column_index]
-
-                for element_index in range(len(csv_line)):
-                    if element_index is location_column_index:
-                        continue
-
-                    subcategory = subcategories[element_index]
-                    xValue = year * 12 + month
-                    yValue = Environment.__string_to_num(csv_line[element_index])
-                    if yValue is None:
-                        continue
-
-                    self.__add_to_data_dictionary(
-                        category,
-                        subcategory,
-                        location,
-                        xValue,
-                        yValue
-                    )

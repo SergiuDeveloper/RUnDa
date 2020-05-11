@@ -2,6 +2,6 @@
 
 from Regression import Regression
 
-class PolynomialRegression():
+class PolynomialRegression(Regression):
     #Split training data and test data to check for over/underfitting
     pass
