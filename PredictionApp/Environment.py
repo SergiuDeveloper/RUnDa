@@ -82,7 +82,7 @@ class Environment():
         xValue:     int
         yValue:     Union[int, float]
 
-        with open(data_file) as csv_file:
+        with open(data_file, 'r', encoding = 'latin-1') as csv_file:
             csv_lines: List[List[str]] = list(reader(csv_file))
             csv_lines = Environment.__validate_csv_data(csv_lines)
 
@@ -98,7 +98,7 @@ class Environment():
                 for element_index in range(len(csv_line)):
                     if element_index == location_column_index:
                         continue
-
+                    
                     subcategory = subcategories[element_index]
                     xValue = year * 12 + month
                     yValue = Environment.__string_to_num(csv_line[element_index])
