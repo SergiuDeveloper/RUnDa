@@ -30,6 +30,17 @@ class LogisticPolynomialRegression(Regression):
         return ((w0, p0, b), data_subtrahend)
 
     @staticmethod
+    def compute_function_result(
+        x_value:    int,
+        w0:         float,
+        p0:         float,
+        b:          float
+    ) -> float:
+        function_result: float = b + w0 * (x_value ** p0)
+
+        return function_result
+
+    @staticmethod
     def __compute_optimal_initial_coefficients(
         data_list: List[Tuple[int, float]]
     ) -> Tuple[float, float, float]:
@@ -73,9 +84,11 @@ class LogisticPolynomialRegression(Regression):
             function_result: float = LogisticPolynomialRegression.__compute_function_result(data[0], w0, p0, b)
             error: float = data[1] - function_result
 
-            w0_derivative -= error * (data[0] ** p0) / len(data_list)
+            power_result = data[0] ** p0 if data[0] != 0 or p0 >= 0 else 0
+
+            w0_derivative -= error * power_result / len(data_list)
             if data[0] != 0:
-                p0_derivative -= error * data[0] * w0 * (data[0] ** p0) * log(data[0]) / len(data_list)
+                p0_derivative -= error * data[0] * w0 * power_result * log(data[0]) / len(data_list)
             b_derivative -= error / len(data_list)
 
         return (w0_derivative, p0_derivative, b_derivative)
@@ -87,7 +100,9 @@ class LogisticPolynomialRegression(Regression):
         p0:         float,
         b:          float
     ) -> float:
-        return b + w0 * (x_value ** p0)
+        power_result = x_value ** p0 if x_value != 0 or p0 >= 0 else 0
+
+        return b + w0 * power_result
 
     @staticmethod
     def __coefficient_modification_rate(

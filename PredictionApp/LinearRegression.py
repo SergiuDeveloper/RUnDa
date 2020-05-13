@@ -27,6 +27,16 @@ class LinearRegression(Regression):
         return ((w0, b), data_subtrahend)
 
     @staticmethod
+    def compute_function_result(
+        x_value:    int,
+        w0:         float,
+        b:          float
+    ) -> float:
+        function_result: float = b + w0 * x_value
+
+        return function_result
+
+    @staticmethod
     def __compute_optimal_initial_coefficients(
         data_list: List[Tuple[float, float]]
     ) -> Tuple[float, float]:

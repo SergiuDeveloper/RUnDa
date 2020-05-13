@@ -1,76 +1,172 @@
 #!/usr/bin/python3
 
 from LinearRegression import LinearRegression
+from PolynomialRegression import PolynomialRegression
 from LogisticPolynomialRegression import LogisticPolynomialRegression
 
 from csv import reader
-from typing import List, Dict, Tuple, Union
-from os import walk
+from typing import List, Dict, Tuple, Union, Callable
+from os import walk, mkdir, remove
+from os.path import exists, join
+from inspect import signature
+from matplotlib import use
+use('Agg')
+from matplotlib.pyplot import plot, scatter, savefig, close
 
 class Environment():
     def __init__(self,
-        data_folder: str
+        data_folder:    str,
+        plots_folder:   str
     ):
-        self.__initialize(data_folder)
+        self.__data_folder = data_folder
+        self.__plots_folder = plots_folder
+
+        self.__initialize()
 
     def linear_regression(self) -> List[Tuple[Tuple[str, str, str], Tuple[Tuple[float, float], Tuple[int, float]]]]:
         training_results: List[Tuple[Tuple[str, str, str], Tuple[Tuple[float, float], Tuple[int, float]]]] = []
-        training_result: Tuple[Tuple[float, float], Tuple[int, float]] = None
+        training_result: Tuple[Tuple[float, float], Tuple[int, float]]
 
         data_dictionary_keys: List[Tuple[str, str, str]] = self.__data_dictionary.keys()
         for data_dictionary_key in data_dictionary_keys:
             training_result = LinearRegression.train(
                     self.__data_dictionary[data_dictionary_key],
-                    1000,
-                    0.001
+                    1,
+                    0.1
                 )
             training_results.append((data_dictionary_key, training_result))
+
+            self.__save_plot(data_dictionary_key, training_result, LinearRegression.compute_function_result, 'linear')
+
+        return training_results
+
+    def polynomial_regression(self) -> List[Tuple[Tuple[str, str, str], Tuple[Tuple[List[float], float], Tuple[int, float]]]]:
+        training_results: List[Tuple[Tuple[str, str, str], Tuple[Tuple[List[float], float], Tuple[int, float]]]] = []
+        training_result: Tuple[Tuple[List[float], float], Tuple[int, float]]
+
+        data_dictionary_keys: List[Tuple[str, str, str]] = list(self.__data_dictionary.keys())
+        for data_dictionary_key in data_dictionary_keys:
+            training_result = PolynomialRegression.train(
+                    self.__data_dictionary[data_dictionary_key],
+                    1,
+                    0.1,
+                    0,
+                    3
+                )
+            training_results.append((data_dictionary_key, training_result))
+
+            self.__save_plot(data_dictionary_key, training_result, PolynomialRegression.compute_function_result, 'polynomial')
 
         return training_results
 
     def logistic_polynomial_regression(self) -> List[Tuple[Tuple[str, str, str], Tuple[Tuple[float, float, float], Tuple[int, float]]]]:
         training_results: List[Tuple[Tuple[str, str, str], Tuple[Tuple[float, float, float], Tuple[int, float]]]] = []
-        training_result: Tuple[Tuple[float, float, float], Tuple[int, float]] = None
+        training_result: Tuple[Tuple[float, float, float], Tuple[int, float]]
 
         data_dictionary_keys: List[Tuple[str, str, str]] = self.__data_dictionary.keys()
         for data_dictionary_key in data_dictionary_keys:
             training_result = LogisticPolynomialRegression.train(
                     self.__data_dictionary[data_dictionary_key],
-                    1000,
-                    0.001
+                    1,
+                    0.1
                 )
             training_results.append((data_dictionary_key, training_result))
 
+            self.__save_plot(data_dictionary_key, training_result, LogisticPolynomialRegression.compute_function_result, 'logistic_polynomial')
+
         return training_results
 
-    def __initialize(self,
-        data_folder: str
-    ) -> None:
+    def __initialize(self) -> None:
         self.__data_dictionary: Dict[Tuple[str, str, str], List[Tuple[int, Union[int, float]]]] = {}
 
         category:   str
         year:       int
         month:      int
 
-        category_directories: List[str] = next(walk(f'{data_folder}'))[1]
+        category_directories: List[str] = next(walk(f'{self.__data_folder}'))[1]
         for category_directory in category_directories:
             category = category_directory
 
-            year_directories: List[str] = next(walk(f'{data_folder}/{category_directory}'))[1]
+            year_directories: List[str] = next(walk(f'{self.__data_folder}/{category_directory}'))[1]
             for year_directory in year_directories:
                 year = int(year_directory)
 
-                month_directories: List[str] = next(walk(f'{data_folder}/{category_directory}/{year_directory}'))[1]
+                month_directories: List[str] = next(walk(f'{self.__data_folder}/{category_directory}/{year_directory}'))[1]
                 for month_directory in month_directories:
                     month = int(month_directory)
 
-                    data_files: List[str] = next(walk(f'{data_folder}/{category_directory}/{year_directory}/{month_directory}'))[2]
+                    data_files: List[str] = next(walk(f'{self.__data_folder}/{category_directory}/{year_directory}/{month_directory}'))[2]
 
                     for data_file in data_files:
-                        data_file = f'{data_folder}/{category_directory}/{year_directory}/{month_directory}/{data_file}'
+                        data_file = f'{self.__data_folder}/{category_directory}/{year_directory}/{month_directory}/{data_file}'
                         self.__get_data_from_file(data_file, category, year, month)
 
         self.__remove_single_entry_datasets()
+
+    def __save_plot(self,
+        data_dictionary_key:        Tuple[str, str, str],
+        training_result:            Tuple[Union[Tuple[Union[List[float], float], float], Tuple[Union[List[float], float], Union[List[float], float], float]], Tuple[int, float]],
+        compute_function_result:    Callable[[int, Union[List[float], float], float], float],
+        plot_file_name:             str
+    ) -> None:
+        training_data: List[Tuple[int, Union[int, float]]] = self.__data_dictionary[data_dictionary_key]
+
+        compute_function_params_count: int = len(signature(compute_function_result).parameters)
+
+        if compute_function_params_count > 3:
+            w: Union[List[float], float] = training_result[0][0]
+            p: Union[List[float], float] = training_result[0][1]
+            b: float = training_result[0][2]
+        else:
+            w: Union[List[float], float] = training_result[0][0]
+            b: float = training_result[0][1]
+
+        x_sub: int = training_result[1][0]
+        y_sub: float = training_result[1][1]
+
+        left_point: int = training_data[0][0]
+        right_point: int = training_data[-1][0]
+        x: List[int] = [(left_point + i * (right_point - left_point) / 1000) for i in range(1001)]
+        fx: List[float] = []
+
+        for xi in x:
+            if compute_function_params_count > 3:
+                function_result = compute_function_result(xi - x_sub, w, p, b + y_sub)
+            else:
+                function_result = compute_function_result(xi - x_sub, w, b + y_sub)
+            fx.append(function_result)
+
+        plot(x, fx)
+        scatter(
+            [
+                data_point[0]
+                for data_point in training_data
+            ],
+            [
+                data_point[1]
+                for data_point in training_data
+            ]
+        )
+
+        category_name: str = data_dictionary_key[0].replace('/', ' SI ')
+        subcategory_name: str = data_dictionary_key[1].replace('/', ' SI ')
+        location: str = data_dictionary_key[2]
+        if not exists(f'{self.__plots_folder}'):
+            mkdir(f'{self.__plots_folder}')
+        if not exists(f'{self.__plots_folder}/{category_name}'):
+            mkdir(f'{self.__plots_folder}/{category_name}')
+        if not exists(f'{self.__plots_folder}/{category_name}/{subcategory_name}'):
+            mkdir(f'{self.__plots_folder}/{category_name}/{subcategory_name}')
+        if not exists(f'{self.__plots_folder}/{category_name}/{subcategory_name}/{location}'):
+            mkdir(f'{self.__plots_folder}/{category_name}/{subcategory_name}/{location}')
+        for root, directories, files in walk(f'{self.__plots_folder}/{category_name}/{subcategory_name}/{location}', topdown = False):
+            if f'{plot_file_name}.png' in files:
+                remove(join(root, f'{plot_file_name}.png'))
+            for directory in directories:
+                rmdir(join(root, directory))
+        
+        savefig(f'{self.__plots_folder}/{category_name}/{subcategory_name}/{location}/{plot_file_name}.png')
+        close()
 
     def __get_data_from_file(self,
         data_file:      str,

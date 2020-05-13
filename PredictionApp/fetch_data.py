@@ -92,7 +92,7 @@ def write_csv_data_to_file_system(
         resource_name.strip()
         month_year_strings = [month_year_string.strip() for month_year_string in resource_name.split()[-2:]]
 
-        category_name = resource_name.split(category_date_linker_keyword)[0].strip()
+        category_name = resource_name.split(category_date_linker_keyword)[0].replace('/', ' SI ').strip()
 
         try:
             month = months[month_year_strings[0]]
