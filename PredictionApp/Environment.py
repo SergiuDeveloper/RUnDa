@@ -4,6 +4,8 @@ from LinearRegression import LinearRegression
 from PolynomialRegression import PolynomialRegression
 from LogisticPolynomialRegression import LogisticPolynomialRegression
 
+from concurrent.futures import ProcessPoolExecutor, Future, as_completed
+from multiprocessing import cpu_count
 from csv import reader
 from typing import List, Dict, Tuple, Union, Callable
 from os import walk, mkdir, remove
@@ -27,16 +29,23 @@ class Environment():
         training_results: List[Tuple[Tuple[str, str, str], Tuple[Tuple[float, float], Tuple[int, float]]]] = []
         training_result: Tuple[Tuple[float, float], Tuple[int, float]]
 
-        data_dictionary_keys: List[Tuple[str, str, str]] = self.__data_dictionary.keys()
-        for data_dictionary_key in data_dictionary_keys:
-            training_result = LinearRegression.train(
-                    self.__data_dictionary[data_dictionary_key],
-                    1,
-                    0.1
-                )
-            training_results.append((data_dictionary_key, training_result))
+        data_dictionary_keys: List[Tuple[str, str, str]] = list(self.__data_dictionary.keys())
+        processes_future_list: List[Future] = []
+        processes_future_data_types_dictionary: Dict[Future, Tuple[str, str, str]] = {}
+        process_future: Future
+        with ProcessPoolExecutor(cpu_count()) as process_pool_executor:
+            for data_dictionary_key in data_dictionary_keys:
+                process_future = process_pool_executor.submit(LinearRegression.train, self.__data_dictionary[data_dictionary_key], 1, 0.1)
+                processes_future_list.append(process_future)
+                processes_future_data_types_dictionary[process_future] = data_dictionary_key
 
-            self.__save_plot(data_dictionary_key, training_result, LinearRegression.compute_function_result, 'linear')
+            data_dictionary_key: Tuple[str, str, str]
+            for process_future_element in as_completed(processes_future_list):
+                training_result = process_future_element.result()
+                data_dictionary_key = processes_future_data_types_dictionary[process_future_element]
+                training_results.append((data_dictionary_key, training_result))
+
+                self.__save_plot(data_dictionary_key, training_result, LinearRegression.compute_function_result, 'linear')
 
         return training_results
 
@@ -45,17 +54,22 @@ class Environment():
         training_result: Tuple[Tuple[List[float], float], Tuple[int, float]]
 
         data_dictionary_keys: List[Tuple[str, str, str]] = list(self.__data_dictionary.keys())
-        for data_dictionary_key in data_dictionary_keys:
-            training_result = PolynomialRegression.train(
-                    self.__data_dictionary[data_dictionary_key],
-                    1,
-                    0.1,
-                    0,
-                    3
-                )
-            training_results.append((data_dictionary_key, training_result))
+        processes_future_list: List[Future] = []
+        processes_future_data_types_dictionary: Dict[Future, Tuple[str, str, str]] = {}
+        process_future: Future
+        with ProcessPoolExecutor(cpu_count()) as process_pool_executor:
+            for data_dictionary_key in data_dictionary_keys:
+                process_future = process_pool_executor.submit(PolynomialRegression.train, self.__data_dictionary[data_dictionary_key], 1, 0.1, 0, 3)
+                processes_future_list.append(process_future)
+                processes_future_data_types_dictionary[process_future] = data_dictionary_key
 
-            self.__save_plot(data_dictionary_key, training_result, PolynomialRegression.compute_function_result, 'polynomial')
+            data_dictionary_key: Tuple[str, str, str]
+            for process_future_element in as_completed(processes_future_list):
+                training_result = process_future_element.result()
+                data_dictionary_key = processes_future_data_types_dictionary[process_future_element]
+                training_results.append((data_dictionary_key, training_result))
+
+                self.__save_plot(data_dictionary_key, training_result, PolynomialRegression.compute_function_result, 'polynomial')
 
         return training_results
 
@@ -63,16 +77,23 @@ class Environment():
         training_results: List[Tuple[Tuple[str, str, str], Tuple[Tuple[float, float, float], Tuple[int, float]]]] = []
         training_result: Tuple[Tuple[float, float, float], Tuple[int, float]]
 
-        data_dictionary_keys: List[Tuple[str, str, str]] = self.__data_dictionary.keys()
-        for data_dictionary_key in data_dictionary_keys:
-            training_result = LogisticPolynomialRegression.train(
-                    self.__data_dictionary[data_dictionary_key],
-                    1,
-                    0.1
-                )
-            training_results.append((data_dictionary_key, training_result))
+        data_dictionary_keys: List[Tuple[str, str, str]] = list(self.__data_dictionary.keys())
+        processes_future_list: List[Future] = []
+        processes_future_data_types_dictionary: Dict[Future, Tuple[str, str, str]] = {}
+        process_future: Future
+        with ProcessPoolExecutor(cpu_count()) as process_pool_executor:
+            for data_dictionary_key in data_dictionary_keys:
+                process_future = process_pool_executor.submit(LogisticPolynomialRegression.train, self.__data_dictionary[data_dictionary_key], 1, 0.1)
+                processes_future_list.append(process_future)
+                processes_future_data_types_dictionary[process_future] = data_dictionary_key
 
-            self.__save_plot(data_dictionary_key, training_result, LogisticPolynomialRegression.compute_function_result, 'logistic_polynomial')
+            data_dictionary_key: Tuple[str, str, str]
+            for process_future_element in as_completed(processes_future_list):
+                training_result = process_future_element.result()
+                data_dictionary_key = processes_future_data_types_dictionary[process_future_element]
+                training_results.append((data_dictionary_key, training_result))
+
+                self.__save_plot(data_dictionary_key, training_result, LogisticPolynomialRegression.compute_function_result, 'logistic_polynomial')
 
         return training_results
 
