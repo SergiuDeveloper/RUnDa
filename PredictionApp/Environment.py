@@ -22,13 +22,17 @@ class Environment():
         plots_folder:   str,
         logs_folder:    str
     ):
-        self.__data_folder = data_folder
-        self.__plots_folder = plots_folder
-        self.__logs_folder = logs_folder
+        self.__data_folder: str = data_folder
+        self.__plots_folder: str = plots_folder
+        self.__logs_folder: str = logs_folder
+        self.__log_file: str = None
 
         self.__initialize()
 
-    def linear_regression(self) -> List[Tuple[Tuple[str, str, str], Tuple[Tuple[float, float], Tuple[int, float]]]]:
+    def linear_regression(self,
+        epochs:         int,
+        learning_rate:  float
+    ) -> List[Tuple[Tuple[str, str, str], Tuple[Tuple[float, float], Tuple[int, float]]]]:
         training_results: List[Tuple[Tuple[str, str, str], Tuple[Tuple[float, float], Tuple[int, float]]]] = []
         training_result: Tuple[Tuple[float, float], Tuple[int, float]]
 
@@ -38,7 +42,7 @@ class Environment():
         process_future: Future
         with ProcessPoolExecutor(cpu_count()) as process_pool_executor:
             for data_dictionary_key in data_dictionary_keys:
-                process_future = process_pool_executor.submit(LinearRegression.train, self.__data_dictionary[data_dictionary_key], 100000, 0.1)
+                process_future = process_pool_executor.submit(LinearRegression.train, self.__data_dictionary[data_dictionary_key], epochs, learning_rate)
                 processes_future_list.append(process_future)
                 processes_future_data_types_dictionary[process_future] = data_dictionary_key
 
@@ -54,7 +58,12 @@ class Environment():
 
         return training_results
 
-    def polynomial_regression(self) -> List[Tuple[Tuple[str, str, str], Tuple[Tuple[List[float], float], Tuple[int, float]]]]:
+    def polynomial_regression(self,
+        epochs:                     int,
+        learning_rate:              float,
+        mse_lower_bound_per_point:  float,
+        max_polynomial_degree:      int
+    ) -> List[Tuple[Tuple[str, str, str], Tuple[Tuple[List[float], float], Tuple[int, float]]]]:
         training_results: List[Tuple[Tuple[str, str, str], Tuple[Tuple[List[float], float], Tuple[int, float]]]] = []
         training_result: Tuple[Tuple[List[float], float], Tuple[int, float]]
 
@@ -64,7 +73,7 @@ class Environment():
         process_future: Future
         with ProcessPoolExecutor(cpu_count()) as process_pool_executor:
             for data_dictionary_key in data_dictionary_keys:
-                process_future = process_pool_executor.submit(PolynomialRegression.train, self.__data_dictionary[data_dictionary_key], 10000, 0.1, 10 * len(data_dictionary_keys), 20)
+                process_future = process_pool_executor.submit(PolynomialRegression.train, self.__data_dictionary[data_dictionary_key], epochs, learning_rate, mse_lower_bound_per_point * len(data_dictionary_keys), max_polynomial_degree)
                 processes_future_list.append(process_future)
                 processes_future_data_types_dictionary[process_future] = data_dictionary_key
 
@@ -80,7 +89,10 @@ class Environment():
 
         return training_results
 
-    def logistic_polynomial_regression(self) -> List[Tuple[Tuple[str, str, str], Tuple[Tuple[float, float, float], Tuple[int, float]]]]:
+    def logistic_polynomial_regression(self,
+        epochs:         int,
+        learning_rate:  float
+    ) -> List[Tuple[Tuple[str, str, str], Tuple[Tuple[float, float, float], Tuple[int, float]]]]:
         training_results: List[Tuple[Tuple[str, str, str], Tuple[Tuple[float, float, float], Tuple[int, float]]]] = []
         training_result: Tuple[Tuple[float, float, float], Tuple[int, float]]
 
@@ -90,7 +102,7 @@ class Environment():
         process_future: Future
         with ProcessPoolExecutor(cpu_count()) as process_pool_executor:
             for data_dictionary_key in data_dictionary_keys:
-                process_future = process_pool_executor.submit(LogisticPolynomialRegression.train, self.__data_dictionary[data_dictionary_key], 100000, 0.1)
+                process_future = process_pool_executor.submit(LogisticPolynomialRegression.train, self.__data_dictionary[data_dictionary_key], epochs, learning_rate)
                 processes_future_list.append(process_future)
                 processes_future_data_types_dictionary[process_future] = data_dictionary_key
 
@@ -105,6 +117,15 @@ class Environment():
                 self.__log_results(data_dictionary_key, 'Logistic Polynomial Regression', training_result[0], training_result[1])
 
         return training_results
+    
+    def begin_log(self) -> None:
+        if not exists(f'{self.__logs_folder}'):
+            mkdir(f'{self.__logs_folder}')
+
+        self.__log_file = datetime.now().strftime('%d.%m.%Y %H%Mh')
+
+    def end_log(self) -> None:
+        self.__log_file = None
 
     def __initialize(self) -> None:
         self.__data_dictionary: Dict[Tuple[str, str, str], List[Tuple[int, Union[int, float]]]] = {}
@@ -204,12 +225,10 @@ class Environment():
         training_result:    Union[Tuple[Union[List[float], float], float], Tuple[Union[List[float], float], Union[List[float], float], float]],
         data_subtrahend:    Tuple[int, float]
     ) -> None:
-        if not exists(f'{self.__logs_folder}'):
-            mkdir(f'{self.__logs_folder}')
+        if self.__log_file == None:
+            return
 
-        date_time_now: str = datetime.now().strftime("%d.%m.%Y %H%Mh")
-
-        with open(f'{self.__logs_folder}/{date_time_now}.txt', 'a') as logs_file:
+        with open(f'{self.__logs_folder}/{self.__log_file}.txt', 'a') as logs_file:
             logs_file.write(f'{log_title}({log_type})\n\t')
             logs_file.write(f'Training result: {training_result}\n\t')
             logs_file.write(f'Data subtrahend: {data_subtrahend}\n\n')
