@@ -1,0 +1,8 @@
+('GRUPE DE VARSTA', 'TOTAL', 'ALBA')(Linear Regression)
+	Training result: (-24.41890068982396, 812.7933333333285)
+	Data subtrahend: (24224, 4671)
+
+('GRUPE DE VARSTA', 'TOTAL', 'ALBA')(Linear Regression)
+	Training result: (-24.41890068982396, 812.7933333333285)
+	Data subtrahend: (24224, 4671)
+

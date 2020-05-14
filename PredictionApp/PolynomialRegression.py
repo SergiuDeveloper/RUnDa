@@ -36,11 +36,11 @@ class PolynomialRegression(Regression):
             if current_MSE < mse_lower_bound:
                 if trainings_performed > 1:
                     (w, b) = last_computed_coefficients
-                return ((w, b), data_subtrahend)
+                return (PolynomialRegression.__reduce_polynomial_degree((w, b)), data_subtrahend)
 
             if trainings_performed > 1:
                 if current_MSE >= previous_MSE:
-                    return (last_computed_coefficients, data_subtrahend)
+                    return (PolynomialRegression.__reduce_polynomial_degree(last_computed_coefficients), data_subtrahend)
 
             last_computed_coefficients = (w.copy(), b)
             previous_MSE = current_MSE
@@ -48,7 +48,7 @@ class PolynomialRegression(Regression):
             optimal_new_weight_value = optimal_initial_coefficients[1]
             w.append(optimal_new_weight_value)
 
-        return (last_computed_coefficients, data_subtrahend)
+        return (PolynomialRegression.__reduce_polynomial_degree(last_computed_coefficients), data_subtrahend)
 
     @staticmethod
     def compute_MSE(
@@ -146,3 +146,18 @@ class PolynomialRegression(Regression):
                     coefficient_derivative
             )
         )
+
+    @staticmethod
+    def __reduce_polynomial_degree(
+        training_results: Tuple[List[float], float]
+    ) -> Tuple[List[float], float]:
+        numbers_of_zero_trailing: int = 0
+        for training_result in reversed(training_results[0]):
+            if training_result == 0:
+                numbers_of_zero_trailing
+            else:
+                break
+
+        training_results = (training_results[0][:len(training_results[0]) - numbers_of_zero_trailing], training_results[1])
+
+        return training_results

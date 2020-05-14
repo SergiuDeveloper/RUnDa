@@ -30,6 +30,22 @@ class LogisticPolynomialRegression(Regression):
         return ((w0, p0, b), data_subtrahend)
 
     @staticmethod
+    def compute_MSE(
+        data_list:  List[Tuple[int, float]],
+        w0:         float,
+        p0:         float,
+        b:          float
+    ) -> float:
+        mse: float = 0
+
+        error: float
+        for data_point in data_list:
+            error = ((PolynomialRegression.compute_function_result(data_point[0], w0, p0, b) - data_point[1]) ** 2) / len(data_point)
+            mse += error
+
+        return mse
+
+    @staticmethod
     def compute_function_result(
         x_value:    int,
         w0:         float,
@@ -40,7 +56,7 @@ class LogisticPolynomialRegression(Regression):
 
         return function_result
 
-    @staticmethod
+    @staticmethod    
     def __compute_optimal_initial_coefficients(
         data_list: List[Tuple[int, float]]
     ) -> Tuple[float, float, float]:

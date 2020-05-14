@@ -10,6 +10,7 @@ from csv import reader
 from typing import List, Dict, Tuple, Union, Callable
 from os import walk, mkdir, remove
 from os.path import exists, join
+from datetime import datetime
 from inspect import signature
 from matplotlib import use
 use('Agg')
@@ -18,10 +19,12 @@ from matplotlib.pyplot import plot, scatter, savefig, close
 class Environment():
     def __init__(self,
         data_folder:    str,
-        plots_folder:   str
+        plots_folder:   str,
+        logs_folder:    str
     ):
         self.__data_folder = data_folder
         self.__plots_folder = plots_folder
+        self.__logs_folder = logs_folder
 
         self.__initialize()
 
@@ -35,7 +38,7 @@ class Environment():
         process_future: Future
         with ProcessPoolExecutor(cpu_count()) as process_pool_executor:
             for data_dictionary_key in data_dictionary_keys:
-                process_future = process_pool_executor.submit(LinearRegression.train, self.__data_dictionary[data_dictionary_key], 1, 0.1)
+                process_future = process_pool_executor.submit(LinearRegression.train, self.__data_dictionary[data_dictionary_key], 5000, 0.1)
                 processes_future_list.append(process_future)
                 processes_future_data_types_dictionary[process_future] = data_dictionary_key
 
@@ -46,6 +49,8 @@ class Environment():
                 training_results.append((data_dictionary_key, training_result))
 
                 self.__save_plot(data_dictionary_key, training_result, LinearRegression.compute_function_result, 'linear')
+
+                self.__log_results(data_dictionary_key, 'Linear Regression', training_result[0], training_result[1])
 
         return training_results
 
@@ -59,7 +64,7 @@ class Environment():
         process_future: Future
         with ProcessPoolExecutor(cpu_count()) as process_pool_executor:
             for data_dictionary_key in data_dictionary_keys:
-                process_future = process_pool_executor.submit(PolynomialRegression.train, self.__data_dictionary[data_dictionary_key], 1, 0.1, 0, 3)
+                process_future = process_pool_executor.submit(PolynomialRegression.train, self.__data_dictionary[data_dictionary_key], 1000, 0.1, 100, 5)
                 processes_future_list.append(process_future)
                 processes_future_data_types_dictionary[process_future] = data_dictionary_key
 
@@ -70,6 +75,8 @@ class Environment():
                 training_results.append((data_dictionary_key, training_result))
 
                 self.__save_plot(data_dictionary_key, training_result, PolynomialRegression.compute_function_result, 'polynomial')
+
+                self.__log_results(data_dictionary_key, 'Polynomial Regression', training_result[0], training_result[1])
 
         return training_results
 
@@ -83,7 +90,7 @@ class Environment():
         process_future: Future
         with ProcessPoolExecutor(cpu_count()) as process_pool_executor:
             for data_dictionary_key in data_dictionary_keys:
-                process_future = process_pool_executor.submit(LogisticPolynomialRegression.train, self.__data_dictionary[data_dictionary_key], 1, 0.1)
+                process_future = process_pool_executor.submit(LogisticPolynomialRegression.train, self.__data_dictionary[data_dictionary_key], 5000, 0.1)
                 processes_future_list.append(process_future)
                 processes_future_data_types_dictionary[process_future] = data_dictionary_key
 
@@ -94,6 +101,8 @@ class Environment():
                 training_results.append((data_dictionary_key, training_result))
 
                 self.__save_plot(data_dictionary_key, training_result, LogisticPolynomialRegression.compute_function_result, 'logistic_polynomial')
+
+                self.__log_results(data_dictionary_key, 'Logistic Polynomial Regression', training_result[0], training_result[1])
 
         return training_results
 
@@ -188,6 +197,22 @@ class Environment():
         
         savefig(f'{self.__plots_folder}/{category_name}/{subcategory_name}/{location}/{plot_file_name}.png')
         close()
+
+    def __log_results(self,
+        log_title:          Tuple[str, str, str],
+        log_type:           str,
+        training_result:    Union[Tuple[Union[List[float], float], float], Tuple[Union[List[float], float], Union[List[float], float], float]],
+        data_subtrahend:    Tuple[int, float]
+    ) -> None:
+        if not exists(f'{self.__logs_folder}'):
+            mkdir(f'{self.__logs_folder}')
+
+        date_time_now: str = datetime.now().strftime("%d.%m.%Y %H%Mh")
+
+        with open(f'{self.__logs_folder}/{date_time_now}.txt', 'a') as logs_file:
+            logs_file.write(f'{log_title}({log_type})\n\t')
+            logs_file.write(f'Training result: {training_result}\n\t')
+            logs_file.write(f'Data subtrahend: {data_subtrahend}\n\n')
 
     def __get_data_from_file(self,
         data_file:      str,
