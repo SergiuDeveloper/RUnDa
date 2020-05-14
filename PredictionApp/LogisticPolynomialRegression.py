@@ -27,7 +27,7 @@ class LogisticPolynomialRegression(Regression):
             p0 = coefficients_tuple[1]
             b = coefficients_tuple[2]
 
-        return ((w0, p0, b), data_subtrahend)
+        return ((w0, p0, b), data_subtrahend, LogisticPolynomialRegression.compute_MSE(data_list, w0, p0, b))
 
     @staticmethod
     def compute_MSE(
@@ -40,7 +40,7 @@ class LogisticPolynomialRegression(Regression):
 
         error: float
         for data_point in data_list:
-            error = ((PolynomialRegression.compute_function_result(data_point[0], w0, p0, b) - data_point[1]) ** 2) / len(data_point)
+            error = ((LogisticPolynomialRegression.compute_function_result(data_point[0], w0, p0, b) - data_point[1]) ** 2) / len(data_point)
             mse += error
 
         return mse

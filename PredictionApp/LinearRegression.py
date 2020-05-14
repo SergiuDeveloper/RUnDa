@@ -10,7 +10,7 @@ class LinearRegression(Regression):
         data_list:      List[Tuple[int, float]],
         epochs:         int,
         learning_rate:  float
-    ) -> Tuple[Tuple[float, float], Tuple[int, float]]:
+    ) -> Tuple[Tuple[float, float], Tuple[int, float], float]:
         normalization_result: Tuple[List[float, float], Tuple[int, float]] = LinearRegression._Regression__normalize(data_list)
         data_list = normalization_result[0]
         data_subtrahend: Tuple[int, float] = normalization_result[1]
@@ -24,7 +24,7 @@ class LinearRegression(Regression):
             w0 = coefficients_tuple[0]
             b = coefficients_tuple[1]
 
-        return ((w0, b), data_subtrahend)
+        return ((w0, b), data_subtrahend, LinearRegression.compute_MSE(data_list, w0, b))
 
     @staticmethod
     def compute_MSE(
@@ -36,7 +36,7 @@ class LinearRegression(Regression):
 
         error: float
         for data_point in data_list:
-            error = ((PolynomialRegression.compute_function_result(data_point[0], w0, b) - data_point[1]) ** 2) / len(data_point)
+            error = ((LinearRegression.compute_function_result(data_point[0], w0, b) - data_point[1]) ** 2) / len(data_point)
             mse += error
 
         return mse

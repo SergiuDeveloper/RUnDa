@@ -32,9 +32,9 @@ class Environment():
     def linear_regression(self,
         epochs:         int,
         learning_rate:  float
-    ) -> List[Tuple[Tuple[str, str, str], Tuple[Tuple[float, float], Tuple[int, float]]]]:
-        training_results: List[Tuple[Tuple[str, str, str], Tuple[Tuple[float, float], Tuple[int, float]]]] = []
-        training_result: Tuple[Tuple[float, float], Tuple[int, float]]
+    ) -> List[Tuple[Tuple[str, str, str], Tuple[Tuple[float, float], Tuple[int, float]], float]]:
+        training_results: List[Tuple[Tuple[str, str, str], Tuple[Tuple[float, float], Tuple[int, float]], float]] = []
+        training_result: Tuple[Tuple[float, float], Tuple[int, float], float]
 
         data_dictionary_keys: List[Tuple[str, str, str]] = list(self.__data_dictionary.keys())
         processes_future_list: List[Future] = []
@@ -54,7 +54,7 @@ class Environment():
 
                 self.__save_plot(data_dictionary_key, training_result, LinearRegression.compute_function_result, 'linear')
 
-                self.__log_results(data_dictionary_key, 'Linear Regression', training_result[0], training_result[1])
+                self.__log_results(data_dictionary_key, 'Linear Regression', training_result[0], training_result[1], training_result[2])
 
         return training_results
 
@@ -63,9 +63,9 @@ class Environment():
         learning_rate:              float,
         mse_lower_bound_per_point:  float,
         max_polynomial_degree:      int
-    ) -> List[Tuple[Tuple[str, str, str], Tuple[Tuple[List[float], float], Tuple[int, float]]]]:
-        training_results: List[Tuple[Tuple[str, str, str], Tuple[Tuple[List[float], float], Tuple[int, float]]]] = []
-        training_result: Tuple[Tuple[List[float], float], Tuple[int, float]]
+    ) -> List[Tuple[Tuple[str, str, str], Tuple[Tuple[List[float], float], Tuple[int, float]], float]]:
+        training_results: List[Tuple[Tuple[str, str, str], Tuple[Tuple[List[float], float], Tuple[int, float]], float]] = []
+        training_result: Tuple[Tuple[List[float], float], Tuple[int, float], float]
 
         data_dictionary_keys: List[Tuple[str, str, str]] = list(self.__data_dictionary.keys())
         processes_future_list: List[Future] = []
@@ -85,16 +85,16 @@ class Environment():
 
                 self.__save_plot(data_dictionary_key, training_result, PolynomialRegression.compute_function_result, 'polynomial')
 
-                self.__log_results(data_dictionary_key, 'Polynomial Regression', training_result[0], training_result[1])
+                self.__log_results(data_dictionary_key, 'Polynomial Regression', training_result[0], training_result[1], training_result[2])
 
         return training_results
 
     def logistic_polynomial_regression(self,
         epochs:         int,
         learning_rate:  float
-    ) -> List[Tuple[Tuple[str, str, str], Tuple[Tuple[float, float, float], Tuple[int, float]]]]:
-        training_results: List[Tuple[Tuple[str, str, str], Tuple[Tuple[float, float, float], Tuple[int, float]]]] = []
-        training_result: Tuple[Tuple[float, float, float], Tuple[int, float]]
+    ) -> List[Tuple[Tuple[str, str, str], Tuple[Tuple[float, float, float], Tuple[int, float]], float]]:
+        training_results: List[Tuple[Tuple[str, str, str], Tuple[Tuple[float, float, float], Tuple[int, float]], float]] = []
+        training_result: Tuple[Tuple[float, float, float], Tuple[int, float], float]
 
         data_dictionary_keys: List[Tuple[str, str, str]] = list(self.__data_dictionary.keys())
         processes_future_list: List[Future] = []
@@ -114,7 +114,7 @@ class Environment():
 
                 self.__save_plot(data_dictionary_key, training_result, LogisticPolynomialRegression.compute_function_result, 'logistic_polynomial')
 
-                self.__log_results(data_dictionary_key, 'Logistic Polynomial Regression', training_result[0], training_result[1])
+                self.__log_results(data_dictionary_key, 'Logistic Polynomial Regression', training_result[0], training_result[1], training_result[2])
 
         return training_results
     
@@ -223,7 +223,8 @@ class Environment():
         log_title:          Tuple[str, str, str],
         log_type:           str,
         training_result:    Union[Tuple[Union[List[float], float], float], Tuple[Union[List[float], float], Union[List[float], float], float]],
-        data_subtrahend:    Tuple[int, float]
+        data_subtrahend:    Tuple[int, float],
+        mse:                float
     ) -> None:
         if self.__log_file == None:
             return
@@ -231,7 +232,8 @@ class Environment():
         with open(f'{self.__logs_folder}/{self.__log_file}.txt', 'a') as logs_file:
             logs_file.write(f'{log_title}({log_type})\n\t')
             logs_file.write(f'Training result: {training_result}\n\t')
-            logs_file.write(f'Data subtrahend: {data_subtrahend}\n\n')
+            logs_file.write(f'Data subtrahend: {data_subtrahend}\n\t')
+            logs_file.write(f'MSE: {mse}\n\n')
 
     def __get_data_from_file(self,
         data_file:      str,

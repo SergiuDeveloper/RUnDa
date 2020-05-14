@@ -9,6 +9,8 @@ class Regression():
             raise TypeError
         if type(getattr(self, 'compute_function_result')) is not MethodType:
             raise TypeError
+        if type(getattr(self, 'compute_MSE')) is not MethodType:
+            raise TypeError
 
     @staticmethod
     def __normalize(
