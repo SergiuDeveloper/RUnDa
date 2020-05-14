@@ -275,6 +275,8 @@ class Environment():
                         xValue,
                         yValue
                     )
+        
+                    self.__data_dictionary[category, subcategory, location].sort()
 
     def __add_to_data_dictionary(self,
         category:       str,
