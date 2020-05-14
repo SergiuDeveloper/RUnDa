@@ -38,7 +38,7 @@ class Environment():
         process_future: Future
         with ProcessPoolExecutor(cpu_count()) as process_pool_executor:
             for data_dictionary_key in data_dictionary_keys:
-                process_future = process_pool_executor.submit(LinearRegression.train, self.__data_dictionary[data_dictionary_key], 5000, 0.1)
+                process_future = process_pool_executor.submit(LinearRegression.train, self.__data_dictionary[data_dictionary_key], 100000, 0.1)
                 processes_future_list.append(process_future)
                 processes_future_data_types_dictionary[process_future] = data_dictionary_key
 
@@ -64,7 +64,7 @@ class Environment():
         process_future: Future
         with ProcessPoolExecutor(cpu_count()) as process_pool_executor:
             for data_dictionary_key in data_dictionary_keys:
-                process_future = process_pool_executor.submit(PolynomialRegression.train, self.__data_dictionary[data_dictionary_key], 1000, 0.1, 100, 5)
+                process_future = process_pool_executor.submit(PolynomialRegression.train, self.__data_dictionary[data_dictionary_key], 10000, 0.1, 10 * len(data_dictionary_keys), 20)
                 processes_future_list.append(process_future)
                 processes_future_data_types_dictionary[process_future] = data_dictionary_key
 
@@ -90,7 +90,7 @@ class Environment():
         process_future: Future
         with ProcessPoolExecutor(cpu_count()) as process_pool_executor:
             for data_dictionary_key in data_dictionary_keys:
-                process_future = process_pool_executor.submit(LogisticPolynomialRegression.train, self.__data_dictionary[data_dictionary_key], 5000, 0.1)
+                process_future = process_pool_executor.submit(LogisticPolynomialRegression.train, self.__data_dictionary[data_dictionary_key], 100000, 0.1)
                 processes_future_list.append(process_future)
                 processes_future_data_types_dictionary[process_future] = data_dictionary_key
 
