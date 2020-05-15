@@ -2,7 +2,7 @@
 
 from Regression import Regression
 
-from typing import List, Tuple
+from typing import List, Tuple, Union
 from math import log
 
 class LogisticPolynomialRegression(Regression):
@@ -11,10 +11,10 @@ class LogisticPolynomialRegression(Regression):
         data_list:      List[Tuple[int, float]],
         epochs:         int,
         learning_rate:  float
-    ) -> Tuple[Tuple[float, float, float], Tuple[int, float]]:
-        normalization_result: Tuple[List[float, float], Tuple[int, float]] = LogisticPolynomialRegression._Regression__normalize(data_list)
+    ) -> Tuple[Tuple[float, float, float], Tuple[int, Union[int, float]]]:
+        normalization_result: Tuple[List[Tuple[int, float]], Tuple[int, Union[int, float]]] = LogisticPolynomialRegression._Regression__normalize(data_list)
         data_list = normalization_result[0]
-        data_subtrahend: Tuple[int, float] = normalization_result[1]
+        data_subtrahend: Tuple[int, Union[int, float]] = normalization_result[1]
 
         coefficients_tuple: Tuple[float, float, float] = (LogisticPolynomialRegression.__compute_optimal_initial_coefficients(data_list))
         w0: float = coefficients_tuple[0]

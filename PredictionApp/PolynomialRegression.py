@@ -2,7 +2,7 @@
 
 from Regression import Regression
 
-from typing import List, Tuple
+from typing import List, Tuple, Union
 
 class PolynomialRegression(Regression):
     @staticmethod
@@ -12,10 +12,10 @@ class PolynomialRegression(Regression):
         learning_rate:              float,
         mse_lower_bound:            float,
         max_trainings_performed:    int
-    ) -> Tuple[Tuple[List[float], float], Tuple[int, float]]:
-        normalization_result: Tuple[List[float, float], Tuple[int, float]] = PolynomialRegression._Regression__normalize(data_list)
+    ) -> Tuple[Tuple[List[float], float], Tuple[int, Union[int, float]]]:
+        normalization_result: Tuple[List[Tuple[int, float]], Tuple[int, Union[int, float]]] = PolynomialRegression._Regression__normalize(data_list)
         data_list = normalization_result[0]
-        data_subtrahend: Tuple[int, float] = normalization_result[1]
+        data_subtrahend: Tuple[int, Union[int, float]] = normalization_result[1]
 
         optimal_initial_coefficients: Tuple[float, float, float] = PolynomialRegression.__compute_optimal_initial_coefficients(data_list)
         w: List[float] = [optimal_initial_coefficients[0]]

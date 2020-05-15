@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 from types import MethodType
-from typing import List, Tuple
+from typing import List, Tuple, Union
 
 class Regression():
     def __init__(self):
@@ -15,7 +15,7 @@ class Regression():
     @staticmethod
     def __normalize(
         data_list: List[Tuple[int, float]]
-    ) -> Tuple[List[Tuple[int, float]], Tuple[int, float]]:
+    ) -> Tuple[List[Tuple[int, float]], Tuple[int, Union[int, float]]]:
         data_subtrahend: Tuple[int, float] = (
             min([data[0] for data in data_list]) - 1,
             min([data[1] for data in data_list])

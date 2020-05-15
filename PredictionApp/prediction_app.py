@@ -1,16 +1,27 @@
 #!/usr/bin/python3
 
 from Environment import Environment
+from DataFetcher import DataFetcher
 
-from typing import List, Tuple
+from typing import List, Tuple, Any
 
 if __name__ == '__main__':
-    environment: Environment = Environment('Data', 'Plots', 'Logs')
+    DataFetcher.write_csv_data_to_file_system()
+
+    environment: Environment = Environment('Data', 'JSON', 'Plots', 'Logs')
 
     environment.begin_log()
 
-    environment.linear_regression(100000, 0.1)
-    environment.polynomial_regression(10000, 0.1, 10, 100)
-    environment.logistic_polynomial_regression(100000, 0.1)
+    linear_regression_training_results: List[Tuple[Any]] = environment.linear_regression(100000, 0.1)
+    polynomial_regression_training_results: List[Tuple[Any]] = environment.polynomial_regression(10000, 0.1, 10, 100)
+    logistic_polynomial_regression_training_results: List[Tuple[Any]] = environment.logistic_polynomial_regression(100000, 0.1)
 
     environment.end_log()
+
+    training_results_json_object: str = environment.create_training_results_json(
+        [
+            (linear_regression_training_results, 'Linear'),
+            (polynomial_regression_training_results, 'Polynomial'),
+            (logistic_polynomial_regression_training_results, 'Logistic Polynomial')
+        ]
+    )

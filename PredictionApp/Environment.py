@@ -6,8 +6,9 @@ from LogisticPolynomialRegression import LogisticPolynomialRegression
 
 from concurrent.futures import ProcessPoolExecutor, Future, as_completed
 from multiprocessing import cpu_count
+from json import dump, dumps
 from csv import reader
-from typing import List, Dict, Tuple, Union, Callable
+from typing import List, Dict, Tuple, Union, Callable, Any
 from os import walk, mkdir, remove
 from os.path import exists, join
 from datetime import datetime
@@ -19,10 +20,12 @@ from matplotlib.pyplot import plot, scatter, savefig, close
 class Environment():
     def __init__(self,
         data_folder:    str,
+        json_folder:    str,
         plots_folder:   str,
         logs_folder:    str
     ):
         self.__data_folder: str = data_folder
+        self.__json_folder: str = json_folder
         self.__plots_folder: str = plots_folder
         self.__logs_folder: str = logs_folder
         self.__log_file: str = None
@@ -32,8 +35,8 @@ class Environment():
     def linear_regression(self,
         epochs:         int,
         learning_rate:  float
-    ) -> List[Tuple[Tuple[str, str, str], Tuple[Tuple[float, float], Tuple[int, float]], float]]:
-        training_results: List[Tuple[Tuple[str, str, str], Tuple[Tuple[float, float], Tuple[int, float]], float]] = []
+    ) -> List[Tuple[Tuple[str, str, str], Tuple[Tuple[float, float], Tuple[int, float], float]]]:
+        training_results: List[Tuple[Tuple[str, str, str], Tuple[Tuple[float, float], Tuple[int, float], float]]] = []
         training_result: Tuple[Tuple[float, float], Tuple[int, float], float]
 
         data_dictionary_keys: List[Tuple[str, str, str]] = list(self.__data_dictionary.keys())
@@ -63,8 +66,8 @@ class Environment():
         learning_rate:              float,
         mse_lower_bound_per_point:  float,
         max_polynomial_degree:      int
-    ) -> List[Tuple[Tuple[str, str, str], Tuple[Tuple[List[float], float], Tuple[int, float]], float]]:
-        training_results: List[Tuple[Tuple[str, str, str], Tuple[Tuple[List[float], float], Tuple[int, float]], float]] = []
+    ) -> List[Tuple[Tuple[str, str, str], Tuple[Tuple[List[float], float], Tuple[int, float], float]]]:
+        training_results: List[Tuple[Tuple[str, str, str], Tuple[Tuple[List[float], float], Tuple[int, float], float]]] = []
         training_result: Tuple[Tuple[List[float], float], Tuple[int, float], float]
 
         data_dictionary_keys: List[Tuple[str, str, str]] = list(self.__data_dictionary.keys())
@@ -92,8 +95,8 @@ class Environment():
     def logistic_polynomial_regression(self,
         epochs:         int,
         learning_rate:  float
-    ) -> List[Tuple[Tuple[str, str, str], Tuple[Tuple[float, float, float], Tuple[int, float]], float]]:
-        training_results: List[Tuple[Tuple[str, str, str], Tuple[Tuple[float, float, float], Tuple[int, float]], float]] = []
+    ) -> List[Tuple[Tuple[str, str, str], Tuple[Tuple[float, float, float], Tuple[int, float], float]]]:
+        training_results: List[Tuple[Tuple[str, str, str], Tuple[Tuple[float, float, float], Tuple[int, float], float]]] = []
         training_result: Tuple[Tuple[float, float, float], Tuple[int, float], float]
 
         data_dictionary_keys: List[Tuple[str, str, str]] = list(self.__data_dictionary.keys())
@@ -117,6 +120,72 @@ class Environment():
                 self.__log_results(data_dictionary_key, 'Logistic Polynomial Regression', training_result[0], training_result[1], training_result[2])
 
         return training_results
+
+    def create_training_results_json(self,
+        training_results_list: List[Tuple[List[Tuple[Any]], str]]
+    ) -> str:
+        training_results_json_object: Dict[str, Dict[str, Dict[str, Dict[str, Dict[str, Any]]]]] = {
+            'TrainingResults': {}
+        }
+
+        category: str
+        subcategory: str
+        location: str
+        data_list: List[Tuple[int, Union[int, float]]]
+        coefficients: List[Tuple[Any]]
+        data_subtrahend: Tuple[int, Union[int, float]]
+        mse: float
+
+        for (training_results, training_type) in training_results_list:
+            for training_result in training_results:
+                category = training_result[0][0]
+                subcategory = training_result[0][1]
+                location = training_result[0][2]
+                data_list = self.__data_dictionary[(category, subcategory, location)]
+                coefficients = training_result[1][0]
+                data_subtrahend = training_result[1][1]
+                mse = training_result[1][2]
+
+                if category not in training_results_json_object['TrainingResults']:
+                    training_results_json_object['TrainingResults'][category] = {}
+                if subcategory not in training_results_json_object['TrainingResults'][category]:
+                    training_results_json_object['TrainingResults'][category][subcategory] = {}
+                if location not in training_results_json_object['TrainingResults'][category][subcategory]:
+                    training_results_json_object['TrainingResults'][category][subcategory][location] = {}
+                if training_type not in training_results_json_object['TrainingResults'][category][subcategory]:
+                    training_results_json_object['TrainingResults'][category][subcategory][location][training_type] = {
+                        'DataPoints': []
+                    }
+                    for data_point in data_list:
+                        training_results_json_object['TrainingResults'][category][subcategory][location][training_type]['DataPoints'].append(
+                            {
+                                'X': data_point[0],
+                                'Y': data_point[1]
+                            }
+                        )
+
+                    training_results_json_object['TrainingResults'][category][subcategory][location][training_type]['Coefficients'] = {
+                        'w': coefficients[0],
+                        'b': coefficients[1]
+                    } if len(coefficients) <= 2 else {
+                        'w': coefficients[0],
+                        'p': coefficients[1],
+                        'b': coefficients[2]
+                    }
+
+                    training_results_json_object['TrainingResults'][category][subcategory][location][training_type]['DataSubtrahend'] = {
+                        'X': data_subtrahend[0],
+                        'Y': data_subtrahend[1]
+                    }
+
+                    training_results_json_object['TrainingResults'][category][subcategory][location][training_type]['MSE'] = mse
+
+        if not exists(f'{self.__json_folder}'):
+            mkdir(f'{self.__json_folder}')
+        with open(f'{self.__json_folder}/training_results.json', 'w', encoding = 'latin-1') as training_results_json_file:
+            dump(training_results_json_object, training_results_json_file, ensure_ascii = False, indent = 4)
+
+        return dumps(training_results_json_object, ensure_ascii = False, indent = 4)
     
     def begin_log(self) -> None:
         if not exists(f'{self.__logs_folder}'):
@@ -128,11 +197,11 @@ class Environment():
         self.__log_file = None
 
     def __initialize(self) -> None:
-        self.__data_dictionary: Dict[Tuple[str, str, str], List[Tuple[int, Union[int, float]]]] = {}
+        self.__data_dictionary: Dict[Tuple[str, str, str], List[Tuple[int, Union[int, Union[int, float]]]]] = {}
 
-        category:   str
-        year:       int
-        month:      int
+        category: str
+        year: int
+        month: int
 
         category_directories: List[str] = next(walk(f'{self.__data_folder}'))[1]
         for category_directory in category_directories:
@@ -156,7 +225,7 @@ class Environment():
 
     def __save_plot(self,
         data_dictionary_key:        Tuple[str, str, str],
-        training_result:            Tuple[Union[Tuple[Union[List[float], float], float], Tuple[Union[List[float], float], Union[List[float], float], float]], Tuple[int, float]],
+        training_result:            Tuple[Union[Tuple[Union[List[float], float], float], Tuple[Union[List[float], float], Union[List[float], float], float]], Tuple[int, float], float],
         compute_function_result:    Callable[[int, Union[List[float], float], float], float],
         plot_file_name:             str
     ) -> None:
@@ -241,9 +310,9 @@ class Environment():
         year:           int,
         month:          int
     ) -> None:
-        location:   str
-        xValue:     int
-        yValue:     Union[int, float]
+        location: str
+        xValue: int
+        yValue: Union[int, float]
 
         with open(data_file, 'r', encoding = 'latin-1') as csv_file:
             csv_lines: List[List[str]] = list(reader(csv_file))
