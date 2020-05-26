@@ -3,6 +3,7 @@
 from Environment import Environment
 from DataFetcher import DataFetcher
 
+from requests import post
 from typing import List, Tuple, Any
 
 if __name__ == '__main__':
@@ -18,10 +19,12 @@ if __name__ == '__main__':
 
     environment.end_log()
 
-    training_results_json_object: str = environment.create_training_results_json(
+    training_results_json_object: Dict[str, Dict[str, Dict[str, Dict[str, Dict[str, Any]]]]] = environment.create_training_results_json(
         [
             (linear_regression_training_results, 'Linear'),
             (polynomial_regression_training_results, 'Polynomial'),
             (logistic_polynomial_regression_training_results, 'Logistic Polynomial')
         ]
     )
+
+    post('localhost/UpdateTrainingResults', training_results_json_object)

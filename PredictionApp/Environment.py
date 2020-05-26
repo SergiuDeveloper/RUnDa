@@ -6,7 +6,7 @@ from LogisticPolynomialRegression import LogisticPolynomialRegression
 
 from concurrent.futures import ProcessPoolExecutor, Future, as_completed
 from multiprocessing import cpu_count
-from json import dump, dumps
+from json import dump
 from csv import reader
 from typing import List, Dict, Tuple, Union, Callable, Any
 from os import walk, mkdir, remove
@@ -185,7 +185,7 @@ class Environment():
         with open(f'{self.__json_folder}/training_results.json', 'w', encoding = 'latin-1') as training_results_json_file:
             dump(training_results_json_object, training_results_json_file, ensure_ascii = False, indent = 4)
 
-        return dumps(training_results_json_object, ensure_ascii = False, indent = 4)
+        return training_results_json_object
     
     def begin_log(self) -> None:
         if not exists(f'{self.__logs_folder}'):

@@ -13,7 +13,7 @@ if (!fs.existsSync('JSON'))
 if (fs.existsSync('JSON/training_results.json'))
     trainingResultsJSONObject = JSON.parse(fs.readFileSync('JSON/training_results.json'))
 
-const httpServer = http.createServer((request, response) => {
+const httpServer = http.createServer(async (request, response) => {
     let requestBody = '';
 
     request.on('data', (dataChunk) => {
@@ -28,9 +28,12 @@ const httpServer = http.createServer((request, response) => {
             return
         }
         
-        let statusCode = 200
+        let serviceReturnValue = {
+            'StatusCode': 500,
+            'ResponseBody': ''
+        }
         try {
-            statusCode = endpointsDictionary[request.method][urlParts.pathname](
+            serviceReturnValue = endpointsDictionary[request.method][urlParts.pathname](
                 urlParts.query,
                 requestBody === '' ? null : JSON.parse(requestBody),
                 response
@@ -38,9 +41,12 @@ const httpServer = http.createServer((request, response) => {
         }
         catch (exception) {
             console.error(exception)
-            statusCode = 500
+            serviceReturnValue['StatusCode'] = 500
+            serviceReturnValue['ResponseBody'] = ''
         }
-        response.writeHead(statusCode)
+
+        response.writeHead(serviceReturnValue['StatusCode'])
+        response.write(serviceReturnValue['ResponseBody'])
         response.end()
     });
 })
@@ -59,7 +65,10 @@ const endpointsDictionary = {
 
 function retrieveDataCategories(requestParametersObject, requestBodyObject, response) {
     if (trainingResultsJSONObject === null)
-        return 204
+        return {
+            'StatusCode': 204,
+            'ResponseBody': ''
+        }
 
     let dataAttributesObject = {
         'DataAttributes': {}
@@ -77,14 +86,18 @@ function retrieveDataCategories(requestParametersObject, requestBodyObject, resp
         }
     }
 
-    response.write(JSON.stringify(dataAttributesObject, null, 4))
-
-    return 200
+    return {
+        'StatusCode': 200,
+        'ResponseBody': JSON.stringify(dataAttributesObject, null, 4)
+    }
 }
 
 function retrieveData(requestParametersObject, requestBodyObject, response) {
     if (trainingResultsJSONObject === null)
-        return 204
+        return {
+            'StatusCode': 204,
+            'ResponseBody': ''
+        }
 
     let category = requestParametersObject.Category
     let subcategory = requestParametersObject.Subcategory
@@ -92,40 +105,64 @@ function retrieveData(requestParametersObject, requestBodyObject, response) {
     let regressionType = requestParametersObject.RegressionType
 
     if (category === undefined || subcategory === undefined || location === undefined)
-        return 400
+        return {
+            'StatusCode': 400,
+            'ResponseBody': ''
+        }
 
     if (
         !(category in trainingResultsJSONObject) ||
         !(subcategory in trainingResultsJSONObject[category]) ||
         !(location in trainingResultsJSONObject[category][subcategory])
     )
-        return 400
+        return {
+            'StatusCode': 400,
+            'ResponseBody': ''
+        }
 
     if (regressionType === undefined) {
-        response.write(JSON.stringify(
-        {
-            'Data': trainingResultsJSONObject[category][subcategory][location]
-        },
-        null, 4))
+        let responseJSON = JSON.stringify(
+            {
+                'Data': trainingResultsJSONObject[category][subcategory][location]
+            },
+            null, 4
+        )
 
-        return 200
+        return {
+            'StatusCode': 200,
+            'ResponseBody': JSON.stringify(
+                {
+                    'Data': trainingResultsJSONObject[category][subcategory][location]
+                },
+                null, 4
+            )
+        }
     }
 
     if (!(regressionType in trainingResultsJSONObject[category][subcategory][location]))
-        return 400
+        return {
+            'StatusCode': 400,
+            'ResponseBody': ''
+        }
 
-    response.write(JSON.stringify(
-        {
-            'Data': trainingResultsJSONObject[category][subcategory][location][regressionType]
-        },
-        null, 4))
 
-    return 200
+    return {
+        'StatusCode': 200,
+        'ResponseBody': JSON.stringify(
+            {
+                'Data': trainingResultsJSONObject[category][subcategory][location][regressionType]
+            },
+            null, 4
+        )
+    }
 }
 
 function updateTrainingResults(requestParametersObject, requestBodyObject, response) {
     if (requestBodyObject === null)
-        return 400
+        return {
+            'StatusCode': 400,
+            'ResponseBody': ''
+        }
 
     const authenticationKey = requestBodyObject.AuthenticationKey
     const newTrainingResultsJSONObject = requestBodyObject.TrainingResults
@@ -140,7 +177,10 @@ function updateTrainingResults(requestParametersObject, requestBodyObject, respo
     const dbAuthenticationKeyRows = databaseConnection.query('SELECT COUNT(*) as rowCount FROM Authentication_Keys WHERE Authentication_Key = ?', [authenticationKey])
     if (dbAuthenticationKeyRows[0].rowCount === 0) {
         databaseConnection.dispose()
-        return 401
+        return {
+            'StatusCode': 401,
+            'ResponseBody': ''
+        }
     }
 
     trainingResultsJSONObject = newTrainingResultsJSONObject
@@ -150,5 +190,8 @@ function updateTrainingResults(requestParametersObject, requestBodyObject, respo
     databaseConnection.query('UPDATE Authentication_Keys SET Authentication_Key = ? WHERE Authentication_Key = ?', [newAuthenticationKey, authenticationKey])
     databaseConnection.dispose()
 
-    return 200
+    return {
+        'StatusCode': 200,
+        'ResponseBody': ''
+    }
 }
