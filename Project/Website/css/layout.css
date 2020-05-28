@@ -80,3 +80,17 @@ nav a:hover{
 ul#MainNav li {
     display:inline;
   }
+
+@media only screen and (max-width: 600px) {
+    header {
+        background-color: #747474;
+        border: #b3c7d6;
+        font-family: 'Sans-serif', sans-serif;
+        font-size: 2em;
+        font-weight: 700;
+        text-align: center;
+        padding: 30px;
+        color: #f2f2f2;
+    }
+    
+}
