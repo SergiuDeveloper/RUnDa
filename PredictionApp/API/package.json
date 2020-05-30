@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "sudo node $npm_package_main",
+    "start": "node $npm_package_main",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Nistor Marian-Sergiu",

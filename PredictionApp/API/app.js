@@ -14,11 +14,11 @@ if (fs.existsSync('JSON/training_results.json'))
     trainingResultsJSONObject = JSON.parse(fs.readFileSync('JSON/training_results.json'))
 
 const httpServer = http.createServer(async (request, response) => {
-    let requestBody = '';
+    let requestBody = ''
 
     request.on('data', (dataChunk) => {
-        requestBody += dataChunk.toString();
-    });
+        requestBody += dataChunk.toString()
+    })
     request.on('end', () => {
         let urlParts = url.parse(request.url, true)
 
@@ -48,10 +48,12 @@ const httpServer = http.createServer(async (request, response) => {
         response.writeHead(serviceReturnValue['StatusCode'])
         response.write(serviceReturnValue['ResponseBody'])
         response.end()
-    });
+    })
 })
 
-httpServer.listen(80)
+httpServer.listen(80, () => {
+    console.log(`Server running on port ${httpServer.address().port}`)
+})
 
 const endpointsDictionary = {
     'GET': {
@@ -172,7 +174,7 @@ function updateTrainingResults(requestParametersObject, requestBodyObject, respo
         user:       'prediction_app@predictionapp',
         password:   'admin_pass123',
         database:   'PredictionApp'
-    });
+    })
 
     const dbAuthenticationKeyRows = databaseConnection.query('SELECT COUNT(*) as rowCount FROM Authentication_Keys WHERE Authentication_Key = ?', [authenticationKey])
     if (dbAuthenticationKeyRows[0].rowCount === 0) {
@@ -186,7 +188,7 @@ function updateTrainingResults(requestParametersObject, requestBodyObject, respo
     trainingResultsJSONObject = newTrainingResultsJSONObject
     fs.writeFileSync('JSON/training_results.json', JSON.stringify(trainingResultsJSONObject, null, 4))
 
-    const newAuthenticationKey = crypto.randomBytes(32).toString('hex');
+    const newAuthenticationKey = crypto.randomBytes(32).toString('hex')
     databaseConnection.query('UPDATE Authentication_Keys SET Authentication_Key = ? WHERE Authentication_Key = ?', [newAuthenticationKey, authenticationKey])
     databaseConnection.dispose()
 
