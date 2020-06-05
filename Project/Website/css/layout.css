@@ -23,14 +23,14 @@ footer{
     padding: 1em;
 }
 
-nav{
+.menu-nav{
     background-color: #FFE400;
     text-align: left;
     overflow: hidden;
     padding-left: 2em;
 }
 
-nav a{
+.menu-nav a{
     background-color: #FFE400;
     color: black;
     display: block;
@@ -39,7 +39,7 @@ nav a{
     padding: 10px 10px;
 }
 
-nav a:hover{
+.menu-nav a:hover{
     background-color: #14A76C;
     padding : 10px 10px;
 }
@@ -98,14 +98,14 @@ ul#MainNav li {
         color: #f2f2f2;
     }
 
-    nav {
+    .menu-nav {
         background-color: #FFE400;
         text-align: left;
         overflow: hidden;
         padding : 30px;
     }
 
-    nav a{
+    .menu-nav a{
         display: none;
     }
 
