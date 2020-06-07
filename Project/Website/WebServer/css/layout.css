@@ -91,8 +91,11 @@ ul#MainNav li {
     display:inline;
   }
 
-@media screen and (max-width: 600px) {
-    @media screen and (max-width: 600px) {
+    @media screen and (max-device-width: 600px) {
+        body {
+            display: none;
+        }
+
         header {
             background-color: #747474;
             border: #b3c7d6;
@@ -110,7 +113,7 @@ ul#MainNav li {
             margin:0 -30px;
         }
 
-        .logo hover .dropdown-content {
+        .logo:hover .dropdown-content {
             display : block;
         }
 
