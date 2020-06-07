@@ -13,9 +13,9 @@
 	</head>
 
 <body>
-<header>
-    Placeholder header
-</header>
+        <header>
+            Placeholder header
+        </header>
 
         <div class="menu-nav">
 
@@ -55,6 +55,7 @@
 
                 <div class = "toolbar">
                     <button onclick="toggleSmooth(this)" id = "smoothGraphButton" class="toolbarButton">Smooth</button>
+
                     <select id="selectCategory" class="toolbarButton">
 
                     </select>
@@ -87,6 +88,5 @@
 
 		<script src = "scripts/externals/chartJS/Chart.js"></script>
 		<script src = "scripts/graphSelect.js"></script>
-        <script src = "scripts/graph/loadCategories.js"></script>
 	</body>
 </html>
