@@ -97,6 +97,7 @@ function selectedLocation(){
         regressions[i++] = value;
         let regression = document.createElement("option");
         regression.text = value.toString();
+        regression.value = value.toString();
         selectRegressionType.add(regression);
     })
 

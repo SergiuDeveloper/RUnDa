@@ -445,3 +445,109 @@
 
 
 }
+
+@media (max-width: 1549px) and (min-width: 1142px){
+    #graphSelectObj{
+        margin: auto;
+    }
+
+    #exportButton{
+        margin: auto;
+    }
+
+    .toolbarLabelDropWrapper{
+        display: inline;
+        float: left;
+        margin: 0.1em auto;
+    }
+
+    .toolbarLabel{
+        margin: auto 0.5em auto 0.5em;
+    }
+
+    .toolbarSelectWrapper{
+        height: inherit;
+        display: flex;
+        margin: auto 1em auto auto;
+    }
+
+    .toolbarSelectGroup{
+        margin:auto;
+    }
+
+    /*.toolbarSelectGroup{*/
+    /*    height: inherit;*/
+    /*}*/
+
+    .inputs{
+        /*display: flex;*/
+        margin-left: 5%;
+        margin-right: 5%;
+        height: 4em;
+        align-self: center;
+        background-color: #ffff4d;
+        /*display: grid;*/
+    }
+
+    .toolbarButtonsWrapper{
+        margin: auto 1em;
+        float: left;
+        display: flex;
+        height: inherit;
+    }
+
+    .toolbarButton{
+        margin: auto;
+        display: flex;
+        float: left;
+    }
+
+    .toolbar{
+        overflow: auto;
+        height: inherit;
+        display: flex;
+        /*display: grid;*/
+        /*grid-template-columns: 1fr 1fr 1fr;*/
+    }
+
+    .graphContainer {
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        background-color: #f2f2f2;
+        align-self: center;
+    }
+
+    .graphContainer .graphDescription {
+        min-height: 50px;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 20px;
+        background-color: #ffff4d;
+    }
+
+    .graphContainer .graph {
+        margin-left: 5%;
+        margin-right: 5%;
+
+        height: 500px;
+        align-self: center;
+        background-color: lightgray;
+    }
+
+    /*.graphSelect{*/
+    /*    float: left;*/
+    /*    !*margin : auto;*!*/
+    /*    height: inherit;*/
+
+    /*}*/
+
+    /*.exportInput{*/
+    /*    float: right;*/
+    /*    margin : auto;*/
+    /*    height: inherit;*/
+    /*}*/
+
+
+}
