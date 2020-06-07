@@ -15,7 +15,7 @@ function notifyDatasetChanged(dataset) {
     let isFirstDataPoint = true;
     let previousDataPointValue;
 
-    dataset.Data.DataPoints.forEach((dataPoint) => {
+    dataset.DataPoints.forEach((dataPoint) => {
         if (!isFirstDataPoint)
             for (let dataPointIterator = previousDataPointValue; dataPointIterator < dataPoint; ++dataPointIterator)
                 dataPoints.push(0);

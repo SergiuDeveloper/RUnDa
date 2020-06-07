@@ -27,18 +27,15 @@ function graphDataCallback(response) {
     let minimumMSE = Number.MAX_VALUE;
 
     if(optimalRegression){
-        Object.values(JSON.parse(response)).forEach(function (value) {
+        Object.values(JSON.parse(response).Data).forEach(function (value) {
             if(value.MSE < minimumMSE){
                 minimumMSE = value.MSE;
                 regressionDataJSON = value;
             }
         })
     } else {
-        regressionDataJSON = JSON.parse(response);
+        regressionDataJSON = JSON.parse(response).Data;
     }
-
-    // console.log(response);
-
     loaded = true;
 
     notifyDatasetChanged(regressionDataJSON);
@@ -59,6 +56,8 @@ function makeDataHTTPGet(category, subcategory, location, regression){
         optimalRegression = false;
     } else
         optimalRegression = true;
+
+    // console.log(encodeURI(URI));
 
     asyncCall(encodeURI(URI), graphDataCallback);
 }
@@ -89,17 +88,17 @@ function selectedLocation(){
     for(let i = selectRegressionType.options.length - 1; i >= 0; i--)
         selectRegressionType.remove(i);
 
+    regressions[i++] = 'Optimal';
+    let regression = document.createElement("option");
+    regression.text = 'Optimal';
+    selectRegressionType.add(regression);
+
     Object.values(predictionAppLocationsJSON[location]).forEach(function (value) {
         regressions[i++] = value;
         let regression = document.createElement("option");
         regression.text = value.toString();
         selectRegressionType.add(regression);
     })
-
-    regressions[i++] = 'Optimal';
-    let regression = document.createElement("option");
-    regression.text = 'Optimal';
-    selectRegressionType.add(regression);
 
     selectRegressionType.addEventListener("change", requestGraphData);
     if(!loaded)
