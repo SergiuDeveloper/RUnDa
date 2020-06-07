@@ -14,8 +14,46 @@ let predictionAppCategoriesJSON;
 let predictionAppSubcategoriesJSON;
 let predictionAppLocationsJSON;
 
+let optimalRegression = false;
+
+/**
+ * Regression data variable.
+ */
+let regressionDataJSON;
+
 function graphDataCallback(response) {
-    console.log(response);
+    let minimumMSE = Number.MAX_VALUE;
+
+    if(optimalRegression){
+        Object.values(JSON.parse(response).Data).forEach(function (value) {
+            if(value.MSE < minimumMSE){
+                minimumMSE = value.MSE;
+                regressionDataJSON = value;
+            }
+        })
+    } else {
+        regressionDataJSON = JSON.parse(response);
+    }
+
+    console.log(regressionDataJSON);
+}
+
+function makeDataHTTPGet(category, subcategory, location, regression){
+    let URI =
+        'https://unemploymentpredictionapi.azurewebsites.net/RetrieveData?Category=' +
+        category +
+        '&Subcategory=' +
+        subcategory +
+        '&Location=' +
+        location;
+
+    if(regression !== 'Optimal') {
+        URI = URI + '&RegressionType=' + regression;
+        optimalRegression = false;
+    } else
+        optimalRegression = true;
+
+    getHttpAsync(encodeURI(URI), graphDataCallback);
 }
 
 function requestGraphData(){
@@ -23,24 +61,7 @@ function requestGraphData(){
     let subcategoryParam = subcategories[selectSubcategory.selectedIndex];
     let locationParam = locations[selectLocation.selectedIndex];
     let regressionParam = regressions[selectRegressionType.selectedIndex];
-
-    // console.log(categoryParam);
-    // console.log(subcategoryParam);
-    // console.log(locationParam);
-    // console.log(regressionParam);
-
-    let URI =
-        'https://unemploymentpredictionapi.azurewebsites.net/RetrieveData?Category=' +
-        categoryParam +
-        '&Subcategory=' +
-        subcategoryParam +
-        '&Location=' +
-        locationParam +
-        '&RegressionType' +
-        regressionParam;
-
-    getHttpAsync(encodeURI(URI), graphDataCallback);
-
+    makeDataHTTPGet(categoryParam, subcategoryParam, locationParam, regressionParam);
 }
 
 function selectedSubcategory(){
@@ -68,6 +89,10 @@ function selectedLocation(){
         selectRegressionType.add(regression);
     })
 
+    regressions[i++] = 'Optimal';
+    let regression = document.createElement("option");
+    regression.text = 'Optimal';
+    selectRegressionType.add(regression);
 
     selectRegressionType.addEventListener("change", requestGraphData);
     requestGraphData();
