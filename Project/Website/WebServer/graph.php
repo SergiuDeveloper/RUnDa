@@ -13,7 +13,6 @@
 	</head>
 
 	<body>
-<!--		<?php include '/php/Server/PopulateGraph.php'; ?>-->
         <header>
             Placeholder header
         </header>
