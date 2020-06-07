@@ -1,3 +1,8 @@
 .graph{
     max-height: 600px;
 }
+
+canvas {
+    width: 90vh;
+    height: 65vh;
+}

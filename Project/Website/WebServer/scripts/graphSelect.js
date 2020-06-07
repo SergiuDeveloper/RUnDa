@@ -1,183 +1,61 @@
+var chartObject;
 
+const DEFAULT_CHART_TYPE = 'bar';
+var dataPoints = [1, 2, 3, 4, 5, 6, 1, 2, 3, 0];                                        /* Get Data from API */
+var dataLabels = ['l1', 'l2', 'l3', 'l4', 'l5', 'l6', 'l7', 'l8', 'l9', 'l10'];         /* Get Data from API */
 
-let selectedCanvasTexture;
-var charts = document.getElementsByClassName("charts");
-testChart();
-testChart2();
-charts[1].style.display = "none";
-
-graphChanged(0);
-
-function callbackFunction(response){
-    console.log(response.toString());
+window.onload = function() {
+    renderChart(DEFAULT_CHART_TYPE);
 }
 
-function errorCallbackFunction(state, status, response){
-    console.log(state.toString() + "\n" + status.toString() + "\n" + JSON.parse(response).toString() );
-}
+function renderChart(chartType) {
+    const canvasContext = document.getElementById('chart').getContext('2d');
 
-function getHttpAsync(URL, callback){
-    var xmlHttp = new XMLHttpRequest();
-
-    xmlHttp.onreadystatechange = function () {
-        if(xmlHttp.readyState === 4 && xmlHttp.status === 200){
-            callback(xmlHttp.responseText);
-        }
-        else if(xmlHttp.readyState === 4){
-            errorCallbackFunction(xmlHttp.readyState, xmlHttp.status, xmlHttp.responseText);
-        }
-    }
-    xmlHttp.open("GET", URL, true);
-    xmlHttp.setRequestHeader('Access-Control-Allow-Origin', '*');
-    xmlHttp.setRequestHeader('Access-Control-Allow-Methods', 'GET, POST, PUT');
-    xmlHttp.setRequestHeader('Access-Control-Allow-Headers', 'Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,X-Access-Token,XKey,Authorization');
-
-    xmlHttp.send(null);
-}
-
-function graphChanged(n){
-
-    var chartToGenerate = "chart" + (n);
-
-    selectedCanvasTexture = document.getElementById(chartToGenerate).getContext('2d');
-
-    // getHttpAsync("../php/Server/PopulateGraph.php", callbackFunction);
-    getHttpAsync("../php/Server/PopulateGraph.php", callbackFunction);
-
-    console.log(n);
-    for(i = 0; i < charts.length; i++){
-        charts[i].style.display = "none";
-    }
-    charts[n].style.display = "block";
-}
-
-function changeGraph(){
-    var selected = document.getElementById("graphSelectObj");
-    graphChanged(selected.options[selected.selectedIndex].value);
-}
-
-function testChart2(){
-    var canvasTexture = document.getElementById("chart1").getContext('2d');
-    var chart = new Chart(
-        canvasTexture, {
-            type: 'pie',
-            data: {
-                labels : [
-                    'Red',
-                    'Blue',
-                    'Yellow',
-                    'Green',
-                    'Purple',
-                    'Orange'
+    chartOptions = {
+        type: chartType,
+        data: {
+            labels: dataLabels,
+            datasets: [{
+                label: '# of Votes',
+                data: dataPoints,
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
                 ],
-                datasets : [ {
-                        label: '# of Votes',
-                        data: [
-                            12,
-                            19,
-                            3,
-                            5,
-                            2,
-                            3
-                        ],
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rbga(255, 159, 64, 0.2)'
-                        ],
-                        borderColor: [
-                            'rgba(255, 99, 132, 1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
-                        ],
-                        borderWidth: 1
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
                 }]
-            },
-            options: {
-                scales: {
-                    yAxes: [{
-                        ticks:{
-                            beginAtZero: true
-                        }
-                    }]
-                },
-                maintainAspectRatio : false
             }
         }
-    );
+    };
 
-    var container = document.getElementsByClassName("graph");
+    if (chartObject !== undefined)
+        chartObject.destroy();
 
-    chart.canvas.parentNode.style.height = '500px';
-    chart.canvas.parentNode.style.width = container.width;
+    chartObject = new Chart(canvasContext, chartOptions);
+
+    const graphDOMElement = document.getElementById('graph');
+    chartObject.canvas.parentNode.style.height = graphDOMElement.style.height;
+    chartObject.canvas.parentNode.style.width = graphDOMElement.style.width;
 }
-
-function testChart(){
-    var canvasTexture = document.getElementById("chart0").getContext('2d');
-    var chart = new Chart(
-        canvasTexture, {
-            type: 'bar',
-            data: {
-                labels : [
-                    'Red',
-                    'Blue',
-                    'Yellow',
-                    'Green',
-                    'Purple',
-                    'Orange'
-                ],
-                datasets : [ {
-                        label: '# of Votes',
-                        data: [
-                            12,
-                            19,
-                            3,
-                            5,
-                            2,
-                            3
-                        ],
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rbga(255, 159, 64, 0.2)'
-                        ],
-                        borderColor: [
-                            'rgba(255, 99, 132, 1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
-                        ],
-                        borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    yAxes: [{
-                        ticks:{
-                            beginAtZero: true
-                        }
-                    }]
-                },
-                maintainAspectRatio : false
-            }
-        }
-    );
-
-    var container = document.getElementsByClassName("graph");
-
-    chart.canvas.parentNode.style.height = '500px';
-    chart.canvas.parentNode.style.width = container.width;
-}
-
-testChart();
