@@ -3,20 +3,29 @@ let selectSubcategory = document.getElementById("selectSubcategory");
 let selectLocation = document.getElementById("selectLocation");
 let selectRegressionType = document.getElementById("selectRegressionType");
 
+let URL = 'https://unemploymentpredictionapi.azurewebsites.net/RetrieveDataCategories';
+
+let predictionAppCategoriesJSON;
+
 function callbackPopulateCategory(response){
-    console.log(response.toString());
+    predictionAppCategoriesJSON = JSON.parse(response).DataAttributes;
+    let i = 0;
+
+    Object.keys(predictionAppCategoriesJSON).forEach(function(key){
+        // console.log(key);
+        let category = document.createElement("option");
+        category.text = key.toLowerCase().charAt(0).toUpperCase() + key.toLowerCase().slice(1);
+
+        selectCategory.add(category);
+    });
+
+    selectCategory.addEventListener('change', function () {
+        console.log(selectCategory.textContent);
+    })
 }
 
-function callbackPopulateSubcategory(response){
-    console.log(response.toString());
-}
-
-function callbackPopulateLocation(response){
-    console.log(response.toString());
-}
-
-function callbackPopulateRegressionType(response){
-    console.log(response.toString());
+function selectedCategory(){
+    console.log("a");
 }
 
 function errorCallbackDebug(state, status, response){
@@ -39,3 +48,5 @@ function asyncCall(URL, callback){
     httpRequest.setRequestHeader('Access-Control-Allow-Origin', '*');
     httpRequest.send(null);
 }
+
+asyncCall(URL, callbackPopulateCategory);

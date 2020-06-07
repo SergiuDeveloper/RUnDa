@@ -56,17 +56,22 @@
                 <div class = "toolbar">
                     <button onclick="toggleSmooth(this)" id = "smoothGraphButton" class="toolbarButton">Smooth</button>
 
-                    <select id="selectCategory" class="toolbarButton">
+                    <label for="selectCategory" class="toolbarLabel">Category : </label>
+                    <select id="selectCategory" class="toolbarDropdown">
+                    </select>
+
+                    <label for="selectSubcategory" class="toolbarLabel">Subcategory : </label>
+                    <select id="selectSubcategory" class="toolbarDropdown">
 
                     </select>
-                    <select id="selectSubcategory" class="toolbarButton">
+
+                    <label for="selectLocation" class="toolbarLabel">Location : </label>
+                    <select id="selectLocation" class="toolbarDropdown">
 
                     </select>
-                    <select id="selectLocation" class="toolbarButton">
 
-                    </select>
-                    <select id="selectRegressionType" class="toolbarButton">
-
+                    <label for="selectRegressionType" class="toolbarLabel">Regression : </label>
+                    <select id="selectRegressionType" class="toolbarDropdown">
                     </select>
                 </div>
 
@@ -88,5 +93,6 @@
 
 		<script src = "scripts/externals/chartJS/Chart.js"></script>
 		<script src = "scripts/graphSelect.js"></script>
+        <script src = "scripts/graph/loadCategories.js"></script>
 	</body>
 </html>

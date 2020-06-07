@@ -24,8 +24,6 @@
     background-color: #ffff4d;
 }
 
-
-
 .graphContainer .graph{
     margin-left: 5%;
     margin-right: 5%;
@@ -68,6 +66,18 @@
     display: flex;
     width : 12%;
     background-color: #9999ff;
+}
+
+.toolbarDropdown{
+    float: left;
+    display: flex;
+    margin: auto auto auto 0;
+}
+
+.toolbarLabel {
+    float : left;
+    display: flex;
+    margin : auto 0.5em auto auto;
 }
 
 .toolbarButton {
