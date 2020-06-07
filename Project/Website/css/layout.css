@@ -105,6 +105,16 @@ ul#MainNav li {
         color: #f2f2f2;
     }
 
+    img {
+        height: 90px;
+        width: 120px;
+        margin:0 -30px;
+    }
+
+    .logo hover .dropdown-content {
+        display : block;
+    }
+
     .menu-nav {
         background-color: #FFE400;
         text-align: left;
@@ -118,13 +128,6 @@ ul#MainNav li {
 
     .dropdown-menu {
         display: flex;
-    }
-
-    .dropdown-button {
-        border: none;
-        background-color: #FFE400;
-        font-family: SansSerif, serif;
-        cursor: pointer;
     }
 
     .dropdown-content {
@@ -143,8 +146,6 @@ ul#MainNav li {
         display: block;
     }
 
-    .dropdown-menu:hover .dropdown-content {
-        display : block;
-    }
+
 
 }
