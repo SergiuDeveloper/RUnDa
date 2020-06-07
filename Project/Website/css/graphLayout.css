@@ -19,23 +19,12 @@
     display: flex;
     margin-left: 5%;
     margin-right: 5%;
-    height: 60px;
+    height: 40px;
     align-self: center;
     background-color: #ffff4d;
 }
 
-.graphContainer .inputs .toolbar {
-    display: flex;
-    float: left;
-    height: inherit;
-    width: 60%;
-}
 
-.graphContainer .inputs .toolbar #smoothGraphButton{
-    margin: auto;
-    float : left;
-    display: flex;
-}
 
 .graphContainer .graph{
     margin-left: 5%;
@@ -52,17 +41,37 @@
     display: flex;
 }
 
+.graphContainer .inputs .exportInput #exportButton{
+    margin : auto;
+    float: left;
+    display: flex;
+}
+
 .graphContainer .inputs .graphSelect{
     float: left;
     display: flex;
     /*width : 150px;*/
-    width : 20%;
+    width : 15%;
     height : inherit;
     background-color: #9999ff;
 }
 
+.graphContainer .inputs .toolbar {
+    display: flex;
+    float: left;
+    height: inherit;
+    width: 73%;
+}
+
 .graphContainer .inputs .exportInput{
     float: right;
-    width : 20%;
+    display: flex;
+    width : 12%;
     background-color: #9999ff;
+}
+
+.toolbarButton {
+    margin: auto;
+    float : left;
+    display: flex;
 }

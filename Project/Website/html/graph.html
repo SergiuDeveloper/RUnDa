@@ -13,7 +13,6 @@
 	</head>
 
 	<body>
-<!--		<?php include '../php/Server/PopulateGraph.php'; ?>-->
 		<header>
 			<img src="../resources/logo/Logo.png" alt="Logo" width="80" height="49">
 		</header>
@@ -55,12 +54,24 @@
                 </div>
 
 				<div class = "toolbar">
-					<button onclick="toggleSmooth(this)" id = "smoothGraphButton">Smooth</button>
+					<button onclick="toggleSmooth(this)" id = "smoothGraphButton" class="toolbarButton">Smooth</button>
+					<select id="selectCategory" class="toolbarButton">
+
+					</select>
+					<select id="selectSubcategory" class="toolbarButton">
+
+					</select>
+					<select id="selectLocation" class="toolbarButton">
+
+					</select>
+					<select id="selectRegressionType" class="toolbarButton">
+
+					</select>
 				</div>
 
                 <div class = "exportInput">
-                    
-                </div>
+                    <button id = "exportButton"> Export Data </button>
+				</div>
 
             </div>
 
