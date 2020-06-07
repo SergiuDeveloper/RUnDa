@@ -42,7 +42,7 @@ function graphChanged(n){
     selectedCanvasTexture = document.getElementById(chartToGenerate).getContext('2d');
 
     // getHttpAsync("../php/Server/PopulateGraph.php", callbackFunction);
-    getHttpAsync("../php/RESTTests/GetRandomGraphData.php?sectionsCount=7&sectionLabels=[\"apples\",\"pears\",\"pineapples\",\"oranges\",\"bananas\",\"melons\",\"grapefruits\"]&dataFloor=20&dataCeiling=100", callbackFunction);
+    getHttpAsync("../php/Server/PopulateGraph.php", callbackFunction);
 
     console.log(n);
     for(i = 0; i < charts.length; i++){

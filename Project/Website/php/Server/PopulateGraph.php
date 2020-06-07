@@ -20,6 +20,9 @@
 
     $encodedURL = CommonEndPointLogic::encodeGETURLParams($URL, $params);
 
+
+    $curlHTTPGET = curl_init();
+
 //    $encodedURL = $URL . '?sectionsCount=' . $sectionsCount . '&sectionLabels=' . json_encode($sectionLabels) . '&dataFloor=' . $dataFloor . '&dataCeiling=' . $dataCeiling;
 
 //../php/RESTTests/GetRandomGraphData.php?sectionsCount=7&sectionLabels=["apples","pears","pineapples","oranges","bananas","melons","grapefruits"]&dataFloor=20&dataCeiling=100;
@@ -35,11 +38,23 @@
 //
 //    $azureEmailAPIResponse = curl_exec($curlSession);
 
-//    curl_setopt_array(
-//        $curlSession, [
-//            CURLOPT_URL => $encodedURL,
-//
-//        ]
-//    )
+    curl_setopt_array(
+        $curlHTTPGET, [
+            CURLOPT_URL => $encodedURL,
+            CURLOPT_HEADER => false,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_SSL_VERIFYHOST => false,
+            CURLOPT_SSL_VERIFYPEER => false
+        ]
+    );
+
+    $response = curl_exec($curlHTTPGET);
+
+    $responseJSON = json_decode ($response, true);
+
+//    print_r($responseJSON);
+
+    if($responseJSON['responseStatus']['status'] === 'SUCCESS')
+        echo json_encode($responseJSON['returnedObject']);
 
 ?>

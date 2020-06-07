@@ -78,7 +78,7 @@ class CommonEndPointLogic {
 
         $URL = substr($URL, 0, strlen($URL) - 1);
 
-        echo $URL;
+        return $URL;
     }
 }
 ?>
