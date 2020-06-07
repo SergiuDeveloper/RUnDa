@@ -92,10 +92,6 @@ ul#MainNav li {
   }
 
     @media screen and (max-device-width: 600px) {
-        body {
-            display: none;
-        }
-
         header {
             background-color: #747474;
             border: #b3c7d6;
