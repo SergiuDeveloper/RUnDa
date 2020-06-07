@@ -14,16 +14,33 @@ let predictionAppCategoriesJSON;
 let predictionAppSubcategoriesJSON;
 let predictionAppLocationsJSON;
 
+function graphDataCallback(response) {
+    console.log(response);
+}
+
 function requestGraphData(){
     let categoryParam = categories[selectCategory.selectedIndex];
     let subcategoryParam = subcategories[selectSubcategory.selectedIndex];
     let locationParam = locations[selectLocation.selectedIndex];
     let regressionParam = regressions[selectRegressionType.selectedIndex];
 
-    console.log(categoryParam);
-    console.log(subcategoryParam);
-    console.log(locationParam);
-    console.log(regressionParam);
+    // console.log(categoryParam);
+    // console.log(subcategoryParam);
+    // console.log(locationParam);
+    // console.log(regressionParam);
+
+    let URI =
+        'https://unemploymentpredictionapi.azurewebsites.net/RetrieveData?Category=' +
+        categoryParam +
+        '&Subcategory=' +
+        subcategoryParam +
+        '&Location=' +
+        locationParam +
+        '&RegressionType' +
+        regressionParam;
+
+    getHttpAsync(encodeURI(URI), graphDataCallback);
+
 }
 
 function selectedSubcategory(){
@@ -53,6 +70,7 @@ function selectedLocation(){
 
 
     selectRegressionType.addEventListener("change", requestGraphData);
+    requestGraphData();
 }
 
 function populateSelect(selectElement, JSON, onSelectCallback){
