@@ -8,7 +8,7 @@ const monthsArray = [ 'January', 'February', 'March', 'April', 'May', 'June', 'J
 var dataPoints;
 var dataLabels;
 
-function notifyDatasetChanged(dataset) {
+function notifyDatasetChanged(dataset, regressionType) {
     dataPoints = [];
     dataLabels = [];
 

@@ -25,20 +25,28 @@ let regressionDataJSON;
 
 function graphDataCallback(response) {
     let minimumMSE = Number.MAX_VALUE;
+    let regressionType = null;
+    let dataJSON = JSON.parse(response).Data;
+    // console.log(response);
 
     if(optimalRegression){
-        Object.values(JSON.parse(response).Data).forEach(function (value) {
-            if(value.MSE < minimumMSE){
-                minimumMSE = value.MSE;
-                regressionDataJSON = value;
+        Object.keys(dataJSON).forEach(function (key) {
+            if(dataJSON[key].MSE < minimumMSE){
+                minimumMSE = dataJSON[key].MSE;
+                regressionDataJSON = dataJSON[key];
+                regressionType = key;
             }
         })
     } else {
-        regressionDataJSON = JSON.parse(response).Data;
+        regressionDataJSON = dataJSON;
+        regressionType = regressions[selectRegressionType.selectedIndex];
     }
     loaded = true;
 
-    notifyDatasetChanged(regressionDataJSON);
+    console.log(regressionDataJSON);
+    console.log(regressionType);
+
+    notifyDatasetChanged(regressionDataJSON, regressionType);
 }
 
 
