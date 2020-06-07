@@ -16,12 +16,25 @@
 }
 
 .graphContainer .inputs{
- 
+    display: flex;
     margin-left: 5%;
     margin-right: 5%;
     height: 60px;
     align-self: center;
     background-color: #ffff4d;
+}
+
+.graphContainer .inputs .toolbar {
+    display: flex;
+    float: left;
+    height: inherit;
+    width: 60%;
+}
+
+.graphContainer .inputs .toolbar #smoothGraphButton{
+    margin: auto;
+    float : left;
+    display: flex;
 }
 
 .graphContainer .graph{
@@ -33,16 +46,23 @@
     background-color: lightgray;
 }
 
+.graphContainer .inputs .graphSelect #graphSelectObj{
+    /*margin: auto 1em;*/
+    margin: auto;
+    display: flex;
+}
+
 .graphContainer .inputs .graphSelect{
     float: left;
-    width : 80px;
-    height : 60px;
+    display: flex;
+    /*width : 150px;*/
+    width : 20%;
+    height : inherit;
     background-color: #9999ff;
 }
 
 .graphContainer .inputs .exportInput{
     float: right;
-    height: 60px;
+    width : 20%;
     background-color: #9999ff;
-    width: 80px;
 }
