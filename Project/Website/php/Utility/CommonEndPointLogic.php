@@ -65,5 +65,20 @@ class CommonEndPointLogic {
             "error" => $error
         ];
     }
+
+    public static function encodeGETURLParams($URL, $params){
+//        echo $URL, PHP_EOL;
+
+        $URL = $URL . '?';
+
+        foreach ($params as $paramName => $paramValue){
+//            echo $paramName, PHP_EOL, $paramValue, PHP_EOL;
+            $URL = $URL . $paramName . '=' . $paramValue . '&';
+        }
+
+        $URL = substr($URL, 0, strlen($URL) - 1);
+
+        echo $URL;
+    }
 }
 ?>

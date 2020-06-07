@@ -9,10 +9,10 @@
 
     CommonEndPointLogic::ValidateHTTPGETRequest();
 
-    $chartSectionsCount = $_GET['sectionsCount'];
-    $chartSectionLabels = json_decode($_GET['sectionLabels'],true);
-    $dataCeiling        = $_GET['dataCeiling'];
-    $dataFloor          = $_GET['dataFloor'];
+    $chartSectionsCount = $_GET['count'];
+    $chartSectionLabels = json_decode($_GET['labels'],true);
+    $dataCeiling        = $_GET['ceiling'];
+    $dataFloor          = $_GET['floor'];
 
     $valuesArray = array();
     $coloursArray = array();
