@@ -13,7 +13,18 @@ let regressions = [];
 let predictionAppCategoriesJSON;
 let predictionAppSubcategoriesJSON;
 let predictionAppLocationsJSON;
-let predictionAppRegressionsJSON;
+
+function requestGraphData(){
+    let categoryParam = categories[selectCategory.selectedIndex];
+    let subcategoryParam = subcategories[selectSubcategory.selectedIndex];
+    let locationParam = locations[selectLocation.selectedIndex];
+    let regressionParam = regressions[selectRegressionType.selectedIndex];
+
+    console.log(categoryParam);
+    console.log(subcategoryParam);
+    console.log(locationParam);
+    console.log(regressionParam);
+}
 
 function selectedSubcategory(){
     let subcategory = subcategories[selectSubcategory.selectedIndex];
@@ -25,14 +36,13 @@ function selectedSubcategory(){
     selectedLocation();
 }
 
-function selectedRegression(){
-
-}
-
 function selectedLocation(){
     let location = locations[selectLocation.selectedIndex];
 
     regressions = []; let i = 0;
+
+    for(let i = selectRegressionType.options.length - 1; i >= 0; i--)
+        selectRegressionType.remove(i);
 
     Object.values(predictionAppLocationsJSON[location]).forEach(function (value) {
         regressions[i++] = value;
@@ -40,11 +50,17 @@ function selectedLocation(){
         regression.text = value.toString();
         selectRegressionType.add(regression);
     })
+
+
+    selectRegressionType.addEventListener("change", requestGraphData);
 }
 
 function populateSelect(selectElement, JSON, onSelectCallback){
     let i = 0;
     let categoryArray = [];
+
+    for(let i = selectElement.options.length - 1; i >= 0; i--)
+        selectElement.remove(i);
 
     Object.keys(JSON).forEach(function (key) {
         let category = document.createElement("option");
@@ -54,6 +70,7 @@ function populateSelect(selectElement, JSON, onSelectCallback){
     })
 
     selectElement.addEventListener("change", onSelectCallback);
+    selectElement.addEventListener("change", requestGraphData);
 
     return categoryArray;
 }
