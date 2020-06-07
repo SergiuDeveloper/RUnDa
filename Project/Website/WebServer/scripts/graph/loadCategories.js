@@ -5,7 +5,10 @@ let selectRegressionType = document.getElementById("selectRegressionType");
 
 let URL = 'https://unemploymentpredictionapi.azurewebsites.net/RetrieveDataCategories';
 
+let categories = [];
+
 let predictionAppCategoriesJSON;
+let predictionAppSubcategoriesJSON;
 
 function callbackPopulateCategory(response){
     predictionAppCategoriesJSON = JSON.parse(response).DataAttributes;
@@ -14,18 +17,49 @@ function callbackPopulateCategory(response){
     Object.keys(predictionAppCategoriesJSON).forEach(function(key){
         // console.log(key);
         let category = document.createElement("option");
+        categories[i++]=key;
         category.text = key.toLowerCase().charAt(0).toUpperCase() + key.toLowerCase().slice(1);
-
+        // category.onselect = selectedCategory();
+        // category.addEventListener("select", selectedCategory);
         selectCategory.add(category);
     });
 
-    selectCategory.addEventListener('change', function () {
-        console.log(selectCategory.textContent);
-    })
+    selectCategory.addEventListener("change", selectedCategory);
 }
 
 function selectedCategory(){
-    console.log("a");
+    let category = categories[selectCategory.selectedIndex];
+
+    Object.keys(predictionAppCategoriesJSON).forEach(function(key ) {
+        // console.log(category[key]);
+
+        // console.log(predictionAppCategoriesJSON[key]);
+
+        if (key === category) {
+            predictionAppSubcategoriesJSON = predictionAppCategoriesJSON[key];
+        }
+    });
+
+    // console.log(predictionAppSubcategoriesJSON);
+
+    Object.keys(predictionAppSubcategoriesJSON).forEach(function (key) {
+        let subcategory = document.createElement("option");
+        subcategory[i++]=key;
+        subcategory.text = key.toLowerCase().charAt(0).toUpperCase() + key.toLowerCase().slice(1);
+        // category.onselect = selectedCategory();
+        // category.addEventListener("select", selectedCategory);
+        selectSubcategory.add(subcategory);
+    })
+
+    selectSubcategory.addEventListener("select", selectedSubcategory);
+}
+
+function populateSelect(){
+
+}
+
+function selectedSubcategory(){
+
 }
 
 function errorCallbackDebug(state, status, response){
