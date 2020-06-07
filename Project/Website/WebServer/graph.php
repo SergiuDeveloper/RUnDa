@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+	<head>
+		<!-- Font? -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+        <link rel = "stylesheet" href = "css/layout.css">
+		<link rel = "stylesheet" href = "css/graphLayout.css">
+		<link rel = "stylesheet" href = "css/graphStyle.css">
+		<title>
+			Placeholder Graph Title
+		</title>
+	</head>
+
+	<body>
+<!--		<?php include '/php/Server/PopulateGraph.php'; ?>-->
+        <header>
+            Placeholder header
+        </header>
+
+        <div class="menu-nav">
+
+            <a href = "index.php"> Home </a>
+            <a href = "graph.php"> Graph Statistics </a>
+            <a href = "mapView.php"> Map View Statistics </a>
+            <a href = "about.php"> About </a>
+            <div class="dropdown-menu">
+                <button class="dropdown-button">
+                    MENU
+                </button>
+                <div class="dropdown-content">
+                    <a href = "index.php"> Home </a>
+                    <a href = "graph.php"> Graph Statistics </a>
+                    <a href = "mapView.php"> Map View Statistics </a>
+                    <a href = "about.php"> About </a>
+                </div>
+            </div>
+        </div>
+        
+        <section class = "graphContainer">
+            <div class = "graphDescription">
+                <h3> Graph Placeholder below </h3>
+            </div>
+
+            <div class = "inputs">
+                <div class = "graphSelect" onchange="changeGraph()">
+					<label for="graphSelectObj"></label>
+						<select id = "graphSelectObj">
+							<option class = "graphs" value = "0" onselect="graphChanged(0)"> Vertical Bar Chart </option>
+							<option class = "graphs" value = "1" onselect="graphChanged(1)"> Pie Chart </option>
+							<option class = "graphs" value = "2" onselect="graphChanged(2)"> Time Series Chart </option>
+							<option class = "graphs" value = "3" onselect="graphChanged(3)"> Data Set Chart </option>
+							<option class = "graphs" value = "4" onselect="graphChanged(4)"> Country Map Chart </option>
+						</select>
+                </div>
+
+                <div class = "exportInput">
+                    
+                </div>
+            </div>
+
+            <div class = "graph">
+				<canvas class = "charts" id = "chart0" width = "400" height = "400"></canvas>
+				<canvas class = "charts" id = "chart1" width = "400" height = "400"></canvas>
+			</div>
+        </section>
+
+		<footer>
+			Placeholder footer
+		</footer>
+
+		<script src = "scripts/externals/chartJS/Chart.js"></script>
+		<script src = "scripts/graphSelect.js"></script>
+	</body>
+</html>
