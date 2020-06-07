@@ -34,7 +34,7 @@ function notifyDatasetChanged(dataset) {
 function renderChart(chartType) {
     const canvasContext = document.getElementById('chart').getContext('2d');
 
-    const [chartSegmentsBackgroundColors, chartSegmentsBorderColors] = (['line', 'radar'].includes(chartType) ? ['rgba(0, 0, 255, 0.6)', 'rgba(0, 255, 0, 1.0)'] : getChartSegmentsColors());
+    const [chartSegmentsBackgroundColors, chartSegmentsBorderColors] = (['line', 'radar'].includes(chartType) ? ['rgba(0, 0, 255, 0.6)', 'rgba(0, 255, 0, 1.0)'] : getChartSegmentsColors(chartType));
 
     const chartOptions = {
         type: chartType,
@@ -75,7 +75,7 @@ function renderChart(chartType) {
     currentChartType = chartType;
 }
 
-function getChartSegmentsColors() {
+function getChartSegmentsColors(chartType) {
     const maxDataPointValue = Math.max.apply(null, dataPoints);
     const minDataPointValue = Math.min.apply(null, dataPoints.filter((dataPoint) => dataPoint > 0));
 
@@ -85,7 +85,7 @@ function getChartSegmentsColors() {
     let chartSegmentsBorderColors = [];
 
     dataPoints.forEach((dataPoint) => {
-        chartSegmentsBackgroundColors.push(`rgba(${255 * ((dataPoint - minDataPointValue) / dataPointsRange)}, 0, ${255 * ((maxDataPointValue - dataPoint) / dataPointsRange)}, 0.75`);
+        chartSegmentsBackgroundColors.push(`rgba(${255 * ((dataPoint - minDataPointValue) / dataPointsRange)}, 0, ${255 * ((maxDataPointValue - dataPoint) / dataPointsRange)}, ${chartType === 'polarArea' ? 0.4 : 0.75}`);
         chartSegmentsBorderColors.push(`rgba(${255 * ((dataPoint - minDataPointValue) / dataPointsRange)}, 0, ${255 * ((maxDataPointValue - dataPoint) / dataPointsRange)}, 1`);
     });
 
