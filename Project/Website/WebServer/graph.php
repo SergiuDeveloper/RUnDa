@@ -12,10 +12,10 @@
 		</title>
 	</head>
 
-	<body>
-        <header>
-            Placeholder header
-        </header>
+<body>
+<header>
+    Placeholder header
+</header>
 
         <div class="menu-nav">
 
@@ -43,19 +43,36 @@
 
             <div class = "inputs">
                 <div class = "graphSelect" onchange="changeGraph()">
-					<label for="graphSelectObj"></label>
-						<select id = "graphSelectObj">
-							<option class = "graphs" value = "0" onselect="graphChanged(0)"> Vertical Bar Chart </option>
-							<option class = "graphs" value = "1" onselect="graphChanged(1)"> Pie Chart </option>
-							<option class = "graphs" value = "2" onselect="graphChanged(2)"> Time Series Chart </option>
-							<option class = "graphs" value = "3" onselect="graphChanged(3)"> Data Set Chart </option>
-							<option class = "graphs" value = "4" onselect="graphChanged(4)"> Country Map Chart </option>
-						</select>
+                    <label for="graphSelectObj"></label>
+                    <select id = "graphSelectObj">
+                        <option class = "graphs" value = "0" onselect="graphChanged(0)"> Vertical Bar Chart </option>
+                        <option class = "graphs" value = "1" onselect="graphChanged(1)"> Pie Chart </option>
+                        <option class = "graphs" value = "2" onselect="graphChanged(2)"> Line Datasets </option>
+                        <option class = "graphs" value = "3" onselect="graphChanged(3)"> Data Set Chart </option>
+                        <option class = "graphs" value = "4" onselect="graphChanged(4)"> Country Map Chart </option>
+                    </select>
+                </div>
+
+                <div class = "toolbar">
+                    <button onclick="toggleSmooth(this)" id = "smoothGraphButton" class="toolbarButton">Smooth</button>
+                    <select id="selectCategory" class="toolbarButton">
+
+                    </select>
+                    <select id="selectSubcategory" class="toolbarButton">
+
+                    </select>
+                    <select id="selectLocation" class="toolbarButton">
+
+                    </select>
+                    <select id="selectRegressionType" class="toolbarButton">
+
+                    </select>
                 </div>
 
                 <div class = "exportInput">
-                    
+                    <button id = "exportButton"> Export Data </button>
                 </div>
+
             </div>
 
             <div class = "graph">
@@ -70,5 +87,6 @@
 
 		<script src = "scripts/externals/chartJS/Chart.js"></script>
 		<script src = "scripts/graphSelect.js"></script>
+        <script src = "scripts/graph/loadCategories.js"></script>
 	</body>
 </html>
