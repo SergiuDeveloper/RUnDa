@@ -1,3 +1,8 @@
+img {
+    float:left;
+    background-color: #747474;
+    margin:0 -10px;
+}
 body{
     align-content: center;
     flex-wrap: wrap;
@@ -87,56 +92,57 @@ ul#MainNav li {
   }
 
 @media screen and (max-width: 600px) {
-    header {
-        background-color: #747474;
-        border: #b3c7d6;
-        font-family: 'Sans-serif', sans-serif;
-        font-size: 2em;
-        font-weight: 700;
-        text-align: center;
-        padding: 30px;
-        color: #f2f2f2;
-    }
+    @media screen and (max-width: 600px) {
+        header {
+            background-color: #747474;
+            border: #b3c7d6;
+            font-family: 'Sans-serif', sans-serif;
+            font-size: 2em;
+            font-weight: 700;
+            text-align: center;
+            padding: 30px;
+            color: #f2f2f2;
+        }
 
-    .menu-nav {
-        background-color: #FFE400;
-        text-align: left;
-        overflow: hidden;
-        padding : 30px;
-    }
+        img {
+            height: 90px;
+            width: 120px;
+            margin:0 -30px;
+        }
 
-    .menu-nav a{
-        display: none;
-    }
+        .logo hover .dropdown-content {
+            display : block;
+        }
 
-    .dropdown-menu {
-        display: flex;
-    }
+        .menu-nav {
+            background-color: #FFE400;
+            text-align: left;
+            overflow: hidden;
+            padding : 30px;
+        }
 
-    .dropdown-button {
-        border: none;
-        background-color: #FFE400;
-        font-family: SansSerif, serif;
-        cursor: pointer;
-    }
+        .menu-nav a{
+            display: none;
+        }
 
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f2f2f2;
-        min-width: 160px;
-        box-shadow: 0 8px 16px 0;
-        z-index: 1;
-    }
+        .dropdown-menu {
+            display: flex;
+        }
 
-    .dropdown-content a{
-        color:black;
-        padding: 12px 16px;
-        display: block;
-    }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f2f2f2;
+            min-width: 160px;
+            box-shadow: 0 8px 16px 0;
+            z-index: 1;
+        }
 
-    .dropdown-menu:hover .dropdown-content {
-        display : block;
-    }
+        .dropdown-content a{
+            float: none;
+            color:black;
+            padding: 12px 16px;
+            display: block;
+        }
 
 }
