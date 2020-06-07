@@ -14,7 +14,7 @@
 
 <body>
 <header>
-    Placeholder header
+    <img src="resources/logo/Logo.png" alt="Logo" width="80" height="49">
 </header>
 
 <div class="menu-nav">
