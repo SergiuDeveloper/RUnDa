@@ -8,14 +8,14 @@ const monthsArray = [ 'January', 'February', 'March', 'April', 'May', 'June', 'J
 var dataPoints;
 var dataLabels;
 
-function notifyDatasetChanged(dataSet){
+function notifyDatasetChanged(dataset) {
     dataPoints = [];
     dataLabels = [];
 
     let isFirstDataPoint = true;
     let previousDataPointValue;
 
-    dataSet.Data.DataPoints.forEach((dataPoint) => {
+    dataset.Data.DataPoints.forEach((dataPoint) => {
         if (!isFirstDataPoint)
             for (let dataPointIterator = previousDataPointValue; dataPointIterator < dataPoint; ++dataPointIterator)
                 dataPoints.push(0);
@@ -34,7 +34,7 @@ function notifyDatasetChanged(dataSet){
 function renderChart(chartType) {
     const canvasContext = document.getElementById('chart').getContext('2d');
 
-    const [chartSegmentsBackgroundColors, chartSegmentsBorderColors] = getChartSegmentsColors();
+    const [chartSegmentsBackgroundColors, chartSegmentsBorderColors] = (['line', 'radar'].includes(chartType) ? ['rgba(0, 0, 255, 0.6)', 'rgba(0, 255, 0, 1.0)'] : getChartSegmentsColors());
 
     const chartOptions = {
         type: chartType,
@@ -45,7 +45,8 @@ function renderChart(chartType) {
                 data: dataPoints,
                 backgroundColor: chartSegmentsBackgroundColors,
                 borderColor: chartSegmentsBorderColors,
-                borderWidth: 1
+                pointRadius: 10,
+                pointHoverRadius: 20
             }]
         },
         options: {
@@ -85,4 +86,8 @@ function getChartSegmentsColors() {
     });
 
     return [chartSegmentsBackgroundColors, chartSegmentsBorderColors];
+}
+
+function getPredictedDataPoints() {
+
 }

@@ -27,7 +27,7 @@ function graphDataCallback(response) {
     let minimumMSE = Number.MAX_VALUE;
 
     if(optimalRegression){
-        Object.values(JSON.parse(response).Data).forEach(function (value) {
+        Object.values(JSON.parse(response)).forEach(function (value) {
             if(value.MSE < minimumMSE){
                 minimumMSE = value.MSE;
                 regressionDataJSON = value;

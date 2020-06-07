@@ -46,11 +46,11 @@
                 <div class = "graphSelect">
                     <label for="graphSelectObj"></label>
                     <select id = "graphSelectObj" onchange="renderChart(this.options[this.selectedIndex].value)">
-                        <option class = "graphs" value="bar"> Vertical Bar Chart </option>
+                        <option class = "graphs" value="bar"> Bar Chart </option>
                         <option class = "graphs" value="pie"> Pie Chart </option>
-                        <option class = "graphs" value="line"> Line Datasets </option>
-                        <option class = "graphs" value="pie"> Data Set Chart </option>
-                        <option class = "graphs" value="bar"> Country Map Chart </option>
+                        <option class = "graphs" value="line"> Line Chart </option>
+                        <option class = "graphs" value="radar"> Radar Chart </option>
+                        <option class = "graphs" value="polarArea"> Polar Area Chart </option>
                     </select>
                 </div>
 
