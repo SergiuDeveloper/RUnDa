@@ -1,0 +1,77 @@
+.graphContainer{
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    background-color: #f2f2f2;
+    align-self: center;
+}
+
+.graphContainer .graphDescription{
+    min-height: 50px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 20px;
+    background-color: #ffff4d;
+}
+
+.graphContainer .inputs{
+    display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 40px;
+    align-self: center;
+    background-color: #ffff4d;
+}
+
+
+
+.graphContainer .graph{
+    margin-left: 5%;
+    margin-right: 5%;
+
+    height: 500px;
+    align-self: center;
+    background-color: lightgray;
+}
+
+.graphContainer .inputs .graphSelect #graphSelectObj{
+    /*margin: auto 1em;*/
+    margin: auto;
+    display: flex;
+}
+
+.graphContainer .inputs .exportInput #exportButton{
+    margin : auto;
+    float: left;
+    display: flex;
+}
+
+.graphContainer .inputs .graphSelect{
+    float: left;
+    display: flex;
+    /*width : 150px;*/
+    width : 15%;
+    height : inherit;
+    background-color: #9999ff;
+}
+
+.graphContainer .inputs .toolbar {
+    display: flex;
+    float: left;
+    height: inherit;
+    width: 73%;
+}
+
+.graphContainer .inputs .exportInput{
+    float: right;
+    display: flex;
+    width : 12%;
+    background-color: #9999ff;
+}
+
+.toolbarButton {
+    margin: auto;
+    float : left;
+    display: flex;
+}
