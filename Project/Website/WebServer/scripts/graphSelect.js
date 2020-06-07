@@ -1,43 +1,50 @@
 var chartObject;
 
 const DEFAULT_CHART_TYPE = 'bar';
-var dataPoints = [1, 2, 3, 4, 5, 6, 1, 2, 3, 0];                                        /* Get Data from API */
-var dataLabels = ['l1', 'l2', 'l3', 'l4', 'l5', 'l6', 'l7', 'l8', 'l9', 'l10'];         /* Get Data from API */
+var currentChartType = DEFAULT_CHART_TYPE;
 
-window.onload = function() {
-    renderChart(DEFAULT_CHART_TYPE);
-}
+const monthsArray = [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ];
 
-function notifyDataSetChanged(dataSet){
-    console.log(dataSet);
+var dataPoints;
+var dataLabels;
+
+function notifyDatasetChanged(dataSet){
+    dataPoints = [];
+    dataLabels = [];
+
+    let isFirstDataPoint = true;
+    let previousDataPointValue;
+
+    dataSet.Data.DataPoints.forEach((dataPoint) => {
+        if (!isFirstDataPoint)
+            for (let dataPointIterator = previousDataPointValue; dataPointIterator < dataPoint; ++dataPointIterator)
+                dataPoints.push(0);
+        else
+            isFirstDataPoint = false;
+
+        dataPoints.push(dataPoint.Y);
+        dataLabels.push(`${monthsArray[dataPoint.X % 12]} ${Math.floor(dataPoint.X / 12)}`);
+
+        previousDataPointValue = dataPoint;
+    });
+
+    renderChart(currentChartType);
 }
 
 function renderChart(chartType) {
     const canvasContext = document.getElementById('chart').getContext('2d');
 
-    chartOptions = {
+    const [chartSegmentsBackgroundColors, chartSegmentsBorderColors] = getChartSegmentsColors();
+
+    const chartOptions = {
         type: chartType,
         data: {
             labels: dataLabels,
             datasets: [{
-                label: '# of Votes',
+                label: 'Unemployee Count',
                 data: dataPoints,
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
+                backgroundColor: chartSegmentsBackgroundColors,
+                borderColor: chartSegmentsBorderColors,
                 borderWidth: 1
             }]
         },
@@ -47,8 +54,9 @@ function renderChart(chartType) {
             scales: {
                 yAxes: [{
                     ticks: {
-                        beginAtZero: true
-                    }
+                        beginAtZero: false
+                    },
+                    min: Math.min.apply(null, dataPoints)
                 }]
             }
         }
@@ -59,7 +67,22 @@ function renderChart(chartType) {
 
     chartObject = new Chart(canvasContext, chartOptions);
 
-    const graphDOMElement = document.getElementById('graph');
-    chartObject.canvas.parentNode.style.height = graphDOMElement.style.height;
-    chartObject.canvas.parentNode.style.width = graphDOMElement.style.width;
+    currentChartType = chartType;
+}
+
+function getChartSegmentsColors() {
+    const maxDataPointValue = Math.max.apply(null, dataPoints);
+    const minDataPointValue = Math.min.apply(null, dataPoints.filter((dataPoint) => dataPoint > 0));
+
+    const dataPointsRange = maxDataPointValue - minDataPointValue;
+
+    let chartSegmentsBackgroundColors = [];
+    let chartSegmentsBorderColors = [];
+
+    dataPoints.forEach((dataPoint) => {
+        chartSegmentsBackgroundColors.push(`rgba(${255 * ((dataPoint - minDataPointValue) / dataPointsRange)}, 0, ${255 * ((maxDataPointValue - dataPoint) / dataPointsRange)}, 0.75`);
+        chartSegmentsBorderColors.push(`rgba(${255 * ((dataPoint - minDataPointValue) / dataPointsRange)}, 0, ${255 * ((maxDataPointValue - dataPoint) / dataPointsRange)}, 1`);
+    });
+
+    return [chartSegmentsBackgroundColors, chartSegmentsBorderColors];
 }

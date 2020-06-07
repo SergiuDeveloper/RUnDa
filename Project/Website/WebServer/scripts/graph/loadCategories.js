@@ -41,7 +41,7 @@ function graphDataCallback(response) {
 
     loaded = true;
 
-    notifyDataSetChanged(regressionDataJSON);
+    notifyDatasetChanged(regressionDataJSON);
 }
 
 
