@@ -43,6 +43,9 @@ function graphDataCallback(response) {
     }
     loaded = true;
 
+    // console.log(regressionDataJSON);
+    // console.log(regressionType);
+
     notifyDatasetChanged(regressionDataJSON, regressionType);
 }
 
