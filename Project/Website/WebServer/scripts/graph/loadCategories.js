@@ -16,6 +16,8 @@ let predictionAppLocationsJSON;
 
 let optimalRegression = false;
 
+let loaded = false;
+
 /**
  * Regression data variable.
  */
@@ -35,8 +37,13 @@ function graphDataCallback(response) {
         regressionDataJSON = JSON.parse(response);
     }
 
-    console.log(regressionDataJSON);
+    // console.log(response);
+
+    loaded = true;
+
+    notifyDataSetChanged(regressionDataJSON);
 }
+
 
 function makeDataHTTPGet(category, subcategory, location, regression){
     let URI =
@@ -53,7 +60,7 @@ function makeDataHTTPGet(category, subcategory, location, regression){
     } else
         optimalRegression = true;
 
-    getHttpAsync(encodeURI(URI), graphDataCallback);
+    asyncCall(encodeURI(URI), graphDataCallback);
 }
 
 function requestGraphData(){
@@ -95,7 +102,8 @@ function selectedLocation(){
     selectRegressionType.add(regression);
 
     selectRegressionType.addEventListener("change", requestGraphData);
-    requestGraphData();
+    if(!loaded)
+        requestGraphData();
 }
 
 function populateSelect(selectElement, JSON, onSelectCallback){

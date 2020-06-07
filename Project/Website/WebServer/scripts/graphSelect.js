@@ -8,6 +8,10 @@ window.onload = function() {
     renderChart(DEFAULT_CHART_TYPE);
 }
 
+function notifyDataSetChanged(dataSet){
+    console.log(dataSet);
+}
+
 function renderChart(chartType) {
     const canvasContext = document.getElementById('chart').getContext('2d');
 
