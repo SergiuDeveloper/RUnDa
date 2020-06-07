@@ -12,7 +12,7 @@
 		</title>
 	</head>
 
-<body>
+    <body>
         <header>
             Placeholder header
         </header>
@@ -42,14 +42,14 @@
             </div>
 
             <div class = "inputs">
-                <div class = "graphSelect" onchange="changeGraph()">
+                <div class = "graphSelect">
                     <label for="graphSelectObj"></label>
-                    <select id = "graphSelectObj">
-                        <option class = "graphs" value = "0" onselect="graphChanged(0)"> Vertical Bar Chart </option>
-                        <option class = "graphs" value = "1" onselect="graphChanged(1)"> Pie Chart </option>
-                        <option class = "graphs" value = "2" onselect="graphChanged(2)"> Line Datasets </option>
-                        <option class = "graphs" value = "3" onselect="graphChanged(3)"> Data Set Chart </option>
-                        <option class = "graphs" value = "4" onselect="graphChanged(4)"> Country Map Chart </option>
+                    <select id = "graphSelectObj" onchange="renderChart(this.options[this.selectedIndex].value)">
+                        <option class = "graphs" value="bar"> Vertical Bar Chart </option>
+                        <option class = "graphs" value="pie"> Pie Chart </option>
+                        <option class = "graphs" value="line"> Line Datasets </option>
+                        <option class = "graphs" value="pie"> Data Set Chart </option>
+                        <option class = "graphs" value="bar"> Country Map Chart </option>
                     </select>
                 </div>
 
@@ -81,9 +81,8 @@
 
             </div>
 
-            <div class = "graph">
-				<canvas class = "charts" id = "chart0" width = "400" height = "400"></canvas>
-				<canvas class = "charts" id = "chart1" width = "400" height = "400"></canvas>
+            <div id = "graph">
+				<canvas class = "charts" id = "chart"></canvas>
 			</div>
         </section>
 
