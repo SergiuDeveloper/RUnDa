@@ -1,87 +1,239 @@
-.graphContainer{
-    width: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
 
-    background-color: #f2f2f2;
-    align-self: center;
+@media screen and (min-device-width: 1550px) {
+    .graphContainer {
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        background-color: #f2f2f2;
+        align-self: center;
+    }
+
+    .graphContainer .graphDescription {
+        min-height: 50px;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 20px;
+        background-color: #ffff4d;
+    }
+
+    .graphContainer .inputs {
+        /*display: flex;*/
+        margin-left: 5%;
+        margin-right: 5%;
+        height: 2em;
+        align-self: center;
+        background-color: #ffff4d;
+    }
+
+    .graphContainer .graph {
+        margin-left: 5%;
+        margin-right: 5%;
+
+        height: 500px;
+        align-self: center;
+        background-color: lightgray;
+    }
+
+    #graphSelectObj {
+        /*margin: auto 1em;*/
+        margin: auto;
+        float: left;
+        display: flex;
+    }
+
+    .toolbarLabelDropWrapper{
+        margin: auto;
+        display: flex;
+        float: left;
+        height: inherit;
+    }
+
+    .graphContainer .inputs .exportInput #exportButton {
+        margin: auto;
+        float: left;
+        display: flex;
+    }
+
+    .graphContainer .inputs .graphSelect {
+        /*margin: auto;*/
+        /*width : 150px;*/
+        /*width : 15%;*/
+    }
+
+    .graphContainer .inputs .toolbar {
+        /*float: right;*/
+        height: inherit;
+        margin: auto;
+        /*width: unset;*/
+        overflow: auto;
+    }
+
+    .graphContainer .inputs .exportInput {
+        display: flex;
+        /*width : 12%;*/
+    }
+
+    .toolbarDropdown {
+        float: left;
+        display: flex;
+        margin: auto auto auto 0;
+    }
+
+    .toolbarButtonsWrapper{
+        float: left;
+        margin: auto 1em;
+        display: flex;
+        height: inherit;
+    }
+
+    .toolbarSelectWrapper{
+        overflow: auto;
+        float: left;
+        height: inherit;
+
+    }
+
+    .toolbarSelectGroup{
+        height: inherit;
+        display: flex;
+        float: left;
+    }
+
+    .toolbarLabel {
+        float: left;
+        display: flex;
+        margin: auto 0.5em auto 0.5em;
+    }
+
+    .toolbarButton {
+        margin: auto;
+        float: left;
+        display: flex;
+        /*height: inherit;*/
+
+    }
 }
 
-.graphContainer .graphDescription{
-    min-height: 50px;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-bottom: 20px;
-    background-color: #ffff4d;
-}
-
-.graphContainer .inputs{
-    display: flex;
-    margin-left: 5%;
-    margin-right: 5%;
-    height: 40px;
-    align-self: center;
-    background-color: #ffff4d;
-}
-
-.graphContainer .graph{
-    margin-left: 5%;
-    margin-right: 5%;
-
-    height: 500px;
-    align-self: center;
-    background-color: lightgray;
-}
-
-.graphContainer .inputs .graphSelect #graphSelectObj{
-    /*margin: auto 1em;*/
+.exportInput{
     margin: auto;
     display: flex;
-}
-
-.graphContainer .inputs .exportInput #exportButton{
-    margin : auto;
-    float: left;
-    display: flex;
-}
-
-.graphContainer .inputs .graphSelect{
-    float: left;
-    display: flex;
-    /*width : 150px;*/
-    width : 15%;
-    height : inherit;
+    float: right;
+    height: inherit;
+    min-width: 7em;
     background-color: #9999ff;
 }
 
-.graphContainer .inputs .toolbar {
+.graphSelect{
+    margin: auto;
     display: flex;
     float: left;
     height: inherit;
-    width: 73%;
-}
-
-.graphContainer .inputs .exportInput{
-    float: right;
-    display: flex;
-    width : 12%;
+    min-width: 10em;
     background-color: #9999ff;
 }
 
-.toolbarDropdown{
-    float: left;
-    display: flex;
-    margin: auto auto auto 0;
-}
+@media screen and (max-device-width: 1549px){
+    #graphSelectObj{
+        margin: auto;
+    }
 
-.toolbarLabel {
-    float : left;
-    display: flex;
-    margin : auto 0.5em auto auto;
-}
+    #exportButton{
+        margin: auto;
+    }
 
-.toolbarButton {
-    margin: auto;
-    float : left;
-    display: flex;
+    .toolbarLabelDropWrapper{
+        display: inline;
+        float: left;
+        margin: 0.1em auto;
+    }
+
+    .toolbarLabel{
+        margin: auto 0.5em auto 0.5em;
+    }
+
+    .toolbarSelectWrapper{
+        height: inherit;
+        display: flex;
+        margin: auto 1em auto auto;
+    }
+
+    .toolbarSelectGroup{
+        margin:auto;
+    }
+
+    /*.toolbarSelectGroup{*/
+    /*    height: inherit;*/
+    /*}*/
+
+    .inputs{
+        /*display: flex;*/
+        margin-left: 5%;
+        margin-right: 5%;
+        height: 3em;
+        align-self: center;
+        background-color: #ffff4d;
+        /*display: grid;*/
+    }
+
+    .toolbarButtonsWrapper{
+        margin: auto 1em;
+        float: left;
+        display: flex;
+        height: inherit;
+    }
+
+    .toolbarButton{
+        margin: auto;
+        display: flex;
+        float: left;
+    }
+
+    .toolbar{
+        overflow: auto;
+        height: inherit;
+        /*display: grid;*/
+        /*grid-template-columns: 1fr 1fr 1fr;*/
+    }
+
+    .graphContainer {
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        background-color: #f2f2f2;
+        align-self: center;
+    }
+
+    .graphContainer .graphDescription {
+        min-height: 50px;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 20px;
+        background-color: #ffff4d;
+    }
+
+    .graphContainer .graph {
+        margin-left: 5%;
+        margin-right: 5%;
+
+        height: 500px;
+        align-self: center;
+        background-color: lightgray;
+    }
+
+    /*.graphSelect{*/
+    /*    float: left;*/
+    /*    !*margin : auto;*!*/
+    /*    height: inherit;*/
+
+    /*}*/
+
+    /*.exportInput{*/
+    /*    float: right;*/
+    /*    margin : auto;*/
+    /*    height: inherit;*/
+    /*}*/
+
+
 }

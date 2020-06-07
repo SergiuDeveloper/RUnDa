@@ -42,6 +42,7 @@
             </div>
 
             <div class = "inputs">
+
                 <div class = "graphSelect">
                     <label for="graphSelectObj"></label>
                     <select id = "graphSelectObj" onchange="renderChart(this.options[this.selectedIndex].value)">
@@ -53,31 +54,55 @@
                     </select>
                 </div>
 
-                <div class = "toolbar">
-                    <button onclick="toggleSmooth(this)" id = "smoothGraphButton" class="toolbarButton">Smooth</button>
-
-                    <label for="selectCategory" class="toolbarLabel">Category : </label>
-                    <select id="selectCategory" class="toolbarDropdown">
-                    </select>
-
-                    <label for="selectSubcategory" class="toolbarLabel">Subcategory : </label>
-                    <select id="selectSubcategory" class="toolbarDropdown">
-
-                    </select>
-
-                    <label for="selectLocation" class="toolbarLabel">Location : </label>
-                    <select id="selectLocation" class="toolbarDropdown">
-
-                    </select>
-
-                    <label for="selectRegressionType" class="toolbarLabel">Regression : </label>
-                    <select id="selectRegressionType" class="toolbarDropdown">
-                    </select>
-                </div>
-
                 <div class = "exportInput">
                     <button id = "exportButton"> Export Data </button>
                 </div>
+                <div class = "toolbar">
+
+                    <div class="toolbarButtonsWrapper">
+                        <button onclick="toggleSmooth(this)" id = "smoothGraphButton" class="toolbarButton">Smooth</button>
+                    </div>
+
+                    <div class="toolbarSelectWrapper">
+
+                        <div class="toolbarSelectGroup">
+
+                            <div class = "toolbarLabelDropWrapper">
+                                <label for="selectCategory" class="toolbarLabel">Category : </label>
+                                <select id="selectCategory" class="toolbarDropdown">
+                                </select>
+                            </div>
+
+                            <div class = "toolbarLabelDropWrapper">
+                                <label for="selectSubcategory" class="toolbarLabel">Subcategory : </label>
+                                <select id="selectSubcategory" class="toolbarDropdown">
+
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="toolbarSelectGroup">
+
+                            <div class = "toolbarLabelDropWrapper">
+                                <label for="selectLocation" class="toolbarLabel">Location : </label>
+                                <select id="selectLocation" class="toolbarDropdown">
+
+                                </select>
+                            </div>
+
+                            <div class = "toolbarLabelDropWrapper">
+                                <label for="selectRegressionType" class="toolbarLabel">Regression : </label>
+                                <select id="selectRegressionType" class="toolbarDropdown">
+                                </select>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
 
             </div>
 

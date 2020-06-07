@@ -128,7 +128,6 @@ function populateSelect(selectElement, JSON, onSelectCallback){
 
 function callbackPopulateCategory(response){
     predictionAppCategoriesJSON = JSON.parse(response).DataAttributes;
-
     categories = populateSelect(selectCategory, predictionAppCategoriesJSON, selectedCategory);
     selectedCategory();
 }
