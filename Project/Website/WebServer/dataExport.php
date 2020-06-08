@@ -3,6 +3,13 @@
 
     $jsonContent = file_get_contents('http://unemploymentpredictionapi.azurewebsites.net/RetrieveData');
 
+//    $jsonContent = file_get_contents('C:\\users\\dadam\\Downloads\\UnemploymentData (2).json');
+
+
+//    print_r($jsonContent);
+//    echo print_r(json_decode($jsonContent, true), PHP_EOL;
+//    die();
+
     switch ($dataType) {
         case 'JSON': {
             header('Content-type: application/json');
@@ -119,9 +126,69 @@
         return $xmlDOMDocument->saveXML();
     }
 
+    function parseRec($array, $depth, $str, &$csvValue){
+        $dataStr = '[';
+        foreach($array as $key => $value){
+            if(is_array($value)){
+                if($key === 'DataPoints'){
+                    foreach($value as $dataSetXY){
+                        $dataStr = $dataStr . '(' . $dataSetXY['X'] . ',' . $dataSetXY['Y'] . '),';
+                    }
+                    $dataStr = substr($dataStr, 0, strlen($dataStr) - 1) . '], ';
+
+                }else if($key === 'Coefficients'){
+                    if(is_array($value['w'])){
+                        $w = '[';
+                        foreach($value['w'] as $val)
+                            $w = $w . $val . ', ';
+
+                        $w = substr($w, 0, strlen($w) - 1) . ']';
+                    } else {
+                        $w = $value['w'];
+                    }
+
+                    if(is_array($value['b'])){
+                        $b = '[';
+                        foreach($value['b'] as $val)
+                            $b = $b . $val . ', ';
+
+                        $b = substr($b, 0, strlen($b) - 1) . ']';
+                    } else {
+                        $b = $value['b'];
+                    }
+
+                    $dataStr = $dataStr . '(' . $w . ', ' . $b . '), ';
+                } else if($key === 'DataSubtrahend'){
+                    $dataStr = $dataStr . '(' . $value['X'] . ', ' . $value['Y'] . '), ';
+                }  else
+                parseRec($value,$depth + 1 ,$str . ' ' . $key, $csvValue);
+            } else {
+                if($key === 'MSE'){
+                    $dataStr = $dataStr . $value;
+                }
+//                echo $str . ', ' . $dataStr , PHP_EOL;
+                $csvValue = $csvValue . $str . ', ' . $dataStr . PHP_EOL;
+            }
+        }
+    }
+
     function getDataCSV($jsonContent) {
         $dataset = json_decode($jsonContent, true);
-        return '';
+        $datasetHeaders = 'Category, Subcategory, Location, RegressionType, DataPoints, DataSubtrahend, Coefficients, MSE';
+        echo $datasetHeaders, PHP_EOL;
+//        foreach($dataset['Data'] as $category => $subcategory){
+//            $datasetHeaders = $datasetHeaders . $category;
+//
+//        }
+
+        $depth = 8;
+        $str = '';
+        $csvValue = '';
+        parseRec($dataset['Data'], 0, $str, $csvValue);
+
+        return $csvValue;
+//        echo $datasetHeaders, PHP_EOL;
+        //return '';
     }
 ?>
 
