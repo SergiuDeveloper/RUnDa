@@ -15,15 +15,20 @@
     </head>
 
     <body>
-    <header>
-        <img src="resources/logo/Logo.png" alt="Logo" width="80" height="49">
-    </header>
+
+        <header id="headerTest">
+            <img src="resources/logo/Logo.png" alt="Logo" width="80" height="49">
+        </header>
 
         <div class="subscriptionPopup" id = "exportSubscriptionPopup">
-            <h3> Subscribe to automatically receive free monthly exports via email </h3>
-            <label for="subscriptionEmailInput"> Input your email here :
-                <input type="email" id="subscriptionEmailInput">
-            </label>
+            <div class="subscriptionPopupBlock">
+                <div class="headingWrapper">
+                    <h3 id="subscriptionHeading"> Subscribe to automatically receive free monthly exports via email </h3>
+                </div>
+                <label for="subscriptionEmailInput" id ="popupEmailLabel"> Input your email here :
+                    <input type="email" id="subscriptionEmailInput">
+                </label>
+            </div>
         </div>
 
         <header>
@@ -68,7 +73,8 @@
                 </div>
 
                 <div class = "exportInput">
-                    <a id = "exportButton" href="dataExport.php"> Export Data </a>
+<!--                    <a id = "exportButton" href="dataExport.php"> Export Data </a>-->
+                    <a id = "exportButton" onclick="exportClicked();"> Export Data </a>
                 </div>
                 <div class = "toolbar">
 

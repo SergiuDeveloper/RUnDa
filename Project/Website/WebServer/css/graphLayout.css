@@ -1,11 +1,53 @@
 
 .subscriptionPopup{
     display: none;
-    width: 100vw;
-    height: 100vh;
-    background-color: #2793db;
+    width: 50%;
+    height: 25%;
+    /*overflow-x: hidden;*/
+    /*overflow-y: hidden;*/
+    background-color: rgba(68, 68, 68, 0.42);
     position: absolute;
+
+    padding: 25% 25% 25% 25%;
+    /*background-color: #9999ff;*/
 }
+
+.headingWrapper{
+    height: 60%;
+    width: 100%;
+    display: flex;
+
+}
+
+#subscriptionHeading{
+    float: left;
+    width: 100%;
+    margin: auto;
+    display: inline;
+    height: 60%;
+    /*align-self: center;*/
+    /*alignment: center;*/
+    text-align:center;
+}
+
+#popupEmailLabel{
+    float: left;
+}
+
+#subscriptionEmailInput{
+    float: left;
+}
+
+
+.subscriptionPopupBlock{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flow;
+    float: left;
+}
+
+
 
 .exportInput{
     margin: auto;
