@@ -24,9 +24,6 @@
         <a href = "mapView.php"> Map View Statistics </a>
         <a href = "about.php"> About </a>
         <div class="dropdown-menu">
-            <button class="dropdown-button">
-                MENU
-            </button>
             <div class="dropdown-content">
                 <a href = "index.php"> Home </a>
                 <a href = "graph.php"> Graph Statistics </a>
@@ -46,25 +43,25 @@
             <a class = "previousSlide" onclick = "plusSlide(-2)"> &#10094 </a>
             <div class = "slideContainer fade">
                 <div class = "slideNumberText"> 1 / 4 </div>
-                <img src = "resources/slides/SlideO.jpg" alt = "Slide 1" style = "width: 100%">
+                <img src = "resources/slides/SlideO.jpg" alt = "Slide 1" class="slideImage">
                 <div class = "slideText"> Caption Text One </div>
             </div>
 
             <div class = "slideContainer fade">
                 <div class = "slideNumberText"> 2 / 4 </div>
-                <img src = "resources/slides/SlideT.jpg" alt = "Slide 2" style = "width: 100%">
+                <img src = "resources/slides/SlideT.jpg" alt = "Slide 2" class="slideImage">
                 <div class = "slideText"> Caption Text Two </div>
             </div>
 
             <div class = "slideContainer fade">
                 <div class = "slideNumberText"> 3 / 4 </div>
-                <img src = "resources/slides/SlideTh.jpg" alt = "Slide 3" style = "width: 100%">
+                <img src = "resources/slides/SlideTh.jpg" alt = "Slide 3" class="slideImage">
                 <div class = "slideText"> Caption Text Three </div>
             </div>
 
             <div class = "slideContainer fade">
                 <div class = "slideNumberText"> 4 / 4 </div>
-                <img src = "resources/slides/SlideF.jpg" alt = "Slide 4" style = "width: 100%">
+                <img src = "resources/slides/SlideF.jpg" alt = "Slide 4" class="slideImage">
                 <div class = "slideText"> Caption Text Four </div>
             </div>
 

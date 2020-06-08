@@ -134,3 +134,8 @@
     from {opacity: .4}
     to {opacity: 1}
 }
+
+.slideImage{
+    width: 100%;
+    height: inherit;
+}
