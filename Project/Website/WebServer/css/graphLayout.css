@@ -95,7 +95,7 @@
         /*grid-template-columns: 1fr 1fr 1fr;*/
     }
 
-    .graphContainer {
+    .toolbarContainer {
         width: 100%;
         padding-top: 20px;
         padding-bottom: 20px;
@@ -104,7 +104,7 @@
         align-self: center;
     }
 
-    .graphContainer .graphDescription {
+    .toolbarContainer .graphDescription {
         min-height: 50px;
         margin-left: 5%;
         margin-right: 5%;
@@ -112,7 +112,7 @@
         background-color: #ffff4d;
     }
 
-    .graphContainer .graph {
+    .toolbarContainer .graph {
         margin-left: 5%;
         margin-right: 5%;
 
@@ -198,7 +198,7 @@
         /*grid-template-columns: 1fr 1fr 1fr;*/
     }
 
-    .graphContainer {
+    .toolbarContainer {
         width: 100%;
         padding-top: 20px;
         padding-bottom: 20px;
@@ -207,7 +207,7 @@
         align-self: center;
     }
 
-    .graphContainer .graphDescription {
+    .toolbarContainer .graphDescription {
         min-height: 50px;
         margin-left: 5%;
         margin-right: 5%;
@@ -215,7 +215,7 @@
         background-color: #ffff4d;
     }
 
-    .graphContainer .graph {
+    .toolbarContainer .graph {
         margin-left: 5%;
         margin-right: 5%;
 
@@ -295,7 +295,7 @@
         /*grid-template-columns: 1fr 1fr 1fr;*/
     }
 
-    .graphContainer {
+    .toolbarContainer {
         width: 100%;
         padding-top: 20px;
         padding-bottom: 20px;
@@ -304,7 +304,7 @@
         align-self: center;
     }
 
-    .graphContainer .graphDescription {
+    .toolbarContainer .graphDescription {
         min-height: 50px;
         margin-left: 5%;
         margin-right: 5%;
@@ -312,7 +312,7 @@
         background-color: #ffff4d;
     }
 
-    .graphContainer .graph {
+    .toolbarContainer .graph {
         margin-left: 5%;
         margin-right: 5%;
 
@@ -338,7 +338,7 @@
 }
 
 @media screen and (min-device-width: 1550px) and (min-width: 1550px){
-    .graphContainer {
+    .toolbarContainer {
         width: 100%;
         padding-top: 20px;
         padding-bottom: 20px;
@@ -347,7 +347,7 @@
         align-self: center;
     }
 
-    .graphContainer .graphDescription {
+    .toolbarContainer .graphDescription {
         min-height: 50px;
         margin-left: 5%;
         margin-right: 5%;
@@ -355,7 +355,7 @@
         background-color: #ffff4d;
     }
 
-    .graphContainer .inputs {
+    .toolbarContainer .inputs {
         /*display: flex;*/
         margin-left: 5%;
         margin-right: 5%;
@@ -364,7 +364,7 @@
         background-color: #ffff4d;
     }
 
-    .graphContainer .graph {
+    .toolbarContainer .graph {
         margin-left: 5%;
         margin-right: 5%;
 
@@ -387,19 +387,19 @@
         height: inherit;
     }
 
-    .graphContainer .inputs .exportInput #exportButton {
+    .toolbarContainer .inputs .exportInput #exportButton {
         margin: auto;
         float: left;
         display: flex;
     }
 
-    .graphContainer .inputs .graphSelect {
+    .toolbarContainer .inputs .graphSelect {
         /*margin: auto;*/
         /*width : 150px;*/
         /*width : 15%;*/
     }
 
-    .graphContainer .inputs .toolbar {
+    .toolbarContainer .inputs .toolbar {
         /*float: right;*/
         height: inherit;
         margin: auto;
@@ -407,7 +407,7 @@
         overflow: auto;
     }
 
-    .graphContainer .inputs .exportInput {
+    .toolbarContainer .inputs .exportInput {
         display: flex;
         /*width : 12%;*/
     }

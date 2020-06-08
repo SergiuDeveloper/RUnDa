@@ -36,7 +36,7 @@
             </div>
         </div>
         
-        <section class = "graphContainer">
+        <section class = "toolbarContainer">
             <div class = "graphDescription">
                 <h3> Graph Placeholder below </h3>
             </div>

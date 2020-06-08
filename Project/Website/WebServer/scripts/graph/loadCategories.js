@@ -55,15 +55,19 @@ function makeDataHTTPGet(category, subcategory, location, regression){
         'https://predictionappapi2.azurewebsites.net/RetrieveData?Category=' +
         category +
         '&Subcategory=' +
-        subcategory +
-        '&Location=' +
-        location;
+        subcategory;
+    if (location !== undefined)
+        URI += '&Location=' + location
 
-    if(regression !== 'Optimal') {
-        URI = URI + '&RegressionType=' + regression;
+    if (regression !== undefined) {
+        if (regression !== 'Optimal') {
+            URI = URI + '&RegressionType=' + regression;
+            optimalRegression = false;
+        } else
+            optimalRegression = true;
+    }
+    else
         optimalRegression = false;
-    } else
-        optimalRegression = true;
 
     // console.log(encodeURI(URI));
 
@@ -73,8 +77,8 @@ function makeDataHTTPGet(category, subcategory, location, regression){
 function requestGraphData(){
     let categoryParam = categories[selectCategory.selectedIndex];
     let subcategoryParam = subcategories[selectSubcategory.selectedIndex];
-    let locationParam = locations[selectLocation.selectedIndex];
-    let regressionParam = regressions[selectRegressionType.selectedIndex];
+    let locationParam = (selectLocation.classList.contains('no-show') ? undefined : locations[selectLocation.selectedIndex]);
+    let regressionParam = (selectRegressionType.classList.contains('no-show') ? undefined : regressions[selectRegressionType.selectedIndex]);
     makeDataHTTPGet(categoryParam, subcategoryParam, locationParam, regressionParam);
 }
 
