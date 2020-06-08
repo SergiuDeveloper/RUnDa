@@ -3,7 +3,7 @@ let selectSubcategory = document.getElementById("selectSubcategory");
 let selectLocation = document.getElementById("selectLocation");
 let selectRegressionType = document.getElementById("selectRegressionType");
 
-let URL = 'https://unemploymentpredictionapi.azurewebsites.net/RetrieveDataCategories';
+let URL = 'http://unemploymentpredictionapi.azurewebsites.net/RetrieveDataCategories';
 
 let categories = [];
 let subcategories = [];
