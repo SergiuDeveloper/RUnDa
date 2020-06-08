@@ -1,6 +1,6 @@
-create user 'RUnDa_Common_DB_User'@'rundacommondatabase' identified by 'RUnDa_Common_Pass';
+create user 'RUnDa_Common_DB_User'@'%' identified by 'RUnDa_Common_Pass';
 
-grant all PRIVILEGES ON runda_common_test.* TO 'RUnDa_Common_DB_User'@'rundacommondatabase';
+grant all PRIVILEGES ON runda_common_test.* TO 'RUnDa_Common_DB_User'@'%';
 
 FLUSH privileges;
 
