@@ -49,7 +49,6 @@ function graphDataCallback(response) {
     notifyDatasetChanged(regressionDataJSON, regressionType);
 }
 
-
 function makeDataHTTPGet(category, subcategory, location, regression){
     let URI =
         'https://predictionappapi2.azurewebsites.net/RetrieveData?Category=' +
