@@ -5,6 +5,8 @@ const url = require('url')
 const mysql = require('sync-mysql')
 const crypto = require('crypto')
 const fs = require('fs')
+const nodemailer = require('nodemailer')
+const sgTransport = require('nodemailer-sendgrid-transport')
 
 var trainingResultsJSONObject = null
 
@@ -99,6 +101,17 @@ function retrieveData(requestParametersObject, requestBodyObject, response) {
         return {
             'StatusCode': 204,
             'ResponseBody': ''
+        }
+		
+	if (requestParametersObject === undefined)
+		return {
+            'StatusCode': 200,
+            'ResponseBody': JSON.stringify(
+                {
+                    'Data': trainingResultsJSONObject
+                },
+                null, 4
+            )
         }
 
     let category = requestParametersObject.Category
@@ -199,7 +212,7 @@ function updateTrainingResults(requestParametersObject, requestBodyObject, respo
     })
 
     const dbAuthenticationKeyRows = databaseConnection.query('SELECT COUNT(*) as rowCount FROM Authentication_Keys WHERE Authentication_Key = ?', [authenticationKey])
-    if (dbAuthenticationKeyRows[0].rowCount === 0) {
+    if (dbAuthenticationKeyRows.length === 0) {
         databaseConnection.dispose()
         return {
             'StatusCode': 401,
@@ -214,8 +227,53 @@ function updateTrainingResults(requestParametersObject, requestBodyObject, respo
     databaseConnection.query('UPDATE Authentication_Keys SET Authentication_Key = ? WHERE Authentication_Key = ?', [newAuthenticationKey, authenticationKey])
     databaseConnection.dispose()
 
+	sendNewsletter()
+
     return {
         'StatusCode': 200,
         'ResponseBody': ''
     }
+}
+
+async function sendNewsletter() {
+	const databaseConnection2 = new mysql({
+        host:       'rundacommondatabase.mysql.database.azure.com',
+        user:       'RUnDa_Common_DB_User@rundacommondatabase',
+        password:   'RUnDa_Common_Pass',
+        database:   'RUnDa_Common_Test'
+    })
+	
+	const emailCredentialsRows = databaseConnection2.query('SELECT Email, Password FROM EmailCredentials')
+	if (emailCredentialsRows.length === 0)
+		return
+	const emailAddress = emailCredentialsRows[0]['Email']
+	const emailPassword = emailCredentialsRows[0]['Password']
+
+    const subscriptionsEmailRows = databaseConnection2.query('SELECT Email FROM Subscriptions')
+	databaseConnection2.dispose()
+	
+	const mailBody = retrieveData()['ResponseBody']
+
+	for (let rowIterator = 0; rowIterator < subscriptionsEmailRows.length; ++rowIterator)
+		sendMail(emailAddress, emailPassword, subscriptionsEmailRows[rowIterator]['Email'], 'RUnDa Newsletter', mailBody)
+}
+
+async function sendMail(emailAddress, emailPassword, receiver, subject, content) {
+	const mailOptions = {
+		auth: {
+			api_user: emailAddress,
+			api_key: emailPassword
+		}
+	}
+
+	const mailClient = nodemailer.createTransport(sgTransport(mailOptions))
+
+	const mailContent = {
+	  from: 'newsletter@RUnDa',
+	  to: receiver,
+	  subject: subject,
+	  text: content
+	}
+
+	mailClient.sendMail(mailContent)
 }
