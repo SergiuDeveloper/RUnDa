@@ -57,7 +57,14 @@
                 </div>
 
                 <div class = "exportInput">
-                    <a id = "exportButton" href="dataExport.php"> Export Data </a>
+                    <label for="exportDataTypeSelect">Export Data Type</label>
+                    <select id="exportDataTypeSelect" onchange="updateExportDataURL(this.options[this.selectedIndex].value)">
+                        <option value="JSON">JSON</option>
+                        <option value="XML">XML</option>
+                        <option value="CSV">CSV</option>
+                    </select>
+
+                    <a id="exportButton" href="dataExport.php"> Export Data </a>
                 </div>
                 <div class = "toolbar">
 
@@ -117,6 +124,7 @@
 			Placeholder footer
 		</footer>
 
+        <script src = "scripts/dataExport.js"></script>
 		<script src = "scripts/externals/chartJS/Chart.js"></script>
 		<script src = "scripts/graphSelect.js"></script>
         <script src = "scripts/graph/loadCategories.js"></script>

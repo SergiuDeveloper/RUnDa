@@ -42,7 +42,14 @@
             <h1>Cartographic Statistics</h1>
             <div class = "inputs">
                 <div class = "exportInput">
-                    <a id = "exportButton" href="dataExport.php"> Export Data </a>
+                    <label for="exportDataTypeSelect">Export Data Type</label>
+                    <select id="exportDataTypeSelect" onchange="updateExportDataURL(this.options[this.selectedIndex].value)">
+                        <option value="JSON">JSON</option>
+                        <option value="XML">XML</option>
+                        <option value="CSV">CSV</option>
+                    </select>
+
+                    <a id="exportButton" href="dataExport.php"> Export Data </a>
                 </div>
 
                 <div class = "toolbar">
