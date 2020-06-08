@@ -24,9 +24,6 @@
         <a href = "mapView.php"> Map View Statistics </a>
         <a href = "about.php"> About </a>
         <div class="dropdown-menu">
-            <button class="dropdown-button">
-                MENU
-            </button>
             <div class="dropdown-content">
                 <a href = "index.php"> Home </a>
                 <a href = "graph.php"> Graph Statistics </a>
