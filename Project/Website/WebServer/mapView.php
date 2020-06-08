@@ -3,19 +3,21 @@
 <html lang = "en">
     <head>
 		<!-- Font? -->
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
 		<link rel = "stylesheet" href = "css/layout.css">
         <link rel = "stylesheet" href = "css/graphLayout.css">
         <link rel = "stylesheet" href = "css/map.css">
-		
-		<title>
-			Placeholder Title
-		</title>
-	</head>
+        <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+        <title>
+            RunDA
+        </title>
+    </head>
+
     <body>
-        <header>
-			Placeholder header
-		</header>
+    <header>
+        <img src="resources/logo/Logo.png" alt="Logo" width="80" height="49">
+    </header>
 
         <div class="menu-nav">
 
@@ -37,6 +39,7 @@
         </div>
 
         <section class = "toolbarContainer">
+            <h1>Cartographic Statistics</h1>
             <div class = "inputs">
                 <div class = "exportInput">
                     <a id = "exportButton" href="dataExport.php"> Export Data </a>

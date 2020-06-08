@@ -3,16 +3,21 @@
 <html lang = "en">
 	<head>
 		<!-- Font? -->
+        <meta charset="UTF-8">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
         <link rel = "stylesheet" href = "css/layout.css">
 		<link rel = "stylesheet" href = "css/graphLayout.css">
 		<link rel = "stylesheet" href = "css/graphStyle.css">
-		<title>
-			Placeholder Graph Title
-		</title>
-	</head>
+        <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+        <title>
+            RunDA
+        </title>
+    </head>
 
     <body>
+    <header>
+        <img src="resources/logo/Logo.png" alt="Logo" width="80" height="49">
+    </header>
 
         <div class="subscriptionPopup" id = "exportSubscriptionPopup">
             <h3> Subscribe to automatically receive free monthly exports via email </h3>
@@ -63,8 +68,7 @@
                 </div>
 
                 <div class = "exportInput">
-<!--                    <a id = "exportButton" href="dataExport.php?" onclick="exportClicked();"> Export Data </a>-->
-                    <a id = "exportButton" onclick="exportClicked();"> Export Data </a>
+                    <a id = "exportButton" href="dataExport.php"> Export Data </a>
                 </div>
                 <div class = "toolbar">
 

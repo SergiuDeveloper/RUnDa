@@ -3,18 +3,19 @@
 <html lang = "en">
     <head>
         <!-- Font? -->
+        <meta charset="UTF-8">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
         <link rel = "stylesheet" href = "css/layout.css">
-
+        <link rel="icon" type="image/x-icon" href="favicon.ico"/>
         <title>
-            Placeholder Graph Title
+            RunDA
         </title>
     </head>
 
     <body>
-        <header>
-            Placeholder header
-        </header>
+    <header>
+        <img src="resources/logo/Logo.png" alt="Logo" width="80" height="49">
+    </header>
 
         <div class="menu-nav">
 
