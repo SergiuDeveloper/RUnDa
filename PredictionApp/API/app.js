@@ -51,7 +51,7 @@ const httpServer = http.createServer(async (request, response) => {
     })
 })
 
-httpServer.listen(80, () => {
+httpServer.listen(process.env.PORT || 80, () => {
     console.log(`Server running on port ${httpServer.address().port}`)
 })
 
@@ -105,6 +105,17 @@ function retrieveData(requestParametersObject, requestBodyObject, response) {
     let subcategory = requestParametersObject.Subcategory
     let location = requestParametersObject.Location
     let regressionType = requestParametersObject.RegressionType
+
+    if (category === undefined && subcategory === undefined && location === undefined && regressionType === undefined)
+        return {
+            'StatusCode': 200,
+            'ResponseBody': JSON.stringify(
+                {
+                    'Data': trainingResultsJSONObject
+                },
+                null, 4
+            )
+        }
 
     if (category === undefined || subcategory === undefined || location === undefined)
         return {
