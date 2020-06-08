@@ -37,35 +37,41 @@
 
     <div class = "slideshow">
 
+        <div class="slideshowWrapper">
+            <div class = "slideshowContainer">
+                <a class = "nextSlide" onclick = "plusSlide(0)"> &#10095 </a>
+                <a class = "previousSlide" onclick = "plusSlide(-2)"> &#10094 </a>
+                <div class = "slideContainer fade">
+                    <div class = "slideNumberText"> 1 / 4 </div>
+                    <img src = "resources/slides/SlideO.jpg" alt = "Slide 1" class="slideImage">
+                    <div class = "slideText"> Caption Text One </div>
+                </div>
 
-        <div class = "slideshowContainer">
-            <a class = "nextSlide" onclick = "plusSlide(0)"> &#10095 </a>
-            <a class = "previousSlide" onclick = "plusSlide(-2)"> &#10094 </a>
-            <div class = "slideContainer fade">
-                <div class = "slideNumberText"> 1 / 4 </div>
-                <img src = "resources/slides/SlideO.jpg" alt = "Slide 1" class="slideImage">
-                <div class = "slideText"> Caption Text One </div>
+                <div class = "slideContainer fade">
+                    <div class = "slideNumberText"> 2 / 4 </div>
+                    <img src = "resources/slides/SlideTAsp.png" alt = "Slide 2" class="slideImage">
+                    <div class = "slideText"> Caption Text Two </div>
+                </div>
+
+                <div class = "slideContainer fade">
+                    <div class = "slideNumberText"> 3 / 4 </div>
+                    <img src = "resources/slides/SlideThAsp.png" alt = "Slide 3" class="slideImage">
+                    <div class = "slideText"> Caption Text Three </div>
+                </div>
+
+                <div class = "slideContainer fade">
+                    <div class = "slideNumberText"> 4 / 4 </div>
+                    <img src = "resources/slides/SlideF.jpg" alt = "Slide 4" class="slideImage">
+                    <div class = "slideText"> Caption Text Four </div>
+                </div>
+
+
+
             </div>
 
-            <div class = "slideContainer fade">
-                <div class = "slideNumberText"> 2 / 4 </div>
-                <img src = "resources/slides/SlideT.jpg" alt = "Slide 2" class="slideImage">
-                <div class = "slideText"> Caption Text Two </div>
-            </div>
+        </div>
 
-            <div class = "slideContainer fade">
-                <div class = "slideNumberText"> 3 / 4 </div>
-                <img src = "resources/slides/SlideTh.jpg" alt = "Slide 3" class="slideImage">
-                <div class = "slideText"> Caption Text Three </div>
-            </div>
-
-            <div class = "slideContainer fade">
-                <div class = "slideNumberText"> 4 / 4 </div>
-                <img src = "resources/slides/SlideF.jpg" alt = "Slide 4" class="slideImage">
-                <div class = "slideText"> Caption Text Four </div>
-            </div>
-
-
+        <div class="dotWrapper">
             <div style = "text-align: center">
                 <span class = "dotSlide" onclick = "currentSlide(1)"></span>
                 <span class = "dotSlide" onclick = "currentSlide(2)"></span>
