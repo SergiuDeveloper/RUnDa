@@ -14,18 +14,14 @@ var predictionCoefficients;
 var predictionSubtrahend;
 
 function notifyDatasetChanged(dataset, regressionType) {
-    console.log(dataset);
     dataPoints = [];
     dataLabels = [];
 
     let isFirstDataPoint = true;
     let previousDataPointValue;
 
-    let dataPointsMaxXValue = dataPoints[0].X;
+    dataPointsMaxXValue = dataset.DataPoints[dataset.DataPoints.length - 1].X;
     dataset.DataPoints.forEach((dataPoint) => {
-        if (dataPoint.X > dataPointsMaxXValue)
-            dataPointsMaxXValue = dataPoint.X;
-
         if (!isFirstDataPoint)
             for (let dataPointIterator = previousDataPointValue; dataPointIterator < dataPoint; ++dataPointIterator)
                 dataPoints.push(0);
@@ -49,7 +45,7 @@ function renderChart(chartType, regressionType) {
 
     const [chartSegmentsBackgroundColors, chartSegmentsBorderColors] = (['line', 'radar'].includes(chartType) ? ['rgba(0, 0, 255, 0.6)', 'rgba(0, 255, 0, 1.0)'] : getChartSegmentsColors(chartType));
 
-    getPredictedDataPoints(regressionType);
+    console.log(getPredictedDataPoints(regressionType));
 
     const chartOptions = {
         type: chartType,
@@ -94,23 +90,26 @@ function getPredictedDataPoints(regressionType) {
     let predictedDataPoints = [];
 
     let predictedValue;
-    for (let predictedMonthsIterator = dataPointsMaxXValue; predictedMonthsIterator < dataPointsMaxXValue + PREDICTED_MONTHS_COUNT; ++predictedMonthsIterator) {
-        predictedValue = 0;
+    for (let predictedMonthsIterator = dataPointsMaxXValue + 1; predictedMonthsIterator <= dataPointsMaxXValue + PREDICTED_MONTHS_COUNT; ++predictedMonthsIterator) {
+        predictedValue = predictionCoefficients.b + predictionSubtrahend.Y;
 
         switch (regressionType) {
             case 'Linear': {
-                predictedValue = predictionCoefficients.w * (predictedMonthsIterator - predictionSubtrahend.X) + predictionCoefficients.b;
+                predictedValue += predictionCoefficients.w * (predictedMonthsIterator - predictionSubtrahend.X);
                 break;
             }
             case 'Polynomial': {
+                for (let weightIterator = 0; weightIterator < predictionCoefficients.w.length; ++weightIterator)
+                    predictedValue += predictionCoefficients.w[weightIterator] * Math.pow(predictedMonthsIterator - predictionSubtrahend.X, weightIterator + 1);
                 break;
             }
             case 'Logistic Polynomial': {
+                predictedValue += predictionCoefficients.w * Math.pow(predictedMonthsIterator - predictionSubtrahend.X, predictionCoefficients.p);
                 break;
             }
         }
 
-        predictedDataPoints.push(predictedValue);
+        predictedDataPoints.push(Math.round(predictedValue));
     }
 
     return predictedDataPoints;
