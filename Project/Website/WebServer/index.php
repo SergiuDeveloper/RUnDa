@@ -6,9 +6,9 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
         <link rel = "stylesheet" href = "css/layout.css">
         <link rel = "stylesheet" href = "css/slides.css">
-
+        <link rel="icon" type="image/x-icon" href="favicon.ico"/>
         <title>
-            Placeholder Title
+            RunDA
         </title>
     </head>
 

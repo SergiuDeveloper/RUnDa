@@ -7,15 +7,16 @@
 		<link rel = "stylesheet" href = "css/layout.css">
         <link rel = "stylesheet" href = "css/graphLayout.css">
         <link rel = "stylesheet" href = "css/map.css">
-		
-		<title>
-			Placeholder Title
-		</title>
-	</head>
+        <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+        <title>
+            RunDA
+        </title>
+    </head>
+
     <body>
-        <header>
-			Placeholder header
-		</header>
+    <header>
+        <img src="resources/logo/Logo.png" alt="Logo" width="80" height="49">
+    </header>
 
         <div class="menu-nav">
 

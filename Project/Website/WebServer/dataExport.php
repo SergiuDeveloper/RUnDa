@@ -4,3 +4,4 @@
 
     echo file_get_contents('http://predictionappapi2.azurewebsites.net/RetrieveData');
 ?>
+
