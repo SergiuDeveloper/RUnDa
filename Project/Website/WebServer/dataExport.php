@@ -1,9 +1,10 @@
 <?php
     $dataType = (isset($_GET['DataType']) ? $_GET['DataType'] : 'JSON');
 
-//    $jsonContent = file_get_contents('http://unemploymentpredictionapi.azurewebsites.net/RetrieveData');
+    $jsonContent = file_get_contents('http://unemploymentpredictionapi.azurewebsites.net/RetrieveData');
 
-    $jsonContent = file_get_contents('C:\\users\\dadam\\Downloads\\UnemploymentData (2).json');
+//    $jsonContent = file_get_contents('C:\\users\\dadam\\Downloads\\UnemploymentData (2).json');
+
 
 //    print_r($jsonContent);
 //    echo print_r(json_decode($jsonContent, true), PHP_EOL;
@@ -125,15 +126,10 @@
         return $xmlDOMDocument->saveXML();
     }
 
-    function parseRec($array, $depth, $str){
+    function parseRec($array, $depth, $str, &$csvValue){
         $dataStr = '[';
         foreach($array as $key => $value){
-//            $depthCopy = $depth;
-//            while($depthCopy--){
-//                echo "\t";
-//            }
             if(is_array($value)){
-//                if($depth > 5)
                 if($key === 'DataPoints'){
                     foreach($value as $dataSetXY){
                         $dataStr = $dataStr . '(' . $dataSetXY['X'] . ',' . $dataSetXY['Y'] . '),';
@@ -141,7 +137,6 @@
                     $dataStr = substr($dataStr, 0, strlen($dataStr) - 1) . '], ';
 
                 }else if($key === 'Coefficients'){
-//                    echo $key . ' ' . $value, PHP_EOL;
                     if(is_array($value['w'])){
                         $w = '[';
                         foreach($value['w'] as $val)
@@ -164,28 +159,16 @@
 
                     $dataStr = $dataStr . '(' . $w . ', ' . $b . '), ';
                 } else if($key === 'DataSubtrahend'){
-//                    echo $key . ' ' . $value, PHP_EOL;
                     $dataStr = $dataStr . '(' . $value['X'] . ', ' . $value['Y'] . '), ';
-                } else if($key === 'MSE'){
-//                    echo $key . ' ' . $value, PHP_EOL;
-                } else
-//                echo $str . ', ' . $key, PHP_EOL;
-                parseRec($value,$depth + 1 ,$str . ' ' . $key);
+                }  else
+                parseRec($value,$depth + 1 ,$str . ' ' . $key, $csvValue);
             } else {
                 if($key === 'MSE'){
                     $dataStr = $dataStr . $value;
                 }
-//                echo $key, PHP_EOL;
-//                if($key === 'Coefficients'){
-//                    $dataStr = $dataStr . ', (' . $value[$key]['w'] . ', ' . $value['Coefficients']['b'] . ')';
-//                }
-//                echo $key . ' ' . $value, PHP_EOL;
-//                if($depth > 5)
-//                echo $str . ', ' . $value, PHP_EOL;
-                echo $str . ', ' . $dataStr , PHP_EOL;
+//                echo $str . ', ' . $dataStr , PHP_EOL;
+                $csvValue = $csvValue . $str . ', ' . $dataStr . PHP_EOL;
             }
-//            echo $dataStr, PHP_EOL;
-//            echo $str . ', ' . $dataStr, PHP_EOL;
         }
     }
 
@@ -200,7 +183,10 @@
 
         $depth = 8;
         $str = '';
-        parseRec($dataset['Data'], 0, $str);
+        $csvValue = '';
+        parseRec($dataset['Data'], 0, $str, $csvValue);
+
+        return $csvValue;
 //        echo $datasetHeaders, PHP_EOL;
         //return '';
     }
