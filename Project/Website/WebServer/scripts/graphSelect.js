@@ -10,10 +10,11 @@ const PREDICTED_MONTHS_COUNT = 12;
 var dataPointsMaxXValue;
 var dataPoints;
 var dataLabels;
+var regressionType;
 var predictionCoefficients;
 var predictionSubtrahend;
 
-function notifyDatasetChanged(dataset, regressionType) {
+function notifyDatasetChanged(dataset, selectedRegressionType) {
     dataPoints = [];
     dataLabels = [];
 
@@ -37,18 +38,19 @@ function notifyDatasetChanged(dataset, regressionType) {
     for (let predictedMonthsIterator = dataPointsMaxXValue + 1; predictedMonthsIterator <= dataPointsMaxXValue + PREDICTED_MONTHS_COUNT; ++predictedMonthsIterator)
         dataLabels.push(`${MONTHS_ARRAY[(predictedMonthsIterator - 1) % 12]} ${Math.floor((predictedMonthsIterator - 1) / 12)}`);
 
+    regressionType = selectedRegressionType;
     predictionCoefficients = dataset.Coefficients;
     predictionSubtrahend = dataset.DataSubtrahend;
 
-    renderChart(currentChartType, regressionType);
+    renderChart(currentChartType);
 }
 
-function renderChart(chartType, regressionType) {
+function renderChart(chartType) {
     const canvasContext = document.getElementById('chart').getContext('2d');
 
     const [chartSegmentsBackgroundColors, chartSegmentsBorderColors] = (['line', 'radar'].includes(chartType) ? ['rgba(0, 0, 255, 0.6)', 'rgba(0, 255, 0, 1.0)'] : getChartSegmentsColors(chartType));
 
-    let predictedDataPoints = (new Array(dataPoints.length)).fill(NaN).concat(getPredictedDataPoints(regressionType));
+    let predictedDataPoints = (new Array(dataPoints.length)).fill(NaN).concat(getPredictedDataPoints());
 
     const chartOptions = {
         type: chartType,
@@ -76,7 +78,6 @@ function renderChart(chartType, regressionType) {
             ]
         },
         options: {
-            spanGaps: true,
             responsive: true,
             maintainAspectRatio: false,
             scales: {
@@ -84,7 +85,7 @@ function renderChart(chartType, regressionType) {
                     ticks: {
                         beginAtZero: false
                     },
-                    min: Math.min.apply(null, dataPoints.concat(predictedDataPoints.slice(dataPoints.length)))
+                    min: Math.min.apply(null, dataPoints.filter((dataPoint) => dataPoint !== NaN).concat(predictedDataPoints.slice(dataPoints.length).filter((predictedDataPoint) => predictedDataPoint !== NaN)))
                 }]
             }
         }
@@ -95,14 +96,14 @@ function renderChart(chartType, regressionType) {
 
     chartObject = new Chart(canvasContext, chartOptions);
 
-    canvasContext.canvas.style.width = '90vw';
+    /*canvasContext.canvas.style.width = '90vw';
     canvasContext.canvas.style.height = '65vh';
-    canvasContext.canvas.style.margin = 'auto';
+    canvasContext.canvas.style.margin = 'auto';*/
 
     currentChartType = chartType;
 }
 
-function getPredictedDataPoints(regressionType) {
+function getPredictedDataPoints() {
     let predictedDataPoints = [];
 
     let predictedValue;
