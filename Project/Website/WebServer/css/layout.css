@@ -91,6 +91,35 @@ ul#MainNav li {
     display:inline;
 }
 
+@media screen and (max-device-width: 400px) {
+    body{
+        background-color: #14A76C;
+    }
+
+    .contentPlaceholder {
+        margin:0 0;
+        display: inline-block;
+    }
+
+    .descriptionPlaceholder {
+        width: 100%;
+        height: 200px;
+        text-align: center;
+    }
+
+    .extraPlaceholder {
+        width: 100%;
+        height: 150px;
+        background-color: #333333;
+    }
+
+    .slideshow {
+        height: 700px;
+    }
+
+
+}
+
 @media screen and (max-device-width: 600px) {
 
     header {
