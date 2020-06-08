@@ -13,6 +13,14 @@
 	</head>
 
     <body>
+
+        <div class="subscriptionPopup" id = "exportSubscriptionPopup">
+            <h3> Subscribe to automatically receive free monthly exports via email </h3>
+            <label for="subscriptionEmailInput"> Input your email here :
+                <input type="email" id="subscriptionEmailInput">
+            </label>
+        </div>
+
         <header>
             Placeholder header
         </header>
@@ -55,7 +63,8 @@
                 </div>
 
                 <div class = "exportInput">
-                    <a id = "exportButton" href="dataExport.php"> Export Data </a>
+<!--                    <a id = "exportButton" href="dataExport.php?" onclick="exportClicked();"> Export Data </a>-->
+                    <a id = "exportButton" onclick="exportClicked();"> Export Data </a>
                 </div>
                 <div class = "toolbar">
 
@@ -118,5 +127,6 @@
 		<script src = "scripts/externals/chartJS/Chart.js"></script>
 		<script src = "scripts/graphSelect.js"></script>
         <script src = "scripts/graph/loadCategories.js"></script>
+        <script src="./scripts/graph/exportPopup.js"></script>
 	</body>
 </html>
