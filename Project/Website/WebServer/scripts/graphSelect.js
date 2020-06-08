@@ -96,7 +96,7 @@ function renderChart(chartType, regressionType) {
     chartObject = new Chart(canvasContext, chartOptions);
 
     canvasContext.canvas.style.width = '90vw';
-    canvasContext.canvas.style.height = '66.5vh';
+    canvasContext.canvas.style.height = '65vh';
     canvasContext.canvas.style.margin = 'auto';
 
     currentChartType = chartType;
