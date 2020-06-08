@@ -24,7 +24,7 @@ function notifyDatasetChanged(dataset, regressionType) {
     dataset.DataPoints.forEach((dataPoint) => {
         if (!isFirstDataPoint)
             for (let dataPointIterator = previousDataPointValue; dataPointIterator < dataPoint; ++dataPointIterator)
-                dataPoints.push(0);
+                dataPoints.push(NaN);
         else
             isFirstDataPoint = false;
 
@@ -33,6 +33,9 @@ function notifyDatasetChanged(dataset, regressionType) {
 
         previousDataPointValue = dataPoint;
     });
+
+    for (let predictedMonthsIterator = dataPointsMaxXValue + 1; predictedMonthsIterator <= dataPointsMaxXValue + PREDICTED_MONTHS_COUNT; ++predictedMonthsIterator)
+        dataLabels.push(`${MONTHS_ARRAY[(predictedMonthsIterator - 1) % 12]} ${Math.floor((predictedMonthsIterator - 1) / 12)}`);
 
     predictionCoefficients = dataset.Coefficients;
     predictionSubtrahend = dataset.DataSubtrahend;
@@ -45,22 +48,35 @@ function renderChart(chartType, regressionType) {
 
     const [chartSegmentsBackgroundColors, chartSegmentsBorderColors] = (['line', 'radar'].includes(chartType) ? ['rgba(0, 0, 255, 0.6)', 'rgba(0, 255, 0, 1.0)'] : getChartSegmentsColors(chartType));
 
-    console.log(getPredictedDataPoints(regressionType));
+    let predictedDataPoints = (new Array(dataPoints.length)).fill(NaN).concat(getPredictedDataPoints(regressionType));
 
     const chartOptions = {
         type: chartType,
         data: {
             labels: dataLabels,
-            datasets: [{
-                label: 'Unemployee Count',
-                data: dataPoints,
-                backgroundColor: chartSegmentsBackgroundColors,
-                borderColor: chartSegmentsBorderColors,
-                pointRadius: 10,
-                pointHoverRadius: 20
-            }]
+            datasets: [
+                {
+                    label: 'Unemployee Count',
+                    data: dataPoints,
+                    backgroundColor: chartSegmentsBackgroundColors,
+                    borderColor: chartSegmentsBorderColors,
+                    pointRadius: 10,
+                    pointHoverRadius: 20,
+                    borderWidth: 2
+                },
+                {
+                    label: 'Unemployee Count(Prediction)',
+                    data: predictedDataPoints,
+                    backgroundColor: 'rgba(0, 255, 0, 0.15)',
+                    borderColor: 'rgba(50, 50, 50, 1)',
+                    pointRadius: 10,
+                    pointHoverRadius: 20,
+                    borderWidth: 2
+                }
+            ]
         },
         options: {
+            spanGaps: true,
             responsive: true,
             maintainAspectRatio: false,
             scales: {
@@ -68,7 +84,7 @@ function renderChart(chartType, regressionType) {
                     ticks: {
                         beginAtZero: false
                     },
-                    min: Math.min.apply(null, dataPoints)
+                    min: Math.min.apply(null, dataPoints.concat(predictedDataPoints.slice(dataPoints.length)))
                 }]
             }
         }
@@ -109,7 +125,7 @@ function getPredictedDataPoints(regressionType) {
             }
         }
 
-        predictedDataPoints.push(Math.round(predictedValue));
+        predictedDataPoints.push(Math.max(0, Math.round(predictedValue)));
     }
 
     return predictedDataPoints;
@@ -117,7 +133,7 @@ function getPredictedDataPoints(regressionType) {
 
 function getChartSegmentsColors(chartType) {
     const maxDataPointValue = Math.max.apply(null, dataPoints);
-    const minDataPointValue = Math.min.apply(null, dataPoints.filter((dataPoint) => dataPoint > 0));
+    const minDataPointValue = Math.min.apply(null, dataPoints.filter((dataPoint) => dataPoint !== NaN));
 
     const dataPointsRange = maxDataPointValue - minDataPointValue;
 
