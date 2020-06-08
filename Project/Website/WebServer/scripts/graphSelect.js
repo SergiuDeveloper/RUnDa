@@ -11,10 +11,11 @@ var dataPointsMaxXValue;
 var dataPoints;
 var dataLabels;
 var regressionType;
+var isFloatingPointData;
 var predictionCoefficients;
 var predictionSubtrahend;
 
-function notifyDatasetChanged(dataset, selectedRegressionType) {
+function notifyDatasetChanged(dataset, selectedRegressionType, selectedIsFloatingPointData) {
     dataPoints = [];
     dataLabels = [];
 
@@ -39,6 +40,7 @@ function notifyDatasetChanged(dataset, selectedRegressionType) {
         dataLabels.push(`${MONTHS_ARRAY[(predictedMonthsIterator - 1) % 12]} ${Math.floor((predictedMonthsIterator - 1) / 12)}`);
 
     regressionType = selectedRegressionType;
+    isFloatingPointData = selectedIsFloatingPointData;
     predictionCoefficients = dataset.Coefficients;
     predictionSubtrahend = dataset.DataSubtrahend;
 
@@ -96,10 +98,6 @@ function renderChart(chartType) {
 
     chartObject = new Chart(canvasContext, chartOptions);
 
-    /*canvasContext.canvas.style.width = '90vw';
-    canvasContext.canvas.style.height = '65vh';
-    canvasContext.canvas.style.margin = 'auto';*/
-
     currentChartType = chartType;
 }
 
@@ -126,7 +124,9 @@ function getPredictedDataPoints() {
             }
         }
 
-        predictedDataPoints.push(Math.max(0, Math.round(predictedValue)));
+        if (!isFloatingPointData)
+            predictedValue = Math.round(predictedValue);
+        predictedDataPoints.push(Math.max(0, predictedValue));
     }
 
     return predictedDataPoints;

@@ -46,7 +46,8 @@ function graphDataCallback(response) {
     // console.log(regressionDataJSON);
     // console.log(regressionType);
 
-    notifyDatasetChanged(regressionDataJSON, regressionType);
+    isFloatingPointData = (selectSubcategory.options[selectSubcategory.selectedIndex].text.indexOf('%') != -1);
+    notifyDatasetChanged(regressionDataJSON, regressionType, isFloatingPointData);
 }
 
 function makeDataHTTPGet(category, subcategory, location, regression){
