@@ -55,7 +55,7 @@
                 </div>
 
                 <div class = "exportInput">
-                    <button id = "exportButton"> Export Data </button>
+                    <a id = "exportButton" href="dataExport.php"> Export Data </a>
                 </div>
                 <div class = "toolbar">
 

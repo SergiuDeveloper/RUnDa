@@ -37,7 +37,7 @@
 
 		<div class = "mapInPage">
             <?php
-                echo file_get_contents('resources/svg/RO_Map.svg');
+                readfile('resources/svg/RO_Map.svg');
             ?>
 		</div>
     </body>
