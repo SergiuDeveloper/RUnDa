@@ -117,10 +117,21 @@ function retrieveData(requestParametersObject, requestBodyObject, response) {
             )
         }
 
-    if (category === undefined || subcategory === undefined || location === undefined)
+    if (category === undefined || subcategory === undefined)
         return {
             'StatusCode': 400,
             'ResponseBody': ''
+        }
+
+    if (location === undefined)
+        return {
+            'StatusCode': 200,
+            'ResponseBody': JSON.stringify(
+                {
+                    'Data': trainingResultsJSONObject[category][subcategory]
+                },
+                null, 4
+            )
         }
 
     if (
