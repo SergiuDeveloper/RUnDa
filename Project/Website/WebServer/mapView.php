@@ -3,7 +3,8 @@
 <html lang = "en">
     <head>
 		<!-- Font? -->
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
 		<link rel = "stylesheet" href = "css/layout.css">
         <link rel = "stylesheet" href = "css/graphLayout.css">
         <link rel = "stylesheet" href = "css/map.css">
@@ -38,6 +39,7 @@
         </div>
 
         <section class = "toolbarContainer">
+            <h1>Cartographic Statistics</h1>
             <div class = "inputs">
                 <div class = "exportInput">
                     <a id = "exportButton" href="dataExport.php"> Export Data </a>

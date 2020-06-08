@@ -3,6 +3,7 @@
 <html lang = "en">
     <head>
         <!-- Font? -->
+        <meta charset="UTF-8">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
         <link rel = "stylesheet" href = "css/layout.css">
         <link rel = "stylesheet" href = "css/slides.css">
@@ -39,8 +40,8 @@
 
         <div class="slideshowWrapper">
             <div class = "slideshowContainer">
-                <a class = "nextSlide" onclick = "plusSlide(0)"> &#10095 </a>
-                <a class = "previousSlide" onclick = "plusSlide(-2)"> &#10094 </a>
+                <a class = "nextSlide" onclick = "plusSlide(0)"> &gt; </a>
+                <a class = "previousSlide" onclick = "plusSlide(-2)"> &lt; </a>
                 <div class = "slideContainer fade">
                     <div class = "slideNumberText"> 1 / 4 </div>
                     <img src = "resources/slides/SlideO.jpg" alt = "Slide 1" class="slideImage">

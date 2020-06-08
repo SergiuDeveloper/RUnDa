@@ -3,6 +3,7 @@
 <html lang = "en">
 	<head>
 		<!-- Font? -->
+        <meta charset="UTF-8">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
         <link rel = "stylesheet" href = "css/layout.css">
 		<link rel = "stylesheet" href = "css/graphLayout.css">
