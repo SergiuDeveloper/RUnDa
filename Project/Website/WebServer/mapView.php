@@ -25,10 +25,7 @@
             <a href = "graph.php"> Graph Statistics </a>
             <a href = "mapView.php"> Map View Statistics </a>
             <a href = "about.php"> About </a>
-            <div class="dropdown-menu">
-                <button class="dropdown-button">
-                    MENU
-                </button>
+            <div class="dropdown-menu"
                 <div class="dropdown-content">
                     <a href = "index.php"> Home </a>
                     <a href = "graph.php"> Graph Statistics </a>
@@ -38,8 +35,7 @@
             </div>
         </div>
 
-        <section class = "toolbarContainer">
-            <h1>Cartographic Statistics</h1>
+        <div class = "toolbarContainer">
             <div class = "inputs">
                 <div class = "exportInput">
                     <label for="exportDataTypeSelect">Export Data Type</label>
@@ -84,7 +80,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
         <div class="loader"></div>
 		<div class = "mapInPage">

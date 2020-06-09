@@ -24,6 +24,10 @@
     margin: 30vh auto auto;
 }
 
+.toolbarContainer {
+    height: 20%;
+}
+
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }

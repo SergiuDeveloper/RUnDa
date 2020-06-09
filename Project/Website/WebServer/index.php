@@ -33,11 +33,21 @@
             </div>
         </div>
     </div>
-
+    <div class="firstSlide">
+        <img src = "resources/phoneSlides/slide1.jpg" alt = "Phone Slide 1" class="phoneSlideImage">
+    </div>
+    <div class="secondSlide">
+        <img src = "resources/phoneSlides/phoneslide2.jpg" alt = "Phone Slide 2" class="phoneSlideImage">
+    </div>
+    <div class="thirdSlide">
+        <img src = "resources/phoneSlides/slide3.jpg" alt = "Phone Slide 3" class="phoneSlideImage">
+    </div>
+    <div class="forthSlide">
+        <img src = "resources/phoneSlides/slide2.jpg" alt = "Phone Slide 1" class="phoneSlideImage">
+    </div>
 
 
     <div class = "slideshow">
-
         <div class="slideshowWrapper">
             <div class = "slideshowContainer">
                 <a class = "nextSlide" onclick = "plusSlide(0)"> &gt; </a>
@@ -45,10 +55,8 @@
                 <div class = "slideContainer fade">
                     <div class = "slideNumberText"> 1 / 4 </div>
                     <img src = "resources/slides/SlideO.jpg" alt = "Slide 1" class="slideImage">
-                    <img src = "resources/phoneSlides/slide1.jpg" alt = "Phone Slide 1" class="phoneSlideImage">
                     <div class = "slideText"> Caption Text One </div>
                 </div>
-
                 <div class = "slideContainer fade">
                     <div class = "slideNumberText"> 2 / 4 </div>
                     <img src = "resources/slides/SlideTAsp.png" alt = "Slide 2" class="slideImage">
