@@ -14,6 +14,13 @@
     padding-right: 5px;
 }
 
+.Diana button {
+    background-color: #14A76C;
+    border: none;
+    border-radius: 12px;
+    height: 20px;
+}
+
 
 .Sergiu {
     text-align: right;
@@ -25,6 +32,13 @@
     padding-right: 5px;
 }
 
+.Sergiu button {
+    background-color: #FF652F;
+    border: none;
+    border-radius: 12px;
+    height: 20px;
+}
+
 .Vlad {
     text-align: right;
     color: #333538;
@@ -33,4 +47,11 @@
     width: 400px;
     background-color: #FF652F;
     padding-right: 5px;
+}
+
+.Vlad button{
+    background-color: #FFE400;
+    border: none;
+    border-radius: 12px;
+    height: 20px;
 }
