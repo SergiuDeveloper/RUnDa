@@ -90,7 +90,7 @@ class DataFetcher():
 
             try:
                 with open(f'Data/{category_name}/{year}/{month}/Data.csv', 'w', encoding = 'latin-1') as csv_file:
-                    csv_file.write(csv_online_content.text.replace('-'. ' '))
+                    csv_file.write(csv_online_content.text.replace('-', ' '))
             except:
                 with open(f'Data/{category_name}/{year}/{month}/Data.csv', 'wb') as csv_file:
                     csv_file.write(csv_online_content.content)
