@@ -5,6 +5,7 @@
         <!-- Font? -->
         <meta charset="UTF-8">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+        <link rel = "stylesheet" href = "css/about.css">
         <link rel = "stylesheet" href = "css/layout.css">
         <link rel="icon" type="image/x-icon" href="favicon.ico"/>
         <title>
@@ -44,7 +45,7 @@
                 <img src="resources/aboutPhotos/diana.jpg" alt="Diana" width="373" height="350">
             </div>
             <div class="Vlad">
-                <img src="resources/aboutPhotos/vlad.jpg" alt="Vlad" width="420" height="350">
+                <img src="resources/aboutPhotos/vlad.jpg" alt="Vlad">
             </div>
         </section>
 
