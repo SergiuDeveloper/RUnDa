@@ -87,7 +87,7 @@
 
 <!--                    <a id="exportButton" href="dataExport.php"> Export Data </a>-->
 <!--                    <a id = "exportButton" href="dataExport.php"> Export Data </a>-->
-                    <a id = "exportButton" onclick="exportClicked();"> Export Data </a>
+                    <a id = "exportButton" onclick="exportClicked();" href="dataExport.php"> Export Data </a>
                 </div>
                 <div class = "toolbar">
 

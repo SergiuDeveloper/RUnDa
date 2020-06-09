@@ -1,5 +1,5 @@
 let popupDiv = document.getElementById("exportSubscriptionPopup");
-const popupRevealMS = 500;
+const popupRevealMS = 6000;
 let emailTextInput = document.getElementById("subscriptionEmailInput");
 
 function enablePopup(){
