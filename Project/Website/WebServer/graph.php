@@ -22,17 +22,19 @@
 
         <div class="subscriptionPopup" id = "exportSubscriptionPopup">
             <div class="subscriptionPopupBlock">
-                <div class="closeButton">x</div>
+                <button class="closeButton" onclick="closePopup()">
+                    x
+                </button>
                 <div class="headingWrapper">
                     <h3 id="subscriptionHeading"> Subscribe to automatically receive free monthly exports via email </h3>
                 </div>
-                  <div class="center-elem"
-                    <div class="inputPopup">
+                <div class="center-elem">
+<!--                        <div class="inputPopup">-->
                         <label for="subscriptionEmailInput" id ="popupEmailLabel"> Input your email here :
                             <input type="email" id="subscriptionEmailInput">
                         </label>
-                        <button class="popupSubscribeButton">Subscribe</button>
-                    </div>
+                        <button class="popupSubscribeButton" onclick="subscribe();">Subscribe</button>
+<!--                        </div>-->
                 </div>
             </div>
         </div>
