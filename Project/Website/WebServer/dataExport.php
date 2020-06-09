@@ -161,7 +161,7 @@
                 } else if($key === 'DataSubtrahend'){
                     $dataStr = $dataStr . '(' . $value['X'] . ', ' . $value['Y'] . '), ';
                 }  else
-                parseRec($value,$depth + 1 ,$str . ' ' . $key, $csvValue);
+                parseRec($value,$depth + 1 ,$str . ', ' . $key, $csvValue);
             } else {
                 if($key === 'MSE'){
                     $dataStr = $dataStr . $value;
