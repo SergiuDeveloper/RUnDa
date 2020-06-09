@@ -1,16 +1,36 @@
 .developers {
-    color: hotpink;
+    color: white;
+    display: inline-block;
 }
 
-/*.Diana {*/
-/*    padding-top: 3em;*/
-/*    display: none;*/
-/*}*/
+.Diana {
+    margin-right: 5px;
+    text-align: right;
+    color: #333538;
+    margin-top: 3em;
+    background-color: #FFE400;
+    height: 150px;
+    width: 400px;
+    padding-right: 5px;
+}
 
-/*.Vlad {*/
-/*    padding-top: 3em;*/
-/*}*/
 
-/*.Sergiu {*/
-/*    padding-top: 3em;*/
-/*}*/
+.Sergiu {
+    text-align: right;
+    color: #333538;
+    margin-top: 3em;
+    height: 150px;
+    width: 400px;
+    background-color: #14A76C;
+    padding-right: 5px;
+}
+
+.Vlad {
+    text-align: right;
+    color: #333538;
+    margin-top: 3em;
+    height: 150px;
+    width: 400px;
+    background-color: #FF652F;
+    padding-right: 5px;
+}

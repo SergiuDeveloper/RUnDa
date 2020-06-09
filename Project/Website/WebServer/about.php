@@ -34,20 +34,26 @@
             </div>
         </div>
 
-        <section class="developers">
+        <div class="developers">
             <h1>
                 Developers
             </h1>
             <div class="Sergiu">
-                <img src="resources/aboutPhotos/sergiu.jpg" alt="Sergiu" width="373" height="350">
+                <img src="resources/aboutPhotos/sergiu.jpg" alt="Sergiu" width="173" height="150">
+                <p> Sergiu-Marian Nistor, Faculty of Computer Science Iasi, 2B6.  </p>
+                <button>Contact me!</button>
             </div>
             <div class="Diana">
-                <img src="resources/aboutPhotos/diana.jpg" alt="Diana" width="373" height="350">
+                <img src="resources/aboutPhotos/diana.jpg" alt="Diana" width="173" height="150">
+                <p> Mihaela-Diana Pascariu, Faculty of Computer Science Iasi, 2B6.  </p>
+                <button>Contact me!</button>
             </div>
             <div class="Vlad">
-                <img src="resources/aboutPhotos/vlad.jpg" alt="Vlad">
+                <img src="resources/aboutPhotos/vlad.jpg" alt="Vlad" width="173" height="150">
+                <p> Vlad-Andrei Loghic, Faculty of Computer Science Iasi, 2B6.  </p>
+                <button>Contact me!</button>
             </div>
-        </section>
+        </div>
 
     </body>
 </html>

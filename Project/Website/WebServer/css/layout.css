@@ -163,6 +163,18 @@ ul#MainNav li {
         background-color: #FF652F;
     }
 
+    .Diana {
+        background-color: #FFE400;
+    }
+
+    .Sergiu {
+        background-color: #14A76C;
+    }
+
+    .Vlad {
+        background-color: #FF652F;
+    }
+
 }
 
 @media screen and (max-device-width: 600px) {
