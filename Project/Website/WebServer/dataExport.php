@@ -1,7 +1,7 @@
 <?php
     $dataType = (isset($_GET['DataType']) ? $_GET['DataType'] : 'JSON');
 
-    $jsonContent = file_get_contents('http://unemploymentprediction.azurewebsites.net/RetrieveData');
+    $jsonContent = file_get_contents('http://unemploymentpredictionapi.azurewebsites.net/RetrieveData');
 
 //    $jsonContent = file_get_contents('C:\\users\\dadam\\Downloads\\UnemploymentData (2).json');
 
@@ -132,7 +132,7 @@
             if(is_array($value)){
                 if($key === 'DataPoints'){
                     foreach($value as $dataSetXY){
-                        $dataStr = $dataStr . '[' . $dataSetXY['X'] . ',' . $dataSetXY['Y'] . '],';
+                        $dataStr = $dataStr . '(' . $dataSetXY['X'] . ';' . $dataSetXY['Y'] . ');';
                     }
                     $dataStr = substr($dataStr, 0, strlen($dataStr) - 1) . '], ';
 
@@ -140,7 +140,7 @@
                     if(is_array($value['w'])){
                         $w = '[';
                         foreach($value['w'] as $val)
-                            $w = $w . $val . ', ';
+                            $w = $w . $val . ';';
 
                         $w = substr($w, 0, strlen($w) - 1) . ']';
                     } else {
@@ -150,24 +150,24 @@
                     if(is_array($value['b'])){
                         $b = '[';
                         foreach($value['b'] as $val)
-                            $b = $b . $val . ', ';
+                            $b = $b . $val . '; ';
 
                         $b = substr($b, 0, strlen($b) - 1) . ']';
                     } else {
                         $b = $value['b'];
                     }
 
-                    $dataStr = $dataStr . '[' . $w . ', ' . $b . '], ';
+                    $dataStr = $dataStr . '(' . $w . '; ' . $b . '), ';
                 } else if($key === 'DataSubtrahend'){
-                    $dataStr = $dataStr . '[' . $value['X'] . ', ' . $value['Y'] . '], ';
+                    $dataStr = $dataStr . '(' . $value['X'] . '; ' . $value['Y'] . '), ';
                 }  else
-                    parseRec($value,$depth + 1 ,$str . ', ' . $key, $csvValue);
+                parseRec($value,$depth + 1 ,$str . ', ' . $key, $csvValue);
             } else {
                 if($key === 'MSE'){
                     $dataStr = $dataStr . $value;
                 }
 //                echo $str . ', ' . $dataStr , PHP_EOL;
-                $csvValue = $csvValue . substr($str . ', ' . $dataStr . PHP_EOL, 2, strlen($str . ', ' . $dataStr . PHP_EOL));
+                $csvValue = $csvValue . substr($str, 2, strlen($str)) . ', ' . $dataStr . PHP_EOL;
             }
         }
     }
