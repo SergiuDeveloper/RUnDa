@@ -38,7 +38,7 @@
             <h1>
                 Developers
             </h1>
-            <div class="Sergiu">
+            <div class="Sergiu" id="ser">
                 <img src="resources/aboutPhotos/sergiu.jpg" alt="Sergiu" width="173" height="150">
                 <p> Sergiu-Marian Nistor, Faculty of Computer Science Iasi, 2B6.  </p>
                 <button onclick="sergiuButtonClicked()">Contact me!</button>
@@ -48,7 +48,7 @@
                 <p> Mihaela-Diana Pascariu, Faculty of Computer Science Iasi, 2B6.  </p>
                 <button onclick="dianaButtonClicked()">Contact me!</button>
             </div>
-            <div class="Vlad">
+            <div class="Vlad" id="vla">
                 <img src="resources/aboutPhotos/vlad.jpg" alt="Vlad" width="173" height="150">
                 <p> Vlad-Andrei Loghic, Faculty of Computer Science Iasi, 2B6.  </p>
                 <button onclick="vladButtonClicked()">Contact me!</button>
