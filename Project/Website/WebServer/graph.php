@@ -32,7 +32,7 @@
 <!--                        <div class="inputPopup">-->
                         <label for="subscriptionEmailInput" id ="popupEmailLabel"> Input your email here :
                             <input type="email" id="subscriptionEmailInput">
-                        </label>
+                        </label
                         <button class="popupSubscribeButton" onclick="subscribe();">Subscribe</button>
 <!--                        </div>-->
                 </div>

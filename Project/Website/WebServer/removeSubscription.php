@@ -2,13 +2,13 @@
 
 //    echo $_SERVER['REQUEST_METHOD'];
 
-    if($_SERVER['REQUEST_METHOD'] !== 'POST'){
+    if($_SERVER['REQUEST_METHOD'] !== 'GET'){
         http_response_code(400);
         echo json_encode(['status'=>'FAILED', 'error'=>'BAD_REQUEST']), PHP_EOL;
         die();
     }
 
-    if(!isset($_POST['email'])){
+    if(!isset($_GET['email'])){
         http_response_code(200);
         echo json_encode(['status'=>'FAILED', 'error'=>'NULL_INPUT']), PHP_EOL;
         die();
