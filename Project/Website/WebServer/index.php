@@ -79,11 +79,7 @@
                     <img src = "resources/slides/SlideF.jpg" alt = "Slide 4" class="slideImage">
                     <div class = "slideText"> Caption Text Four </div>
                 </div>
-
-
-
             </div>
-
         </div>
 
         <div class="dotWrapper">
