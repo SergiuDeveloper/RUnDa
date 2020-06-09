@@ -1,0 +1,170 @@
+('GRUPE DE VARSTA', 'TOTAL', 'ALBA')(Linear Regression)
+	Training result: (-25.217790548641844, 822.6332387003122)
+	Data subtrahend: (24224, 4671)
+	MSE: 874357.5984956347
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'ALBA')(Linear Regression)
+	Training result: (-6.541213345113369, 151.06582147024747)
+	Data subtrahend: (24223, 860)
+	MSE: 18580.933636802463
+
+('GRUPE DE VARSTA', 'TOTAL', 'ARAD')(Linear Regression)
+	Training result: (-22.374943151279613, 814.7984144375075)
+	Data subtrahend: (24224, 2201)
+	MSE: 842421.8206955998
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'ALBA')(Linear Regression)
+	Training result: (-9.448235096133612, 347.40372289426057)
+	Data subtrahend: (24223, 393)
+	MSE: 211595.08135862503
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'ALBA')(Linear Regression)
+	Training result: (-1.5496865665362465, 136.52209645026363)
+	Data subtrahend: (24223, 909)
+	MSE: 39996.408936562664
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'ALBA')(Linear Regression)
+	Training result: (-1.851844839917548, 67.07605328479613)
+	Data subtrahend: (24223, 263)
+	MSE: 5491.998864620216
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'ALBA')(Linear Regression)
+	Training result: (-1.2203500357608768, 106.19880937355397)
+	Data subtrahend: (24223, 811)
+	MSE: 32286.55694336498
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'ALBA')(Linear Regression)
+	Training result: (-7.931461146871952, 254.88769826244243)
+	Data subtrahend: (24223, 1265)
+	MSE: 82877.6902766983
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'ARAD')(Linear Regression)
+	Training result: (26.00914636711687, 48.306828664491874)
+	Data subtrahend: (24223, 221)
+	MSE: 1321468.8634929175
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'ARAD')(Linear Regression)
+	Training result: (-0.5482350961336169, 23.703722894260732)
+	Data subtrahend: (24223, 98)
+	MSE: 556.6313586250117
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'ARAD')(Linear Regression)
+	Training result: (-12.008586814758727, 242.28016744499146)
+	Data subtrahend: (24223, 559)
+	MSE: 24918.88691938416
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'ARAD')(Linear Regression)
+	Training result: (-18.291720307964138, 321.84739366401584)
+	Data subtrahend: (24223, 487)
+	MSE: 13091.205064867776
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'ARAD')(Linear Regression)
+	Training result: (-4.807068029786688, 111.01899068003199)
+	Data subtrahend: (24223, 429)
+	MSE: 10045.721686362824
+
+('GRUPE DE VARSTA', 'TOTAL', 'ARGES')(Linear Regression)
+	Training result: (-37.41790838053504, 997.5010705934782)
+	Data subtrahend: (24224, 7357)
+	MSE: 1278903.7594343624
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'ARAD')(Linear Regression)
+	Training result: (-9.965741091337465, 192.520135470571)
+	Data subtrahend: (24223, 267)
+	MSE: 11407.79051650646
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'ARGES')(Linear Regression)
+	Training result: (-15.407227901889016, 435.9785430381456)
+	Data subtrahend: (24223, 567)
+	MSE: 203844.95941617893
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'ARGES')(Linear Regression)
+	Training result: (-5.194770499389976, 98.31586143827342)
+	Data subtrahend: (24223, 392)
+	MSE: 6931.665531286883
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'ARGES')(Linear Regression)
+	Training result: (-11.289015103706541, 279.2265471833065)
+	Data subtrahend: (24223, 1396)
+	MSE: 98987.96185943214
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'ALBA')(Linear Regression)
+	Training result: (-1.5496865665362465, 136.52209645026363)
+	Data subtrahend: (24223, 909)
+	MSE: 39996.408936562664
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'ALBA')(Linear Regression)
+	Training result: (-1.851844839917548, 67.07605328479613)
+	Data subtrahend: (24223, 263)
+	MSE: 5491.998864620216
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'ALBA')(Linear Regression)
+	Training result: (-9.448235096133612, 347.40372289426057)
+	Data subtrahend: (24223, 393)
+	MSE: 211595.08135862503
+
+('GRUPE DE VARSTA', 'TOTAL', 'ALBA')(Linear Regression)
+	Training result: (-25.217790548641844, 822.6332387003122)
+	Data subtrahend: (24224, 4671)
+	MSE: 874357.5984956347
+
+('GRUPE DE VARSTA', 'TOTAL', 'ARAD')(Linear Regression)
+	Training result: (-22.374943151279613, 814.7984144375075)
+	Data subtrahend: (24224, 2201)
+	MSE: 842421.8206955998
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'ALBA')(Linear Regression)
+	Training result: (-6.541213345113369, 151.06582147024747)
+	Data subtrahend: (24223, 860)
+	MSE: 18580.933636802463
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'ALBA')(Linear Regression)
+	Training result: (-1.2203500357608768, 106.19880937355397)
+	Data subtrahend: (24223, 811)
+	MSE: 32286.55694336498
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'ALBA')(Linear Regression)
+	Training result: (-7.931461146871952, 254.88769826244243)
+	Data subtrahend: (24223, 1265)
+	MSE: 82877.6902766983
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'ARAD')(Linear Regression)
+	Training result: (-0.5482350961336169, 23.703722894260732)
+	Data subtrahend: (24223, 98)
+	MSE: 556.6313586250117
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'ARAD')(Linear Regression)
+	Training result: (26.00914636711687, 48.306828664491874)
+	Data subtrahend: (24223, 221)
+	MSE: 1321468.8634929175
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'ARAD')(Linear Regression)
+	Training result: (-9.965741091337465, 192.520135470571)
+	Data subtrahend: (24223, 267)
+	MSE: 11407.79051650646
+
+('GRUPE DE VARSTA', 'TOTAL', 'ARGES')(Linear Regression)
+	Training result: (-37.41790838053504, 997.5010705934782)
+	Data subtrahend: (24224, 7357)
+	MSE: 1278903.7594343624
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'ARAD')(Linear Regression)
+	Training result: (-12.008586814758727, 242.28016744499146)
+	Data subtrahend: (24223, 559)
+	MSE: 24918.88691938416
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'ARAD')(Linear Regression)
+	Training result: (-4.807068029786688, 111.01899068003199)
+	Data subtrahend: (24223, 429)
+	MSE: 10045.721686362824
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'ARAD')(Linear Regression)
+	Training result: (-18.291720307964138, 321.84739366401584)
+	Data subtrahend: (24223, 487)
+	MSE: 13091.205064867776
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'ARGES')(Linear Regression)
+	Training result: (-15.407227901889016, 435.9785430381456)
+	Data subtrahend: (24223, 567)
+	MSE: 203844.95941617893
+

@@ -1,0 +1,15 @@
+('GRUPE DE VARSTA', 'TOTAL', 'ALBA')(Linear Regression)
+	Training result: (-26.121887809903832, 863.7473119430382)
+	Data subtrahend: (24224, 4671)
+	MSE: 716304.1926535023
+
+('GRUPE DE VARSTA', 'TOTAL', 'ALBA')(Polynomial Regression)
+	Training result: ([-60.69840177619714, 1.9330861839886442], 939.4206715954591)
+	Data subtrahend: (24224, 4671)
+	MSE: 566596.3949298261
+
+('GRUPE DE VARSTA', 'TOTAL', 'ALBA')(Logistic Polynomial Regression)
+	Training result: (-3.0000000000000013, 1.7000000000000006, 782.8272373574546)
+	Data subtrahend: (24224, 4671)
+	MSE: 804554.2259451986
+
