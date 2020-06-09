@@ -9,12 +9,12 @@ function sergiuButtonClicked() {
     sergiuInfoEmail = "Email: sergiunistor@hotmail.com <br>";
     sergiuInfoPhone = "<br> Phone: +40752715683";
 
-    document.getElementById("dia").innerHTML = dianaInfoEmail.bold() + dianaInfoPhone.bold();
+    document.getElementById("ser").innerHTML = sergiuInfoEmail.bold() + sergiuInfoPhone.bold();
 }
 
 function vladButtonClicked() {
     vladInfoEmail = "Email: vlad.loghin00@gmail.com <br>";
     vladInfoPhone = "<br> Phone: +40747976160";
 
-    document.getElementById("dia").innerHTML = dianaInfoEmail.bold() + dianaInfoPhone.bold();
+    document.getElementById("vla").innerHTML = vladInfoEmail.bold() + vladInfoPhone.bold();
 }
