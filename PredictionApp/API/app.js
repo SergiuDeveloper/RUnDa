@@ -252,10 +252,17 @@ async function sendNewsletter() {
     const subscriptionsEmailRows = databaseConnection2.query('SELECT Email FROM Subscriptions')
 	databaseConnection2.dispose()
 	
-	const mailBody = retrieveData()['ResponseBody']
+    const mailBodyTemplate = `
+        JSON: http://unemploymentpredictionapi.azurewebsites.net/dataExport.php?DataType=JSON
+        XML: http://unemploymentpredictionapi.azurewebsites.net/dataExport.php?DataType=XML
+        CSV: http://unemploymentpredictionapi.azurewebsites.net/dataExport.php?DataType=CSV
+        
+        You can unsubscribe from our newsletter using the following link:
+        http://unemploymentpredictionapi.azurewebsites.net/removeSubscription.php?email={0}
+    `
 
 	for (let rowIterator = 0; rowIterator < subscriptionsEmailRows.length; ++rowIterator)
-		sendMail(emailAddress, emailPassword, subscriptionsEmailRows[rowIterator]['Email'], 'RUnDa Newsletter', mailBody)
+		sendMail(emailAddress, emailPassword, subscriptionsEmailRows[rowIterator]['Email'], 'RUnDa Newsletter', mailBodyTemplate.format(subscriptionsEmailRows[rowIterator]['Email']))
 }
 
 async function sendMail(emailAddress, emailPassword, receiver, subject, content) {
