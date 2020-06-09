@@ -1,14 +1,7 @@
 <?php
     $dataType = (isset($_GET['DataType']) ? $_GET['DataType'] : 'JSON');
 
-    $jsonContent = file_get_contents('http://unemploymentpredictionapi.azurewebsites.net/RetrieveData');
-
-//    $jsonContent = file_get_contents('C:\\users\\dadam\\Downloads\\UnemploymentData (2).json');
-
-
-//    print_r($jsonContent);
-//    echo print_r(json_decode($jsonContent, true), PHP_EOL;
-//    die();
+    $jsonContent = file_get_contents('http://predictionappapi2.azurewebsites.net/RetrieveData');
 
     switch ($dataType) {
         case 'JSON': {
@@ -126,69 +119,24 @@
         return $xmlDOMDocument->saveXML();
     }
 
-    function parseRec($array, $depth, $str, &$csvValue){
-        $dataStr = '[';
-        foreach($array as $key => $value){
-            if(is_array($value)){
-                if($key === 'DataPoints'){
-                    foreach($value as $dataSetXY){
-                        $dataStr = $dataStr . '(' . $dataSetXY['X'] . ';' . $dataSetXY['Y'] . ');';
-                    }
-                    $dataStr = substr($dataStr, 0, strlen($dataStr) - 1) . '], ';
-
-                }else if($key === 'Coefficients'){
-                    if(is_array($value['w'])){
-                        $w = '[';
-                        foreach($value['w'] as $val)
-                            $w = $w . $val . ';';
-
-                        $w = substr($w, 0, strlen($w) - 1) . ']';
-                    } else {
-                        $w = $value['w'];
-                    }
-
-                    if(is_array($value['b'])){
-                        $b = '[';
-                        foreach($value['b'] as $val)
-                            $b = $b . $val . '; ';
-
-                        $b = substr($b, 0, strlen($b) - 1) . ']';
-                    } else {
-                        $b = $value['b'];
-                    }
-
-                    $dataStr = $dataStr . '(' . $w . '; ' . $b . '), ';
-                } else if($key === 'DataSubtrahend'){
-                    $dataStr = $dataStr . '(' . $value['X'] . '; ' . $value['Y'] . '), ';
-                }  else
-                parseRec($value,$depth + 1 ,$str . ', ' . $key, $csvValue);
-            } else {
-                if($key === 'MSE'){
-                    $dataStr = $dataStr . $value;
-                }
-//                echo $str . ', ' . $dataStr , PHP_EOL;
-                $csvValue = $csvValue . substr($str, 2, strlen($str)) . ', ' . $dataStr . PHP_EOL;
-            }
-        }
-    }
-
     function getDataCSV($jsonContent) {
-        $dataset = json_decode($jsonContent, true);
-        $datasetHeaders = 'Category, Subcategory, Location, RegressionType, DataPoints, DataSubtrahend, Coefficients, MSE';
-        echo $datasetHeaders, PHP_EOL;
-//        foreach($dataset['Data'] as $category => $subcategory){
-//            $datasetHeaders = $datasetHeaders . $category;
-//
-//        }
+        $jsonContent = json_decode($jsonContent, true);
 
-        $depth = 8;
-        $str = '';
-        $csvValue = '';
-        parseRec($dataset['Data'], 0, $str, $csvValue);
+        $csvData = 'Category,Subcategory,Location,RegressionType,DataPoints,DataSubtrahend,Coefficients,MSE' . PHP_EOL;
 
-        return $csvValue;
-//        echo $datasetHeaders, PHP_EOL;
-        //return '';
+        $categories = $jsonContent['Data'];
+        foreach ($categories as $category => $subcategories)
+            foreach ($subcategories as $subcategory => $locations)
+                foreach ($locations as $location => $regressionTypes)
+                    foreach ($regressionTypes as $regressionType => $data) {
+                        $dataPoints = str_replace(',', ';', json_encode(array_values($data['DataPoints'])));
+                        $dataSubtrahend = str_replace(',', ';', json_encode(array_values($data['DataSubtrahend'])));
+                        $coefficients = str_replace(',', ';', json_encode(array_values($data['Coefficients'])));
+                        $mse = str_replace(',', '.', $data['MSE']);
+                        $csvData .= "{$category},{$subcategory},{$location},{$regressionType},{$dataPoints},{$dataSubtrahend},{$coefficients},{$mse}" . PHP_EOL;
+                    }
+
+        return $csvData;
     }
 ?>
 
