@@ -19,7 +19,11 @@
     </header>
 
     <div class="menu-nav">
-
+        <div class="menu-bar">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
         <a href = "index.php"> Home </a>
         <a href = "graph.php"> Graph Statistics </a>
         <a href = "mapView.php"> Map View Statistics </a>

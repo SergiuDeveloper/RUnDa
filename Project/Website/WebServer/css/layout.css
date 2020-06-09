@@ -9,6 +9,9 @@ body{
     background-color: #272727;
 }
 
+.menu-bar {
+    display: none;
+}
 
 header {
     background-color: #747474;
@@ -94,9 +97,15 @@ ul#MainNav li {
     display:inline;
 }
 
-@media screen and (max-device-width: 400px) {
+@media screen and (max-device-width: 450px) {
+    img {
+        height: 130px;
+        width: 120px;
+        margin:0 -90px;
+    }
+
     body{
-        background-color: #272727;;
+        background-color: #272727;
         height: 100%;
     }
 
@@ -112,6 +121,23 @@ ul#MainNav li {
 
     footer {
         margin-bottom: 0;
+    }
+
+    .menu-bar{
+        display: inline-block;
+        margin-left: 91%;
+        padding-top: 0;
+    }
+
+    .menu-nav {
+       height: 0;
+    }
+
+    .bar {
+        padding-top: 5px;
+        width: 30px;
+        height: 2px;
+        background-color: #333538;
     }
 
     .extraPlaceholder {
@@ -164,7 +190,7 @@ ul#MainNav li {
     }
 
     .Diana {
-        background-color: #FFE400;
+        background-color: hotpink;
     }
 
     .Sergiu {
