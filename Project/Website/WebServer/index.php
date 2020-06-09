@@ -91,7 +91,7 @@
         </div>
     </div>
 
-    <section class = "contentPlaceholder">
+    <div class = "contentPlaceholder">
         <div class = "contentItem descriptionPlaceholder">
             <div class = "slideshowDescription fade" style="display: none;">
                 <h1>
@@ -116,17 +116,16 @@
             </div>
         </div>
 
-        <div class = "contentItem extraPlaceholder">
-            Placeholder Extra
-
+        <div class = "contentItem extraPlaceholder" id="newsContainer">
         </div>
-    </section>
+    </div>
 
     <footer>
         Placeholder footer
     </footer>
 
     <script src = "scripts/slides.js"></script>
+    <script src = "scripts/newsScripts.js"></script>
 
     </body>
 
