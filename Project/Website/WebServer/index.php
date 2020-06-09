@@ -137,7 +137,7 @@
         </div>
 
         <footer>
-            Placeholder footer
+
         </footer>
 
 
