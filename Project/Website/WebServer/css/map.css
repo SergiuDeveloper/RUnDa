@@ -1,6 +1,6 @@
-.mapInPage {
-    position: fixed;
-}
+/*.mapInPage {*/
+/*    position: fixed;*/
+/*}*/
 
 .land:hover {
     fill: white !important;
@@ -27,6 +27,7 @@
 .toolbarContainer {
     height: 20%;
 }
+
 
 @keyframes spin {
     0% { transform: rotate(0deg); }

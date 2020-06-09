@@ -13,9 +13,9 @@
     </head>
 
     <body>
-    <header>
-        <img src="resources/logo/Logo.png" alt="Logo" width="80" height="49">
-    </header>
+        <header>
+            <img src="resources/logo/Logo.png" alt="Logo" width="80" height="49">
+        </header>
 
         <div class="menu-nav">
 
@@ -24,9 +24,6 @@
             <a href = "mapView.php"> Map View Statistics </a>
             <a href = "about.php"> About </a>
             <div class="dropdown-menu">
-                <button class="dropdown-button">
-                    MENU
-                </button>
                 <div class="dropdown-content">
                     <a href = "index.php"> Home </a>
                     <a href = "graph.php"> Graph Statistics </a>
@@ -35,5 +32,21 @@
                 </div>
             </div>
         </div>
+
+        <section class="developers">
+            <h1>
+                Developers
+            </h1>
+            <div class="Sergiu">
+                <img src="resources/aboutPhotos/sergiu.jpg" alt="Sergiu" width="373" height="350">
+            </div>
+            <div class="Diana">
+                <img src="resources/aboutPhotos/diana.jpg" alt="Diana" width="373" height="350">
+            </div>
+            <div class="Vlad">
+                <img src="resources/aboutPhotos/vlad.jpg" alt="Vlad" width="420" height="350">
+            </div>
+        </section>
+
     </body>
 </html>
