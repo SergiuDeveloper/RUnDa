@@ -45,6 +45,7 @@
                 <div class = "slideContainer fade">
                     <div class = "slideNumberText"> 1 / 4 </div>
                     <img src = "resources/slides/SlideO.jpg" alt = "Slide 1" class="slideImage">
+                    <img src = "resources/phoneSlides/slide1.jpg" alt = "Phone Slide 1" class="phoneSlideImage">
                     <div class = "slideText"> Caption Text One </div>
                 </div>
 

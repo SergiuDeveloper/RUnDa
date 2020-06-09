@@ -1,3 +1,5 @@
+
+
 img {
     float:left;
     background-color: #747474;
@@ -87,13 +89,17 @@ footer{
     display: flex;
 }
 
+.phoneSlideImage {
+    display: none;
+}
+
 ul#MainNav li {
     display:inline;
 }
 
 @media screen and (max-device-width: 400px) {
     body{
-        background-color: #14A76C;
+        background-color: hotpink;
     }
 
     .contentPlaceholder {
@@ -115,6 +121,14 @@ ul#MainNav li {
 
     .slideshow {
         display : none;
+    }
+
+    .slideImage {
+        display: none;
+    }
+
+    .phoneSlideImage {
+        display: block;
     }
 }
 
