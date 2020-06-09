@@ -126,7 +126,7 @@ ul#MainNav li {
     .menu-bar{
         display: inline-block;
         margin-left: 91%;
-        padding-top: 0;
+        margin-bottom: 40px;
     }
 
     .menu-nav {
@@ -134,9 +134,9 @@ ul#MainNav li {
     }
 
     .bar {
-        padding-top: 5px;
+        padding-top: 3px;
         width: 30px;
-        height: 2px;
+        height: 3px;
         background-color: #333538;
     }
 
