@@ -45,7 +45,13 @@
     width: auto;
 }
 
-
+.closeButton{
+    font-family: 'Sans-serif', sans-serif;
+    position: relative;
+    left: 96.5%;
+    background-color: white;
+    border: none;
+}
 
 .popupSubscribeButton{
     margin: 0 0.5em;

@@ -1,0 +1,7 @@
+{
+  "URL" : "rundacommondatabase.mysql.database.azure.com",
+  "DATABASE" : "runda_common_test",
+  "PORT" : "3306",
+  "USER" : "RUnDa_Common_DB_User@rundacommondatabase",
+  "PASS" : "RUnDa_Common_Pass"
+}
