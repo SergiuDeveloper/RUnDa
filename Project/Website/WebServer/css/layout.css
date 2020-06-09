@@ -9,7 +9,6 @@ body{
     background-color: #272727;
 }
 
-
 header {
     background-color: #747474;
     border: #b3c7d6;
@@ -34,12 +33,12 @@ footer{
     text-align: left;
     overflow: hidden;
     padding-left: 2em;
+    margin-right: 0;
 }
 
 .menu-nav a{
     background-color: #FFE400;
-    color: black;
-    display: block;
+    display: inline;
     float: left;
     text-decoration: none;
     padding: 10px 10px;

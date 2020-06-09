@@ -1,0 +1,71 @@
+.adminMenu{
+    overflow: hidden;
+    /*background-color: #14a76c;*/
+    float : right;
+    width : fit-content;
+    /*left: 36%;*/
+    /*right: 0;*/
+    right: -35.6em;
+    overflow: unset;
+    position: relative;
+    display: flow;
+    padding-top: 9px;
+    padding-right: 1em;
+    padding-bottom: 9px;
+    /*margin-right: 1em;*/
+    /*opacity: 0;*/
+
+    animation-name: adminHide;
+    animation-duration: 3s;
+}
+
+@media screen and (max-width: 1150px){
+    .adminMenu{
+        display: none;
+    }
+}
+
+@keyframes adminHide {
+    0% {
+        right: 0;
+    }
+    100% {
+        right: -35.6em;
+    }
+}
+
+@keyframes textFade {
+    100% {
+        opacity: 1;
+        color: rgba(0, 0, 0, 0);
+        /*background-color: #14A76C;*/
+        /*width: 40%;*/
+        /*left: 40%;*/
+        /*left: 0;*/
+        right: 0;
+    }
+    75% {
+        /*width: 20%;*/
+    }
+    50% {
+        /*background-color: inherit;*/
+        /*width : inherit;*/
+        /*width : 0;*/
+    }
+
+    25% {
+        /*right: -30em;*/
+    }
+
+    0% {color: rgba(0, 0, 0, 100);
+        /*background-color: inherit;*/
+    }
+}
+
+.descriptionLabel{
+    color: black;
+}
+
+.adminMenu:hover{
+    animation: textFade 1s forwards;
+}
