@@ -1,29 +1,18 @@
 let newsContainer = document.getElementById("newsContainer");
 
-function generateNewsItem(title, content){
+function generateNewsItem(ID, title, content){
     let itemContainer = document.createElement("div");
-        itemContainer.className = "newsItem";
+    itemContainer.className = "newsItem";
+    itemContainer.id = ID;
 
     let titleText = document.createElement("h3");
-        titleText.innerText = title;
+    titleText.innerText = escapeHTML(title);
 
     let contentText = document.createElement("p");
-        contentText.innerText = content;
+    contentText.innerText = escapeHTML(content);
 
     itemContainer.appendChild(titleText);
     itemContainer.appendChild(contentText);
-
-    // newsContaineradd(itemContainer);
-
-    // let outerDiv =
-    //     '<div class="newsItem">' +
-    //     '<h3>' +
-    //     title +
-    //     '</h3>' +
-    //     '<p>' +
-    //     content +
-    //     '</p>' +
-    //     '</div>';
 
     newsContainer.appendChild(itemContainer);
 }
@@ -34,6 +23,23 @@ function escapeHTML(unsafeText) {
     return div.innerHTML;
 }
 
-generateNewsItem('Sample Title 1', 'Content medium medium medium');
-generateNewsItem('Sample Title 2', 'Content smol');
-// generateNewsItem('Sample Title 3', 'Content bigggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg');
+function retrieveNewsEntries(responseJSON){
+    Object.values(responseJSON).forEach(function (value) {
+        generateNewsItem(value.ID, value.title, value.content);
+    })
+}
+
+function requestAsync(URL, callback){
+    let request = new XMLHttpRequest();
+    request.onreadystatechange = function () {
+        if(request.readyState === 4 && request.status === 200){
+            let responseJSON = JSON.parse(request.responseText);
+            if(responseJSON.status === 'SUCCESS')
+                callback(responseJSON.content);
+        }
+    }
+    request.open('GET', URL);
+    request.send(null);
+}
+
+requestAsync('./getNews.php', retrieveNewsEntries);
