@@ -1,4 +1,3 @@
-
 .subscriptionPopup{
     display: none;
     width: 50%;
@@ -16,7 +15,7 @@
     height: 60%;
     width: 100%;
     display: flex;
-
+    text-align: center;
 }
 
 #subscriptionHeading{
@@ -24,18 +23,47 @@
     width: 100%;
     margin: auto;
     display: inline;
-    height: 60%;
+    /*height: 60%;*/
     /*align-self: center;*/
     /*alignment: center;*/
     text-align:center;
 }
 
 #popupEmailLabel{
+    height: fit-content;
     float: left;
+    display: inline-flex;
+    margin: auto;
+    /*text-align: center;*/
 }
 
 #subscriptionEmailInput{
-    float: left;
+    float: right;
+    /*margin: auto;*/
+}
+.input{
+    width: auto;
+}
+
+
+
+.popupSubscribeButton{
+    margin: 0 0.5em;
+}
+
+.center-elem{
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+.inputPopup{
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
 }
 
 
