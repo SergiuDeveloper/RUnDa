@@ -36,4 +36,4 @@ function escapeHTML(unsafeText) {
 
 generateNewsItem('Sample Title 1', 'Content medium medium medium');
 generateNewsItem('Sample Title 2', 'Content smol');
-generateNewsItem('Sample Title 3', 'Content bigggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg');
+generateNewsItem('Sample Title 3', 'Content bigggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg');
