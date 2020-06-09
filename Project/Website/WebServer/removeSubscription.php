@@ -14,7 +14,7 @@
         die();
     }
 
-    $email = $_GET['email'];
+    $email = $_POST['email'];
     $credentials = json_decode(file_get_contents('./resources/database/database.json'), true);
 
     try {

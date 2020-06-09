@@ -2,19 +2,19 @@
 
 //    echo $_SERVER['REQUEST_METHOD'];
 
-    if($_SERVER['REQUEST_METHOD'] !== 'GET'){
+    if($_SERVER['REQUEST_METHOD'] !== 'POST'){
         http_response_code(400);
         echo json_encode(['status'=>'FAILED', 'error'=>'BAD_REQUEST']), PHP_EOL;
         die();
     }
 
-    if(!isset($_GET['email'])){
+    if(!isset($_POST['email'])){
         http_response_code(200);
         echo json_encode(['status'=>'FAILED', 'error'=>'NULL_INPUT']), PHP_EOL;
         die();
     }
 
-    $email = $_GET['email'];
+    $email = $_POST['email'];
     $credentials = json_decode(file_get_contents('./resources/database/database.json'), true);
 
     try {
