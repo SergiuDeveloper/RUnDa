@@ -26,7 +26,7 @@ footer{
     border: #b3c7d6;
     text-align: center;
     padding: 1em;
-    margin-top: 1em;
+    margin-top: 2em;
 }
 
 .menu-nav{
@@ -62,7 +62,8 @@ footer{
 }
 
 .contentItem{
-    margin: 10px;
+    margin-top: 1em;
+    margin-right: 0.5em;
 }
 
 .descriptionPlaceholder{
@@ -75,7 +76,9 @@ footer{
 
 .extraPlaceholder{
     width: 20%;
-    margin-top : 0;
+    margin-top : 1em;
+    margin-left: 0.5em;
+    /*margin-top : 0;*/
     text-align: left;
     float:right;
     overflow-y : scroll;
@@ -86,7 +89,7 @@ footer{
 .newsItem{
     background-color: #FFE400;
     width: 90%;
-    margin: 5% 5%;
+    margin: 0 5%;
     /*height: 120px;*/
     height: fit-content;
     padding-top: 1em;
