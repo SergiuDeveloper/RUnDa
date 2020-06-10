@@ -1,0 +1,55 @@
+('GRUPE DE VARSTA', 'TOTAL', 'ALBA')(Linear Regression)
+	Training result: (-0.0, 947.0)
+	Data subtrahend: (24224, 4671)
+	MSE: 2515849.0
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'ALBA')(Linear Regression)
+	Training result: (-17.0, 85.0)
+	Data subtrahend: (24223, 263)
+	MSE: 317091.5
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'ALBA')(Linear Regression)
+	Training result: (-37.0, 253.0)
+	Data subtrahend: (24223, 909)
+	MSE: 1263602.0
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'ALBA')(Linear Regression)
+	Training result: (-64.0, 378.0)
+	Data subtrahend: (24223, 1265)
+	MSE: 3745593.5
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'ALBA')(Linear Regression)
+	Training result: (110.0, 273.0)
+	Data subtrahend: (24223, 306)
+	MSE: 19295363.0
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'ALBA')(Linear Regression)
+	Training result: (-18.0, 129.0)
+	Data subtrahend: (24223, 811)
+	MSE: 426064.0
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'ALBA')(Linear Regression)
+	Training result: (-46.0, 230.0)
+	Data subtrahend: (24223, 860)
+	MSE: 1910985.0
+
+('GRUPE DE VARSTA', 'TOTAL', 'ARAD')(Linear Regression)
+	Training result: (-0.0, 711.0)
+	Data subtrahend: (24224, 2201)
+	MSE: 1202976.5
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'ARAD')(Linear Regression)
+	Training result: (5.0, 66.0)
+	Data subtrahend: (24223, 215)
+	MSE: 1890462.0
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'ARAD')(Linear Regression)
+	Training result: (2.0, 23.0)
+	Data subtrahend: (24223, 98)
+	MSE: 9818.0
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'ARAD')(Linear Regression)
+	Training result: (8.0, 138.0)
+	Data subtrahend: (24223, 267)
+	MSE: 297088.0
+

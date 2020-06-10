@@ -1,0 +1,3520 @@
+('GRUPE DE VARSTA', 'TOTAL', 'ALBA')(Linear Regression)
+	Training result: (-0.1, 946.9)
+	Data subtrahend: (24224, 4671)
+	MSE: 2505770.905
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'ALBA')(Linear Regression)
+	Training result: (109.9, 272.9)
+	Data subtrahend: (24223, 306)
+	MSE: 19258541.39
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'ALBA')(Linear Regression)
+	Training result: (-16.9, 85.1)
+	Data subtrahend: (24223, 263)
+	MSE: 312395.2899999999
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'ALBA')(Linear Regression)
+	Training result: (-36.9, 253.1)
+	Data subtrahend: (24223, 909)
+	MSE: 1254433.7899999998
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'ALBA')(Linear Regression)
+	Training result: (-63.9, 378.1)
+	Data subtrahend: (24223, 1265)
+	MSE: 3729549.99
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'ALBA')(Linear Regression)
+	Training result: (-17.9, 129.1)
+	Data subtrahend: (24223, 811)
+	MSE: 420812.69
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'ALBA')(Linear Regression)
+	Training result: (-45.9, 230.1)
+	Data subtrahend: (24223, 860)
+	MSE: 1899445.9899999998
+
+('GRUPE DE VARSTA', 'TOTAL', 'ARAD')(Linear Regression)
+	Training result: (-0.1, 710.9)
+	Data subtrahend: (24224, 2201)
+	MSE: 1198515.305
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'ARAD')(Linear Regression)
+	Training result: (5.1, 66.1)
+	Data subtrahend: (24223, 215)
+	MSE: 1884993.09
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'ARAD')(Linear Regression)
+	Training result: (1.9, 22.9)
+	Data subtrahend: (24223, 98)
+	MSE: 9043.689999999999
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'ARAD')(Linear Regression)
+	Training result: (7.9, 137.9)
+	Data subtrahend: (24223, 267)
+	MSE: 292708.29
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'ARAD')(Linear Regression)
+	Training result: (20.9, 179.9)
+	Data subtrahend: (24223, 559)
+	MSE: 1228074.8900000001
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'ARAD')(Linear Regression)
+	Training result: (2.9, 70.9)
+	Data subtrahend: (24223, 429)
+	MSE: 46688.29000000001
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'ARAD')(Linear Regression)
+	Training result: (13.9, 288.9)
+	Data subtrahend: (24223, 471)
+	MSE: 1293531.29
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'ARGES')(Linear Regression)
+	Training result: (94.9, 410.9)
+	Data subtrahend: (24223, 508)
+	MSE: 17793528.990000002
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'ARGES')(Linear Regression)
+	Training result: (-44.9, 191.1)
+	Data subtrahend: (24223, 392)
+	MSE: 1825321.7899999998
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'ARGES')(Linear Regression)
+	Training result: (-55.9, 413.1)
+	Data subtrahend: (24223, 1396)
+	MSE: 2246363.2899999996
+
+('GRUPE DE VARSTA', 'TOTAL', 'ARGES')(Linear Regression)
+	Training result: (-0.1, 1355.9)
+	Data subtrahend: (24224, 7357)
+	MSE: 6623209.605
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'ARGES')(Linear Regression)
+	Training result: (-57.9, 486.1)
+	Data subtrahend: (24223, 2036)
+	MSE: 2393348.9899999993
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'ARGES')(Linear Regression)
+	Training result: (-4.1, 151.9)
+	Data subtrahend: (24223, 1384)
+	MSE: 19459.290000000005
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'ARGES')(Linear Regression)
+	Training result: (-40.9, 177.1)
+	Data subtrahend: (24223, 1385)
+	MSE: 2290839.1899999995
+
+('GRUPE DE VARSTA', 'TOTAL', 'BACAU')(Linear Regression)
+	Training result: (-0.1, 2056.9)
+	Data subtrahend: (24224, 10743)
+	MSE: 20358471.405
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'BACAU')(Linear Regression)
+	Training result: (-237.9, 1180.1)
+	Data subtrahend: (24223, 843)
+	MSE: 49303375.29000001
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'BACAU')(Linear Regression)
+	Training result: (-445.9, 1930.1)
+	Data subtrahend: (24223, 497)
+	MSE: 174072931.18999997
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'BACAU')(Linear Regression)
+	Training result: (-36.9, 765.1)
+	Data subtrahend: (24223, 1521)
+	MSE: 1147686.99
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'BACAU')(Linear Regression)
+	Training result: (469.9, -256.1)
+	Data subtrahend: (24223, 2149)
+	MSE: 263037596.18999994
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'BACAU')(Linear Regression)
+	Training result: (-36.9, 384.1)
+	Data subtrahend: (24223, 1993)
+	MSE: 1360569.7899999998
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'BACAU')(Linear Regression)
+	Training result: (140.9, 483.9)
+	Data subtrahend: (24223, 1604)
+	MSE: 22020019.390000004
+
+('GRUPE DE VARSTA', 'TOTAL', 'BIHOR')(Linear Regression)
+	Training result: (-0.1, 1135.9)
+	Data subtrahend: (24224, 3077)
+	MSE: 4109395.805000001
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'BIHOR')(Linear Regression)
+	Training result: (12.9, 470.9)
+	Data subtrahend: (24223, 230)
+	MSE: 1982715.1899999997
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'BIHOR')(Linear Regression)
+	Training result: (-2.1, 101.9)
+	Data subtrahend: (24223, 161)
+	MSE: 21222.090000000007
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'BIHOR')(Linear Regression)
+	Training result: (6.9, 313.9)
+	Data subtrahend: (24223, 542)
+	MSE: 675811.7899999999
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'BIHOR')(Linear Regression)
+	Training result: (-31.9, 293.1)
+	Data subtrahend: (24223, 834)
+	MSE: 1346027.5899999999
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'BIHOR')(Linear Regression)
+	Training result: (21.9, 88.9)
+	Data subtrahend: (24223, 558)
+	MSE: 486053.08999999985
+
+('GRUPE DE VARSTA', 'TOTAL', 'BISTRITA')(Linear Regression)
+	Training result: (-0.0, 0.0)
+	Data subtrahend: (24224, 3712)
+	MSE: 0.0
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'BIHOR')(Linear Regression)
+	Training result: (60.9, -61.1)
+	Data subtrahend: (24223, 542)
+	MSE: 3971161.7900000005
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'BISTRITA')(Linear Regression)
+	Training result: (105.9, -106.1)
+	Data subtrahend: (24223, 469)
+	MSE: 5575.745000000005
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'BISTRITA')(Linear Regression)
+	Training result: (10.9, -11.1)
+	Data subtrahend: (24223, 196)
+	MSE: 56.24500000000001
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'BISTRITA')(Linear Regression)
+	Training result: (60.9, -61.1)
+	Data subtrahend: (24223, 618)
+	MSE: 1836.2449999999997
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'BISTRITA')(Linear Regression)
+	Training result: (37.9, -38.1)
+	Data subtrahend: (24223, 899)
+	MSE: 706.9449999999998
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'BISTRITA')(Linear Regression)
+	Training result: (69.9, -70.1)
+	Data subtrahend: (24223, 621)
+	MSE: 2422.145000000002
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'BISTRITA')(Linear Regression)
+	Training result: (30.9, -31.1)
+	Data subtrahend: (24223, 592)
+	MSE: 468.2449999999996
+
+('GRUPE DE VARSTA', 'TOTAL', 'BOTOSANI')(Linear Regression)
+	Training result: (-0.1, 955.9)
+	Data subtrahend: (24224, 3132)
+	MSE: 2106487.905
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'BOTOSANI')(Linear Regression)
+	Training result: (28.9, 282.9)
+	Data subtrahend: (24223, 179)
+	MSE: 2084885.5899999999
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'BOTOSANI')(Linear Regression)
+	Training result: (-2.9, 75.1)
+	Data subtrahend: (24223, 100)
+	MSE: 976.99
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'BOTOSANI')(Linear Regression)
+	Training result: (-8.9, 191.1)
+	Data subtrahend: (24223, 461)
+	MSE: 9010.990000000002
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'BOTOSANI')(Linear Regression)
+	Training result: (-42.9, 376.1)
+	Data subtrahend: (24223, 921)
+	MSE: 1071557.19
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'BOTOSANI')(Linear Regression)
+	Training result: (-22.9, 64.1)
+	Data subtrahend: (24223, 632)
+	MSE: 750653.19
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'BOTOSANI')(Linear Regression)
+	Training result: (-8.9, 112.1)
+	Data subtrahend: (24223, 810)
+	MSE: 68590.69000000002
+
+('GRUPE DE VARSTA', 'TOTAL', 'BRAILA')(Linear Regression)
+	Training result: (-0.1, 841.9)
+	Data subtrahend: (24224, 4286)
+	MSE: 3178847.905
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'BRAILA')(Linear Regression)
+	Training result: (66.9, 78.9)
+	Data subtrahend: (24223, 374)
+	MSE: 7077157.990000002
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'BRAILA')(Linear Regression)
+	Training result: (-16.9, 86.1)
+	Data subtrahend: (24223, 193)
+	MSE: 248279.68999999994
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'BRAILA')(Linear Regression)
+	Training result: (-34.9, 266.1)
+	Data subtrahend: (24223, 733)
+	MSE: 681429.8899999999
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'BRAILA')(Linear Regression)
+	Training result: (-23.9, 398.1)
+	Data subtrahend: (24223, 1202)
+	MSE: 98685.68999999996
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'BRAILA')(Linear Regression)
+	Training result: (-19.9, 76.1)
+	Data subtrahend: (24223, 600)
+	MSE: 660487.3899999999
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'BRAILA')(Linear Regression)
+	Training result: (-19.9, 228.1)
+	Data subtrahend: (24223, 991)
+	MSE: 139908.58999999997
+
+('GRUPE DE VARSTA', 'TOTAL', 'BRASOV')(Linear Regression)
+	Training result: (-0.1, 1038.9)
+	Data subtrahend: (24224, 5029)
+	MSE: 2857138.4050000007
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'BRASOV')(Linear Regression)
+	Training result: (-25.9, 404.1)
+	Data subtrahend: (24223, 487)
+	MSE: 833784.69
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'BRASOV')(Linear Regression)
+	Training result: (-13.9, 176.1)
+	Data subtrahend: (24223, 306)
+	MSE: 39605.09000000002
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'BRASOV')(Linear Regression)
+	Training result: (-88.9, 418.1)
+	Data subtrahend: (24223, 1112)
+	MSE: 6574141.89
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'BRASOV')(Linear Regression)
+	Training result: (-88.9, 381.1)
+	Data subtrahend: (24223, 1266)
+	MSE: 7299468.490000002
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'BRASOV')(Linear Regression)
+	Training result: (2.9, 41.9)
+	Data subtrahend: (24223, 852)
+	MSE: 26451.190000000002
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'BRASOV')(Linear Regression)
+	Training result: (-47.9, 240.1)
+	Data subtrahend: (24223, 910)
+	MSE: 1948077.2899999996
+
+('GRUPE DE VARSTA', 'TOTAL', 'BUZAU')(Linear Regression)
+	Training result: (-0.1, 1321.9)
+	Data subtrahend: (24224, 10990)
+	MSE: 11434602.105000002
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'BUZAU')(Linear Regression)
+	Training result: (-28.1, 1186.9)
+	Data subtrahend: (24223, 225)
+	MSE: 1127735.3900000001
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'BUZAU')(Linear Regression)
+	Training result: (-11.9, 161.1)
+	Data subtrahend: (24223, 438)
+	MSE: 524050.2899999999
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'BUZAU')(Linear Regression)
+	Training result: (-64.9, 397.1)
+	Data subtrahend: (24223, 1858)
+	MSE: 5233134.8900000015
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'BUZAU')(Linear Regression)
+	Training result: (-77.9, 590.1)
+	Data subtrahend: (24223, 3246)
+	MSE: 4301446.79
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'BUZAU')(Linear Regression)
+	Training result: (-24.9, 50.1)
+	Data subtrahend: (24223, 1955)
+	MSE: 2013503.5899999996
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'BUZAU')(Linear Regression)
+	Training result: (-5.9, 107.1)
+	Data subtrahend: (24223, 2526)
+	MSE: 79120.39000000001
+
+('GRUPE DE VARSTA', 'TOTAL', 'CALARASI')(Linear Regression)
+	Training result: (-0.1, 1093.9)
+	Data subtrahend: (24224, 2829)
+	MSE: 39220073.005
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'CALARASI')(Linear Regression)
+	Training result: (-18.9, 270.1)
+	Data subtrahend: (24223, 254)
+	MSE: 320331.88999999984
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'CALARASI')(Linear Regression)
+	Training result: (-13.9, 83.1)
+	Data subtrahend: (24223, 111)
+	MSE: 253313.79
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'CALARASI')(Linear Regression)
+	Training result: (7.9, 170.9)
+	Data subtrahend: (24223, 604)
+	MSE: 1347143.8900000001
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'CALARASI')(Linear Regression)
+	Training result: (-22.9, 317.1)
+	Data subtrahend: (24223, 759)
+	MSE: 4182456.8899999997
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'CALARASI')(Linear Regression)
+	Training result: (-16.9, 133.1)
+	Data subtrahend: (24223, 516)
+	MSE: 1479132.9900000002
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'CALARASI')(Linear Regression)
+	Training result: (3.9, 241.9)
+	Data subtrahend: (24223, 585)
+	MSE: 2246500.6900000004
+
+('GRUPE DE VARSTA', 'TOTAL', 'CARAS-SEVERIN')(Linear Regression)
+	Training result: (-0.1, 770.9)
+	Data subtrahend: (24224, 2984)
+	MSE: 1672814.825
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'CARAS-SEVERIN')(Linear Regression)
+	Training result: (21.9, 263.9)
+	Data subtrahend: (24223, 237)
+	MSE: 1470241.4649999996
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'CARAS-SEVERIN')(Linear Regression)
+	Training result: (-2.1, 72.9)
+	Data subtrahend: (24223, 151)
+	MSE: 7188.365000000003
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'CARAS-SEVERIN')(Linear Regression)
+	Training result: (-2.1, 135.9)
+	Data subtrahend: (24223, 476)
+	MSE: 47500.165
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'CARAS-SEVERIN')(Linear Regression)
+	Training result: (-8.9, 67.1)
+	Data subtrahend: (24223, 594)
+	MSE: 84922.16500000002
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'CARAS-SEVERIN')(Linear Regression)
+	Training result: (-11.1, 240.9)
+	Data subtrahend: (24223, 843)
+	MSE: 23267.56500000001
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'CARAS-SEVERIN')(Linear Regression)
+	Training result: (-9.9, 122.1)
+	Data subtrahend: (24223, 575)
+	MSE: 152197.46500000003
+
+('GRUPE DE VARSTA', 'TOTAL', 'CLUJ')(Linear Regression)
+	Training result: (-0.1, 1453.9)
+	Data subtrahend: (24224, 3540)
+	MSE: 2317442.4050000003
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'CLUJ')(Linear Regression)
+	Training result: (-6.1, 316.9)
+	Data subtrahend: (24223, 339)
+	MSE: 159763.38999999996
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'CLUJ')(Linear Regression)
+	Training result: (-2.1, 122.9)
+	Data subtrahend: (24223, 180)
+	MSE: 8489.89
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'CLUJ')(Linear Regression)
+	Training result: (-10.9, 356.1)
+	Data subtrahend: (24223, 621)
+	MSE: 126233.48999999999
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'CLUJ')(Linear Regression)
+	Training result: (-47.9, 448.1)
+	Data subtrahend: (24223, 1001)
+	MSE: 1711664.3899999997
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'CLUJ')(Linear Regression)
+	Training result: (-3.9, 204.1)
+	Data subtrahend: (24223, 662)
+	MSE: 72810.99
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'CLUJ')(Linear Regression)
+	Training result: (-22.9, 237.1)
+	Data subtrahend: (24223, 694)
+	MSE: 260203.48999999996
+
+('GRUPE DE VARSTA', 'TOTAL', 'CONSTANTA')(Linear Regression)
+	Training result: (0.1, 778.1)
+	Data subtrahend: (24224, 4855)
+	MSE: 18127762.104999997
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'CONSTANTA')(Linear Regression)
+	Training result: (-7.9, 110.1)
+	Data subtrahend: (24223, 418)
+	MSE: 1509543.1900000002
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'CONSTANTA')(Linear Regression)
+	Training result: (12.9, 6.9)
+	Data subtrahend: (24223, 227)
+	MSE: 177334.69000000003
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'CONSTANTA')(Linear Regression)
+	Training result: (8.9, 165.9)
+	Data subtrahend: (24223, 895)
+	MSE: 293440.29
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'CONSTANTA')(Linear Regression)
+	Training result: (24.9, 204.1)
+	Data subtrahend: (24223, 1261)
+	MSE: 1258422.6300000001
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'CONSTANTA')(Linear Regression)
+	Training result: (27.1, 31.1)
+	Data subtrahend: (24223, 883)
+	MSE: 819383.3900000002
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'CONSTANTA')(Linear Regression)
+	Training result: (32.9, 369.9)
+	Data subtrahend: (24223, 863)
+	MSE: 1077021.19
+
+('GRUPE DE VARSTA', 'TOTAL', 'COVASNA')(Linear Regression)
+	Training result: (-0.1, 388.1)
+	Data subtrahend: (24224, 2577)
+	MSE: 13684141.844999997
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'COVASNA')(Linear Regression)
+	Training result: (-103.9, 681.1)
+	Data subtrahend: (24223, 372)
+	MSE: 8138149.390000002
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'COVASNA')(Linear Regression)
+	Training result: (-16.9, 36.1)
+	Data subtrahend: (24223, 179)
+	MSE: 406750.0899999999
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'COVASNA')(Linear Regression)
+	Training result: (-5.9, 49.1)
+	Data subtrahend: (24223, 510)
+	MSE: 521911.99
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'COVASNA')(Linear Regression)
+	Training result: (-4.9, 51.1)
+	Data subtrahend: (24223, 612)
+	MSE: 1556526.2899999998
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'COVASNA')(Linear Regression)
+	Training result: (-11.9, 24.1)
+	Data subtrahend: (24223, 301)
+	MSE: 1335413.49
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'COVASNA')(Linear Regression)
+	Training result: (7.9, 39.9)
+	Data subtrahend: (24223, 382)
+	MSE: 873163.1900000002
+
+('GRUPE DE VARSTA', 'TOTAL', 'DAMBOVITA')(Linear Regression)
+	Training result: (-0.1, 5923.9)
+	Data subtrahend: (24224, 3150)
+	MSE: 61995195.30499999
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'DAMBOVITA')(Linear Regression)
+	Training result: (68.9, 1328.9)
+	Data subtrahend: (24223, 494)
+	MSE: 21252057.990000002
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'DAMBOVITA')(Linear Regression)
+	Training result: (22.9, 171.9)
+	Data subtrahend: (24223, 226)
+	MSE: 1304487.8899999997
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'DAMBOVITA')(Linear Regression)
+	Training result: (33.9, 648.9)
+	Data subtrahend: (24223, 691)
+	MSE: 5646669.289999999
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'DAMBOVITA')(Linear Regression)
+	Training result: (-113.9, 1558.1)
+	Data subtrahend: (24223, 787)
+	MSE: 6064449.690000001
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'DAMBOVITA')(Linear Regression)
+	Training result: (-68.9, 1166.1)
+	Data subtrahend: (24223, 378)
+	MSE: 3158366.990000001
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'DAMBOVITA')(Linear Regression)
+	Training result: (-123.9, 1531.1)
+	Data subtrahend: (24223, 455)
+	MSE: 12202259.690000001
+
+('GRUPE DE VARSTA', 'TOTAL', 'DOLJ')(Linear Regression)
+	Training result: (-0.1, 12594.9)
+	Data subtrahend: (24224, 7329)
+	MSE: 100808629.90499997
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'DOLJ')(Linear Regression)
+	Training result: (-15.1, 786.9)
+	Data subtrahend: (24223, 1307)
+	MSE: 931184.2899999999
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'DOLJ')(Linear Regression)
+	Training result: (-14.9, 825.9)
+	Data subtrahend: (24223, 314)
+	MSE: 317068.3300000001
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'DOLJ')(Linear Regression)
+	Training result: (-133.9, 2866.1)
+	Data subtrahend: (24223, 1024)
+	MSE: 14970020.390000004
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'DOLJ')(Linear Regression)
+	Training result: (-207.9, 4543.1)
+	Data subtrahend: (24223, 1737)
+	MSE: 38790973.39
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'DOLJ')(Linear Regression)
+	Training result: (-54.9, 2183.1)
+	Data subtrahend: (24223, 1310)
+	MSE: 6111850.790000001
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'DOLJ')(Linear Regression)
+	Training result: (-80.9, 2406.1)
+	Data subtrahend: (24223, 1637)
+	MSE: 5788176.190000001
+
+('GRUPE DE VARSTA', 'TOTAL', 'GALATI')(Linear Regression)
+	Training result: (-0.1, 3275.9)
+	Data subtrahend: (24224, 10247)
+	MSE: 77648848.405
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'GALATI')(Linear Regression)
+	Training result: (-44.1, 1780.9)
+	Data subtrahend: (24223, 568)
+	MSE: 6456240.290000001
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'GALATI')(Linear Regression)
+	Training result: (-15.9, 156.1)
+	Data subtrahend: (24223, 342)
+	MSE: 332247.88999999996
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'GALATI')(Linear Regression)
+	Training result: (-53.9, 610.1)
+	Data subtrahend: (24223, 1463)
+	MSE: 2522780.689999999
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'GALATI')(Linear Regression)
+	Training result: (-69.9, 937.1)
+	Data subtrahend: (24223, 3063)
+	MSE: 3859727.490000001
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'GALATI')(Linear Regression)
+	Training result: (-32.9, 170.1)
+	Data subtrahend: (24223, 2037)
+	MSE: 2839653.19
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'GALATI')(Linear Regression)
+	Training result: (8.9, 497.9)
+	Data subtrahend: (24223, 2314)
+	MSE: 2275532.69
+
+('GRUPE DE VARSTA', 'TOTAL', 'GIURGIU')(Linear Regression)
+	Training result: (-0.1, 798.9)
+	Data subtrahend: (24224, 1599)
+	MSE: 46528117.904999994
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'GIURGIU')(Linear Regression)
+	Training result: (-44.9, 326.1)
+	Data subtrahend: (24223, 175)
+	MSE: 1568996.2899999998
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'GIURGIU')(Linear Regression)
+	Training result: (-1.1, 45.1)
+	Data subtrahend: (24223, 51)
+	MSE: 56889.53
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'GIURGIU')(Linear Regression)
+	Training result: (-12.9, 161.1)
+	Data subtrahend: (24223, 224)
+	MSE: 1192816.59
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'GIURGIU')(Linear Regression)
+	Training result: (-25.9, 261.1)
+	Data subtrahend: (24223, 334)
+	MSE: 5688381.79
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'GIURGIU')(Linear Regression)
+	Training result: (-22.9, 168.1)
+	Data subtrahend: (24223, 308)
+	MSE: 2240949.69
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'GIURGIU')(Linear Regression)
+	Training result: (-8.9, 207.1)
+	Data subtrahend: (24223, 372)
+	MSE: 2363492.9900000007
+
+('GRUPE DE VARSTA', 'TOTAL', 'GORJ')(Linear Regression)
+	Training result: (-0.1, 3927.9)
+	Data subtrahend: (24224, 1964)
+	MSE: 17614404.805
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'GORJ')(Linear Regression)
+	Training result: (32.9, 345.9)
+	Data subtrahend: (24223, 270)
+	MSE: 2664519.4899999998
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'GORJ')(Linear Regression)
+	Training result: (-3.1, 137.9)
+	Data subtrahend: (24223, 98)
+	MSE: 11365.590000000002
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'GORJ')(Linear Regression)
+	Training result: (-34.9, 658.1)
+	Data subtrahend: (24223, 317)
+	MSE: 747108.6899999998
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'GORJ')(Linear Regression)
+	Training result: (-81.9, 1301.1)
+	Data subtrahend: (24223, 461)
+	MSE: 4236476.590000001
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'GORJ')(Linear Regression)
+	Training result: (-12.9, 544.1)
+	Data subtrahend: (24223, 369)
+	MSE: 238700.79
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'GORJ')(Linear Regression)
+	Training result: (-59.9, 1293.1)
+	Data subtrahend: (24223, 417)
+	MSE: 1158935.09
+
+('GRUPE DE VARSTA', 'TOTAL', 'HARGHITA')(Linear Regression)
+	Training result: (-0.1, 854.9)
+	Data subtrahend: (24224, 4804)
+	MSE: 2726253.505
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'HARGHITA')(Linear Regression)
+	Training result: (-37.9, 683.1)
+	Data subtrahend: (24223, 606)
+	MSE: 610139.2899999999
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'HARGHITA')(Linear Regression)
+	Training result: (-12.9, 166.1)
+	Data subtrahend: (24223, 245)
+	MSE: 103604.19000000003
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'HARGHITA')(Linear Regression)
+	Training result: (-13.9, 270.1)
+	Data subtrahend: (24223, 954)
+	MSE: 177493.49
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'HARGHITA')(Linear Regression)
+	Training result: (-15.9, 237.1)
+	Data subtrahend: (24223, 1164)
+	MSE: 239977.79000000004
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'HARGHITA')(Linear Regression)
+	Training result: (-7.9, 109.1)
+	Data subtrahend: (24223, 633)
+	MSE: 123341.09000000003
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'HARGHITA')(Linear Regression)
+	Training result: (-5.9, 150.1)
+	Data subtrahend: (24223, 632)
+	MSE: 301791.18999999994
+
+('GRUPE DE VARSTA', 'TOTAL', 'HUNEDOARA')(Linear Regression)
+	Training result: (-0.1, 1546.9)
+	Data subtrahend: (24224, 5040)
+	MSE: 8097698.105000001
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'HUNEDOARA')(Linear Regression)
+	Training result: (-60.9, 408.1)
+	Data subtrahend: (24223, 444)
+	MSE: 3188904.7899999996
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'HUNEDOARA')(Linear Regression)
+	Training result: (10.9, 109.9)
+	Data subtrahend: (24223, 301)
+	MSE: 319905.08999999997
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'HUNEDOARA')(Linear Regression)
+	Training result: (-34.9, 434.1)
+	Data subtrahend: (24223, 788)
+	MSE: 766608.3899999998
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'HUNEDOARA')(Linear Regression)
+	Training result: (-128.9, 1015.1)
+	Data subtrahend: (24223, 1355)
+	MSE: 10601822.690000001
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'HUNEDOARA')(Linear Regression)
+	Training result: (-6.1, 439.9)
+	Data subtrahend: (24223, 798)
+	MSE: 221176.38999999998
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'HUNEDOARA')(Linear Regression)
+	Training result: (20.9, 101.9)
+	Data subtrahend: (24223, 790)
+	MSE: 680385.7899999999
+
+('GRUPE DE VARSTA', 'TOTAL', 'IALOMITA')(Linear Regression)
+	Training result: (-0.1, 1425.9)
+	Data subtrahend: (24224, 3782)
+	MSE: 6497899.105
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'IALOMITA')(Linear Regression)
+	Training result: (-53.9, 464.1)
+	Data subtrahend: (24223, 289)
+	MSE: 1520501.5899999996
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'IALOMITA')(Linear Regression)
+	Training result: (-16.9, 96.1)
+	Data subtrahend: (24223, 157)
+	MSE: 230071.78999999998
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'IALOMITA')(Linear Regression)
+	Training result: (-40.9, 315.1)
+	Data subtrahend: (24223, 654)
+	MSE: 1025166.5899999999
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'IALOMITA')(Linear Regression)
+	Training result: (-72.9, 506.1)
+	Data subtrahend: (24223, 1077)
+	MSE: 4361868.890000001
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'IALOMITA')(Linear Regression)
+	Training result: (-7.9, 202.1)
+	Data subtrahend: (24223, 740)
+	MSE: 85844.39
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'IALOMITA')(Linear Regression)
+	Training result: (-10.9, 278.1)
+	Data subtrahend: (24223, 838)
+	MSE: 22494.98999999999
+
+('GRUPE DE VARSTA', 'TOTAL', 'IASI')(Linear Regression)
+	Training result: (-0.1, 4383.9)
+	Data subtrahend: (24224, 5248)
+	MSE: 22400142.10499999
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'IASI')(Linear Regression)
+	Training result: (7.9, 576.9)
+	Data subtrahend: (24223, 427)
+	MSE: 1127820.29
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'IASI')(Linear Regression)
+	Training result: (-18.9, 90.1)
+	Data subtrahend: (24223, 175)
+	MSE: 346082.38999999996
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'IASI')(Linear Regression)
+	Training result: (-90.9, 753.1)
+	Data subtrahend: (24223, 875)
+	MSE: 5638604.690000001
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'IASI')(Linear Regression)
+	Training result: (-98.9, 1322.1)
+	Data subtrahend: (24223, 1598)
+	MSE: 5026511.390000002
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'IASI')(Linear Regression)
+	Training result: (-44.9, 934.1)
+	Data subtrahend: (24223, 998)
+	MSE: 1193539.29
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'IASI')(Linear Regression)
+	Training result: (-48.9, 1338.1)
+	Data subtrahend: (24223, 1135)
+	MSE: 1723188.8900000004
+
+('GRUPE DE VARSTA', 'TOTAL', 'ILFOV')(Linear Regression)
+	Training result: (-0.1, 469.1)
+	Data subtrahend: (24224, 657)
+	MSE: 31334379.944999997
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'ILFOV')(Linear Regression)
+	Training result: (28.9, 57.9)
+	Data subtrahend: (24223, 75)
+	MSE: 1459460.39
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'ILFOV')(Linear Regression)
+	Training result: (0.9, 23.9)
+	Data subtrahend: (24223, 27)
+	MSE: 17511.39
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'ILFOV')(Linear Regression)
+	Training result: (-9.9, 117.1)
+	Data subtrahend: (24223, 126)
+	MSE: 647837.6899999997
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'ILFOV')(Linear Regression)
+	Training result: (-7.9, 107.1)
+	Data subtrahend: (24223, 203)
+	MSE: 2576755.4900000007
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'ILFOV')(Linear Regression)
+	Training result: (-6.9, 56.1)
+	Data subtrahend: (24223, 116)
+	MSE: 1342669.39
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'ILFOV')(Linear Regression)
+	Training result: (2.9, 92.1)
+	Data subtrahend: (24223, 109)
+	MSE: 2227184.8299999996
+
+('GRUPE DE VARSTA', 'TOTAL', 'MARAMURES')(Linear Regression)
+	Training result: (-0.1, 5233.9)
+	Data subtrahend: (24224, 1196)
+	MSE: 22160992.004999995
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'MARAMURES')(Linear Regression)
+	Training result: (291.9, 148.9)
+	Data subtrahend: (24223, 323)
+	MSE: 97870559.78999998
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'MARAMURES')(Linear Regression)
+	Training result: (-41.9, 514.1)
+	Data subtrahend: (24223, 51)
+	MSE: 1185196.7899999998
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'MARAMURES')(Linear Regression)
+	Training result: (57.9, 1219.9)
+	Data subtrahend: (24223, 201)
+	MSE: 13362685.790000001
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'MARAMURES')(Linear Regression)
+	Training result: (-102.9, 1496.1)
+	Data subtrahend: (24223, 294)
+	MSE: 9132508.690000001
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'MARAMURES')(Linear Regression)
+	Training result: (-90.9, 992.1)
+	Data subtrahend: (24223, 141)
+	MSE: 8796900.790000001
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'MARAMURES')(Linear Regression)
+	Training result: (-156.9, 949.1)
+	Data subtrahend: (24223, 186)
+	MSE: 25780098.890000004
+
+('GRUPE DE VARSTA', 'TOTAL', 'MEHEDINTI')(Linear Regression)
+	Training result: (-0.1, 2621.9)
+	Data subtrahend: (24224, 6069)
+	MSE: 24855140.805000003
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'MEHEDINTI')(Linear Regression)
+	Training result: (89.9, 168.9)
+	Data subtrahend: (24223, 282)
+	MSE: 11991682.990000002
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'MEHEDINTI')(Linear Regression)
+	Training result: (25.9, 184.9)
+	Data subtrahend: (24223, 150)
+	MSE: 1777762.8899999997
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'MEHEDINTI')(Linear Regression)
+	Training result: (21.9, 638.9)
+	Data subtrahend: (24223, 1215)
+	MSE: 2814227.29
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'MEHEDINTI')(Linear Regression)
+	Training result: (-41.9, 1233.1)
+	Data subtrahend: (24223, 1709)
+	MSE: 640423.9900000001
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'MEHEDINTI')(Linear Regression)
+	Training result: (-55.9, 506.1)
+	Data subtrahend: (24223, 918)
+	MSE: 1388799.9899999998
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'MEHEDINTI')(Linear Regression)
+	Training result: (-65.9, 1046.1)
+	Data subtrahend: (24223, 691)
+	MSE: 1692122.490000001
+
+('GRUPE DE VARSTA', 'TOTAL', 'MUNICIPIUL BUCURESTI')(Linear Regression)
+	Training result: (-0.1, 9335.9)
+	Data subtrahend: (24224, 7770)
+	MSE: 65785450.62499999
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'MUNICIPIUL BUCURESTI')(Linear Regression)
+	Training result: (-18.9, 254.1)
+	Data subtrahend: (24223, 138)
+	MSE: 169200.66499999998
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'MUNICIPIUL BUCURESTI')(Linear Regression)
+	Training result: (-53.9, 1744.9)
+	Data subtrahend: (24223, 254)
+	MSE: 1327914.185
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'MUNICIPIUL BUCURESTI')(Linear Regression)
+	Training result: (-114.9, 2680.1)
+	Data subtrahend: (24223, 1742)
+	MSE: 10184208.265000002
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'MUNICIPIUL BUCURESTI')(Linear Regression)
+	Training result: (-3.1, 2016.9)
+	Data subtrahend: (24223, 2667)
+	MSE: 2077767.6650000003
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'MUNICIPIUL BUCURESTI')(Linear Regression)
+	Training result: (-16.1, 2055.9)
+	Data subtrahend: (24223, 1161)
+	MSE: 2128642.565000001
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'MUNICIPIUL BUCURESTI')(Linear Regression)
+	Training result: (-57.9, 1497.1)
+	Data subtrahend: (24223, 1425)
+	MSE: 2693334.165
+
+('GRUPE DE VARSTA', 'TOTAL', 'MURES')(Linear Regression)
+	Training result: (-0.1, 1277.9)
+	Data subtrahend: (24224, 5782)
+	MSE: 5267001.705000001
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'MURES')(Linear Regression)
+	Training result: (2.9, 275.9)
+	Data subtrahend: (24223, 763)
+	MSE: 204769.49
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'MURES')(Linear Regression)
+	Training result: (-23.9, 284.1)
+	Data subtrahend: (24223, 360)
+	MSE: 186798.18999999994
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'MURES')(Linear Regression)
+	Training result: (-92.9, 483.1)
+	Data subtrahend: (24223, 1316)
+	MSE: 7439046.490000001
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'MURES')(Linear Regression)
+	Training result: (-151.9, 755.1)
+	Data subtrahend: (24223, 1493)
+	MSE: 19063885.29
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'MURES')(Linear Regression)
+	Training result: (-24.9, 171.1)
+	Data subtrahend: (24223, 756)
+	MSE: 776988.6899999998
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'MURES')(Linear Regression)
+	Training result: (-59.9, 255.1)
+	Data subtrahend: (24223, 850)
+	MSE: 3415926.4899999993
+
+('GRUPE DE VARSTA', 'TOTAL', 'NEAMT')(Linear Regression)
+	Training result: (-0.1, 2298.9)
+	Data subtrahend: (24224, 6876)
+	MSE: 21712826.805
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'NEAMT')(Linear Regression)
+	Training result: (-3.1, 502.9)
+	Data subtrahend: (24223, 629)
+	MSE: 712301.8899999999
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'NEAMT')(Linear Regression)
+	Training result: (-6.9, 116.1)
+	Data subtrahend: (24223, 307)
+	MSE: 3849.7900000000022
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'NEAMT')(Linear Regression)
+	Training result: (-77.9, 585.1)
+	Data subtrahend: (24223, 1157)
+	MSE: 3231474.1900000004
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'NEAMT')(Linear Regression)
+	Training result: (-120.9, 927.1)
+	Data subtrahend: (24223, 1927)
+	MSE: 8316017.490000002
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'NEAMT')(Linear Regression)
+	Training result: (-24.9, 325.1)
+	Data subtrahend: (24223, 1300)
+	MSE: 311361.7899999999
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'NEAMT')(Linear Regression)
+	Training result: (-31.9, 548.1)
+	Data subtrahend: (24223, 1383)
+	MSE: 178376.08999999997
+
+('GRUPE DE VARSTA', 'TOTAL', 'OLT')(Linear Regression)
+	Training result: (-0.1, 1933.9)
+	Data subtrahend: (24224, 8318)
+	MSE: 15772128.705000002
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'OLT')(Linear Regression)
+	Training result: (98.9, 338.9)
+	Data subtrahend: (24223, 539)
+	MSE: 16669959.89
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'OLT')(Linear Regression)
+	Training result: (23.9, 67.9)
+	Data subtrahend: (24223, 304)
+	MSE: 1113572.19
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'OLT')(Linear Regression)
+	Training result: (-4.1, 511.9)
+	Data subtrahend: (24223, 1178)
+	MSE: 824694.69
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'OLT')(Linear Regression)
+	Training result: (-48.9, 688.1)
+	Data subtrahend: (24223, 2469)
+	MSE: 373047.08999999985
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'OLT')(Linear Regression)
+	Training result: (-33.9, 221.1)
+	Data subtrahend: (24223, 1676)
+	MSE: 1014655.7899999998
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'OLT')(Linear Regression)
+	Training result: (-18.9, 318.1)
+	Data subtrahend: (24223, 1906)
+	MSE: 23881.789999999983
+
+('GRUPE DE VARSTA', 'TOTAL', 'PRAHOVA')(Linear Regression)
+	Training result: (-0.1, 1512.9)
+	Data subtrahend: (24224, 6424)
+	MSE: 8527827.105000002
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'PRAHOVA')(Linear Regression)
+	Training result: (6.9, 664.9)
+	Data subtrahend: (24223, 451)
+	MSE: 2392176.9899999998
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'PRAHOVA')(Linear Regression)
+	Training result: (-16.9, 131.1)
+	Data subtrahend: (24223, 235)
+	MSE: 161198.58999999997
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'PRAHOVA')(Linear Regression)
+	Training result: (-78.9, 466.1)
+	Data subtrahend: (24223, 1038)
+	MSE: 5213004.49
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'PRAHOVA')(Linear Regression)
+	Training result: (-89.9, 530.1)
+	Data subtrahend: (24223, 1885)
+	MSE: 7160833.990000001
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'PRAHOVA')(Linear Regression)
+	Training result: (-77.9, 473.1)
+	Data subtrahend: (24223, 1119)
+	MSE: 7488535.290000001
+
+('GRUPE DE VARSTA', 'TOTAL', 'SALAJ')(Linear Regression)
+	Training result: (-0.1, 425.9)
+	Data subtrahend: (24224, 4119)
+	MSE: 523420.00499999995
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'PRAHOVA')(Linear Regression)
+	Training result: (-86.9, 414.1)
+	Data subtrahend: (24223, 1218)
+	MSE: 6417786.490000001
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'SALAJ')(Linear Regression)
+	Training result: (-33.9, 384.1)
+	Data subtrahend: (24223, 490)
+	MSE: 783144.49
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'SALAJ')(Linear Regression)
+	Training result: (-54.9, 152.1)
+	Data subtrahend: (24223, 277)
+	MSE: 3475963.59
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'SALAJ')(Linear Regression)
+	Training result: (-75.9, 205.1)
+	Data subtrahend: (24223, 877)
+	MSE: 6788651.790000001
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'SALAJ')(Linear Regression)
+	Training result: (-36.9, 259.1)
+	Data subtrahend: (24223, 955)
+	MSE: 1227132.0899999999
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'SALAJ')(Linear Regression)
+	Training result: (50.9, -17.1)
+	Data subtrahend: (24223, 615)
+	MSE: 3090444.59
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'SALAJ')(Linear Regression)
+	Training result: (20.9, -3.1)
+	Data subtrahend: (24223, 611)
+	MSE: 520681.7899999999
+
+('GRUPE DE VARSTA', 'TOTAL', 'SATU-MARE')(Linear Regression)
+	Training result: (-0.1, 482.9)
+	Data subtrahend: (24224, 3357)
+	MSE: 681453.005
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'SATU-MARE')(Linear Regression)
+	Training result: (-8.9, 169.1)
+	Data subtrahend: (24223, 396)
+	MSE: 26415.79
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'SATU-MARE')(Linear Regression)
+	Training result: (-12.9, 109.1)
+	Data subtrahend: (24223, 207)
+	MSE: 100452.49000000002
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'SATU-MARE')(Linear Regression)
+	Training result: (0.9, 151.9)
+	Data subtrahend: (24223, 790)
+	MSE: 59574.79000000001
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'SATU-MARE')(Linear Regression)
+	Training result: (-28.9, 171.1)
+	Data subtrahend: (24223, 925)
+	MSE: 1066411.2899999998
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'SATU-MARE')(Linear Regression)
+	Training result: (-4.9, 76.1)
+	Data subtrahend: (24223, 451)
+	MSE: 32759.890000000007
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'SATU-MARE')(Linear Regression)
+	Training result: (-17.9, 55.1)
+	Data subtrahend: (24223, 485)
+	MSE: 479080.5899999999
+
+('GRUPE DE VARSTA', 'TOTAL', 'SIBIU')(Linear Regression)
+	Training result: (-0.1, 291.9)
+	Data subtrahend: (24224, 3229)
+	MSE: 351333.80500000005
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'SIBIU')(Linear Regression)
+	Training result: (-3.9, 29.1)
+	Data subtrahend: (24223, 327)
+	MSE: 167167.59
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'SIBIU')(Linear Regression)
+	Training result: (-27.9, 117.1)
+	Data subtrahend: (24223, 168)
+	MSE: 894909.1900000001
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'SIBIU')(Linear Regression)
+	Training result: (-35.9, 220.1)
+	Data subtrahend: (24223, 570)
+	MSE: 1154078.39
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'SIBIU')(Linear Regression)
+	Training result: (-63.9, 216.1)
+	Data subtrahend: (24223, 822)
+	MSE: 5117234.79
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'SIBIU')(Linear Regression)
+	Training result: (-37.9, 134.1)
+	Data subtrahend: (24223, 523)
+	MSE: 1669041.1899999997
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'SIBIU')(Linear Regression)
+	Training result: (-11.9, 118.1)
+	Data subtrahend: (24223, 641)
+	MSE: 94078.29000000001
+
+('GRUPE DE VARSTA', 'TOTAL', 'SUCEAVA')(Linear Regression)
+	Training result: (-0.1, 2064.9)
+	Data subtrahend: (24224, 10017)
+	MSE: 10649985.105000002
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'SUCEAVA')(Linear Regression)
+	Training result: (-48.1, 1640.9)
+	Data subtrahend: (24223, 1175)
+	MSE: 4217647.29
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'SUCEAVA')(Linear Regression)
+	Training result: (-2.1, 154.9)
+	Data subtrahend: (24223, 603)
+	MSE: 44062.99
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'SUCEAVA')(Linear Regression)
+	Training result: (-74.9, 426.1)
+	Data subtrahend: (24223, 1841)
+	MSE: 5262200.390000001
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'SUCEAVA')(Linear Regression)
+	Training result: (-41.9, 508.1)
+	Data subtrahend: (24223, 2596)
+	MSE: 1379482.6899999997
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'SUCEAVA')(Linear Regression)
+	Training result: (-34.9, 134.1)
+	Data subtrahend: (24223, 1427)
+	MSE: 2052966.1899999997
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'SUCEAVA')(Linear Regression)
+	Training result: (-38.9, 281.1)
+	Data subtrahend: (24223, 1777)
+	MSE: 1124238.39
+
+('GRUPE DE VARSTA', 'TOTAL', 'TELEORMAN')(Linear Regression)
+	Training result: (-0.1, 3459.9)
+	Data subtrahend: (24224, 8808)
+	MSE: 54605554.605000004
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'TELEORMAN')(Linear Regression)
+	Training result: (49.9, 902.9)
+	Data subtrahend: (24223, 648)
+	MSE: 14572461.989999998
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'TELEORMAN')(Linear Regression)
+	Training result: (3.9, 213.9)
+	Data subtrahend: (24223, 436)
+	MSE: 328867.88999999996
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'TELEORMAN')(Linear Regression)
+	Training result: (-24.1, 667.9)
+	Data subtrahend: (24223, 1472)
+	MSE: 264062.8899999999
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'TELEORMAN')(Linear Regression)
+	Training result: (-5.1, 1048.9)
+	Data subtrahend: (24223, 2334)
+	MSE: 3661772.3900000006
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'TELEORMAN')(Linear Regression)
+	Training result: (-45.9, 454.1)
+	Data subtrahend: (24223, 1718)
+	MSE: 1295183.5899999999
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'TELEORMAN')(Linear Regression)
+	Training result: (-10.1, 680.9)
+	Data subtrahend: (24223, 1753)
+	MSE: 760991.2899999999
+
+('GRUPE DE VARSTA', 'TOTAL', 'TIMIS')(Linear Regression)
+	Training result: (-0.1, 376.9)
+	Data subtrahend: (24224, 2421)
+	MSE: 291852.00500000006
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'TIMIS')(Linear Regression)
+	Training result: (67.9, 97.9)
+	Data subtrahend: (24223, 168)
+	MSE: 6687532.590000002
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'TIMIS')(Linear Regression)
+	Training result: (2.9, 61.9)
+	Data subtrahend: (24223, 81)
+	MSE: 30290.79
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'TIMIS')(Linear Regression)
+	Training result: (-32.9, 69.1)
+	Data subtrahend: (24223, 443)
+	MSE: 1668798.99
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'TIMIS')(Linear Regression)
+	Training result: (-62.9, 195.1)
+	Data subtrahend: (24223, 751)
+	MSE: 4313875.39
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'TIMIS')(Linear Regression)
+	Training result: (-26.9, 91.1)
+	Data subtrahend: (24223, 407)
+	MSE: 1305459.0899999999
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'TIMIS')(Linear Regression)
+	Training result: (-61.9, 246.1)
+	Data subtrahend: (24223, 415)
+	MSE: 4214648.49
+
+('GRUPE DE VARSTA', 'TOTAL', 'TULCEA')(Linear Regression)
+	Training result: (0.1, 91.1)
+	Data subtrahend: (24224, 2430)
+	MSE: 1106122.7049999998
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'TULCEA')(Linear Regression)
+	Training result: (1.1, 108.1)
+	Data subtrahend: (24223, 292)
+	MSE: 219576.68999999994
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'TULCEA')(Linear Regression)
+	Training result: (12.9, 66.9)
+	Data subtrahend: (24223, 106)
+	MSE: 325058.89
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'TULCEA')(Linear Regression)
+	Training result: (23.9, 158.9)
+	Data subtrahend: (24223, 387)
+	MSE: 1500358.2899999998
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'TULCEA')(Linear Regression)
+	Training result: (-20.9, 122.1)
+	Data subtrahend: (24223, 595)
+	MSE: 804829.79
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'TULCEA')(Linear Regression)
+	Training result: (11.1, -10.9)
+	Data subtrahend: (24223, 373)
+	MSE: 93737.18999999999
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'TULCEA')(Linear Regression)
+	Training result: (-11.9, 82.1)
+	Data subtrahend: (24223, 209)
+	MSE: 819502.8900000001
+
+('GRUPE DE VARSTA', 'TOTAL', 'VALCEA')(Linear Regression)
+	Training result: (-0.1, 507.9)
+	Data subtrahend: (24224, 4553)
+	MSE: 814981.105
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'VALCEA')(Linear Regression)
+	Training result: (112.9, 622.9)
+	Data subtrahend: (24223, 299)
+	MSE: 28935198.990000002
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'VALCEA')(Linear Regression)
+	Training result: (-27.9, 124.1)
+	Data subtrahend: (24223, 195)
+	MSE: 712235.19
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'VALCEA')(Linear Regression)
+	Training result: (-86.9, 242.1)
+	Data subtrahend: (24223, 734)
+	MSE: 8961812.390000002
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'VALCEA')(Linear Regression)
+	Training result: (-179.9, 476.1)
+	Data subtrahend: (24223, 1219)
+	MSE: 39066643.49
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'VALCEA')(Linear Regression)
+	Training result: (-70.9, 142.1)
+	Data subtrahend: (24223, 826)
+	MSE: 8859983.690000001
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'VALCEA')(Linear Regression)
+	Training result: (-108.9, 218.1)
+	Data subtrahend: (24223, 687)
+	MSE: 16379912.590000004
+
+('GRUPE DE VARSTA', 'TOTAL', 'VASLUI')(Linear Regression)
+	Training result: (-0.1, 3229.9)
+	Data subtrahend: (24224, 8421)
+	MSE: 18144607.605000004
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'VASLUI')(Linear Regression)
+	Training result: (0.9, 673.9)
+	Data subtrahend: (24223, 289)
+	MSE: 1657745.4899999993
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'VASLUI')(Linear Regression)
+	Training result: (-19.9, 214.1)
+	Data subtrahend: (24223, 208)
+	MSE: 199597.88999999998
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'VASLUI')(Linear Regression)
+	Training result: (-113.9, 1174.1)
+	Data subtrahend: (24223, 1061)
+	MSE: 8071353.390000002
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'VASLUI')(Linear Regression)
+	Training result: (-195.9, 1467.1)
+	Data subtrahend: (24223, 2907)
+	MSE: 27833062.990000006
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'VASLUI')(Linear Regression)
+	Training result: (-77.9, 355.1)
+	Data subtrahend: (24223, 1858)
+	MSE: 7048514.590000001
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'VASLUI')(Linear Regression)
+	Training result: (-104.9, 398.1)
+	Data subtrahend: (24223, 2070)
+	MSE: 12046226.89
+
+('GRUPE DE VARSTA', 'TOTAL', 'VRANCEA')(Linear Regression)
+	Training result: (-0.1, 1178.9)
+	Data subtrahend: (24224, 4777)
+	MSE: 5382343.005000001
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'VRANCEA')(Linear Regression)
+	Training result: (-19.1, 521.9)
+	Data subtrahend: (24223, 381)
+	MSE: 297268.29
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'VRANCEA')(Linear Regression)
+	Training result: (-26.9, 120.1)
+	Data subtrahend: (24223, 221)
+	MSE: 656363.4899999999
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'VRANCEA')(Linear Regression)
+	Training result: (-45.9, 293.1)
+	Data subtrahend: (24223, 754)
+	MSE: 1390329.8899999997
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'VRANCEA')(Linear Regression)
+	Training result: (-81.9, 522.1)
+	Data subtrahend: (24223, 1230)
+	MSE: 4559615.390000001
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'VRANCEA')(Linear Regression)
+	Training result: (-39.9, 235.1)
+	Data subtrahend: (24223, 839)
+	MSE: 1703603.2899999998
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'VRANCEA')(Linear Regression)
+	Training result: (-80.9, 355.1)
+	Data subtrahend: (24223, 1074)
+	MSE: 6028043.490000002
+
+('GRUPE DE VARSTA', 'TOTAL', 'TOTAL')(Linear Regression)
+	Training result: (-0.1, 45868.9)
+	Data subtrahend: (24224, 250882)
+	MSE: 9526330432.425
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'TOTAL')(Linear Regression)
+	Training result: (487.9, 18213.9)
+	Data subtrahend: (24223, 19642)
+	MSE: 2348298964.3650007
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'TOTAL')(Linear Regression)
+	Training result: (-860.9, 6480.1)
+	Data subtrahend: (24223, 12451)
+	MSE: 385372238.56499994
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'TOTAL')(Linear Regression)
+	Training result: (-1401.9, 13476.1)
+	Data subtrahend: (24223, 43937)
+	MSE: 832837678.6650002
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'TOTAL')(Linear Regression)
+	Training result: (-2024.9, 17444.1)
+	Data subtrahend: (24223, 68433)
+	MSE: 2191920558.765001
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'TOTAL')(Linear Regression)
+	Training result: (-950.9, 5217.1)
+	Data subtrahend: (24223, 45150)
+	MSE: 977597062.7649999
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'TOTAL')(Linear Regression)
+	Training result: (-1086.9, 9293.1)
+	Data subtrahend: (24223, 48690)
+	MSE: 622216750.9650002
+
+('GRUPE DE VARSTA', 'TOTAL', 'BISTRITA NASAUD')(Linear Regression)
+	Training result: (227.9, 359.9)
+	Data subtrahend: (24226, 3180)
+	MSE: 58541539.14
+
+('GRUPE DE VARSTA', 'SUB 25 ANI', 'BISTRITA NASAUD')(Linear Regression)
+	Training result: (-13.9, 238.1)
+	Data subtrahend: (24226, 320)
+	MSE: 114040.24000000002
+
+('GRUPE DE VARSTA', '25 - 29 ANI', 'BISTRITA NASAUD')(Linear Regression)
+	Training result: (14.9, 50.9)
+	Data subtrahend: (24226, 158)
+	MSE: 289344.33999999997
+
+('GRUPE DE VARSTA', '30 - 39 ANI', 'BISTRITA NASAUD')(Linear Regression)
+	Training result: (55.9, 120.9)
+	Data subtrahend: (24226, 537)
+	MSE: 3419333.14
+
+('GRUPE DE VARSTA', '40 - 49 ANI', 'BISTRITA NASAUD')(Linear Regression)
+	Training result: (67.9, 215.9)
+	Data subtrahend: (24226, 712)
+	MSE: 5801573.940000001
+
+('GRUPE DE VARSTA', '50 - 55 ANI', 'BISTRITA NASAUD')(Linear Regression)
+	Training result: (65.9, 25.9)
+	Data subtrahend: (24226, 579)
+	MSE: 3926690.0400000005
+
+('GRUPE DE VARSTA', 'PESTE 55 ANI', 'BISTRITA NASAUD')(Linear Regression)
+	Training result: (36.9, -17.1)
+	Data subtrahend: (24226, 599)
+	MSE: 1128414.1399999997
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'ALBA')(Linear Regression)
+	Training result: (-71.9, 1091.1)
+	Data subtrahend: (24223, 4671)
+	MSE: 2339550.985000001
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'ALBA')(Linear Regression)
+	Training result: (12.9, 436.9)
+	Data subtrahend: (24223, 2096)
+	MSE: 1112345.985
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'ALBA')(Linear Regression)
+	Training result: (-84.9, 654.1)
+	Data subtrahend: (24223, 2575)
+	MSE: 5215941.585000001
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'ALBA')(Linear Regression)
+	Training result: (18.9, 348.9)
+	Data subtrahend: (24223, 1623)
+	MSE: 1069179.4849999999
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'ALBA')(Linear Regression)
+	Training result: (14.9, 151.9)
+	Data subtrahend: (24223, 839)
+	MSE: 447730.0850000001
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'ALBA')(Linear Regression)
+	Training result: (3.9, 196.9)
+	Data subtrahend: (24223, 784)
+	MSE: 145205.78500000003
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'ALBA')(Linear Regression)
+	Training result: (-90.9, 768.1)
+	Data subtrahend: (24223, 3022)
+	MSE: 5262832.085000001
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'ALBA')(Linear Regression)
+	Training result: (-2.1, 284.9)
+	Data subtrahend: (24223, 1257)
+	MSE: 172790.28499999995
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'ALBA')(Linear Regression)
+	Training result: (-88.9, 558.1)
+	Data subtrahend: (24223, 1690)
+	MSE: 6596896.985000001
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'ARAD')(Linear Regression)
+	Training result: (52.9, 604.9)
+	Data subtrahend: (24223, 2201)
+	MSE: 6037011.885
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'ARAD')(Linear Regression)
+	Training result: (58.9, 180.9)
+	Data subtrahend: (24223, 1121)
+	MSE: 4433200.585
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'ARAD')(Linear Regression)
+	Training result: (-6.1, 423.9)
+	Data subtrahend: (24223, 1080)
+	MSE: 197668.685
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'ARAD')(Linear Regression)
+	Training result: (70.9, 20.9)
+	Data subtrahend: (24223, 843)
+	MSE: 5047769.985000001
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'ARAD')(Linear Regression)
+	Training result: (45.9, 13.9)
+	Data subtrahend: (24223, 435)
+	MSE: 2159684.7849999997
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'ARAD')(Linear Regression)
+	Training result: (24.9, 18.9)
+	Data subtrahend: (24223, 396)
+	MSE: 604081.585
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'ARAD')(Linear Regression)
+	Training result: (-18.1, 591.9052631578948)
+	Data subtrahend: (24223, 1350)
+	MSE: 138496.26052631577
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'ARAD')(Linear Regression)
+	Training result: (12.9, 166.9)
+	Data subtrahend: (24223, 686)
+	MSE: 412168.18500000006
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'ARAD')(Linear Regression)
+	Training result: (-30.9, 425.1)
+	Data subtrahend: (24223, 664)
+	MSE: 251971.2849999999
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'ARGES')(Linear Regression)
+	Training result: (-108.9, 1574.1)
+	Data subtrahend: (24223, 7357)
+	MSE: 4190893.8850000007
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'ARGES')(Linear Regression)
+	Training result: (-3.1, 531.9)
+	Data subtrahend: (24223, 3401)
+	MSE: 523597.485
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'ARGES')(Linear Regression)
+	Training result: (-105.9, 1101.1)
+	Data subtrahend: (24223, 3897)
+	MSE: 4523645.985000001
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'ARGES')(Linear Regression)
+	Training result: (7.1, 70.1)
+	Data subtrahend: (24223, 1157)
+	MSE: 201366.485
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'ARGES')(Linear Regression)
+	Training result: (6.9, 69.9)
+	Data subtrahend: (24223, 645)
+	MSE: 95542.485
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'ARGES')(Linear Regression)
+	Training result: (0.1, 6.1)
+	Data subtrahend: (24223, 506)
+	MSE: 75237.585
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'ARGES')(Linear Regression)
+	Training result: (-115.9, 1558.1)
+	Data subtrahend: (24223, 6146)
+	MSE: 2961792.785000001
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'ARGES')(Linear Regression)
+	Training result: (-10.1, 461.9)
+	Data subtrahend: (24223, 2756)
+	MSE: 264576.38499999995
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'ARGES')(Linear Regression)
+	Training result: (-105.9, 1215.1)
+	Data subtrahend: (24223, 3271)
+	MSE: 3520903.7850000015
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'BACAU')(Linear Regression)
+	Training result: (-146.9, 2351.1)
+	Data subtrahend: (24223, 10743)
+	MSE: 2163242.085
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'BACAU')(Linear Regression)
+	Training result: (4.9, 811.9)
+	Data subtrahend: (24223, 4301)
+	MSE: 2808595.485
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'BACAU')(Linear Regression)
+	Training result: (-151.9, 1712.1)
+	Data subtrahend: (24223, 6269)
+	MSE: 6519360.185000001
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'BACAU')(Linear Regression)
+	Training result: (-41.9, 495.1)
+	Data subtrahend: (24223, 2359)
+	MSE: 1096062.8849999998
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'BACAU')(Linear Regression)
+	Training result: (4.9, 290.9)
+	Data subtrahend: (24223, 897)
+	MSE: 608519.6849999999
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'BACAU')(Linear Regression)
+	Training result: (-46.9, 268.1)
+	Data subtrahend: (24223, 1398)
+	MSE: 2938637.1849999996
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'BACAU')(Linear Regression)
+	Training result: (-105.1, 2011.9)
+	Data subtrahend: (24223, 8228)
+	MSE: 748154.1850000003
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'BACAU')(Linear Regression)
+	Training result: (-0.1, 584.9)
+	Data subtrahend: (24223, 3340)
+	MSE: 948548.1849999998
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'BACAU')(Linear Regression)
+	Training result: (-104.9, 1763.1)
+	Data subtrahend: (24223, 4552)
+	MSE: 825147.3850000007
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'BIHOR')(Linear Regression)
+	Training result: (68.9, 997.9)
+	Data subtrahend: (24223, 3077)
+	MSE: 14877412.785000002
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'BIHOR')(Linear Regression)
+	Training result: (4.9, 525.9)
+	Data subtrahend: (24223, 1589)
+	MSE: 885146.285
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'BIHOR')(Linear Regression)
+	Training result: (63.9, 481.9)
+	Data subtrahend: (24223, 1478)
+	MSE: 10585969.884999998
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'BIHOR')(Linear Regression)
+	Training result: (2.9, 246.9)
+	Data subtrahend: (24223, 1043)
+	MSE: 287002.885
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'BIHOR')(Linear Regression)
+	Training result: (4.9, 159.9)
+	Data subtrahend: (24223, 589)
+	MSE: 146415.08500000002
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'BIHOR')(Linear Regression)
+	Training result: (-2.1, 105.9)
+	Data subtrahend: (24223, 435)
+	MSE: 26615.18500000001
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'BIHOR')(Linear Regression)
+	Training result: (65.9, 806.9)
+	Data subtrahend: (24223, 1978)
+	MSE: 12503173.285000002
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'BIHOR')(Linear Regression)
+	Training result: (-0.1, 401.9)
+	Data subtrahend: (24223, 964)
+	MSE: 363824.5849999999
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'BIHOR')(Linear Regression)
+	Training result: (65.9, 404.9)
+	Data subtrahend: (24223, 1014)
+	MSE: 10339213.085000003
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'BISTRITA-NASAUD')(Linear Regression)
+	Training result: (316.9, -102.1)
+	Data subtrahend: (24223, 3180)
+	MSE: 132461452.08499998
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'BISTRITA-NASAUD')(Linear Regression)
+	Training result: (200.9, -83.1)
+	Data subtrahend: (24223, 1593)
+	MSE: 52333736.385000005
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'BISTRITA-NASAUD')(Linear Regression)
+	Training result: (115.9, 59.9)
+	Data subtrahend: (24223, 1508)
+	MSE: 18299294.085000005
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'BISTRITA-NASAUD')(Linear Regression)
+	Training result: (78.9, -69.1)
+	Data subtrahend: (24223, 1001)
+	MSE: 6736776.285000002
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'BISTRITA-NASAUD')(Linear Regression)
+	Training result: (41.9, -38.1)
+	Data subtrahend: (24223, 581)
+	MSE: 1825385.785
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'BISTRITA-NASAUD')(Linear Regression)
+	Training result: (36.9, -31.1)
+	Data subtrahend: (24223, 420)
+	MSE: 1563039.885
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'BISTRITA-NASAUD')(Linear Regression)
+	Training result: (237.9, 97.9)
+	Data subtrahend: (24223, 2048)
+	MSE: 79678435.185
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'BISTRITA-NASAUD')(Linear Regression)
+	Training result: (158.9, 12.9)
+	Data subtrahend: (24223, 954)
+	MSE: 34912054.98500001
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'BISTRITA-NASAUD')(Linear Regression)
+	Training result: (78.9, 102.9)
+	Data subtrahend: (24223, 1076)
+	MSE: 9153994.585
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'BOTOSANI')(Linear Regression)
+	Training result: (-57.9, 1072.1)
+	Data subtrahend: (24223, 3132)
+	MSE: 841534.2850000004
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'BOTOSANI')(Linear Regression)
+	Training result: (-11.1, 437.9)
+	Data subtrahend: (24223, 1390)
+	MSE: 76580.88499999998
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'BOTOSANI')(Linear Regression)
+	Training result: (-46.9, 682.1)
+	Data subtrahend: (24223, 1694)
+	MSE: 1132671.785
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'BOTOSANI')(Linear Regression)
+	Training result: (-14.9, 216.1)
+	Data subtrahend: (24223, 1122)
+	MSE: 165509.385
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'BOTOSANI')(Linear Regression)
+	Training result: (-4.9, 79.1)
+	Data subtrahend: (24223, 570)
+	MSE: 18360.385000000006
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'BOTOSANI')(Linear Regression)
+	Training result: (-9.9, 154.1)
+	Data subtrahend: (24223, 535)
+	MSE: 101970.38500000001
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'BOTOSANI')(Linear Regression)
+	Training result: (-42.9, 919.1)
+	Data subtrahend: (24223, 1947)
+	MSE: 293366.2849999999
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'BOTOSANI')(Linear Regression)
+	Training result: (-6.1, 375.9)
+	Data subtrahend: (24223, 803)
+	MSE: 117787.88499999997
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'BOTOSANI')(Linear Regression)
+	Training result: (-36.9, 558.1)
+	Data subtrahend: (24223, 1129)
+	MSE: 565348.7849999999
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'BRASOV')(Linear Regression)
+	Training result: (-262.9, 1565.1)
+	Data subtrahend: (24223, 5029)
+	MSE: 54082165.38499999
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'BRASOV')(Linear Regression)
+	Training result: (-60.9, 556.1)
+	Data subtrahend: (24223, 2266)
+	MSE: 2368870.7849999997
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'BRASOV')(Linear Regression)
+	Training result: (-201.9, 1009.1)
+	Data subtrahend: (24223, 2763)
+	MSE: 33972563.98500001
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'BRASOV')(Linear Regression)
+	Training result: (-48.9, 362.1)
+	Data subtrahend: (24223, 1409)
+	MSE: 2699391.9849999994
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'BRASOV')(Linear Regression)
+	Training result: (-5.9, 145.1)
+	Data subtrahend: (24223, 755)
+	MSE: 100922.98500000002
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'BRASOV')(Linear Regression)
+	Training result: (-42.9, 217.1)
+	Data subtrahend: (24223, 654)
+	MSE: 1930219.3849999995
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'BRASOV')(Linear Regression)
+	Training result: (-213.9, 1244.1)
+	Data subtrahend: (24223, 3579)
+	MSE: 33016956.785000004
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'BRASOV')(Linear Regression)
+	Training result: (-54.9, 443.1)
+	Data subtrahend: (24223, 1479)
+	MSE: 1695519.1849999994
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'BRASOV')(Linear Regression)
+	Training result: (-158.9, 808.1)
+	Data subtrahend: (24223, 2093)
+	MSE: 19753475.985000003
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'BRAILA')(Linear Regression)
+	Training result: (-48.9, 940.1)
+	Data subtrahend: (24223, 4286)
+	MSE: 379739.185
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'BRAILA')(Linear Regression)
+	Training result: (-0.1, 325.9)
+	Data subtrahend: (24223, 1748)
+	MSE: 425454.5849999999
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'BRAILA')(Linear Regression)
+	Training result: (-48.9, 644.1)
+	Data subtrahend: (24223, 2508)
+	MSE: 609354.3849999998
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'BRAILA')(Linear Regression)
+	Training result: (6.9, 101.9)
+	Data subtrahend: (24223, 1091)
+	MSE: 154905.385
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'BRAILA')(Linear Regression)
+	Training result: (-1.9, 66.1)
+	Data subtrahend: (24223, 515)
+	MSE: 15859.185000000001
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'BRAILA')(Linear Regression)
+	Training result: (8.9, 60.9)
+	Data subtrahend: (24223, 551)
+	MSE: 166985.18500000003
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'BRAILA')(Linear Regression)
+	Training result: (-55.9, 871.1)
+	Data subtrahend: (24223, 3162)
+	MSE: 373796.18499999994
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'BRAILA')(Linear Regression)
+	Training result: (1.9, 281.9)
+	Data subtrahend: (24223, 1211)
+	MSE: 436607.3849999999
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'BRAILA')(Linear Regression)
+	Training result: (-57.9, 589.1)
+	Data subtrahend: (24223, 1951)
+	MSE: 1182244.1849999998
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'BUCURESTI')(Linear Regression)
+	Training result: (-264.9, 2640.1)
+	Data subtrahend: (24223, 14996)
+	MSE: 22452624.884999994
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'BUCURESTI')(Linear Regression)
+	Training result: (-180.9, 1367.1)
+	Data subtrahend: (24223, 7908)
+	MSE: 17735430.385000005
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'BUCURESTI')(Linear Regression)
+	Training result: (-83.9, 1272.9)
+	Data subtrahend: (24223, 7088)
+	MSE: 1519706.1250000002
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'BUCURESTI')(Linear Regression)
+	Training result: (-264.9, 2640.1)
+	Data subtrahend: (24223, 14996)
+	MSE: 22452624.884999994
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'BUCURESTI')(Linear Regression)
+	Training result: (-180.9, 1367.1)
+	Data subtrahend: (24223, 7908)
+	MSE: 17735430.385000005
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'BUCURESTI')(Linear Regression)
+	Training result: (-83.9, 1272.9)
+	Data subtrahend: (24223, 7088)
+	MSE: 1519706.1250000002
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'BUCURESTI')(Linear Regression)
+	Training result: (-0.0, 0.0)
+	Data subtrahend: (24223, 0)
+	MSE: 0.0
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'BUCURESTI')(Linear Regression)
+	Training result: (-0.0, 0.0)
+	Data subtrahend: (24223, 0)
+	MSE: 0.0
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'BUCURESTI')(Linear Regression)
+	Training result: (-0.0, 0.0)
+	Data subtrahend: (24223, 0)
+	MSE: 0.0
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'BUZAU')(Linear Regression)
+	Training result: (-213.9, 1750.1)
+	Data subtrahend: (24223, 10990)
+	MSE: 25309340.385
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'BUZAU')(Linear Regression)
+	Training result: (-52.9, 657.1)
+	Data subtrahend: (24223, 4433)
+	MSE: 1061550.1849999998
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'BUZAU')(Linear Regression)
+	Training result: (-160.9, 1093.1)
+	Data subtrahend: (24223, 6557)
+	MSE: 16424527.585000005
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'BUZAU')(Linear Regression)
+	Training result: (-35.9, 380.1)
+	Data subtrahend: (24223, 1881)
+	MSE: 706590.7849999998
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'BUZAU')(Linear Regression)
+	Training result: (-3.1, 152.9)
+	Data subtrahend: (24223, 927)
+	MSE: 45447.584999999985
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'BUZAU')(Linear Regression)
+	Training result: (-32.9, 239.1)
+	Data subtrahend: (24223, 942)
+	MSE: 702156.9849999999
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'BUZAU')(Linear Regression)
+	Training result: (-177.9, 1370.1)
+	Data subtrahend: (24223, 9109)
+	MSE: 18041981.985000003
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'BUZAU')(Linear Regression)
+	Training result: (-49.9, 504.1)
+	Data subtrahend: (24223, 3506)
+	MSE: 1070745.3849999998
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'BUZAU')(Linear Regression)
+	Training result: (-127.9, 908.1)
+	Data subtrahend: (24223, 5561)
+	MSE: 10411658.985000003
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'CARAS-SEVERIN')(Linear Regression)
+	Training result: (-12.1, 794.9)
+	Data subtrahend: (24223, 2984)
+	MSE: 738787.3849999999
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'CARAS-SEVERIN')(Linear Regression)
+	Training result: (8.9, 285.9)
+	Data subtrahend: (24223, 1372)
+	MSE: 630901.085
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'CARAS-SEVERIN')(Linear Regression)
+	Training result: (-20.9, 508.9)
+	Data subtrahend: (24223, 1612)
+	MSE: 54386.92499999999
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'CARAS-SEVERIN')(Linear Regression)
+	Training result: (27.9, 284.9)
+	Data subtrahend: (24223, 1231)
+	MSE: 1914984.0849999995
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'CARAS-SEVERIN')(Linear Regression)
+	Training result: (27.9, 124.9)
+	Data subtrahend: (24223, 572)
+	MSE: 1456078.1849999998
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'CARAS-SEVERIN')(Linear Regression)
+	Training result: (-0.1, 159.9)
+	Data subtrahend: (24223, 659)
+	MSE: 39369.285
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'CARAS-SEVERIN')(Linear Regression)
+	Training result: (-39.9, 738.1)
+	Data subtrahend: (24223, 1525)
+	MSE: 439110.0849999999
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'CARAS-SEVERIN')(Linear Regression)
+	Training result: (-18.9, 279.1)
+	Data subtrahend: (24223, 682)
+	MSE: 200218.48499999993
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'CARAS-SEVERIN')(Linear Regression)
+	Training result: (-20.9, 459.1)
+	Data subtrahend: (24223, 843)
+	MSE: 53438.984999999964
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'CALARASI')(Linear Regression)
+	Training result: (-60.9, 1216.1)
+	Data subtrahend: (24223, 2829)
+	MSE: 223305.58500000014
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'CALARASI')(Linear Regression)
+	Training result: (-14.1, 523.9)
+	Data subtrahend: (24223, 1401)
+	MSE: 157285.08499999996
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'CALARASI')(Linear Regression)
+	Training result: (-46.9, 692.1)
+	Data subtrahend: (24223, 1428)
+	MSE: 623771.2849999999
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'CALARASI')(Linear Regression)
+	Training result: (-2.1, 236.9)
+	Data subtrahend: (24223, 689)
+	MSE: 163219.385
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'CALARASI')(Linear Regression)
+	Training result: (-2.1, 149.9)
+	Data subtrahend: (24223, 346)
+	MSE: 69336.785
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'CALARASI')(Linear Regression)
+	Training result: (-0.1, 94.9)
+	Data subtrahend: (24223, 335)
+	MSE: 23311.985000000004
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'CALARASI')(Linear Regression)
+	Training result: (-58.9, 1033.1)
+	Data subtrahend: (24223, 2086)
+	MSE: 652300.5850000003
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'CALARASI')(Linear Regression)
+	Training result: (-12.1, 407.9)
+	Data subtrahend: (24223, 1021)
+	MSE: 31450.68499999999
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'CALARASI')(Linear Regression)
+	Training result: (-46.9, 625.1)
+	Data subtrahend: (24223, 1065)
+	MSE: 841521.8849999999
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'CLUJ')(Linear Regression)
+	Training result: (-93.9, 825.1)
+	Data subtrahend: (24223, 4357)
+	MSE: 4796787.885000001
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'CLUJ')(Linear Regression)
+	Training result: (-28.9, 300.1)
+	Data subtrahend: (24223, 2258)
+	MSE: 634121.3849999998
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'CLUJ')(Linear Regression)
+	Training result: (-64.9, 533.1)
+	Data subtrahend: (24223, 2091)
+	MSE: 2002794.8850000005
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'CLUJ')(Linear Regression)
+	Training result: (-38.9, 404.1)
+	Data subtrahend: (24223, 1870)
+	MSE: 889317.5849999998
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'CLUJ')(Linear Regression)
+	Training result: (-7.9, 183.1)
+	Data subtrahend: (24223, 1127)
+	MSE: 64887.18500000001
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'CLUJ')(Linear Regression)
+	Training result: (-30.9, 238.1)
+	Data subtrahend: (24223, 726)
+	MSE: 587608.7849999999
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'CLUJ')(Linear Regression)
+	Training result: (-54.9, 430.1)
+	Data subtrahend: (24223, 2478)
+	MSE: 1611484.6849999996
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'CLUJ')(Linear Regression)
+	Training result: (-20.9, 134.1)
+	Data subtrahend: (24223, 1114)
+	MSE: 382283.58499999996
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'CLUJ')(Linear Regression)
+	Training result: (-33.9, 335.1)
+	Data subtrahend: (24223, 1325)
+	MSE: 425845.4849999998
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'CONSTANTA')(Linear Regression)
+	Training result: (98.9, -98.9)
+	Data subtrahend: (24223, 5534)
+	MSE: 12186824.125000002
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'CONSTANTA')(Linear Regression)
+	Training result: (128.9, -129.1)
+	Data subtrahend: (24223, 2824)
+	MSE: 10003065.485
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'CONSTANTA')(Linear Regression)
+	Training result: (-29.9, 289.1)
+	Data subtrahend: (24223, 2451)
+	MSE: 1733334.5849999995
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'CONSTANTA')(Linear Regression)
+	Training result: (63.9, 19.1)
+	Data subtrahend: (24223, 2668)
+	MSE: 4151631.125
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'CONSTANTA')(Linear Regression)
+	Training result: (76.9, -15.1)
+	Data subtrahend: (24223, 1530)
+	MSE: 3948998.385
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'CONSTANTA')(Linear Regression)
+	Training result: (-12.9, 207.1)
+	Data subtrahend: (24223, 965)
+	MSE: 173380.685
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'CONSTANTA')(Linear Regression)
+	Training result: (35.1, -34.9)
+	Data subtrahend: (24223, 2783)
+	MSE: 2382879.185
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'CONSTANTA')(Linear Regression)
+	Training result: (51.9, -52.1)
+	Data subtrahend: (24223, 1232)
+	MSE: 1411061.4849999999
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'CONSTANTA')(Linear Regression)
+	Training result: (-16.9, 136.1)
+	Data subtrahend: (24223, 1432)
+	MSE: 830199.285
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'COVASNA')(Linear Regression)
+	Training result: (-135.9, 626.1)
+	Data subtrahend: (24223, 2611)
+	MSE: 17517868.085
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'COVASNA')(Linear Regression)
+	Training result: (-56.9, 262.1)
+	Data subtrahend: (24223, 1167)
+	MSE: 3282277.184999999
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'COVASNA')(Linear Regression)
+	Training result: (-78.9, 367.1)
+	Data subtrahend: (24223, 1441)
+	MSE: 5632002.285000001
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'COVASNA')(Linear Regression)
+	Training result: (-84.9, 379.1)
+	Data subtrahend: (24223, 707)
+	MSE: 6776330.885000002
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'COVASNA')(Linear Regression)
+	Training result: (-25.9, 132.1)
+	Data subtrahend: (24223, 360)
+	MSE: 646385.1849999999
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'COVASNA')(Linear Regression)
+	Training result: (-58.9, 247.1)
+	Data subtrahend: (24223, 347)
+	MSE: 3234022.084999999
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'COVASNA')(Linear Regression)
+	Training result: (-50.9, 284.1)
+	Data subtrahend: (24223, 1867)
+	MSE: 2630100.585
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'COVASNA')(Linear Regression)
+	Training result: (-30.9, 150.1)
+	Data subtrahend: (24223, 787)
+	MSE: 1047450.3849999998
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'COVASNA')(Linear Regression)
+	Training result: (-19.9, 172.1)
+	Data subtrahend: (24223, 1042)
+	MSE: 366049.5849999999
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'DAMBOVITA')(Linear Regression)
+	Training result: (-181.1, 3400.9)
+	Data subtrahend: (24223, 6035)
+	MSE: 3160131.4850000003
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'DAMBOVITA')(Linear Regression)
+	Training result: (-49.1, 1467.9)
+	Data subtrahend: (24223, 2852)
+	MSE: 1735181.0850000002
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'DAMBOVITA')(Linear Regression)
+	Training result: (-131.9, 1933.1)
+	Data subtrahend: (24223, 3183)
+	MSE: 1786031.9850000003
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'DAMBOVITA')(Linear Regression)
+	Training result: (-63.9, 505.1)
+	Data subtrahend: (24223, 1040)
+	MSE: 1900054.7849999995
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'DAMBOVITA')(Linear Regression)
+	Training result: (-20.9, 246.1)
+	Data subtrahend: (24223, 537)
+	MSE: 110927.68499999998
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'DAMBOVITA')(Linear Regression)
+	Training result: (-42.9, 280.1)
+	Data subtrahend: (24223, 482)
+	MSE: 1110507.4849999999
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'DAMBOVITA')(Linear Regression)
+	Training result: (-117.1, 2908.9)
+	Data subtrahend: (24223, 4982)
+	MSE: 4521796.885000003
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'DAMBOVITA')(Linear Regression)
+	Training result: (-28.1, 1221.9)
+	Data subtrahend: (24223, 2315)
+	MSE: 2279401.3850000002
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'DAMBOVITA')(Linear Regression)
+	Training result: (-89.1, 1686.9)
+	Data subtrahend: (24223, 2667)
+	MSE: 746599.8850000004
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'DOLJ')(Linear Regression)
+	Training result: (-507.9, 3809.1)
+	Data subtrahend: (24223, 17131)
+	MSE: 165759584.48499995
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'DOLJ')(Linear Regression)
+	Training result: (-197.9, 1445.1)
+	Data subtrahend: (24223, 7145)
+	MSE: 27300927.285000008
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'DOLJ')(Linear Regression)
+	Training result: (-309.9, 2364.1)
+	Data subtrahend: (24223, 9986)
+	MSE: 58670476.584999986
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'DOLJ')(Linear Regression)
+	Training result: (-50.9, 547.1)
+	Data subtrahend: (24223, 2478)
+	MSE: 1929537.3849999995
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'DOLJ')(Linear Regression)
+	Training result: (-35.9, 262.1)
+	Data subtrahend: (24223, 1297)
+	MSE: 1448738.0849999995
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'DOLJ')(Linear Regression)
+	Training result: (-14.9, 291.1)
+	Data subtrahend: (24223, 1175)
+	MSE: 61231.685
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'DOLJ')(Linear Regression)
+	Training result: (-456.9, 3262.1)
+	Data subtrahend: (24223, 14653)
+	MSE: 133218217.48499997
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'DOLJ')(Linear Regression)
+	Training result: (-161.9, 1183.1)
+	Data subtrahend: (24223, 5848)
+	MSE: 16333392.585000005
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'DOLJ')(Linear Regression)
+	Training result: (-294.9, 2079.1)
+	Data subtrahend: (24223, 8805)
+	MSE: 56326164.28499998
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'GALATI')(Linear Regression)
+	Training result: (-208.1, 3691.9)
+	Data subtrahend: (24223, 10247)
+	MSE: 3763831.885
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'GALATI')(Linear Regression)
+	Training result: (-52.1, 1667.9)
+	Data subtrahend: (24223, 4363)
+	MSE: 3335370.885000001
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'GALATI')(Linear Regression)
+	Training result: (-155.9, 2059.1)
+	Data subtrahend: (24223, 5849)
+	MSE: 3221878.3850000007
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'GALATI')(Linear Regression)
+	Training result: (-34.1, 887.9)
+	Data subtrahend: (24223, 1747)
+	MSE: 685685.1849999999
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'GALATI')(Linear Regression)
+	Training result: (21.9, 460.9)
+	Data subtrahend: (24223, 951)
+	MSE: 3084888.885
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'GALATI')(Linear Regression)
+	Training result: (-55.9, 427.1)
+	Data subtrahend: (24223, 796)
+	MSE: 1834898.0849999997
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'GALATI')(Linear Regression)
+	Training result: (-173.9, 2974.9)
+	Data subtrahend: (24223, 8329)
+	MSE: 1953779.3249999997
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'GALATI')(Linear Regression)
+	Training result: (-73.9, 1279.9)
+	Data subtrahend: (24223, 3339)
+	MSE: 402784.22500000003
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'GALATI')(Linear Regression)
+	Training result: (-99.9, 1694.9)
+	Data subtrahend: (24223, 4990)
+	MSE: 661335.3250000002
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'GIURGIU')(Linear Regression)
+	Training result: (-116.9, 1033.1)
+	Data subtrahend: (24223, 1599)
+	MSE: 5391696.785000002
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'GIURGIU')(Linear Regression)
+	Training result: (-37.9, 473.1)
+	Data subtrahend: (24223, 820)
+	MSE: 360073.2849999999
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'GIURGIU')(Linear Regression)
+	Training result: (-78.9, 579.1)
+	Data subtrahend: (24223, 760)
+	MSE: 2988524.8850000002
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'GIURGIU')(Linear Regression)
+	Training result: (-21.9, 252.1)
+	Data subtrahend: (24223, 329)
+	MSE: 269957.38499999995
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'GIURGIU')(Linear Regression)
+	Training result: (-0.1, 124.9)
+	Data subtrahend: (24223, 196)
+	MSE: 32312.285
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'GIURGIU')(Linear Regression)
+	Training result: (-21.9, 127.1)
+	Data subtrahend: (24223, 133)
+	MSE: 392180.285
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'GIURGIU')(Linear Regression)
+	Training result: (-94.9, 819.1)
+	Data subtrahend: (24223, 1232)
+	MSE: 3500450.7850000006
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'GIURGIU')(Linear Regression)
+	Training result: (-37.9, 348.1)
+	Data subtrahend: (24223, 624)
+	MSE: 543236.1849999998
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'GIURGIU')(Linear Regression)
+	Training result: (-56.9, 510.1)
+	Data subtrahend: (24223, 569)
+	MSE: 1291630.9849999996
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'GORJ')(Linear Regression)
+	Training result: (-159.9, 2143.1)
+	Data subtrahend: (24223, 4069)
+	MSE: 6148669.185000001
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'GORJ')(Linear Regression)
+	Training result: (-20.1, 667.9)
+	Data subtrahend: (24223, 2040)
+	MSE: 217988.98499999996
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'GORJ')(Linear Regression)
+	Training result: (-139.9, 1475.1)
+	Data subtrahend: (24223, 2029)
+	MSE: 8131238.785000002
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'GORJ')(Linear Regression)
+	Training result: (-101.9, 812.1)
+	Data subtrahend: (24223, 1256)
+	MSE: 5514350.985000001
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'GORJ')(Linear Regression)
+	Training result: (-27.9, 347.1)
+	Data subtrahend: (24223, 690)
+	MSE: 233536.8849999999
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'GORJ')(Linear Regression)
+	Training result: (-73.9, 511.1)
+	Data subtrahend: (24223, 520)
+	MSE: 3503344.485000001
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'GORJ')(Linear Regression)
+	Training result: (-57.9, 1393.1)
+	Data subtrahend: (24223, 2751)
+	MSE: 188684.5850000001
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'GORJ')(Linear Regression)
+	Training result: (7.9, 428.9)
+	Data subtrahend: (24223, 1242)
+	MSE: 797941.4850000001
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'GORJ')(Linear Regression)
+	Training result: (-65.9, 964.1)
+	Data subtrahend: (24223, 1509)
+	MSE: 1002283.6850000003
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'HARGHITA')(Linear Regression)
+	Training result: (-94.9, 1006.1)
+	Data subtrahend: (24223, 4843)
+	MSE: 3451084.9850000013
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'HARGHITA')(Linear Regression)
+	Training result: (-22.9, 425.1)
+	Data subtrahend: (24223, 2143)
+	MSE: 95110.08499999996
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'HARGHITA')(Linear Regression)
+	Training result: (-71.9, 669.1)
+	Data subtrahend: (24223, 2612)
+	MSE: 2787846.285
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'HARGHITA')(Linear Regression)
+	Training result: (-30.9, 407.1)
+	Data subtrahend: (24223, 1396)
+	MSE: 315806.0849999999
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'HARGHITA')(Linear Regression)
+	Training result: (5.9, 149.9)
+	Data subtrahend: (24223, 710)
+	MSE: 189485.285
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'HARGHITA')(Linear Regression)
+	Training result: (-36.9, 257.1)
+	Data subtrahend: (24223, 686)
+	MSE: 903859.9849999999
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'HARGHITA')(Linear Regression)
+	Training result: (-63.9, 781.1)
+	Data subtrahend: (24223, 3265)
+	MSE: 1724017.2849999997
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'HARGHITA')(Linear Regression)
+	Training result: (-28.9, 301.1)
+	Data subtrahend: (24223, 1407)
+	MSE: 358271.98499999987
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'HARGHITA')(Linear Regression)
+	Training result: (-34.9, 480.1)
+	Data subtrahend: (24223, 1858)
+	MSE: 545922.6849999998
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'HUNEDOARA')(Linear Regression)
+	Training result: (-198.9, 1945.1)
+	Data subtrahend: (24223, 5040)
+	MSE: 19817701.285000004
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'HUNEDOARA')(Linear Regression)
+	Training result: (-75.9, 819.1)
+	Data subtrahend: (24223, 2689)
+	MSE: 2899909.2850000006
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'HUNEDOARA')(Linear Regression)
+	Training result: (-122.9, 1126.1)
+	Data subtrahend: (24223, 2351)
+	MSE: 7741413.3850000035
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'HUNEDOARA')(Linear Regression)
+	Training result: (-170.9, 1549.1)
+	Data subtrahend: (24223, 3374)
+	MSE: 15304071.685000004
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'HUNEDOARA')(Linear Regression)
+	Training result: (-58.9, 667.1)
+	Data subtrahend: (24223, 1859)
+	MSE: 1632702.1849999996
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'HUNEDOARA')(Linear Regression)
+	Training result: (-111.9, 882.1)
+	Data subtrahend: (24223, 1515)
+	MSE: 7246928.885000001
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'HUNEDOARA')(Linear Regression)
+	Training result: (-27.9, 509.1)
+	Data subtrahend: (24223, 1553)
+	MSE: 347047.98499999987
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'HUNEDOARA')(Linear Regression)
+	Training result: (-16.9, 222.1)
+	Data subtrahend: (24223, 760)
+	MSE: 214985.48499999996
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'HUNEDOARA')(Linear Regression)
+	Training result: (-10.9, 287.1)
+	Data subtrahend: (24223, 793)
+	MSE: 44002.885
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'IALOMITA')(Linear Regression)
+	Training result: (-203.9, 1834.1)
+	Data subtrahend: (24223, 3782)
+	MSE: 21316573.685000006
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'IALOMITA')(Linear Regression)
+	Training result: (-67.9, 640.1)
+	Data subtrahend: (24223, 1756)
+	MSE: 2008483.9850000003
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'IALOMITA')(Linear Regression)
+	Training result: (-135.9, 1194.1)
+	Data subtrahend: (24223, 2026)
+	MSE: 10286271.085
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'IALOMITA')(Linear Regression)
+	Training result: (-171.9, 597.1)
+	Data subtrahend: (24223, 1182)
+	MSE: 29633199.185000002
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'IALOMITA')(Linear Regression)
+	Training result: (-7.9, 93.1)
+	Data subtrahend: (24223, 590)
+	MSE: 57845.08500000002
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'IALOMITA')(Linear Regression)
+	Training result: (-163.9, 563.1)
+	Data subtrahend: (24223, 533)
+	MSE: 27405453.485
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'IALOMITA')(Linear Regression)
+	Training result: (-32.1, 1236.9)
+	Data subtrahend: (24223, 2600)
+	MSE: 890891.8850000002
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'IALOMITA')(Linear Regression)
+	Training result: (-59.9, 606.1)
+	Data subtrahend: (24223, 1107)
+	MSE: 1472421.2849999997
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'IALOMITA')(Linear Regression)
+	Training result: (27.9, 630.9)
+	Data subtrahend: (24223, 1493)
+	MSE: 4394894.784999999
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'IASI')(Linear Regression)
+	Training result: (-294.9, 2609.1)
+	Data subtrahend: (24223, 7613)
+	MSE: 43285399.38499999
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'IASI')(Linear Regression)
+	Training result: (-84.9, 945.1)
+	Data subtrahend: (24223, 3381)
+	MSE: 2975930.1850000005
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'IASI')(Linear Regression)
+	Training result: (-209.9, 1664.1)
+	Data subtrahend: (24223, 4232)
+	MSE: 23746270.585000005
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'IASI')(Linear Regression)
+	Training result: (-110.9, 687.1)
+	Data subtrahend: (24223, 1107)
+	MSE: 9257896.085000003
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'IASI')(Linear Regression)
+	Training result: (-29.9, 247.1)
+	Data subtrahend: (24223, 592)
+	MSE: 602082.8849999998
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'IASI')(Linear Regression)
+	Training result: (-80.9, 440.1)
+	Data subtrahend: (24223, 515)
+	MSE: 5151894.585000001
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'IASI')(Linear Regression)
+	Training result: (-183.9, 1922.1)
+	Data subtrahend: (24223, 6506)
+	MSE: 12549655.685000002
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'IASI')(Linear Regression)
+	Training result: (-54.9, 698.1)
+	Data subtrahend: (24223, 2789)
+	MSE: 909536.6849999996
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'IASI')(Linear Regression)
+	Training result: (-128.9, 1224.1)
+	Data subtrahend: (24223, 3717)
+	MSE: 6784080.385000003
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'ILFOV')(Linear Regression)
+	Training result: (7.9, 452.9)
+	Data subtrahend: (24223, 657)
+	MSE: 1091292.7850000001
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'ILFOV')(Linear Regression)
+	Training result: (11.9, 205.9)
+	Data subtrahend: (24223, 387)
+	MSE: 632043.085
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'ILFOV')(Linear Regression)
+	Training result: (-4.1, 246.9)
+	Data subtrahend: (24223, 270)
+	MSE: 72708.08500000002
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'ILFOV')(Linear Regression)
+	Training result: (-2.9, 59.1)
+	Data subtrahend: (24223, 171)
+	MSE: 11468.484999999997
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'ILFOV')(Linear Regression)
+	Training result: (-1.1, 45.9)
+	Data subtrahend: (24223, 102)
+	MSE: 2248.3849999999998
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'ILFOV')(Linear Regression)
+	Training result: (-1.9, 17.1)
+	Data subtrahend: (24223, 65)
+	MSE: 10199.484999999997
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'ILFOV')(Linear Regression)
+	Training result: (10.9, 438.9)
+	Data subtrahend: (24223, 441)
+	MSE: 1270456.885
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'ILFOV')(Linear Regression)
+	Training result: (12.9, 184.9)
+	Data subtrahend: (24223, 260)
+	MSE: 614396.0850000001
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'ILFOV')(Linear Regression)
+	Training result: (-2.1, 253.9)
+	Data subtrahend: (24223, 181)
+	MSE: 121195.18500000001
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'MARAMURES')(Linear Regression)
+	Training result: (-43.1, 2299.9)
+	Data subtrahend: (24223, 4216)
+	MSE: 2800079.6850000005
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'MARAMURES')(Linear Regression)
+	Training result: (-4.1, 1067.9)
+	Data subtrahend: (24223, 2045)
+	MSE: 1591079.3850000002
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'MARAMURES')(Linear Regression)
+	Training result: (-39.1, 1231.9)
+	Data subtrahend: (24223, 2171)
+	MSE: 244169.68500000006
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'MARAMURES')(Linear Regression)
+	Training result: (-16.1, 985.9)
+	Data subtrahend: (24223, 2246)
+	MSE: 1060068.385
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'MARAMURES')(Linear Regression)
+	Training result: (-0.1, 543.9)
+	Data subtrahend: (24223, 1093)
+	MSE: 634327.9849999999
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'MARAMURES')(Linear Regression)
+	Training result: (-16.1, 532.9)
+	Data subtrahend: (24223, 1062)
+	MSE: 123351.78499999999
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'MARAMURES')(Linear Regression)
+	Training result: (-27.1, 1313.9)
+	Data subtrahend: (24223, 1970)
+	MSE: 637694.685
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'MARAMURES')(Linear Regression)
+	Training result: (-4.1, 579.9)
+	Data subtrahend: (24223, 896)
+	MSE: 309913.785
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'MARAMURES')(Linear Regression)
+	Training result: (-23.1, 734.1)
+	Data subtrahend: (24223, 1074)
+	MSE: 74366.925
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'MEHEDINTI')(Linear Regression)
+	Training result: (-26.1, 2673.9)
+	Data subtrahend: (24223, 6069)
+	MSE: 14283054.985000001
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'MEHEDINTI')(Linear Regression)
+	Training result: (72.9, 776.9)
+	Data subtrahend: (24223, 2676)
+	MSE: 17510968.785000004
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'MEHEDINTI')(Linear Regression)
+	Training result: (-98.9, 1897.1)
+	Data subtrahend: (24223, 3393)
+	MSE: 794039.1850000003
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'MEHEDINTI')(Linear Regression)
+	Training result: (-102.9, 696.1)
+	Data subtrahend: (24223, 1209)
+	MSE: 9116724.985000001
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'MEHEDINTI')(Linear Regression)
+	Training result: (24.9, 223.9)
+	Data subtrahend: (24223, 543)
+	MSE: 1130792.085
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'MEHEDINTI')(Linear Regression)
+	Training result: (-127.9, 472.1)
+	Data subtrahend: (24223, 666)
+	MSE: 16181848.685000002
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'MEHEDINTI')(Linear Regression)
+	Training result: (76.9, 2217.9)
+	Data subtrahend: (24223, 4620)
+	MSE: 43798574.58500001
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'MEHEDINTI')(Linear Regression)
+	Training result: (47.9, 763.9)
+	Data subtrahend: (24223, 1922)
+	MSE: 9802465.084999999
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'MEHEDINTI')(Linear Regression)
+	Training result: (28.9, 1453.9)
+	Data subtrahend: (24223, 2698)
+	MSE: 12187664.885000002
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'MURES')(Linear Regression)
+	Training result: (-350.9, 1980.1)
+	Data subtrahend: (24223, 5782)
+	MSE: 97666919.58499998
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'MURES')(Linear Regression)
+	Training result: (-48.9, 184.1)
+	Data subtrahend: (24223, 2645)
+	MSE: 3044240.485
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'MURES')(Linear Regression)
+	Training result: (-301.9, 1796.1)
+	Data subtrahend: (24223, 3137)
+	MSE: 66359126.484999985
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'MURES')(Linear Regression)
+	Training result: (-82.9, 259.1)
+	Data subtrahend: (24223, 1073)
+	MSE: 8485644.785
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'MURES')(Linear Regression)
+	Training result: (-49.9, 143.1)
+	Data subtrahend: (24223, 572)
+	MSE: 3108002.784999999
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'MURES')(Linear Regression)
+	Training result: (-32.9, 116.1)
+	Data subtrahend: (24223, 501)
+	MSE: 1323206.3849999998
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'MURES')(Linear Regression)
+	Training result: (-267.9, 1987.1)
+	Data subtrahend: (24223, 4443)
+	MSE: 48661006.184999995
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'MURES')(Linear Regression)
+	Training result: (0.9, 203.1)
+	Data subtrahend: (24223, 1911)
+	MSE: 63897.925
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'MURES')(Linear Regression)
+	Training result: (-268.9, 1784.1)
+	Data subtrahend: (24223, 2532)
+	MSE: 48950048.48499999
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'NEAMT')(Linear Regression)
+	Training result: (-265.9, 2438.1)
+	Data subtrahend: (24223, 7269)
+	MSE: 25676607.084999997
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'NEAMT')(Linear Regression)
+	Training result: (-139.9, 1061.1)
+	Data subtrahend: (24223, 3095)
+	MSE: 11060375.185000002
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'NEAMT')(Linear Regression)
+	Training result: (-125.9, 1722.1)
+	Data subtrahend: (24223, 3829)
+	MSE: 3265839.285000001
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'NEAMT')(Linear Regression)
+	Training result: (-92.9, 560.1)
+	Data subtrahend: (24223, 1167)
+	MSE: 7105947.485
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'NEAMT')(Linear Regression)
+	Training result: (-45.9, 289.1)
+	Data subtrahend: (24223, 589)
+	MSE: 1788782.4849999999
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'NEAMT')(Linear Regression)
+	Training result: (-46.9, 271.1)
+	Data subtrahend: (24223, 578)
+	MSE: 1770774.3849999995
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'NEAMT')(Linear Regression)
+	Training result: (-172.9, 2299.1)
+	Data subtrahend: (24223, 5681)
+	MSE: 6198119.985000001
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'NEAMT')(Linear Regression)
+	Training result: (-93.9, 772.1)
+	Data subtrahend: (24223, 2506)
+	MSE: 3990934.085000001
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'NEAMT')(Linear Regression)
+	Training result: (-78.9, 1546.1)
+	Data subtrahend: (24223, 3156)
+	MSE: 566077.2850000003
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'OLT')(Linear Regression)
+	Training result: (16.9, 1899.9)
+	Data subtrahend: (24223, 8318)
+	MSE: 19204692.585
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'OLT')(Linear Regression)
+	Training result: (11.9, 526.9)
+	Data subtrahend: (24223, 3605)
+	MSE: 1908216.785
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'OLT')(Linear Regression)
+	Training result: (4.9, 1372.9)
+	Data subtrahend: (24223, 4713)
+	MSE: 9038683.185000002
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'OLT')(Linear Regression)
+	Training result: (-3.1, 266.9)
+	Data subtrahend: (24223, 1771)
+	MSE: 142360.18499999997
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'OLT')(Linear Regression)
+	Training result: (-3.9, 71.1)
+	Data subtrahend: (24223, 922)
+	MSE: 58390.08500000001
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'OLT')(Linear Regression)
+	Training result: (0.9, 230.9)
+	Data subtrahend: (24223, 814)
+	MSE: 202928.885
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'OLT')(Linear Regression)
+	Training result: (19.9, 1653.9)
+	Data subtrahend: (24223, 6526)
+	MSE: 16693322.785000004
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'OLT')(Linear Regression)
+	Training result: (15.9, 511.9)
+	Data subtrahend: (24223, 2627)
+	MSE: 2333546.4850000003
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'OLT')(Linear Regression)
+	Training result: (3.9, 1152.9)
+	Data subtrahend: (24223, 3888)
+	MSE: 6550424.685000001
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'PRAHOVA')(Linear Regression)
+	Training result: (-343.9, 2201.1)
+	Data subtrahend: (24223, 6424)
+	MSE: 85508359.585
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'PRAHOVA')(Linear Regression)
+	Training result: (-101.9, 974.1)
+	Data subtrahend: (24223, 3104)
+	MSE: 6023267.585000001
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'PRAHOVA')(Linear Regression)
+	Training result: (-241.9, 1290.1)
+	Data subtrahend: (24223, 3257)
+	MSE: 46778008.385000005
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'PRAHOVA')(Linear Regression)
+	Training result: (-76.9, 705.1)
+	Data subtrahend: (24223, 2030)
+	MSE: 4798191.085000001
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'PRAHOVA')(Linear Regression)
+	Training result: (-21.9, 318.1)
+	Data subtrahend: (24223, 1097)
+	MSE: 502772.1849999998
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'PRAHOVA')(Linear Regression)
+	Training result: (-54.9, 387.1)
+	Data subtrahend: (24223, 933)
+	MSE: 2318069.2849999997
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'PRAHOVA')(Linear Regression)
+	Training result: (-266.9, 1573.1)
+	Data subtrahend: (24223, 4317)
+	MSE: 50413593.88499999
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'PRAHOVA')(Linear Regression)
+	Training result: (-79.9, 656.1)
+	Data subtrahend: (24223, 2007)
+	MSE: 3191842.785
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'PRAHOVA')(Linear Regression)
+	Training result: (-186.9, 929.1)
+	Data subtrahend: (24223, 2298)
+	MSE: 28384234.485000003
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'SATU-MARE')(Linear Regression)
+	Training result: (-72.9, 173.1)
+	Data subtrahend: (24223, 3813)
+	MSE: 35323.350000000006
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'SATU-MARE')(Linear Regression)
+	Training result: (-13.9, 49.1)
+	Data subtrahend: (24223, 1657)
+	MSE: 1166.05
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'SATU-MARE')(Linear Regression)
+	Training result: (-58.9, 158.1)
+	Data subtrahend: (24223, 2122)
+	MSE: 25518.75
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'SATU-MARE')(Linear Regression)
+	Training result: (-7.9, 19.1)
+	Data subtrahend: (24223, 737)
+	MSE: 2036.1499999999999
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'SATU-MARE')(Linear Regression)
+	Training result: (-0.9, 2.1)
+	Data subtrahend: (24223, 358)
+	MSE: 394.95
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'SATU-MARE')(Linear Regression)
+	Training result: (-6.9, 22.1)
+	Data subtrahend: (24223, 374)
+	MSE: 699.6499999999999
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'SATU-MARE')(Linear Regression)
+	Training result: (-64.9, 169.1)
+	Data subtrahend: (24223, 3061)
+	MSE: 20860.650000000005
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'SATU-MARE')(Linear Regression)
+	Training result: (-12.9, 65.1)
+	Data subtrahend: (24223, 1281)
+	MSE: 287.55000000000024
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'SATU-MARE')(Linear Regression)
+	Training result: (-51.9, 139.1)
+	Data subtrahend: (24223, 1745)
+	MSE: 18241.550000000003
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'SALAJ')(Linear Regression)
+	Training result: (-129.9, 686.1)
+	Data subtrahend: (24223, 4119)
+	MSE: 15213299.585000005
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'SALAJ')(Linear Regression)
+	Training result: (-54.9, 193.1)
+	Data subtrahend: (24223, 1754)
+	MSE: 3611585.7849999997
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'SALAJ')(Linear Regression)
+	Training result: (-74.9, 520.1)
+	Data subtrahend: (24223, 2338)
+	MSE: 4029018.1850000005
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'SALAJ')(Linear Regression)
+	Training result: (-51.9, 141.1)
+	Data subtrahend: (24223, 800)
+	MSE: 3505563.6849999996
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'SALAJ')(Linear Regression)
+	Training result: (-25.9, 52.1)
+	Data subtrahend: (24223, 430)
+	MSE: 1063271.4849999999
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'SALAJ')(Linear Regression)
+	Training result: (-25.9, 117.1)
+	Data subtrahend: (24223, 342)
+	MSE: 704040.585
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'SALAJ')(Linear Regression)
+	Training result: (-77.9, 597.1)
+	Data subtrahend: (24223, 3267)
+	MSE: 4167219.285
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'SALAJ')(Linear Regression)
+	Training result: (-28.9, 181.1)
+	Data subtrahend: (24223, 1284)
+	MSE: 755155.6849999998
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'SALAJ')(Linear Regression)
+	Training result: (-48.9, 445.1)
+	Data subtrahend: (24223, 1954)
+	MSE: 1384599.9849999996
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'SIBIU')(Linear Regression)
+	Training result: (-181.9, 656.1)
+	Data subtrahend: (24223, 3229)
+	MSE: 38513862.685
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'SIBIU')(Linear Regression)
+	Training result: (-93.9, 271.1)
+	Data subtrahend: (24223, 1542)
+	MSE: 10412135.485000003
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'SIBIU')(Linear Regression)
+	Training result: (-87.9, 397.1)
+	Data subtrahend: (24223, 1675)
+	MSE: 8884776.585
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'SIBIU')(Linear Regression)
+	Training result: (-75.9, 181.1)
+	Data subtrahend: (24223, 1074)
+	MSE: 7516549.585000001
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'SIBIU')(Linear Regression)
+	Training result: (-33.9, 96.1)
+	Data subtrahend: (24223, 534)
+	MSE: 1522983.0849999997
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'SIBIU')(Linear Regression)
+	Training result: (-41.9, 99.1)
+	Data subtrahend: (24223, 526)
+	MSE: 2266667.885
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'SIBIU')(Linear Regression)
+	Training result: (-105.9, 490.1)
+	Data subtrahend: (24223, 2140)
+	MSE: 12005802.485000001
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'SIBIU')(Linear Regression)
+	Training result: (-59.9, 185.1)
+	Data subtrahend: (24223, 998)
+	MSE: 3966642.7849999997
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'SIBIU')(Linear Regression)
+	Training result: (-45.9, 305.1)
+	Data subtrahend: (24223, 1142)
+	MSE: 2188388.085
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'SUCEAVA')(Linear Regression)
+	Training result: (-240.9, 2284.1)
+	Data subtrahend: (24223, 10280)
+	MSE: 30562952.385000005
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'SUCEAVA')(Linear Regression)
+	Training result: (-18.1, 915.9)
+	Data subtrahend: (24223, 4524)
+	MSE: 1357895.7850000001
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'SUCEAVA')(Linear Regression)
+	Training result: (-222.9, 1368.1)
+	Data subtrahend: (24223, 5756)
+	MSE: 38170164.785000004
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'SUCEAVA')(Linear Regression)
+	Training result: (-43.9, 528.1)
+	Data subtrahend: (24223, 2779)
+	MSE: 933400.7849999999
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'SUCEAVA')(Linear Regression)
+	Training result: (-8.1, 280.9)
+	Data subtrahend: (24223, 1356)
+	MSE: 93132.48499999999
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'SUCEAVA')(Linear Regression)
+	Training result: (-35.9, 272.1)
+	Data subtrahend: (24223, 1398)
+	MSE: 912616.8849999998
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'SUCEAVA')(Linear Regression)
+	Training result: (-196.9, 1877.1)
+	Data subtrahend: (24223, 7380)
+	MSE: 21172559.985000007
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'SUCEAVA')(Linear Regression)
+	Training result: (-10.1, 744.9)
+	Data subtrahend: (24223, 3058)
+	MSE: 885150.685
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'SUCEAVA')(Linear Regression)
+	Training result: (-186.9, 1132.1)
+	Data subtrahend: (24223, 4322)
+	MSE: 27337257.285000008
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'TELEORMAN')(Linear Regression)
+	Training result: (-31.1, 3521.9)
+	Data subtrahend: (24223, 8808)
+	MSE: 37561922.485
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'TELEORMAN')(Linear Regression)
+	Training result: (34.9, 1159.9)
+	Data subtrahend: (24223, 3722)
+	MSE: 13209595.785
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'TELEORMAN')(Linear Regression)
+	Training result: (-66.1, 2458.9)
+	Data subtrahend: (24223, 4989)
+	MSE: 6429637.085000003
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'TELEORMAN')(Linear Regression)
+	Training result: (-7.1, 639.9)
+	Data subtrahend: (24223, 2063)
+	MSE: 1144340.9849999999
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'TELEORMAN')(Linear Regression)
+	Training result: (8.9, 269.9)
+	Data subtrahend: (24223, 986)
+	MSE: 613857.8849999999
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'TELEORMAN')(Linear Regression)
+	Training result: (-16.1, 420.9)
+	Data subtrahend: (24223, 1026)
+	MSE: 102339.48499999997
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'TELEORMAN')(Linear Regression)
+	Training result: (-24.1, 3002.9)
+	Data subtrahend: (24223, 6624)
+	MSE: 25790712.885
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'TELEORMAN')(Linear Regression)
+	Training result: (25.9, 988.9)
+	Data subtrahend: (24223, 2637)
+	MSE: 8154048.284999999
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'TELEORMAN')(Linear Regression)
+	Training result: (-50.1, 2037.9)
+	Data subtrahend: (24223, 3963)
+	MSE: 5069579.985000001
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'TIMIS')(Linear Regression)
+	Training result: (-113.9, 605.1)
+	Data subtrahend: (24223, 2421)
+	MSE: 14992547.985000005
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'TIMIS')(Linear Regression)
+	Training result: (-41.9, 349.1)
+	Data subtrahend: (24223, 1260)
+	MSE: 2056432.4849999996
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'TIMIS')(Linear Regression)
+	Training result: (-71.9, 279.1)
+	Data subtrahend: (24223, 1138)
+	MSE: 6034373.885000002
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'TIMIS')(Linear Regression)
+	Training result: (84.9, 130.9)
+	Data subtrahend: (24223, 1138)
+	MSE: 9901698.985000003
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'TIMIS')(Linear Regression)
+	Training result: (47.9, 131.9)
+	Data subtrahend: (24223, 624)
+	MSE: 3483435.485
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'TIMIS')(Linear Regression)
+	Training result: (36.9, 4.9)
+	Data subtrahend: (24223, 508)
+	MSE: 1640771.8849999998
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'TIMIS')(Linear Regression)
+	Training result: (-198.9, 485.1)
+	Data subtrahend: (24223, 1272)
+	MSE: 48623855.58500001
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'TIMIS')(Linear Regression)
+	Training result: (-89.9, 217.1)
+	Data subtrahend: (24223, 636)
+	MSE: 10509580.585000003
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'TIMIS')(Linear Regression)
+	Training result: (-108.9, 276.1)
+	Data subtrahend: (24223, 628)
+	MSE: 13907763.385000002
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'TULCEA')(Linear Regression)
+	Training result: (16.1, 59.1)
+	Data subtrahend: (24223, 2430)
+	MSE: 697557.1849999999
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'TULCEA')(Linear Regression)
+	Training result: (21.9, -22.1)
+	Data subtrahend: (24223, 1123)
+	MSE: 114732.28499999996
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'TULCEA')(Linear Regression)
+	Training result: (-5.9, 147.1)
+	Data subtrahend: (24223, 1241)
+	MSE: 476650.0850000001
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'TULCEA')(Linear Regression)
+	Training result: (55.9, 34.9)
+	Data subtrahend: (24223, 602)
+	MSE: 3377137.485
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'TULCEA')(Linear Regression)
+	Training result: (25.9, -16.1)
+	Data subtrahend: (24223, 353)
+	MSE: 558470.9849999999
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'TULCEA')(Linear Regression)
+	Training result: (29.9, 50.9)
+	Data subtrahend: (24223, 249)
+	MSE: 1186357.8849999998
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'TULCEA')(Linear Regression)
+	Training result: (-39.9, 80.1)
+	Data subtrahend: (24223, 1772)
+	MSE: 4344590.285
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'TULCEA')(Linear Regression)
+	Training result: (-3.9, 8.1)
+	Data subtrahend: (24223, 756)
+	MSE: 298584.085
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'TULCEA')(Linear Regression)
+	Training result: (-35.9, 115.1)
+	Data subtrahend: (24223, 973)
+	MSE: 2383844.585
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'VASLUI')(Linear Regression)
+	Training result: (-511.9, 4254.1)
+	Data subtrahend: (24223, 8421)
+	MSE: 178216831.28499997
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'VASLUI')(Linear Regression)
+	Training result: (-206.9, 1537.1)
+	Data subtrahend: (24223, 3453)
+	MSE: 32571838.685000002
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'VASLUI')(Linear Regression)
+	Training result: (-304.9, 2717.1)
+	Data subtrahend: (24223, 4968)
+	MSE: 58530128.98499999
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'VASLUI')(Linear Regression)
+	Training result: (-4.1, 267.9)
+	Data subtrahend: (24223, 1117)
+	MSE: 59605.58499999998
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'VASLUI')(Linear Regression)
+	Training result: (-6.9, 150.1)
+	Data subtrahend: (24223, 553)
+	MSE: 45085.384999999995
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'VASLUI')(Linear Regression)
+	Training result: (2.9, 124.9)
+	Data subtrahend: (24223, 557)
+	MSE: 85305.58499999999
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'VASLUI')(Linear Regression)
+	Training result: (-507.9, 4140.1)
+	Data subtrahend: (24223, 7150)
+	MSE: 180342366.48499995
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'VASLUI')(Linear Regression)
+	Training result: (-199.9, 1535.1)
+	Data subtrahend: (24223, 2752)
+	MSE: 30902460.685000002
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'VASLUI')(Linear Regression)
+	Training result: (-307.9, 2605.1)
+	Data subtrahend: (24223, 4398)
+	MSE: 61966964.184999995
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'VALCEA')(Linear Regression)
+	Training result: (-361.9, 1232.1)
+	Data subtrahend: (24223, 4553)
+	MSE: 137255641.385
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'VALCEA')(Linear Regression)
+	Training result: (-166.9, 657.1)
+	Data subtrahend: (24223, 2169)
+	MSE: 29115145.185000006
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'VALCEA')(Linear Regression)
+	Training result: (-194.9, 684.1)
+	Data subtrahend: (24223, 2275)
+	MSE: 39941071.58500001
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'VALCEA')(Linear Regression)
+	Training result: (-47.9, 459.1)
+	Data subtrahend: (24223, 1509)
+	MSE: 1648024.6849999998
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'VALCEA')(Linear Regression)
+	Training result: (-25.9, 224.1)
+	Data subtrahend: (24223, 817)
+	MSE: 592543.8849999999
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'VALCEA')(Linear Regression)
+	Training result: (-21.9, 287.1)
+	Data subtrahend: (24223, 640)
+	MSE: 279120.1849999999
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'VALCEA')(Linear Regression)
+	Training result: (-313.9, 846.1)
+	Data subtrahend: (24223, 2971)
+	MSE: 110090285.08499998
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'VALCEA')(Linear Regression)
+	Training result: (-140.9, 443.1)
+	Data subtrahend: (24223, 1342)
+	MSE: 21595494.685000002
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'VALCEA')(Linear Regression)
+	Training result: (-172.9, 518.1)
+	Data subtrahend: (24223, 1514)
+	MSE: 34145933.785000004
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'VRANCEA')(Linear Regression)
+	Training result: (-294.9, 1769.1)
+	Data subtrahend: (24223, 4777)
+	MSE: 60661900.38499999
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'VRANCEA')(Linear Regression)
+	Training result: (-87.9, 702.1)
+	Data subtrahend: (24223, 2038)
+	MSE: 4264250.585000001
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'VRANCEA')(Linear Regression)
+	Training result: (-206.9, 1168.1)
+	Data subtrahend: (24223, 2638)
+	MSE: 32965462.185000002
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'VRANCEA')(Linear Regression)
+	Training result: (-52.9, 392.1)
+	Data subtrahend: (24223, 952)
+	MSE: 1675731.9849999994
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'VRANCEA')(Linear Regression)
+	Training result: (-12.9, 175.1)
+	Data subtrahend: (24223, 466)
+	MSE: 65410.78500000002
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'VRANCEA')(Linear Regression)
+	Training result: (-39.9, 234.1)
+	Data subtrahend: (24223, 469)
+	MSE: 1173754.5849999997
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'VRANCEA')(Linear Regression)
+	Training result: (-241.9, 1458.1)
+	Data subtrahend: (24223, 3744)
+	MSE: 42242069.78500001
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'VRANCEA')(Linear Regression)
+	Training result: (-74.9, 527.1)
+	Data subtrahend: (24223, 1572)
+	MSE: 3418742.1850000005
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'VRANCEA')(Linear Regression)
+	Training result: (-166.9, 934.1)
+	Data subtrahend: (24223, 2169)
+	MSE: 21670676.985000003
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'Total TARA')(Linear Regression)
+	Training result: (-5837.9, 57545.1)
+	Data subtrahend: (24223, 250882)
+	MSE: 11630811214.484997
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'Total TARA')(Linear Regression)
+	Training result: (-1422.9, 19344.1)
+	Data subtrahend: (24223, 115664)
+	MSE: 350644574.18500024
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'Total TARA')(Linear Regression)
+	Training result: (-4414.9, 40586.1)
+	Data subtrahend: (24223, 132833)
+	MSE: 8210103412.6849985
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'Total TARA')(Linear Regression)
+	Training result: (-1541.9, 13402.1)
+	Data subtrahend: (24223, 77342)
+	MSE: 1151242832.2850003
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'Total TARA')(Linear Regression)
+	Training result: (-291.9, 5554.1)
+	Data subtrahend: (24223, 40492)
+	MSE: 31696004.184999995
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'Total TARA')(Linear Regression)
+	Training result: (-1249.9, 8963.1)
+	Data subtrahend: (24223, 35735)
+	MSE: 930280572.4850001
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'Total TARA')(Linear Regression)
+	Training result: (-4295.9, 49446.1)
+	Data subtrahend: (24223, 168237)
+	MSE: 5531222741.584999
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'Total TARA')(Linear Regression)
+	Training result: (-1130.9, 15998.1)
+	Data subtrahend: (24223, 72964)
+	MSE: 213682187.38500005
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'Total TARA')(Linear Regression)
+	Training result: (-3164.9, 33448.1)
+	Data subtrahend: (24223, 95273)
+	MSE: 3633788449.585001
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI', 'SATU MARE')(Linear Regression)
+	Training result: (13.9, 533.9)
+	Data subtrahend: (24228, 3357)
+	MSE: 1244902.3349999997
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI FEMEI', 'SATU MARE')(Linear Regression)
+	Training result: (10.9, 143.9)
+	Data subtrahend: (24228, 1505)
+	MSE: 159104.73500000002
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI BARBATI', 'SATU MARE')(Linear Regression)
+	Training result: (2.9, 402.9)
+	Data subtrahend: (24228, 1839)
+	MSE: 529033.9349999998
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL URBAN', 'SATU MARE')(Linear Regression)
+	Training result: (-8.9, 162.1)
+	Data subtrahend: (24228, 628)
+	MSE: 70239.935
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL URBAN', 'SATU MARE')(Linear Regression)
+	Training result: (0.9, 48.9)
+	Data subtrahend: (24228, 329)
+	MSE: 17884.734999999997
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL URBAN', 'SATU MARE')(Linear Regression)
+	Training result: (-9.9, 113.1)
+	Data subtrahend: (24228, 299)
+	MSE: 28026.335000000003
+
+('MEDII DE REZIDENTA', 'NUMAR TOTAL SOMERI DIN MEDIUL RURAL', 'SATU MARE')(Linear Regression)
+	Training result: (22.9, 399.9)
+	Data subtrahend: (24228, 2701)
+	MSE: 1162712.935
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI FEMEI DIN MEDIUL RURAL', 'SATU MARE')(Linear Regression)
+	Training result: (9.9, 94.9)
+	Data subtrahend: (24228, 1176)
+	MSE: 97950.33499999999
+
+('MEDII DE REZIDENTA', 'NUMAR SOMERI BARBATI DIN MEDIUL RURAL', 'SATU MARE')(Linear Regression)
+	Training result: (12.9, 317.9)
+	Data subtrahend: (24228, 1512)
+	MSE: 586262.9349999999
+
