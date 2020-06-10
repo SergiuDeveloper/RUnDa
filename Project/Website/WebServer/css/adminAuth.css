@@ -5,7 +5,7 @@
     width : fit-content;
     /*left: 36%;*/
     /*right: 0;*/
-    right: -35.6em;
+    right: -35em;
     overflow: unset;
     position: relative;
     display: flow;
@@ -14,9 +14,9 @@
     padding-bottom: 9px;
     /*margin-right: 1em;*/
     /*opacity: 0;*/
+    /*animation-name: adminHide;*/
+    /*animation-duration: 3s;*/
 
-    animation-name: adminHide;
-    animation-duration: 3s;
 }
 
 @media screen and (max-width: 1150px){
@@ -29,14 +29,18 @@
     0% {
         right: 0;
     }
+    75% {
+        right: -0em;
+    }
     100% {
         right: -35.6em;
+        visibility: visible;
     }
 }
 
 @keyframes textFade {
     100% {
-        opacity: 1;
+        /*opacity: 1;*/
         color: rgba(0, 0, 0, 0);
         /*background-color: #14A76C;*/
         /*width: 40%;*/
@@ -67,5 +71,6 @@
 }
 
 .adminMenu:hover{
+    opacity: 1;
     animation: textFade 1s forwards;
 }

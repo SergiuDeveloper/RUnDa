@@ -111,6 +111,13 @@ footer{
     padding-bottom: 0.5em;
 }
 
+
+.hiddenDeleteButton{
+    display: none;
+    position: absolute;
+    right: 4em;
+}
+
 .newsItem h3{
     text-align: center;
     margin-top : 0;
