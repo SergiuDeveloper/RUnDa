@@ -38,6 +38,8 @@
         <div class = "toolbarContainer">
             <div class = "inputs">
                 <div class = "exportInput">
+                    <a id="mapExportButton" href="mapExport.php"> Export Map </a>
+
                     <label for="exportDataTypeSelect">Export Data Type</label>
                     <select id="exportDataTypeSelect" onchange="updateExportDataURL(this.options[this.selectedIndex].value)">
                         <option value="JSON">JSON</option>
