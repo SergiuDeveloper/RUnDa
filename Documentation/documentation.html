@@ -100,6 +100,12 @@
                             <li class="no-number"><a href="#machine-learning-app-results"><span>4.4. </span> Rezultate </a></li>
                         </ol>
                     </li>
+                    <li class="no-number"><a href="#rest-api"><span>5. </span>REST API</a>
+                        <ol role="directory">
+                            <li class="no-number"><a href="#rest-api-introduction"><span>5.1. </span> Introducere </a></li>
+                            <li class="no-number"><a href="#rest-api-context"><span>5.2. </span> REST API in contextul arhitecturii sistemului </a></li>
+                        </ol>
+                    </li>
                     <li class="no-number"><a href=""><span>5. </span> Etape de dezvoltare </a></li>
                     <li class="no-number"><a href=""><span>9. </span>References</a></li>
                 </ol>
@@ -158,6 +164,24 @@
                 <img src="Invatamant Gimnazial - Bihor_Polinomial.png" alt="Regresie polinomiala cu grad variabil">
                 <h4><span></span>4.4.3. </span>Regresii Logistic-polinomiale</h4>
                 <img src="Invatamant Unviersitar - Vaslui_Logistic Polinomial.png" alt="Regresie logistic-polinomiala">
+        </section>
+
+        <section id="rest-api">
+            <h2><span>5. </span>REST API</h2>
+            <p id="rest-api-introduction"><h3><span>5.1 </span>Introducere</h3>
+                REST API-ul are rolul de a stoca datele primite de la Aplicatia de Antrenare a Modelelor de Machine Learning, spre a le pasa, ulterior, spre Aplicatia Web.<br><br>
+                Limbajul ales pentru implementarea REST API-ului este NodeJS(v14.0.0) din cauza usurintei de implementare a serverelor HTTP.
+            </p>
+            <p id="rest-api-context"><h3><span>5.2 </span>REST API in contextul arhitecturii sistemului</h3>
+                <img src="Architecture_UML.png" alt="Arhitectura sistem"><br><br>
+
+                Conform diagramei de mai sus, REST API-ul reprezinta un intermediar intre Aplicatia de Antrenare a Modelelor de Machine Learning si Aplicatia Web.<br><br>
+                Spre a actualiza datele stocate pe REST API, Aplicatia de Antrenare a Modelelor de Machine Learning trimite un request HTTP de tip POST, continand rezultatul antrenarii modelelor si setul de date, precedat de un API key.<br>
+                API key-ul este o cheie generata random si stocata in baza de date. Este folosit pentru logarea Aplicatiei de Antrenare.<br>
+                In urma unei logari cu succes, un nou API key este generat si stocat in baza de date.<br><br>
+
+                In acelasi timp, REST API-ul satisface request-uri de la Aplicatia Web.
+            </p>
         </section>
     </div>
 </body>
