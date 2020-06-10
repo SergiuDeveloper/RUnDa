@@ -190,13 +190,13 @@
         align-self: center;
     }
 
-    .toolbarContainer .graphDescription {
-        min-height: 50px;
-        margin-left: 5%;
-        margin-right: 5%;
-        margin-bottom: 20px;
-        background-color: #ffff4d;
-    }
+    /*.toolbarContainer .graphDescription {*/
+    /*    min-height: 50px;*/
+    /*    margin-left: 5%;*/
+    /*    margin-right: 5%;*/
+    /*    margin-bottom: 20px;*/
+    /*    background-color: #ffff4d;*/
+    /*}*/
 
     .toolbarContainer .graph {
         margin-left: 5%;

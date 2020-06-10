@@ -7,8 +7,8 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
 		<link rel = "stylesheet" href = "css/layout.css">
         <link rel = "stylesheet" href = "css/graphLayout.css">
-        <link rel = "stylesheet" href = "css/map.css">
         <link rel = "stylesheet" href = "css/responsive.css">
+        <link rel = "stylesheet" href = "css/map.css">
         <link rel="icon" type="image/x-icon" href="favicon.ico"/>
         <title>
             RunDA
@@ -20,20 +20,21 @@
         <img src="resources/logo/Logo.png" alt="Logo" width="80" height="49">
     </header>
 
-        <div class="menu-nav">
-            <a href = "index.php"> Home </a>
-            <a href = "graph.php"> Graph Statistics </a>
-            <a href = "mapView.php"> Map View Statistics </a>
-            <a href = "about.php"> About </a>
-<!--            <div class="dropdown-menu"-->
-<!--                <div class="dropdown-content">-->
-<!--                    <a href = "index.php"> Home </a>-->
-<!--                    <a href = "graph.php"> Graph Statistics </a>-->
-<!--                    <a href = "mapView.php"> Map View Statistics </a>-->
-<!--                    <a href = "about.php"> About </a>-->
-<!--                </div>-->
+    <div class="menu-nav">
+        <button class="menuButton" onclick="dropdownClicked()"></button>
+        <a href = "index.php"> Home </a>
+        <a href = "graph.php"> Graph Statistics </a>
+        <a href = "mapView.php"> Map View Statistics </a>
+        <a href = "about.php"> About </a>
+        <div class="dropdown-menu">
+            <div class="dropdown-content" id="menuResponsive">
+                <a href = "index.php"> Home </a>
+                <a href = "graph.php"> Graph Statistics </a>
+                <a href = "mapView.php"> Map View Statistics </a>
+                <a href = "about.php"> About </a>
+            </div>
         </div>
-
+    </div>
 
         <div class = "toolbarContainer">
             <div class = "inputs">
@@ -91,7 +92,8 @@
             ?>
 		</div>
 
-        <script type="application/javascript" src="scripts/mapView.js"></script>
-        <script type="application/javascript" src = "scripts/graph/loadCategories.js"></script>
+        <script src="scripts/mapView.js"></script>
+        <script src = "scripts/graph/loadCategories.js"></script>
+        <script src = "scripts/buttonEvents.js"></script>
     </body>
 </html>

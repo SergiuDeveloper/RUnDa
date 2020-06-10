@@ -94,6 +94,10 @@
         display: block;
     }
 
+    .toolbarContainer{
+        margin-top: 70px;
+    }
+
 }
 
 @media screen and (max-device-width: 600px) {
