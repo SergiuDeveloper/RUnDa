@@ -122,10 +122,21 @@
         height: 0;
     }
 
+    .menu-bar{
+        display: inline-block;
+        margin-left: 91%;
+        height: 20px;
+    }
+
+    .menu-bar:hover {
+        background-color: #14A76C;
+    }
+
     .bar {
         padding-top: 3px;
+        margin-top: 2px;
         width: 30px;
-        height: 3px;
+        height: 1px;
         background-color: #333538;
     }
 
