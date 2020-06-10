@@ -27,4 +27,4 @@ if __name__ == '__main__':
         ]
     )
 
-    post('localhost/UpdateTrainingResults', training_results_json_object)
+    post('https://rundaapi.azurewebsites.net/UpdateTrainingResults', training_results_json_object)
