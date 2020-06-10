@@ -85,10 +85,11 @@
 
 .exportInput{
     margin: auto;
-    display: flex;
+    display: grid;
     float: right;
     height: inherit;
     min-width: 7em;
+    min-height: 4em;
     background-color: #9999ff;
 }
 
@@ -101,7 +102,7 @@
     background-color: #9999ff;
 }
 
-@media only screen and (max-device-width: 979px), (max-width: 979px){
+@media only screen and (max-device-width: 981px), (max-width: 981px){
     #graphSelectObj{
         margin: auto;
     }
@@ -173,8 +174,9 @@
 
     .toolbar{
         overflow: auto;
-        height: inherit;
+        /*height: inherit;*/
         display: flow;
+        height: 15em;
         /*display: grid;*/
         /*grid-template-columns: 1fr 1fr 1fr;*/
     }
@@ -206,7 +208,7 @@
     }
 }
 
-@media only screen and (max-device-width: 1141px) and (min-device-width: 980px), (max-width: 1141px) and (min-width: 980px){
+@media only screen and (max-device-width: 1294px) and (min-device-width: 982px), (max-width: 1294px) and (min-width: 982px){
     #graphSelectObj{
         margin: auto;
     }
@@ -315,7 +317,7 @@
 /*    }*/
 /*}*/
 
-@media screen and (max-device-width: 1549px) and (min-device-width: 1142px), (max-width: 1549px) and (min-width: 1142px){
+@media screen and (max-device-width: 1549px) and (min-device-width: 1295px), (max-width: 1549px) and (min-width: 1295px){
 
     #graphSelectObj{
         margin: auto;
@@ -492,7 +494,7 @@
     }
 
     .toolbarContainer .inputs .exportInput {
-        display: flex;
+        display: grid;
         /*width : 12%;*/
     }
 
