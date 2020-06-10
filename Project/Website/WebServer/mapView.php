@@ -90,8 +90,8 @@
             ?>
 		</div>
 
-        <script type="application/javascript" src="scripts/mapView.js"></script>
-        <script type="application/javascript" src = "scripts/graph/loadCategories.js"></script>
-        <script type="application/javascript" src = "scripts/buttonEvents.js"></script>
+        <script src="scripts/mapView.js"></script>
+        <script src = "scripts/graph/loadCategories.js"></script>
+        <script src = "scripts/buttonEvents.js"></script>
     </body>
 </html>

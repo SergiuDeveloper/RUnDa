@@ -25,12 +25,10 @@
                     <h3 id="subscriptionHeading"> Subscribe to automatically receive free monthly exports via email </h3>
                 </div>
                 <div class="center-elem">
-<!--                        <div class="inputPopup">-->
                         <label for="subscriptionEmailInput" id ="popupEmailLabel"> Input your email here :
                             <input type="email" id="subscriptionEmailInput">
-                        </label
-                        <button class="popupSubscribeButton" onclick="subscribe();">Subscribe</button>
-<!--                        </div>-->
+                        </label>
+                        <button class="popupSubscribeButton" onclick="subscribe()">Subscribe</button>
                 </div>
             </div>
         </div>
@@ -54,10 +52,9 @@
                 </div>
             </div>
         </div>
-
-        </div>
         
         <section class = "toolbarContainer">
+            <h3>Graphics</h3>
 <!--            <div class = "graphDescription">-->
 <!--                <h3> Graph Placeholder below </h3>-->
 <!--            </div>-->
