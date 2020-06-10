@@ -21,18 +21,14 @@
         </header>
 
         <div class="menu-nav">
-            <div class="menu-bar" onclick="dropdownClicked()">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
+            <button class="menuButton" onclick="dropdownClicked()"></button>
             <a href = "index.php"> Home </a>
             <a href = "graph.php"> Graph Statistics </a>
             <a href = "mapView.php"> Map View Statistics </a>
             <a href = "about.php"> About </a>
 
-            <div class="dropdown-menu" id="menuResponsive">
-                <div class="dropdown-content">
+            <div class="dropdown-menu">
+                <div class="dropdown-content" id="menuResponsive">
                     <a href = "index.php"> Home </a>
                     <a href = "graph.php"> Graph Statistics </a>
                     <a href = "mapView.php"> Map View Statistics </a>
