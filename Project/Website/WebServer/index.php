@@ -17,7 +17,7 @@
 
     <body>
         <header>
-            <img src="resources/logo/Logo.png" alt="Logo" width="80" height="49">
+            <img src="resources/logo/Logo.png" alt="Logo" width="80" height="50">
         </header>
 
         <div class="menu-nav">
@@ -79,13 +79,13 @@
                     </div>
                     <div class = "slideContainer fade">
                         <div class = "slideNumberText"> 2 / 4 </div>
-                        <img src = "resources/slides/SlideTAsp.png" alt = "Slide 2" class="slideImage">
+                        <img src = "resources/slides/SlideT.jpg" alt = "Slide 2" class="slideImage">
                         <div class = "slideText"> Caption Text Two </div>
                     </div>
 
                     <div class = "slideContainer fade">
                         <div class = "slideNumberText"> 3 / 4 </div>
-                        <img src = "resources/slides/SlideThAsp.png" alt = "Slide 3" class="slideImage">
+                        <img src = "resources/slides/SlideTh.jpg" alt = "Slide 3" class="slideImage">
                         <div class = "slideText"> Caption Text Three </div>
                     </div>
 
@@ -121,15 +121,36 @@
                 </div>
 
                 <div class = "slideshowDescription fade" style="display: none;">
-                    Slide description 2
+                    Restructuring the economy through massive closures was a painful process and we are now witnessing
+                    the consequences. It has been a tragic experience for people in their forties and fifties in a
+                    country with limited job offers, almost impossible to find a new, reliable work place in the same
+                    geographical area and during a period when new investments were scarce.  Consequently, many of those
+                    people who became unemployed following massive lay-offs after being paid a certain amount as
+                    compensation no longer registered with unemployment offices which have long been passive with
+                    respect to implementing active labour market policies.
                 </div>
 
                 <div class = "slideshowDescription fade" style="display: none;">
-                    Slide description 3
+                    As such, the Romanian labour market is confronted with multiple challenges, and one major problem is
+                    precisely the continuous reduction firstly in terms of volume of workforce and secondly of quality
+                    and availability for work. We are more than ever at a crossroads, 15 years after the beginning of the
+                    largest migration of Romanians since World War II.The UN estimates that, as of 2017,
+                    around 3.58 million Romanians had emigrated to developed EU countries since 2000, especially Italy
+                    and Spain. In addition, working age emigrants exceeded 2.65 million persons, accounting for about 20
+                    per cent of the Romanian working population. Their remittances in 2016 amounted to 1.9 per cent of
+                    GDP from a peak of 4.5 per cent in 2008. The World Bank estimates that Romanians who now live and
+                    work in other EU countries have sent home during the past ten years of EU membership over 52 billion
+                    euros, which also significantly contributed to raising the living standard of their families back
+                    home, especially in rural areas and small towns, and also improving country’s balance of payments.
                 </div>
 
                 <div class = "slideshowDescription fade" style="display: none;">
-                    Slide description 4
+                    In its report on the 2018 Convergence Programme of Romania issued in May this year, the Council of
+                    the EU stated that Romania has substantial unused labour potential, and several groups such as young
+                    people, Roma, the long-term unemployed and people with disabilities have difficulties in accessing
+                    the labour market. In the past year, Romania made little progress addressing the country-specific
+                    recommendation to strengthen targeted activation policies and integrated public services, focusing
+                    on those furthest away from the labour market.
                 </div>
             </div>
 
