@@ -58,9 +58,9 @@
         </div>
         
         <section class = "toolbarContainer">
-            <div class = "graphDescription">
-                <h3> Graph Placeholder below </h3>
-            </div>
+<!--            <div class = "graphDescription">-->
+<!--                <h3> Graph Placeholder below </h3>-->
+<!--            </div>-->
 
             <div class = "inputs">
 
@@ -142,7 +142,7 @@
         </section>
 
 		<footer>
-			Placeholder footer
+
 		</footer>
 
         <script src = "scripts/dataExport.js"></script>
