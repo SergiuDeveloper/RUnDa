@@ -3,7 +3,7 @@ let selectSubcategory = document.getElementById("selectSubcategory");
 let selectLocation = document.getElementById("selectLocation");
 let selectRegressionType = document.getElementById("selectRegressionType");
 
-let URL = 'http://unemploymentpredictionapi.azurewebsites.net/RetrieveDataCategories';
+let URL = 'http://unemploymentprediction.azurewebsites.net/RetrieveDataCategories';
 
 let categories = [];
 let subcategories = [];
@@ -52,7 +52,7 @@ function graphDataCallback(response) {
 
 function makeDataHTTPGet(category, subcategory, location, regression){
     let URI =
-        'https://predictionappapi2.azurewebsites.net/RetrieveData?Category=' +
+        'https://unemploymentprediction.azurewebsites.net/RetrieveData?Category=' +
         category +
         '&Subcategory=' +
         subcategory;

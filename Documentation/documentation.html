@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Romanian Unemployment Data Visualizer">
+    <meta name="keywords" content="project, web, HTML, CSS, JavaScript, PHP, PYTHON, unemployment, graphs map, export ">
+    <meta name="author" content="Vlad Andrei Loghin, Sergiu Marian Nistor , Mihaela-Diana Pascariu">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentatie RUnDa</title>
+
+    <link rel="stylesheet" type="text/css" href="documentation.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/javascript" src="mathjax-config.js"></script>
+</head>
+<body>
+    <header>
+        <h1 class = "title">Documentatie RUnDa</h1>
+    </header>
+    <div role="contentinfo" style="font-size:1vw">
+        <section typeof="sa:AuthorList">
+            <h2>Autori</h2>
+            <ul>
+                <li typeof="sa:ContributorRole" property="schema:author">
+                    <span typeof="schema:Person">
+                        <meta property="schema:givenName" content="Vlad Andrei">
+                        <meta property="schema:additionalName" content="E.">
+                        <meta property="schema:familyName" content="Loghin">
+                        <span property="schema:name">Vlad Andrei E. Loghin</span>
+                    </span>
+                    <ul>
+                        <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                            <a href="mailto:vlad.loghin00@gmail.com" property="schema:email">vlad.loghin00@gmail.com</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li typeof="sa:ContributorRole" property="schema:author">
+                    <span typeof="schema:Person">
+                        <meta property="schema:givenName" content="Sergiu Marian">
+                        <meta property="schema:additionalName" content="V.">
+                        <meta property="schema:familyName" content="Nistor">
+                        <span property="schema:name">Sergiu Marian V. Nistor</span>
+                    </span>
+                    <ul>
+                        <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                            <a href="mailto:sergiunistor@hotmail.com" property="schema:email">sergiunistor@hotmail.com</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li typeof="sa:ContributorRole" property="schema:author">
+                    <span typeof="schema:Person">
+                        <meta property="schema:givenName" content="Mihaela-Diana">
+                        <meta property="schema:additionalName" content="C.">
+                        <meta property="schema:familyName" content="Pascariu">
+                        <span property="schema:name">Mihaela-Diana C. Pascariu</span>
+                    </span>
+                    <ul>
+                        <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                            <a href="mailto:mihaela.pascariu31@gmail.com"
+                               property="schema:email">mihaela.pascariu31@gmail.com</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h1>Cuprins</h1>
+            <div role="contentinfo">
+                <ol role="directory">
+                    <li class="no-number"><a href=""><span>1. </span>Descrierea generala a proiectului</a>
+                    </li>
+                    <li class="no-number"><a href="#interface"><span>2. </span>Interfata Grafica</a>
+                        <ol role="directory">
+                            <li class="no-number"><a href="#main-page"><span>2.1. </span> Main Page </a></li>
+                            <li class="no-number"><a href=""><span>2.2. </span> Graph Statistics </a></li>
+                            <li class="no-number"><a href=""><span>2.3. </span> Map View Statistics </a></li>
+                            <li class="no-number"><a href=""><span>2.4. </span> About </a></li>
+                            <li class="no-number"><a href=""><span>2.5. </span> Responsive </a></li>
+                        </ol>
+                    </li>
+                    <li class="no-number"><a href=""><span>3. </span> Back-End </a>
+                        <ol role="directory">
+                            <li class="no-number"><a href="#main-architecture"><span>3.1. </span> Sumar arhitectura Back-End </a></li>
+                            <li class="no-number"><a href="#architecture-schema"><span>3.2. </span> Diagrama, design arhitectura </a></li>
+                            <li class="no-number"><a href="#architecture-components"><span>3.3. </span> Descrierea componentelor </a></li>
+                            <li class="no-number"><a href="#export-filter-convert"><span>3.4. </span> Procesare, afisare, exportare </a></li>
+                            <li class="no-number"><a href="#subscription-service"><span>3.5. </span> Sistem subscriptii. Automatizare exportari </a></li>
+                            <li class="no-number"><a href="#database-other-resources"><span>3.6. </span> Baza de date </a></li>
+                        </ol>
+                    </li>
+                    <li><a href="#machine-learning-app"><span>4. </span>Aplicatie de Antrenare a Modelelor de Machine Learning</a>
+                        <ol role="directory">
+                            <li class="no-number"><a href="#machine-learning-app-introduction"><span>4.1. </span> Introducere </a></li>
+                            <li class="no-number"><a href="#machine-learning-app-dataset"><span>4.2. </span> Set de date </a></li>
+                            <li class="no-number"><a href="#machine-learning-app-theory"><span>4.3. </span> Procedee folosite de Machine Learning </a></li>
+                            <li class="no-number"><a href="#machine-learning-app-results"><span>4.4. </span> Rezultate </a></li>
+                        </ol>
+                    </li>
+                    <li class="no-number"><a href="#rest-api"><span>5. </span>REST API</a>
+                        <ol role="directory">
+                            <li class="no-number"><a href="#rest-api-introduction"><span>5.1. </span> Introducere </a></li>
+                            <li class="no-number"><a href="#rest-api-context"><span>5.2. </span> REST API in contextul arhitecturii sistemului </a></li>
+                        </ol>
+                    </li>
+                    <li class="no-number"><a href=""><span>5. </span> Etape de dezvoltare </a></li>
+                    <li class="no-number"><a href=""><span>9. </span>References</a></li>
+                </ol>
+            </div>
+        </section>
+        <section id="introducere" role="doc-introduction">
+            <h2><span>1. </span>Descrierea generala a proiectului</h2>
+            <p>
+                Romanian Unemployment Data Visualizer este o  aplicatie web care pune la dispozitie utilizatorului o metoda practica si usoara
+                de vizualizare a statisticilor privind somajul in Romania.
+            </p>
+        </section>
+
+        <section id="frond-end">
+            <h2><span>2. </span>Interfata Grafica</h2>
+            <p id="interface">
+                Interfata grafica este sub forma unei pagini web in care s-a folosit HTML5 si CSS3. Aceatsa este dispusa in mai multe pagini,
+                care pot fi accesate dintr-o bara de navigare aflata in partea de sus a fiecarei pagini.
+            </p>
+        </section>
+
+        <section id="main-page">
+            <h2><span>2. </span>Main Page</h2>
+            <p>
+                Aceasta pagina are un rol informativ privind situatia Romaniei la categoria de someri. Prima sectiune, cea mai evidenta si importanta,
+                o reprezinta slide-urile. In cadrul acestora, se vor difuza poze sugestive, fiecare avand o descriere aferenta intr-un placeholder.
+                Aceste placeholdere detin informatii privind problemele majore ale Romaniei care au dus la statistici socante.
+            </p>
+            <img src="slide.png" alt="slide">
+            <p>
+                Acestea au fost implementate folosind javascript.
+            </p>
+            <img src="codslide.png" alt="cod-slide">
+            <p>
+                PlaceHolder-ul de informatii se schima si el odata cu slide-urile, afisand mereu textul aferent slide-ului curent.
+            </p>
+
+            <p>
+                De asemenea, tot in mainPage se afla si o sectiune de News. Acestea sunt stocate intr-o baza de date, fiind manipulate doar de catre administrator.
+            </p>
+
+            <img src="codNews.png" alt="cos-news">
+
+        </section>
+
+        <section id="graph-statistics-page">
+            <h2><span>2. </span>Main Page</h2>
+            <p>
+                Aceasta pagina are un rol informativ privind situatia Romaniei la categoria de someri. Prima sectiune, cea mai evidenta si importanta,
+                o reprezinta slide-urile. In cadrul acestora, se vor difuza poze sugestive, fiecare avand o descriere aferenta intr-un placeholder.
+                Aceste placeholdere detin informatii privind problemele majore ale Romaniei care au dus la statistici socante.
+            </p>
+            <img src="slide.png" alt="slide">
+            <p>
+                Acestea au fost implementate folosind javascript.
+            </p>
+            <img src="codslide.png" alt="cod-slide">
+            <p>
+                PlaceHolder-ul de informatii se schima si el odata cu slide-urile, afisand mereu textul aferent slide-ului curent.
+            </p>
+
+            <p>
+                De asemenea, tot in mainPage se afla si o sectiune de News. Acestea sunt stocate intr-o baza de date, fiind manipulate doar de catre administrator.
+            </p>
+
+            <img src="codNews.png" alt="cos-news">
+
+        </section>
+
+
+
+        <section id="Back-End">
+            <h2 id="doc-back-end-title"> 3. Back End </h2>
+
+            <ul>
+                <li>
+                    <h3> <span>3.1</span> Arhitectura Back-End </h3>
+                    <p id="main-architecture">
+                        Arhitectura proiectului este construita pe baza modelului MVC.
+                        Cerintele client-ului sunt modelate de WebServer, comunicate cu API-ul si filtrate pentru user.
+                    </p>
+                </li>
+                <li>
+                    <h3> <span>3.2</span> Diagrama arhitecturala </h3>
+                    <p id="architecture-schema">
+                        Modelul back-end-ului poate fi reprezentat simplu astfel :
+                    </p>
+                    <img src="photos/MVCAdaptation.png" alt="Prezentare arhitectura">
+                </li>
+                <li>
+                    <h3> <span>3.3</span> Descrierea componentelor din arhitectura </h3>
+                    <p id="architecture-components">
+                        Flow-ul logic al filtrarii datelor poate fi vazut prin descrierea
+                        logica a unui call :
+                    </p>
+                    <img src="photos/MVCOnExportExample.png" alt="XMLExportFlow">
+                </li>
+                <li>
+                    <h3> <span>3.4</span> Procesare, afisare, exportare date </h3>
+                    <p id="export-filter-convert">
+                        Afisarea de date e realizata prin filtrarea datelor primite de la API-ul de ML prin doua request-uri.
+                        Primul request obtine categoriile datelor. Al doilea e realizat automat la schimbarea categoriilor, obtinand
+                        datele si convertind-ule intr-un format pentru grafic.
+                        La cererea unui export, datele originale sunt transformate printr-un model scris de echipa noastra
+                        in backend, si trimis inapoi catre client in format-ul cerut.
+                    </p>
+                    <ol>
+                        <li>
+                            <p>Exportare CSV</p>
+                            <img src="photos/CSVExpEx.png" alt="CSV Export Example">
+                        </li>
+                        <li>
+                            <p>Extract exportare XML</p>
+                            <img src="photos/XMLExpEx.png" alt="XML Export Extract">
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <h3> <span>3.5</span> Sistem de subscriptii. Exportari automate </h3>
+                    <p id="subscription-service">
+                        Exportarea poate fi realizata prin descarcare manuala din website, dar si prin email, automat lunar,
+                        atunci cand un nou set de predictii este calculat. Un user se poate abona la sistemul de subscriptii
+                        prin adaugarea email-ului dupa un export. Acestea sunt salvate in baza de date a aplicatiei, adresata
+                        mai jos.
+                    </p>
+                    <ol>
+                        <li>
+                            <p>Adaugare de subscriptie pe email</p>
+                            <img src="photos/SubAdd.png" alt="Subscription adding">
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <h3> <span>3.6</span> Alte resurse, MySQL </h3>
+                    <p id="database-other-resources">
+                        Diverse date de pe website sunt comune pentru utilizatori dar si salvate pentru API. Am folosit
+                        o baza de date MySQL pentru sinergia cu PHP.
+                        Exista servicii pentru accesarea datelor comune, precum news item-urile din main page sau
+                        pentru accesarea administrarii website-ului prin conturi. Baza de date mai e folosita si de API pentru a accesa
+                        email-urile abonatilor la serviciul de exportare automata sau pentru a salva credentialele conturilor
+                        de trimitere automata
+                    </p>
+                    <p>Preluare de news items</p>
+                    <img src="photos/NewsLoad.png" alt="News Items Loading">
+                </li>
+            </ul>
+        </section>
+
+        <section id="machine-learning-app">
+            <h2><span>4. </span>Aplicatie de Antrenare a Modelelor de Machine Learning</h2>
+            <p id="machine-learning-app-introduction"><h3><span>4.1 </span>Introducere</h3>
+                Aplicatia de Antrenare a Modelelor de Machine Learning sustrage informatii din seturi de date puse la dispozitie de <a href="https:/data.gov.ro/">DATA.GOV.RO</a>, cuantificand informatiile si observand evolutia datelor in timp,
+                    inspre a putea folosi functiile obtinute pentru a prezice numarul somerilor, ori rata somajului, in viitor.<br><br>
+
+                Antrenarea s-a realizat pe baza unor regresii:
+                <ol>
+                    <li>Lineare</li>
+                    <li>Polinomiale cu grad variabil</li>
+                    <li>Logistic-polinomiale</li>
+                </ol>
+
+                Limbajul ales pentru implementarea aplicatiei este Python(v3.8.3), din cauza usurintei de manipulare a seturilor de date.
+            </p>
+            <p id="machine-learning-app-dataset"><h3><span>4.2. </span>Set de date</h3>
+                Setul de date este furnizat de <a href="https://data.gov.ro/">DATA.GOV.RO</a>.<br>
+                Datele sunt preluate cu ajutorul <a href="https://docs.ckan.org/en/2.8/api/">CKAN's Action API</a>.<br><br>
+
+                Setul de date este prelucrat, clasificand datele sub forma unui dictionar pe 4 nivele:
+                <ol>
+                    <li>Categorie</li>
+                    <li>Subcategorie</li>
+                    <li>Locatie</li>
+                    <li>Data</li>
+                </ol>
+            </p>
+            <p id="machine-learning-app-theory"><h3><span>4.3. </span>Procedee folosite de Machine Learning</h3>
+                In cadrul aplicatiei au fost folosite 3 tipuri de regresii:
+                <ol>
+                    <li>Lineare: $w \cdot x + b$</li>
+                    <li>Polinomiale cu grad variabil: $\sum_{i=1}^{m}{w_i \cdot x^i} + b$</li>
+                    <li>Logistic-polinomiale: $w \cdot x^p + b$</li>
+                </ol>
+
+                Se realizeaza normalizarea datelor, spre a micsora ordinul lor de marime.<br>
+                Functia de eroare aleasa este MSE(Mean Squared Error): $\frac{1}{n}\sum_{i=1}^{n}{(Y_i - Y^{'}_{i})^2}$<br>
+                Tehnica de minimizare folosita este "gradient descent", modificand fiecare hiper-parametru in directia inversa diferentialei partiale a functiei MSE, cu o valoarea prestabilita, spre a identifica un minim local al functiei.<br><br>
+            </p>
+            <p id="machine-learning-app-results"><h3><span>4.4. </span>Rezultate</h3>
+                <h4><span></span>4.4.1.</span>Regresii lineare</h4>
+                <img src="Numar Someri Barbati din Mediul Rural - Alba_Linear.png" alt="Regresie lineara">
+                <h4><span></span>4.4.2.</span>Regresii polinomiale cu grad variabil</h4>
+                <img src="Invatamant Gimnazial - Bihor_Polinomial.png" alt="Regresie polinomiala cu grad variabil">
+                <h4><span></span>4.4.3.</span>Regresii Logistic-polinomiale</h4>
+                <img src="Invatamant Unviersitar - Vaslui_Logistic Polinomial.png" alt="Regresie logistic-polinomiala">
+        </section>
+
+        <section id="rest-api">
+            <h2><span>5. </span>REST API</h2>
+            <p id="rest-api-introduction"><h3><span>5.1 </span>Introducere</h3>
+                REST API-ul are rolul de a stoca datele primite de la Aplicatia de Antrenare a Modelelor de Machine Learning, spre a le pasa, ulterior, spre Aplicatia Web.<br><br>
+                Limbajul ales pentru implementarea REST API-ului este NodeJS(v14.0.0) din cauza usurintei de implementare a serverelor HTTP.
+            </p>
+            <p id="rest-api-context"><h3><span>5.2 </span>REST API in contextul arhitecturii sistemului</h3>
+                <img src="Architecture_UML.png" alt="Arhitectura sistem"><br><br>
+
+                Conform diagramei de mai sus, REST API-ul reprezinta un intermediar intre Aplicatia de Antrenare a Modelelor de Machine Learning si Aplicatia Web.<br><br>
+                Spre a actualiza datele stocate pe REST API, Aplicatia de Antrenare a Modelelor de Machine Learning trimite un request HTTP de tip POST, continand rezultatul antrenarii modelelor si setul de date, precedat de un API key.<br>
+                API key-ul este o cheie generata random si stocata in baza de date. Este folosit pentru logarea Aplicatiei de Antrenare.<br>
+                In urma unei logari cu succes, un nou API key este generat si stocat in baza de date.<br><br>
+
+                In acelasi timp, REST API-ul satisface request-uri de la Aplicatia Web.
+            </p>
+        </section>
+
+        <section>
+
+        </section>
+    </div>
+</body>
+</html>

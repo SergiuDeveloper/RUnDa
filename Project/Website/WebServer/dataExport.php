@@ -1,7 +1,7 @@
 <?php
     $dataType = (isset($_GET['DataType']) ? $_GET['DataType'] : 'JSON');
 
-    $jsonContent = file_get_contents('http://unemploymentpredictionapi.azurewebsites.net/RetrieveData');
+    $jsonContent = file_get_contents('http://predictionappapi2.azurewebsites.net/RetrieveData');
 
     switch ($dataType) {
         case 'JSON': {
@@ -21,6 +21,11 @@
             header('Content-Disposition: attachment; filename=UnemploymentData.csv');
             echo getDataCSV($jsonContent);
             break;
+        }
+        case 'PDF': {
+            header('Content-type: application/pdf');
+            header('Content-Disposition: attachment; filename=UnemploymentData.csv');
+
         }
     }
 
@@ -120,8 +125,23 @@
     }
 
     function getDataCSV($jsonContent) {
-        $dataset = json_decode($jsonContent, true);
-        return '';
+        $jsonContent = json_decode($jsonContent, true);
+
+        $csvData = 'Category,Subcategory,Location,RegressionType,DataPoints,DataSubtrahend,Coefficients,MSE' . PHP_EOL;
+
+        $categories = $jsonContent['Data'];
+        foreach ($categories as $category => $subcategories)
+            foreach ($subcategories as $subcategory => $locations)
+                foreach ($locations as $location => $regressionTypes)
+                    foreach ($regressionTypes as $regressionType => $data) {
+                        $dataPoints = str_replace(',', ';', json_encode(array_values($data['DataPoints'])));
+                        $dataSubtrahend = str_replace(',', ';', json_encode(array_values($data['DataSubtrahend'])));
+                        $coefficients = str_replace(',', ';', json_encode(array_values($data['Coefficients'])));
+                        $mse = str_replace(',', '.', $data['MSE']);
+                        $csvData .= "{$category},{$subcategory},{$location},{$regressionType},{$dataPoints},{$dataSubtrahend},{$coefficients},{$mse}" . PHP_EOL;
+                    }
+
+        return $csvData;
     }
 ?>
 

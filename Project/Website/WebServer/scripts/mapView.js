@@ -72,12 +72,17 @@ function notifyDatasetChanged(dataset) {
 
     let countyBackgroundColors = getCountyBackgroundColors(dataPoints);
 
-    for (let pathsIterator = 0; pathsIterator < pathsArray.length; ++pathsIterator) {
+    for (let pathsIterator = 0; pathsIterator < pathsArray.length; ++pathsIterator)
         pathsArray[pathsIterator].style.fill = countyBackgroundColors[pathsIterator];
-    }
 
     document.getElementsByClassName('loader')[0].style.display = 'none';
     document.getElementsByClassName('mapInPage')[0].style.display = 'block';
+
+    for (let i = 0; i < countyBackgroundColors.length; ++i)
+        countyBackgroundColors[i] = countyBackgroundColors[i].replace(/,/g, ';').replace(/ /g, '');
+
+    const mapExportButton = document.getElementById('mapExportButton');
+    mapExportButton.href = `${mapExportButton.href.slice(0, mapExportButton.href.indexOf('.php') + 4)}?CountyColors=${countyBackgroundColors.join()}`;
 }
 
 function getCountyBackgroundColors(dataPoints) {
@@ -89,7 +94,7 @@ function getCountyBackgroundColors(dataPoints) {
     let countyBackgroundColors = [];
 
     dataPoints.forEach((dataPoint) => {
-        countyBackgroundColors.push(`rgba(${255 * ((dataPoint - minDataPointValue) / dataPointsRange)}, 0, ${255 * ((maxDataPointValue - dataPoint) / dataPointsRange)}, 1`);
+        countyBackgroundColors.push(`rgba(${Math.floor(255 * ((dataPoint - minDataPointValue) / dataPointsRange))}, 0, ${Math.floor(255 * ((maxDataPointValue - dataPoint) / dataPointsRange))}, 1)`);
     });
 
     return countyBackgroundColors;

@@ -1,0 +1,139 @@
+@media screen and (max-device-width: 450px) {
+    img {
+        height: 130px;
+        width: 120px;
+        margin:0 -90px;
+    }
+
+    body{
+        background-color: #272727;
+        height: 100%;
+    }
+
+    .contentPlaceholder {
+        margin:0 0;
+        display: inline-block;
+    }
+
+    .descriptionPlaceholder {
+        display: none;
+        height: 200px;
+    }
+
+    footer {
+        margin-bottom: 0;
+    }
+
+    .menu-nav {
+        height: 0;
+    }
+
+    .extraPlaceholder {
+        margin-top: 5em;
+        margin-bottom: 1em;
+        width: 100%;
+        height: 150px;
+        background-color: #333333;
+    }
+
+    .slideshow {
+        display : none;
+    }
+
+    .slideImage {
+        display: none;
+    }
+
+    .phoneSlideImage {
+        display: inline-block;
+        height: 200px;
+    }
+
+    .firstSlide {
+        padding-left: 3%;
+        margin-top: 5em;
+        height: 200px;
+        background-color: #747474;
+    }
+
+    .secondSlide {
+        margin-top: 5em;
+        padding-left: 90.5%;
+        height: 200px;
+        background-color: #14A76C;
+    }
+
+    .thirdSlide {
+        padding-left: 3%;
+        margin-top: 5em;
+        height: 200px;
+        background-color: #FFE400;
+    }
+
+    .forthSlide {
+        margin-top: 5em;
+        padding-left: 90.5%;
+        height: 200px;
+        background-color: #FF652F;
+    }
+
+    .dropdown-menu {
+        display: flex;
+    }
+
+    .menuButton {
+        display: block;
+        margin-left: 92%;
+    }
+
+    .menuButton:hover {
+        background-color: #14A76C;
+    }
+
+    .menuButton:hover .dropdown-content{
+        display: block;
+    }
+
+    .toolbarContainer{
+        margin-top: 70px;
+    }
+
+}
+
+@media screen and (max-device-width: 600px) {
+
+    header {
+        background-color: #747474;
+        border: #b3c7d6;
+        font-family: 'Sans-serif', sans-serif;
+        font-size: 2em;
+        font-weight: 700;
+        text-align: center;
+        padding: 30px;
+        color: #f2f2f2;
+    }
+
+    .menu-nav {
+        height: 0;
+    }
+
+    img {
+        height: 90px;
+        width: 120px;
+        margin: 0 -30px;
+    }
+
+    .menu-nav {
+        background-color: #FFE400;
+        text-align: left;
+        overflow: hidden;
+        padding: 30px;
+    }
+
+    .slideshow {
+        height: 700px;
+        padding-left: 0;
+        padding-top: 1em;
+        padding-right: 0;
+    }
+}

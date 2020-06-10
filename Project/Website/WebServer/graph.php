@@ -6,6 +6,7 @@
         <meta charset="UTF-8">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
         <link rel = "stylesheet" href = "css/layout.css">
+        <link rel = "stylesheet" href = "css/responsive.css">
 		<link rel = "stylesheet" href = "css/graphLayout.css">
 		<link rel = "stylesheet" href = "css/graphStyle.css">
         <link rel="icon" type="image/x-icon" href="favicon.ico"/>
@@ -15,21 +16,35 @@
     </head>
 
     <body>
-    <header>
-        <img src="resources/logo/Logo.png" alt="Logo" width="80" height="49">
-    </header>
+        <div class="subscriptionPopup" id = "exportSubscriptionPopup">
+            <div class="subscriptionPopupBlock">
+                <button class="closeButton" onclick="closePopup()">
+                    x
+                </button>
+                <div class="headingWrapper">
+                    <h3 id="subscriptionHeading"> Subscribe to automatically receive free monthly exports via email </h3>
+                </div>
+                <div class="center-elem">
+                        <label for="subscriptionEmailInput" id ="popupEmailLabel"> Input your email here :
+                            <input type="email" id="subscriptionEmailInput">
+                        </label>
+                        <button class="popupSubscribeButton" onclick="subscribe()">Subscribe</button>
+                </div>
+            </div>
+        </div>
+
+        <header>
+            <img src="resources/logo/Logo.png" alt="Logo" width="80" height="49">
+        </header>
 
         <div class="menu-nav">
-
+            <button class="menuButton" onclick="dropdownClicked()"></button>
             <a href = "index.php"> Home </a>
             <a href = "graph.php"> Graph Statistics </a>
             <a href = "mapView.php"> Map View Statistics </a>
             <a href = "about.php"> About </a>
             <div class="dropdown-menu">
-                <button class="dropdown-button">
-                    MENU
-                </button>
-                <div class="dropdown-content">
+                <div class="dropdown-content" id="menuResponsive">
                     <a href = "index.php"> Home </a>
                     <a href = "graph.php"> Graph Statistics </a>
                     <a href = "mapView.php"> Map View Statistics </a>
@@ -39,9 +54,10 @@
         </div>
         
         <section class = "toolbarContainer">
-            <div class = "graphDescription">
-                <h3> Graph Placeholder below </h3>
-            </div>
+            <h3>Graphics</h3>
+<!--            <div class = "graphDescription">-->
+<!--                <h3> Graph Placeholder below </h3>-->
+<!--            </div>-->
 
             <div class = "inputs">
 
@@ -64,7 +80,9 @@
                         <option value="CSV">CSV</option>
                     </select>
 
-                    <a id="exportButton" href="dataExport.php"> Export Data </a>
+<!--                    <a id="exportButton" href="dataExport.php"> Export Data </a>-->
+<!--                    <a id = "exportButton" href="dataExport.php"> Export Data </a>-->
+                    <a id = "exportButton" onclick="exportClicked();" href="dataExport.php"> Export Data </a>
                 </div>
                 <div class = "toolbar">
 
@@ -121,12 +139,14 @@
         </section>
 
 		<footer>
-			Placeholder footer
+
 		</footer>
 
         <script src = "scripts/dataExport.js"></script>
 		<script src = "scripts/externals/chartJS/Chart.js"></script>
 		<script src = "scripts/graphSelect.js"></script>
         <script src = "scripts/graph/loadCategories.js"></script>
+        <script src="./scripts/graph/exportPopup.js"></script>
+        <script src = "scripts/buttonEvents.js"></script>
 	</body>
 </html>

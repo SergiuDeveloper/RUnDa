@@ -7,6 +7,7 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
 		<link rel = "stylesheet" href = "css/layout.css">
         <link rel = "stylesheet" href = "css/graphLayout.css">
+        <link rel = "stylesheet" href = "css/responsive.css">
         <link rel = "stylesheet" href = "css/map.css">
         <link rel="icon" type="image/x-icon" href="favicon.ico"/>
         <title>
@@ -19,34 +20,33 @@
         <img src="resources/logo/Logo.png" alt="Logo" width="80" height="49">
     </header>
 
-        <div class="menu-nav">
-
-            <a href = "index.php"> Home </a>
-            <a href = "graph.php"> Graph Statistics </a>
-            <a href = "mapView.php"> Map View Statistics </a>
-            <a href = "about.php"> About </a>
-            <div class="dropdown-menu">
-                <button class="dropdown-button">
-                    MENU
-                </button>
-                <div class="dropdown-content">
-                    <a href = "index.php"> Home </a>
-                    <a href = "graph.php"> Graph Statistics </a>
-                    <a href = "mapView.php"> Map View Statistics </a>
-                    <a href = "about.php"> About </a>
-                </div>
+    <div class="menu-nav">
+        <button class="menuButton" onclick="dropdownClicked()"></button>
+        <a href = "index.php"> Home </a>
+        <a href = "graph.php"> Graph Statistics </a>
+        <a href = "mapView.php"> Map View Statistics </a>
+        <a href = "about.php"> About </a>
+        <div class="dropdown-menu">
+            <div class="dropdown-content" id="menuResponsive">
+                <a href = "index.php"> Home </a>
+                <a href = "graph.php"> Graph Statistics </a>
+                <a href = "mapView.php"> Map View Statistics </a>
+                <a href = "about.php"> About </a>
             </div>
         </div>
+    </div>
 
-        <section class = "toolbarContainer">
-            <h1>Cartographic Statistics</h1>
+        <div class = "toolbarContainer">
             <div class = "inputs">
                 <div class = "exportInput">
+                    <a id="mapExportButton" href="mapExport.php"> Export Map </a>
+
                     <label for="exportDataTypeSelect">Export Data Type</label>
                     <select id="exportDataTypeSelect" onchange="updateExportDataURL(this.options[this.selectedIndex].value)">
                         <option value="JSON">JSON</option>
                         <option value="XML">XML</option>
                         <option value="CSV">CSV</option>
+                        <option value="PDF">PDF</option>
                     </select>
 
                     <a id="exportButton" href="dataExport.php"> Export Data </a>
@@ -84,7 +84,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
         <div class="loader"></div>
 		<div class = "mapInPage">
@@ -93,7 +93,8 @@
             ?>
 		</div>
 
-        <script type="application/javascript" src="scripts/mapView.js"></script>
-        <script type="application/javascript" src = "scripts/graph/loadCategories.js"></script>
+        <script src="scripts/mapView.js"></script>
+        <script src = "scripts/graph/loadCategories.js"></script>
+        <script src = "scripts/buttonEvents.js"></script>
     </body>
 </html>

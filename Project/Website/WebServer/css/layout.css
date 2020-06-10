@@ -9,7 +9,6 @@ body{
     background-color: #272727;
 }
 
-
 header {
     background-color: #747474;
     border: #b3c7d6;
@@ -26,6 +25,7 @@ footer{
     border: #b3c7d6;
     text-align: center;
     padding: 1em;
+    margin-top: 2em;
 }
 
 .menu-nav{
@@ -33,12 +33,12 @@ footer{
     text-align: left;
     overflow: hidden;
     padding-left: 2em;
+    margin-right: 0;
 }
 
 .menu-nav a{
     background-color: #FFE400;
-    color: black;
-    display: block;
+    display: inline;
     float: left;
     text-decoration: none;
     padding: 10px 10px;
@@ -53,6 +53,23 @@ footer{
     display: none;
 }
 
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFE400;
+    overflow: auto;
+    z-index: 1;
+}
+
+.menuButton {
+    display: none;
+    border: none;
+    height: 50px;
+    width: 80px;
+    background-color: #272727;
+    color: #9999ff;
+    text-align: center;
+}
 
 .slidesPlaceholder{
     height: 60vh;
@@ -60,14 +77,14 @@ footer{
     text-align: center;
 }
 
-
 .contentItem{
-    margin: 10px;
+    margin-top: 1em;
+    margin-right: 0.5em;
 }
 
 .descriptionPlaceholder{
     width: 80%;
-    height: 200px;
+    height: inherit;
     background-color: #FFE400;
     text-align: center;
     float: left;
@@ -75,9 +92,43 @@ footer{
 
 .extraPlaceholder{
     width: 20%;
-    background-color: #FF652F;
+    margin-top : 1em;
+    margin-left: 0.5em;
     text-align: left;
     float:right;
+    overflow-y : scroll;
+    display: flow;
+    height: inherit;
+}
+
+.newsItem{
+    background-color: #FF652F;
+    width: 90%;
+    margin: 0 5%;
+    /*height: 120px;*/
+    height: fit-content;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+}
+
+
+.hiddenDeleteButton{
+    display: none;
+    position: absolute;
+    right: 4em;
+}
+
+.newsItem h3{
+    text-align: center;
+    margin-top : 0;
+    margin-bottom: 0.5em;
+}
+
+.newsItem p{
+    text-align: left;
+    margin: 0 1em;
+    width: auto;
+    word-wrap: break-word;
 }
 
 .contentPlaceholder{
@@ -85,96 +136,13 @@ footer{
     margin: auto;
 
     display: flex;
+    height: 35vh;
+}
+
+.phoneSlideImage {
+    display: none;
 }
 
 ul#MainNav li {
     display:inline;
-}
-
-@media screen and (max-device-width: 400px) {
-    body{
-        background-color: #14A76C;
-    }
-
-    .contentPlaceholder {
-        margin:0 0;
-        display: inline-block;
-    }
-
-    .descriptionPlaceholder {
-        width: 100%;
-        height: 200px;
-        text-align: center;
-    }
-
-    .extraPlaceholder {
-        width: 100%;
-        height: 150px;
-        background-color: #333333;
-    }
-
-    .slideshow {
-        display : none;
-    }
-}
-
-@media screen and (max-device-width: 600px) {
-
-    header {
-        background-color: #747474;
-        border: #b3c7d6;
-        font-family: 'Sans-serif', sans-serif;
-        font-size: 2em;
-        font-weight: 700;
-        text-align: center;
-        padding: 30px;
-        color: #f2f2f2;
-    }
-
-    img {
-        height: 90px;
-        width: 120px;
-        margin:0 -30px;
-    }
-
-    .logo:hover .dropdown-content {
-        display : block;
-    }
-
-    .menu-nav {
-        background-color: #FFE400;
-        text-align: left;
-        overflow: hidden;
-        padding : 30px;
-    }
-
-    .menu-nav a{
-        display: none;
-    }
-
-    .dropdown-menu {
-        display: flex;
-    }
-
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f2f2f2;
-        min-width: 160px;
-        box-shadow: 0 8px 16px 0;
-        z-index: 1;
-    }
-
-    .dropdown-content a{
-        float: none;
-        color:black;
-        padding: 12px 16px;
-        display: block;
-    }
-    .slideshow {
-        height: 700px;
-        padding-left: 0;
-        padding-top: 1em;
-        padding-right: 0;
-    }
 }
