@@ -73,9 +73,9 @@
                 <ol role="directory">
                     <li class="no-number"><a href=""><span>1. </span>Descrierea generala a proiectului</a>
                     </li>
-                    <li class="no-number"><a href=""><span>2. </span>Interfata Grafica</a>
+                    <li class="no-number"><a href="#interface"><span>2. </span>Interfata Grafica</a>
                         <ol role="directory">
-                            <li class="no-number"><a href=""><span>2.1. </span> Main Page </a></li>
+                            <li class="no-number"><a href="#main-page"><span>2.1. </span> Main Page </a></li>
                             <li class="no-number"><a href=""><span>2.2. </span> Graph Statistics </a></li>
                             <li class="no-number"><a href=""><span>2.3. </span> Map View Statistics </a></li>
                             <li class="no-number"><a href=""><span>2.4. </span> About </a></li>
@@ -111,12 +111,71 @@
                 </ol>
             </div>
         </section>
-        <section id="interfata" role="doc-introduction">
+        <section id="introducere" role="doc-introduction">
             <h2><span>1. </span>Descrierea generala a proiectului</h2>
             <p>
-                Romanian Unemployment Data Visualizer este o  aplicatie web care pune la dispozitie utilizatorului......
+                Romanian Unemployment Data Visualizer este o  aplicatie web care pune la dispozitie utilizatorului o metoda practica si usoara
+                de vizualizare a statisticilor privind somajul in Romania.
             </p>
         </section>
+
+        <section id="frond-end">
+            <h2><span>2. </span>Interfata Grafica</h2>
+            <p id="interface">
+                Interfata grafica este sub forma unei pagini web in care s-a folosit HTML5 si CSS3. Aceatsa este dispusa in mai multe pagini,
+                care pot fi accesate dintr-o bara de navigare aflata in partea de sus a fiecarei pagini.
+            </p>
+        </section>
+
+        <section id="main-page">
+            <h2><span>2. </span>Main Page</h2>
+            <p>
+                Aceasta pagina are un rol informativ privind situatia Romaniei la categoria de someri. Prima sectiune, cea mai evidenta si importanta,
+                o reprezinta slide-urile. In cadrul acestora, se vor difuza poze sugestive, fiecare avand o descriere aferenta intr-un placeholder.
+                Aceste placeholdere detin informatii privind problemele majore ale Romaniei care au dus la statistici socante.
+            </p>
+            <img src="slide.png" alt="slide">
+            <p>
+                Acestea au fost implementate folosind javascript.
+            </p>
+            <img src="codslide.png" alt="cod-slide">
+            <p>
+                PlaceHolder-ul de informatii se schima si el odata cu slide-urile, afisand mereu textul aferent slide-ului curent.
+            </p>
+
+            <p>
+                De asemenea, tot in mainPage se afla si o sectiune de News. Acestea sunt stocate intr-o baza de date, fiind manipulate doar de catre administrator.
+            </p>
+
+            <img src="codNews.png" alt="cos-news">
+
+        </section>
+
+        <section id="graph-statistics-page">
+            <h2><span>2. </span>Main Page</h2>
+            <p>
+                Aceasta pagina are un rol informativ privind situatia Romaniei la categoria de someri. Prima sectiune, cea mai evidenta si importanta,
+                o reprezinta slide-urile. In cadrul acestora, se vor difuza poze sugestive, fiecare avand o descriere aferenta intr-un placeholder.
+                Aceste placeholdere detin informatii privind problemele majore ale Romaniei care au dus la statistici socante.
+            </p>
+            <img src="slide.png" alt="slide">
+            <p>
+                Acestea au fost implementate folosind javascript.
+            </p>
+            <img src="codslide.png" alt="cod-slide">
+            <p>
+                PlaceHolder-ul de informatii se schima si el odata cu slide-urile, afisand mereu textul aferent slide-ului curent.
+            </p>
+
+            <p>
+                De asemenea, tot in mainPage se afla si o sectiune de News. Acestea sunt stocate intr-o baza de date, fiind manipulate doar de catre administrator.
+            </p>
+
+            <img src="codNews.png" alt="cos-news">
+
+        </section>
+
+
 
         <section id="Back-End">
             <h2 id="doc-back-end-title"> 3. Back End </h2>
@@ -259,6 +318,10 @@
 
                 In acelasi timp, REST API-ul satisface request-uri de la Aplicatia Web.
             </p>
+        </section>
+
+        <section>
+
         </section>
     </div>
 </body>
