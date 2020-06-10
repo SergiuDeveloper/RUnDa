@@ -331,7 +331,7 @@ class Environment():
                     if element_index == location_column_index:
                         continue
                     
-                    subcategory = subcategories[element_index]
+                    subcategory = subcategories[element_index].replace(', DIN CARE:', '')
                     xValue = year * 12 + month
                     yValue = Environment.__string_to_num(csv_line[element_index])
                     if yValue == None:
@@ -382,7 +382,8 @@ class Environment():
         csv_lines = [
             csv_line
             for csv_line in csv_lines
-            if csv_line[0] != ''
+            if csv_line != ''
+            if csv_line.count('') != len(csv_line)
         ]
 
         empty_csv_column_indexes: List[int] = [

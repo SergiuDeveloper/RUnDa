@@ -90,7 +90,7 @@ class DataFetcher():
 
             try:
                 with open(f'Data/{category_name}/{year}/{month}/Data.csv', 'w', encoding = 'latin-1') as csv_file:
-                    csv_file.write(csv_online_content.text.replace('-', ' '))
+                    csv_file.write(csv_online_content.text.replace(', DIN CARE:', ''))
             except:
                 with open(f'Data/{category_name}/{year}/{month}/Data.csv', 'wb') as csv_file:
                     csv_file.write(csv_online_content.content)
@@ -100,10 +100,8 @@ class DataFetcher():
                 remove(f'Data/{category_name}/{year}/{month}/Data.csv')
                 rename(f'Data/{category_name}/{year}/{month}/Data2.csv', f'Data/{category_name}/{year}/{month}/Data.csv')
 
-                with open(f'Data/{category_name}/{year}/{month}/Data.csv', 'r') as file :
-                    csv_file_content = file.read()
-
-                csv_file_content = csv_file_content.replace('-', ' ')
+                with open(f'Data/{category_name}/{year}/{month}/Data.csv', 'r') as file:
+                    csv_file_content = file.read().replace(', DIN CARE:', '')
 
                 with open(f'Data/{category_name}/{year}/{month}/Data.csv', 'w') as file:
                     file.write(csv_file_content)

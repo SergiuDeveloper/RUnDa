@@ -4,7 +4,7 @@ from Environment import Environment
 from DataFetcher import DataFetcher
 
 from requests import post
-from typing import List, Tuple, Any
+from typing import List, Tuple, Dict, Any
 
 if __name__ == '__main__':
     DataFetcher.write_csv_data_to_file_system()
@@ -13,9 +13,9 @@ if __name__ == '__main__':
 
     environment.begin_log()
 
-    linear_regression_training_results: List[Tuple[Any]] = environment.linear_regression(100000, 0.1)
-    polynomial_regression_training_results: List[Tuple[Any]] = environment.polynomial_regression(10000, 0.1, 10, 100)
-    logistic_polynomial_regression_training_results: List[Tuple[Any]] = environment.logistic_polynomial_regression(100000, 0.1)
+    linear_regression_training_results: List[Tuple[Any]] = environment.linear_regression(0, 0.1)
+    polynomial_regression_training_results: List[Tuple[Any]] = environment.polynomial_regression(0, 0.1, 1, 1)
+    logistic_polynomial_regression_training_results: List[Tuple[Any]] = environment.logistic_polynomial_regression(0, 0.1)
 
     environment.end_log()
 
