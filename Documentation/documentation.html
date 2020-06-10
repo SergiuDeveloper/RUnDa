@@ -120,6 +120,7 @@
 
         <section id="Back-End">
             <h2 id="doc-back-end-title"> 3. Back End </h2>
+
             <ul>
                 <li>
                     <h3> <span>3.1</span> Arhitectura Back-End </h3>
@@ -127,20 +128,23 @@
                         Arhitectura proiectului este construita pe baza modelului MVC.
                         Cerintele client-ului sunt modelate de WebServer, comunicate cu API-ul si filtrate pentru user.
                     </p>
-
+                </li>
+                <li>
                     <h3> <span>3.2</span> Diagrama arhitecturala </h3>
                     <p id="architecture-schema">
                         Modelul back-end-ului poate fi reprezentat simplu astfel :
-                        'model here'
                     </p>
-
+                    <img src="photos/MVCAdaptation.png" alt="Prezentare arhitectura">
+                </li>
+                <li>
                     <h3> <span>3.3</span> Descrierea componentelor din arhitectura </h3>
                     <p id="architecture-components">
-                        Flow-ul logic al filtrarii datelor :
-                        'model here'
-                        'model here'
+                        Flow-ul logic al filtrarii datelor poate fi vazut prin descrierea
+                        logica a unui call :
                     </p>
-
+                    <img src="photos/MVCOnExportExample.png" alt="XMLExportFlow">
+                </li>
+                <li>
                     <h3> <span>3.4</span> Procesare, afisare, exportare date </h3>
                     <p id="export-filter-convert">
                         Afisarea de date e realizata prin filtrarea datelor primite de la API-ul de ML prin doua request-uri.
@@ -148,20 +152,34 @@
                         datele si convertind-ule intr-un format pentru grafic.
                         La cererea unui export, datele originale sunt transformate printr-un model scris de echipa noastra
                         in backend, si trimis inapoi catre client in format-ul cerut.
-
-                        'Sectiuni cod'
                     </p>
-
+                    <ol>
+                        <li>
+                            <p>Exportare CSV</p>
+                            <img src="photos/CSVExpEx.png" alt="CSV Export Example">
+                        </li>
+                        <li>
+                            <p>Extract exportare XML</p>
+                            <img src="photos/XMLExpEx.png" alt="XML Export Extract">
+                        </li>
+                    </ol>
+                </li>
+                <li>
                     <h3> <span>3.5</span> Sistem de subscriptii. Exportari automate </h3>
                     <p id="subscription-service">
                         Exportarea poate fi realizata prin descarcare manuala din website, dar si prin email, automat lunar,
                         atunci cand un nou set de predictii este calculat. Un user se poate abona la sistemul de subscriptii
                         prin adaugarea email-ului dupa un export. Acestea sunt salvate in baza de date a aplicatiei, adresata
                         mai jos.
-
-                        'Sectiuni cod'
                     </p>
-
+                    <ol>
+                        <li>
+                            <p>Adaugare de subscriptie pe email</p>
+                            <img src="photos/SubAdd.png" alt="Subscription adding">
+                        </li>
+                    </ol>
+                </li>
+                <li>
                     <h3> <span>3.6</span> Alte resurse, MySQL </h3>
                     <p id="database-other-resources">
                         Diverse date de pe website sunt comune pentru utilizatori dar si salvate pentru API. Am folosit
@@ -171,6 +189,8 @@
                         email-urile abonatilor la serviciul de exportare automata sau pentru a salva credentialele conturilor
                         de trimitere automata
                     </p>
+                    <p>Preluare de news items</p>
+                    <img src="photos/NewsLoad.png" alt="News Items Loading">
                 </li>
             </ul>
         </section>
