@@ -33,9 +33,10 @@
     } catch (PDOException $exception){
         http_response_code(200);
         echo json_encode(['status'=>'FAILURE', 'error'=>'DB_EXCEPT']), PHP_EOL;
+        die();
     }
 
     http_response_code(200);
-        echo json_encode(['status'=>'SUCCESS', 'error'=>'']), PHP_EOL;
+    echo json_encode(['status'=>'SUCCESS', 'error'=>'']), PHP_EOL;
 
 ?>
