@@ -1,8 +1,8 @@
+
 <!DOCTYPE html>
 
 <html lang = "en">
     <head>
-        <!-- Font? -->
         <meta charset="UTF-8">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
         <link rel = "stylesheet" href = "css/layout.css">
@@ -21,18 +21,14 @@
         </header>
 
         <div class="menu-nav">
-            <div class="menu-bar">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
+            <button class="menuButton" onclick="dropdownClicked()"></button>
             <a href = "index.php"> Home </a>
             <a href = "graph.php"> Graph Statistics </a>
             <a href = "mapView.php"> Map View Statistics </a>
             <a href = "about.php"> About </a>
 
             <div class="dropdown-menu">
-                <div class="dropdown-content">
+                <div class="dropdown-content" id="menuResponsive">
                     <a href = "index.php"> Home </a>
                     <a href = "graph.php"> Graph Statistics </a>
                     <a href = "mapView.php"> Map View Statistics </a>
@@ -40,19 +36,21 @@
                 </div>
             </div>
 
-            <div class="adminMenu">
-                <form>
+            <button onclick="logout();" id="logoutButton" style="display: none;"> Logout </button>
+
+            <div class="adminMenu" id="adminMenuDiv">
                 Admin?
                 <label for="adminEmailInput" class="descriptionLabel">
                     Email :
-                    <input type="email" id="adminEmailInput">
+                    <input type="email" id="adminEmailInput" name="email">
                 </label>
                 <label for="adminPasswordInput" class="descriptionLabel">
                     Password :
-                    <input type="password" id="adminPasswordInput">
+                    <input type="password" id="adminPasswordInput" name="token">
                 </label>
-                <input type="submit">
-                </form>
+                <button onclick="authenticateAdmin();">
+                    Login
+                </button>
             </div>
 
         </div>
@@ -142,9 +140,26 @@
             Placeholder footer
         </footer>
 
+
+        <script>
+            let adminToken = false;
+
+        </script>
+        <script>
+            function updateAdminSession(){
+                adminToken = true;
+                checkAdminToken();
+            }
+
+            function logout() {
+                adminToken = false;
+                checkAdminToken();
+                hideAdminElements();
+            }
+        </script>
         <script src = "scripts/slides.js"></script>
         <script src = "scripts/newsScripts.js"></script>
-
+        <script src = "scripts/buttonEvents.js"></script>
     </body>
 
 </html>
