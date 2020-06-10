@@ -8,6 +8,10 @@
     <meta name="author" content="Vlad Andrei Loghin, Sergiu Marian Nistor , Mihaela-Diana Pascariu">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentatie RUnDa</title>
+
+    <link rel="stylesheet" type="text/css" href="documentation.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config" src="mathjax-config.js"></script>
 </head>
 <body>
     <header>
@@ -67,39 +71,37 @@
             <h1>Cuprins</h1>
             <div role="contentinfo">
                 <ol role="directory">
-                    <li><a href=""><span>1. </span>Descrierea generala a proiectului</a>
+                    <li class="no-number"><a href=""><span>1. </span>Descrierea generala a proiectului</a>
                     </li>
-                    <li><a href=""><span>2. </span>Interfata Grafica</a>
+                    <li class="no-number"><a href=""><span>2. </span>Interfata Grafica</a>
                         <ol role="directory">
-                            <li><a href=""><span>2.1 </span> Main Page </a></li>
-                            <li><a href=""><span>2.2 </span> Graph Statistics </a></li>
-                            <li><a href=""><span>2.3 </span> Map View Statistics </a></li>
-                            <li><a href=""><span>2.4 </span> About </a></li>
-                            <li><a href=""><span>2.5 </span> Responsive </a></li>
+                            <li class="no-number"><a href=""><span>2.1. </span> Main Page </a></li>
+                            <li class="no-number"><a href=""><span>2.2. </span> Graph Statistics </a></li>
+                            <li class="no-number"><a href=""><span>2.3. </span> Map View Statistics </a></li>
+                            <li class="no-number"><a href=""><span>2.4. </span> About </a></li>
+                            <li class="no-number"><a href=""><span>2.5. </span> Responsive </a></li>
                         </ol>
                     </li>
-                    <li><a href=""><span>3. </span>REST API Propriu</a>
+                    <li class="no-number"><a href=""><span>3. </span> Back-End </a>
                         <ol role="directory">
-                            <li><a href=""><span>3.1 </span> SERGIU </a></li>
-                            <li><a href=""><span>3.2 </span> SERGIU </a></li>
-                            <li><a href=""><span>3.3 </span> SERGIU </a></li>
-                            <li><a href=""><span>3.4 </span> SERGIU </a></li>
-                            <li><a href=""><span>3.5 </span> SERGIU </a></li>
-                            <li><a href=""><span>3.6 </span> SERGIU </a></li>
+                            <li class="no-number"><a href=""><span>3.1. </span> VLAD </a></li>
+                            <li class="no-number"><a href=""><span>3.2. </span> VLAD </a></li>
+                            <li class="no-number"><a href=""><span>3.3. </span> VLAD </a></li>
+                            <li class="no-number"><a href=""><span>3.4. </span> VLAD </a></li>
+                            <li class="no-number"><a href=""><span>3.5. </span> VLAD </a></li>
+                            <li class="no-number"><a href=""><span>3.6. </span> VLAD </a></li>
                         </ol>
                     </li>
-                    <li><a href=""><span>4. </span> Back-End </a>
+                    <li><a href="#machine-learning-app"><span>4. </span>Aplicatie de Antrenare a Modelelor de Machine Learning</a>
                         <ol role="directory">
-                            <li><a href=""><span>4.1 </span> VLAD </a></li>
-                            <li><a href=""><span>4.2 </span> VLAD </a></li>
-                            <li><a href=""><span>4.3 </span> VLAD </a></li>
-                            <li><a href=""><span>4.4 </span> VLAD </a></li>
-                            <li><a href=""><span>4.5 </span> VLAD </a></li>
-                            <li><a href=""><span>4.6 </span> VLAD </a></li>
+                            <li class="no-number"><a href="#machine-learning-app-introduction"><span>4.1. </span> Introducere </a></li>
+                            <li class="no-number"><a href="#machine-learning-app-dataset"><span>4.2. </span> Set de date </a></li>
+                            <li class="no-number"><a href="#machine-learning-app-theory"><span>4.3. </span> Procedee folosite de Machine Learning </a></li>
+                            <li class="no-number"><a href="#machine-learning-app-results"><span>4.4. </span> Rezultate </a></li>
                         </ol>
                     </li>
-                    <li><a href=""><span>5. </span> Etape de dezvoltare </a></li>
-                    <li><a href=""><span>9. </span>References</a></li>
+                    <li class="no-number"><a href=""><span>5. </span> Etape de dezvoltare </a></li>
+                    <li class="no-number"><a href=""><span>9. </span>References</a></li>
                 </ol>
             </div>
         </section>
@@ -108,6 +110,54 @@
             <p>
                 Romanian Unemployment Data Visualizer este o  aplicatie web care pune la dispozitie utilizatorului......
             </p>
+        </section>
+
+        <section id="machine-learning-app">
+            <h2><span>4. </span>Aplicatie de Antrenare a Modelelor de Machine Learning</h2>
+            <p id="machine-learning-app-introduction"><h3><span>4.1 </span>Introducere</h3>
+                Aplicatia de Antrenare a Modelelor de Machine Learning sustrage informatii din seturi de date puse la dispozitie de <a href="https:/data.gov.ro/">DATA.GOV.RO</a>, cuantificand informatiile si observand evolutia datelor in timp,
+                    inspre a putea folosi functiile obtinute pentru a prezice numarul somerilor, ori rata somajului, in viitor.<br><br>
+
+                Antrenarea s-a realizat pe baza unor regresii:
+                <ol>
+                    <li>Lineare</li>
+                    <li>Polinomiale cu grad variabil</li>
+                    <li>Logistic-polinomiale</li>
+                </ol>
+
+                Limbajul ales pentru implementarea aplicatiei este Python(v3.8.3), din cauza usurintei de manipulare a seturilor de date.
+            </p>
+            <p id="machine-learning-app-dataset"><h3><span>4.2. </span>Set de date</h3>
+                Setul de date este furnizat de <a href="https://data.gov.ro/">DATA.GOV.RO</a>.<br>
+                Datele sunt preluate cu ajutorul <a href="https://docs.ckan.org/en/2.8/api/">CKAN's Action API</a>.<br><br>
+
+                Setul de date este prelucrat, clasificand datele sub forma unui dictionar pe 4 nivele:
+                <ol>
+                    <li>Categorie</li>
+                    <li>Subcategorie</li>
+                    <li>Locatie</li>
+                    <li>Data</li>
+                </ol>
+            </p>
+            <p id="machine-learning-app-theory"><h3><span>4.3. </span>Procedee folosite de Machine Learning</h3>
+                In cadrul aplicatiei au fost folosite 3 tipuri de regresii:
+                <ol>
+                    <li>Lineare: $w \cdot x + b$</li>
+                    <li>Polinomiale cu grad variabil: $\sum_{i=1}^{m}{w_i \cdot x^i} + b$</li>
+                    <li>Logistic-polinomiale: $w \cdot x^p + b$</li>
+                </ol>
+
+                Se realizeaza normalizarea datelor, spre a micsora ordinul lor de marime.<br>
+                Functia de eroare aleasa este MSE(Mean Squared Error): $\frac{1}{n}\sum_{i=1}^{n}{(Y_i - Y^{'}_{i})^2}$<br>
+                Tehnica de minimizare folosita este "gradient descent", modificand fiecare hiper-parametru in directia inversa diferentialei partiale a functiei MSE, cu o valoarea prestabilita, spre a identifica un minim local al functiei.<br><br>
+            </p>
+            <p id="machine-learning-app-results"><h3><span>4.4. </span>Rezultate</h3>
+                <h4><span></span>4.4.1. </span>Regresii lineare</h4>
+                <img src="Numar Someri Barbati din Mediul Rural - Alba_Linear.png" alt="Regresie lineara">
+                <h4><span></span>4.4.2. </span>Regresii polinomiale cu grad variabil</h4>
+                <img src="Invatamant Gimnazial - Bihor_Polinomial.png" alt="Regresie polinomiala cu grad variabil">
+                <h4><span></span>4.4.3. </span>Regresii Logistic-polinomiale</h4>
+                <img src="Invatamant Unviersitar - Vaslui_Logistic Polinomial.png" alt="Regresie logistic-polinomiala">
         </section>
     </div>
 </body>
