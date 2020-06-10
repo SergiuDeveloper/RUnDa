@@ -76,9 +76,9 @@
                     <li class="no-number"><a href="#interface"><span>2. </span>Interfata Grafica</a>
                         <ol role="directory">
                             <li class="no-number"><a href="#main-page"><span>2.1. </span> Main Page </a></li>
-                            <li class="no-number"><a href=""><span>2.2. </span> Graph Statistics </a></li>
-                            <li class="no-number"><a href=""><span>2.3. </span> Map View Statistics </a></li>
-                            <li class="no-number"><a href=""><span>2.4. </span> About </a></li>
+                            <li class="no-number"><a href="#graph-statistics-page"><span>2.2. </span> Graph Statistics </a></li>
+                            <li class="no-number"><a href="#map-view-page"><span>2.3. </span> Map View Statistics </a></li>
+                            <li class="no-number"><a href="#about-page"><span>2.4. </span> About </a></li>
                             <li class="no-number"><a href=""><span>2.5. </span> Responsive </a></li>
                         </ol>
                     </li>
@@ -128,7 +128,7 @@
         </section>
 
         <section id="main-page">
-            <h2><span>2. </span>Main Page</h2>
+            <h2><span>2.1 </span>Main Page</h2>
             <p>
                 Aceasta pagina are un rol informativ privind situatia Romaniei la categoria de someri. Prima sectiune, cea mai evidenta si importanta,
                 o reprezinta slide-urile. In cadrul acestora, se vor difuza poze sugestive, fiecare avand o descriere aferenta intr-un placeholder.
@@ -148,34 +148,89 @@
             </p>
 
             <img src="codNews.png" alt="cos-news">
+            <p>
+                Administrarea sectiunii de news necesita intrarea intr-un cont de administrator, accesat din dreapta sus dintr-o sectiune "ascunsa" in spatele unei animatii
+            </p>
+            <img src="photos/AdminLoginSection.png" alt="Admin Login Form">
+
+            <p>
+                Odata in contul de administrator, se pot sterge item-urile de news.
+            </p>
+            <img src="photos/DeleteNews.png" alt="Delete News">
+
+
 
         </section>
 
         <section id="graph-statistics-page">
-            <h2><span>2. </span>Main Page</h2>
+            <h2><span>2.2 </span>Graph Statistics Page</h2>
             <p>
-                Aceasta pagina are un rol informativ privind situatia Romaniei la categoria de someri. Prima sectiune, cea mai evidenta si importanta,
-                o reprezinta slide-urile. In cadrul acestora, se vor difuza poze sugestive, fiecare avand o descriere aferenta intr-un placeholder.
-                Aceste placeholdere detin informatii privind problemele majore ale Romaniei care au dus la statistici socante.
+                Aceasta pagina are rolul de a difuza statistici si predictii despre categoriile de someri. Pagina permite vizualizarea acestor
+                date in diferite grafice dar si modificarea parametrilor statisticilor.
+                Graficele sunt colorate de la albastru la rosu
+                Informatiile pot fi afisate diferit din tipul graficului, si pot fi filtrate pe :
             </p>
-            <img src="slide.png" alt="slide">
-            <p>
-                Acestea au fost implementate folosind javascript.
-            </p>
-            <img src="codslide.png" alt="cod-slide">
-            <p>
-                PlaceHolder-ul de informatii se schima si el odata cu slide-urile, afisand mereu textul aferent slide-ului curent.
-            </p>
+            <ul>
+                <li> Categorii (ex. Nivel educatie / Medii rezidenta) </li>
+                <li> Subcategorii (ex. Vizualizare pe distributie de varsta) </li>
+                <li> Locatie (Judet) </li>
+                <li> Tipul de regresie folosita de predictie (explicata in detaliu mai jos, la sectiunea de predictii) </li>
+            </ul>
 
             <p>
-                De asemenea, tot in mainPage se afla si o sectiune de News. Acestea sunt stocate intr-o baza de date, fiind manipulate doar de catre administrator.
+                Un exemplu de grafic :
             </p>
+            <img src="photos/GraphView.png" alt="Graph Example">
 
-            <img src="codNews.png" alt="cos-news">
+            <p> Graficele pot fi vizualizate in urmatoarele formate:  </p>
+            <img src="photos/Views.png" alt="Views">
+
+            <p>
+                Depinzand de categoria alesa, se pot selecta subcategorii relevante ei :
+            </p>
+            <p> Subcategorii nivel educatie :  </p>
+            <img src="photos/EducationLevel.png" alt ="Education Level">
+
+            <p> Subcategorii procentaje somaj </p>
+            <img src="photos/UnempRating.png" alt="Unemployment Level">
+
+            <p> Locatie si tipul predictiei </p>
+            <img src="photos/LocAndPred.png" alt="Location and Prediction">
+
+            <p> Exportarea datelor pentru toate filtrele in formatul ales </p>
+            <img src="photos/TypeAndExport.png" alt="Type Select and Export Data">
+
+            <p> Odata folosita exportarea, apare pop-up de abonare </p>
+            <img src="photos/SubscriptionPopup.png" alt="Subscription Popup">
 
         </section>
 
+        <section id="map-view-page">
+            <h2><span>2.3 </span>Map Statistics Page</h2>
+            <p>
+                Pentru o vizualizare mai in context, pagina de map statistics poate fi folosita pentru a vedea
+                statisticile proiectate pe harta Romaniei, colorata pe aceeasi tema ca si graficele
+            </p>
 
+            <p> Categoriile si subcategoriile se pastreaza, prezentandu-se statisticile ultimelei luni : </p>
+            <img src="photos/MapView.png" alt="Map Visualization">
+
+            <p> Formatul de harta poate fi exportat si in PDF :  </p>
+
+            <img src="photos/MapExport.png" alt="Map Export">
+
+        </section>
+
+        <section id="about-page" >
+            <h2> <span>2.4</span> About Page </h2>
+            <p>
+                In aceasta pagina putem vedea informatii despre echipa din spatele aplicatiei.
+                Prin apasarea butonului de contact me! la fiecare persoana, se pot afla persoanele
+                de contact ale persoanei respective.
+
+            </p>
+
+        </section>
 
         <section id="Back-End">
             <h2 id="doc-back-end-title"> 3. Back End </h2>
