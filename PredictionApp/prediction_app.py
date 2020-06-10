@@ -13,9 +13,9 @@ if __name__ == '__main__':
 
     environment.begin_log()
 
-    linear_regression_training_results: List[Tuple[Any]] = environment.linear_regression(0, 0.1)
-    polynomial_regression_training_results: List[Tuple[Any]] = environment.polynomial_regression(0, 0.1, 1, 1)
-    logistic_polynomial_regression_training_results: List[Tuple[Any]] = environment.logistic_polynomial_regression(0, 0.1)
+    linear_regression_training_results: List[Tuple[Any]] = environment.linear_regression(5000, 0.1)
+    polynomial_regression_training_results: List[Tuple[Any]] = environment.polynomial_regression(5000, 0.1, 1, 1)
+    logistic_polynomial_regression_training_results: List[Tuple[Any]] = environment.logistic_polynomial_regression(5000, 0.1)
 
     environment.end_log()
 
