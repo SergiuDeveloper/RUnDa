@@ -110,12 +110,13 @@
         <div class = "contentPlaceholder">
             <div class = "contentItem descriptionPlaceholder">
                 <div class = "slideshowDescription fade" style="display: none;">
-                    <h1>
-                        Unemployment statistics, all in one place
-                    </h1>
                     <p>
-                        This website brings all information about Romania's unemployment data in one place.
-                        Easy to use for everyone, we created a user interface for anybody to see all statistics, filtered or not.
+                        The Romanian economy is currently enjoying a period of grace. According to the latest information
+                        provided by the country’s statistics office, GDP advanced in the first semester by 4.1 per cent,
+                        while at the end of August, the unemployment rate was 3.46 per cent compared with an average of
+                        8.3 per cent in the euro area. It is important to note that 70 per cent of Romania’s unemployed
+                        reside in rural areas while one third of the total number is represented by people with no
+                        qualifications.
                     </p>
                 </div>
 
