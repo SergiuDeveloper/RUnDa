@@ -18,3 +18,7 @@ function vladButtonClicked() {
 
     document.getElementById("vla").innerHTML = vladInfoEmail.bold() + vladInfoPhone.bold();
 }
+
+function dropdownClicked() {
+    document.getElementById("menuResponsive").style.display = "block";
+}

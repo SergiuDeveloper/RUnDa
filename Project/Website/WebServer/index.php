@@ -21,7 +21,7 @@
         </header>
 
         <div class="menu-nav">
-            <div class="menu-bar">
+            <div class="menu-bar" onclick="dropdownClicked()">
                 <div class="bar"></div>
                 <div class="bar"></div>
                 <div class="bar"></div>
@@ -31,7 +31,7 @@
             <a href = "mapView.php"> Map View Statistics </a>
             <a href = "about.php"> About </a>
 
-            <div class="dropdown-menu">
+            <div class="dropdown-menu" id="menuResponsive">
                 <div class="dropdown-content">
                     <a href = "index.php"> Home </a>
                     <a href = "graph.php"> Graph Statistics </a>
@@ -144,7 +144,7 @@
 
         <script src = "scripts/slides.js"></script>
         <script src = "scripts/newsScripts.js"></script>
-
+        <script src = "scripts/buttonEvents.js"></script>
     </body>
 
 </html>
