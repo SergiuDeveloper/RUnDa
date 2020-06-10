@@ -8,6 +8,7 @@
 		<link rel = "stylesheet" href = "css/layout.css">
         <link rel = "stylesheet" href = "css/graphLayout.css">
         <link rel = "stylesheet" href = "css/map.css">
+        <link rel = "stylesheet" href = "css/responsive.css">
         <link rel="icon" type="image/x-icon" href="favicon.ico"/>
         <title>
             RunDA
@@ -20,20 +21,19 @@
     </header>
 
         <div class="menu-nav">
-
             <a href = "index.php"> Home </a>
             <a href = "graph.php"> Graph Statistics </a>
             <a href = "mapView.php"> Map View Statistics </a>
             <a href = "about.php"> About </a>
-            <div class="dropdown-menu"
-                <div class="dropdown-content">
-                    <a href = "index.php"> Home </a>
-                    <a href = "graph.php"> Graph Statistics </a>
-                    <a href = "mapView.php"> Map View Statistics </a>
-                    <a href = "about.php"> About </a>
-                </div>
-            </div>
+<!--            <div class="dropdown-menu"-->
+<!--                <div class="dropdown-content">-->
+<!--                    <a href = "index.php"> Home </a>-->
+<!--                    <a href = "graph.php"> Graph Statistics </a>-->
+<!--                    <a href = "mapView.php"> Map View Statistics </a>-->
+<!--                    <a href = "about.php"> About </a>-->
+<!--                </div>-->
         </div>
+
 
         <div class = "toolbarContainer">
             <div class = "inputs">
