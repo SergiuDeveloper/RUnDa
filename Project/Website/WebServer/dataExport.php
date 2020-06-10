@@ -22,6 +22,11 @@
             echo getDataCSV($jsonContent);
             break;
         }
+        case 'PDF': {
+            header('Content-type: application/pdf');
+            header('Content-Disposition: attachment; filename=UnemploymentData.csv');
+
+        }
     }
 
     function getDataJSON($jsonContent) {

@@ -46,6 +46,7 @@
                         <option value="JSON">JSON</option>
                         <option value="XML">XML</option>
                         <option value="CSV">CSV</option>
+                        <option value="PDF">PDF</option>
                     </select>
 
                     <a id="exportButton" href="dataExport.php"> Export Data </a>
