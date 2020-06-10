@@ -21,6 +21,10 @@
     height: 20px;
 }
 
+h1 {
+    color: #555555;
+}
+
 
 .Sergiu {
     text-align: right;
@@ -54,4 +58,65 @@
     border: none;
     border-radius: 12px;
     height: 20px;
+}
+
+@media screen and (max-device-width: 450px) {
+
+    .dropdown-menu {
+        display: flex;
+    }
+
+    .menuButton {
+        display: block;
+        margin-left: 92%;
+    }
+
+    .menuButton:hover {
+        background-color: #14A76C;
+    }
+
+    .menuButton:hover .dropdown-content{
+        display: block;
+    }
+
+    .Diana {
+        background-color: #FFE400;
+        margin-top: 7em;
+        height: 350px;
+        width: 600px;
+    }
+
+    .Sergiu {
+        background-color: #14A76C;
+        margin-top: 7em;
+        height: 350px;
+        width: 600px;
+    }
+
+    .Vlad {
+        background-color: #FF652F;
+        margin-top: 7em;
+        height: 350px;
+        width: 600px;
+    }
+
+    .Vphoto {
+        width: 373px;
+        height: 350px;
+    }
+
+    .Dphoto {
+        width: 373px;
+        height: 350px;
+    }
+
+    .Sphoto {
+        width: 373px;
+        height: 350px;
+    }
+
+    p{
+        margin-left: 380px;
+    }
+
 }

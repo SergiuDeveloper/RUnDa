@@ -15,11 +15,6 @@
     </head>
 
     <body>
-
-        <header id="headerTest">
-            <img src="resources/logo/Logo.png" alt="Logo" width="80" height="49">
-        </header>
-
         <div class="subscriptionPopup" id = "exportSubscriptionPopup">
             <div class="subscriptionPopupBlock">
                 <button class="closeButton" onclick="closePopup()">
@@ -40,23 +35,25 @@
         </div>
 
         <header>
-            Placeholder header
+            <img src="resources/logo/Logo.png" alt="Logo" width="80" height="49">
         </header>
 
         <div class="menu-nav">
-
+            <button class="menuButton" onclick="dropdownClicked()"></button>
             <a href = "index.php"> Home </a>
             <a href = "graph.php"> Graph Statistics </a>
             <a href = "mapView.php"> Map View Statistics </a>
             <a href = "about.php"> About </a>
+
             <div class="dropdown-menu">
-                <div class="dropdown-content">
+                <div class="dropdown-content" id="menuResponsive">
                     <a href = "index.php"> Home </a>
                     <a href = "graph.php"> Graph Statistics </a>
                     <a href = "mapView.php"> Map View Statistics </a>
                     <a href = "about.php"> About </a>
                 </div>
             </div>
+
         </div>
         
         <section class = "toolbarContainer">
