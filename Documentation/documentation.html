@@ -84,12 +84,12 @@
                     </li>
                     <li class="no-number"><a href=""><span>3. </span> Back-End </a>
                         <ol role="directory">
-                            <li class="no-number"><a href=""><span>3.1. </span> VLAD </a></li>
-                            <li class="no-number"><a href=""><span>3.2. </span> VLAD </a></li>
-                            <li class="no-number"><a href=""><span>3.3. </span> VLAD </a></li>
-                            <li class="no-number"><a href=""><span>3.4. </span> VLAD </a></li>
-                            <li class="no-number"><a href=""><span>3.5. </span> VLAD </a></li>
-                            <li class="no-number"><a href=""><span>3.6. </span> VLAD </a></li>
+                            <li class="no-number"><a href="#main-architecture"><span>3.1. </span> Sumar arhitectura Back-End </a></li>
+                            <li class="no-number"><a href="#architecture-schema"><span>3.2. </span> Diagrama, design arhitectura </a></li>
+                            <li class="no-number"><a href="#architecture-components"><span>3.3. </span> Descrierea componentelor </a></li>
+                            <li class="no-number"><a href="#export-filter-convert"><span>3.4. </span> Procesare, afisare, exportare </a></li>
+                            <li class="no-number"><a href="#subscription-service"><span>3.5. </span> Sistem subscriptii. Automatizare exportari </a></li>
+                            <li class="no-number"><a href="#database-other-resources"><span>3.6. </span> Baza de date </a></li>
                         </ol>
                     </li>
                     <li><a href="#machine-learning-app"><span>4. </span>Aplicatie de Antrenare a Modelelor de Machine Learning</a>
@@ -120,6 +120,7 @@
 
         <section id="Back-End">
             <h2 id="doc-back-end-title"> 3. Back End </h2>
+
             <ul>
                 <li>
                     <h3> <span>3.1</span> Arhitectura Back-End </h3>
@@ -127,33 +128,69 @@
                         Arhitectura proiectului este construita pe baza modelului MVC.
                         Cerintele client-ului sunt modelate de WebServer, comunicate cu API-ul si filtrate pentru user.
                     </p>
-
+                </li>
+                <li>
                     <h3> <span>3.2</span> Diagrama arhitecturala </h3>
                     <p id="architecture-schema">
                         Modelul back-end-ului poate fi reprezentat simplu astfel :
-                        'model here'
-
-                        Flow-ul logic al modelului :
-                        'model here'
                     </p>
-
+                    <img src="photos/MVCAdaptation.png" alt="Prezentare arhitectura">
+                </li>
+                <li>
                     <h3> <span>3.3</span> Descrierea componentelor din arhitectura </h3>
                     <p id="architecture-components">
-
+                        Flow-ul logic al filtrarii datelor poate fi vazut prin descrierea
+                        logica a unui call :
                     </p>
-
+                    <img src="photos/MVCOnExportExample.png" alt="XMLExportFlow">
+                </li>
+                <li>
                     <h3> <span>3.4</span> Procesare, afisare, exportare date </h3>
-                    <p id=""></p>
-
+                    <p id="export-filter-convert">
+                        Afisarea de date e realizata prin filtrarea datelor primite de la API-ul de ML prin doua request-uri.
+                        Primul request obtine categoriile datelor. Al doilea e realizat automat la schimbarea categoriilor, obtinand
+                        datele si convertind-ule intr-un format pentru grafic.
+                        La cererea unui export, datele originale sunt transformate printr-un model scris de echipa noastra
+                        in backend, si trimis inapoi catre client in format-ul cerut.
+                    </p>
+                    <ol>
+                        <li>
+                            <p>Exportare CSV</p>
+                            <img src="photos/CSVExpEx.png" alt="CSV Export Example">
+                        </li>
+                        <li>
+                            <p>Extract exportare XML</p>
+                            <img src="photos/XMLExpEx.png" alt="XML Export Extract">
+                        </li>
+                    </ol>
+                </li>
+                <li>
                     <h3> <span>3.5</span> Sistem de subscriptii. Exportari automate </h3>
                     <p id="subscription-service">
-
+                        Exportarea poate fi realizata prin descarcare manuala din website, dar si prin email, automat lunar,
+                        atunci cand un nou set de predictii este calculat. Un user se poate abona la sistemul de subscriptii
+                        prin adaugarea email-ului dupa un export. Acestea sunt salvate in baza de date a aplicatiei, adresata
+                        mai jos.
                     </p>
-
+                    <ol>
+                        <li>
+                            <p>Adaugare de subscriptie pe email</p>
+                            <img src="photos/SubAdd.png" alt="Subscription adding">
+                        </li>
+                    </ol>
+                </li>
+                <li>
                     <h3> <span>3.6</span> Alte resurse, MySQL </h3>
                     <p id="database-other-resources">
-
+                        Diverse date de pe website sunt comune pentru utilizatori dar si salvate pentru API. Am folosit
+                        o baza de date MySQL pentru sinergia cu PHP.
+                        Exista servicii pentru accesarea datelor comune, precum news item-urile din main page sau
+                        pentru accesarea administrarii website-ului prin conturi. Baza de date mai e folosita si de API pentru a accesa
+                        email-urile abonatilor la serviciul de exportare automata sau pentru a salva credentialele conturilor
+                        de trimitere automata
                     </p>
+                    <p>Preluare de news items</p>
+                    <img src="photos/NewsLoad.png" alt="News Items Loading">
                 </li>
             </ul>
         </section>

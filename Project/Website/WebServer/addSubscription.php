@@ -1,7 +1,5 @@
 <?php
 
-//    echo $_SERVER['REQUEST_METHOD'];
-
     if($_SERVER['REQUEST_METHOD'] !== 'POST'){
         http_response_code(400);
         echo json_encode(['status'=>'FAILED', 'error'=>'BAD_REQUEST']), PHP_EOL;
@@ -24,11 +22,10 @@
             $credentials['PASS']
         );
 
-        $stmt = $pdoConnection->prepare("INSERT INTO subscriptions (email, date_created, date_last_sent) VALUES (:email, CURRENT_TIMESTAMP , CURRENT_TIMESTAMP )");
+        $stmt = $pdoConnection->prepare("INSERT INTO subscriptions (email, date_created, date_last_sent) 
+            VALUES (:email, CURRENT_TIMESTAMP , CURRENT_TIMESTAMP )");
         $stmt->bindParam(":email", $email);
         $stmt->execute();
-
-//        $stmt->debugDumpParams();
 
     } catch (PDOException $exception){
         http_response_code(200);
